@@ -49,7 +49,7 @@ export function view() {
   html += '<div class="section-title"><h2>' + esc(t('Today')) + '</h2><a href="#/calendar">' + esc(t('Calendar')) + '</a></div><div class="tiles">';
   html += tile('#/rosary', 'rosary', t('Pray the Rosary'), t(myst.name), 'dark');
   if (ups.length) html += tile(ups[0].saintId ? '#/saint/' + ups[0].saintId : '#/calendar', 'star', ups[0].name, t('Celebrated today'));
-  else html += tile('#/prayer/morning-offering', 'sun', t('Morning Offering'), t('Give your day to God'));
+  html += hourPrayer(now);
   html += tile('#/habits', 'check', t('This week'), habitSummary());
   html += '</div>';
 
@@ -75,4 +75,15 @@ function habitSummary() {
   const w = state.habits[weekKey()] || {};
   const n = data.paths.habits.filter(h => w[h.id]).length;
   return n + ' ' + t('of') + ' ' + data.paths.habits.length + ' ' + t('habits');
+}
+
+// A prayer that fits the time of day: morning offering, the Angelus (Regina Caeli in Easter season), or night prayer.
+function hourPrayer(now) {
+  const h = now.getHours();
+  if (h >= 5 && h < 11) return tile('#/prayer/morning-offering', 'sun', t('Morning Offering'), t('Give your day to God'));
+  if (h >= 11 && h < 20) {
+    const easter = season(now) === 'easter';
+    return tile('#/prayer/' + (easter ? 'regina-caeli' : 'angelus'), 'bell', t(easter ? 'The Regina Caeli' : 'The Angelus'), t('Prayed at 6 am, noon and 6 pm'));
+  }
+  return tile('#/prayer/guardian-angel', 'moon', t('Prayer to your Guardian Angel'), t('Before you sleep'));
 }

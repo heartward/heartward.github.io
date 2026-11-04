@@ -15,7 +15,8 @@ export function view() {
     tile('#/reminder', 'bell', t('Daily reminder'), t('Add prayer time to your calendar')) +
     '</div>';
   const learned = data.prayers.filter(p => state.learned[p.id]).length;
-  html += '<div class="section-title"><h2>' + esc(t('Prayers to learn')) + '</h2><span class="small muted">' + learned + ' / ' + data.prayers.length + ' ' + esc(t('learned')) + '</span></div>';
+  html += '<div class="section-title"><h2>' + esc(t('Prayers to learn')) + '</h2><span class="small muted">' + learned + ' / ' + data.prayers.length + ' ' + esc(t('learned')) + '</span></div>' +
+    '<p class="small muted" style="margin:-4px 2px 8px">' + esc(t('Any of these prayers can begin and end with the Sign of the Cross, with or without holy water.')) + '</p>';
   const cats = [...new Set(data.prayers.map(p => p.category))];
   cats.forEach(c => {
     html += '<div class="eyebrow" style="margin:16px 2px 6px">' + esc(t(c)) + '</div><ul class="list card tight">';
@@ -91,7 +92,7 @@ function rosarySteps(key) {
     for (let i = 0; i < 10; i++) steps.push({ p: 'hail-mary', bead: 'small', decade: d, name, count: i + 1 });
     steps.push({ p: 'glory-be', bead: null, decade: d, name }, { p: 'fatima-prayer', bead: null, decade: d, name });
   });
-  steps.push({ p: 'hail-holy-queen', bead: null }, { p: 'sign-of-the-cross', bead: null, end: true });
+  steps.push({ p: 'hail-holy-queen', bead: null }, { p: 'prayer-after-rosary', bead: null }, { p: 'sign-of-the-cross', bead: null, end: true });
   steps.forEach(s => { if (s.p) s.prayer = P(s.p); });
   return { steps, m };
 }

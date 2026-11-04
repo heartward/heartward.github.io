@@ -142,6 +142,17 @@ export const ES = {
   'Anniversary reminders for your baptism and other dates are in Me > My dates.': 'Los recordatorios de aniversario de tu bautismo y otras fechas están en Yo > Mis fechas.',
   'Light a candle and thank God for this day.': 'Enciende una vela y da gracias a Dios por este día.',
 
+  'Faith, hope and love': 'Fe, esperanza y caridad',
+  'Meals': 'Comidas',
+  'Mary': 'María',
+  'Short prayers': 'Oraciones breves',
+  'Any of these prayers can begin and end with the Sign of the Cross, with or without holy water.': 'Todas estas oraciones pueden empezar y terminar con la señal de la cruz, con o sin agua bendita.',
+  'The Angelus': 'El Ángelus',
+  'The Regina Caeli': 'Regina Coeli',
+  'Prayed at 6 am, noon and 6 pm': 'Se reza a las 6 am, al mediodía y a las 6 pm',
+  'Prayer to your Guardian Angel': 'Oración al Ángel de la Guarda',
+  'Before you sleep': 'Antes de dormir',
+
   // Learn
   'Learn the faith': 'Aprende la fe',
   'Guides for everything that can feel new: Mass, prayers, words, saints and the Church year.': 'Guías para todo lo que puede parecer nuevo: la Misa, las oraciones, las palabras, los santos y el año litúrgico.',
