@@ -91,30 +91,67 @@
       "id": "sym1-01",
       "stage": "catechumenate",
       "title": "The journey of faith: the Trinity, faith, and the God who is love",
-      "summary": "God made us for himself, and has shown us who he is.",
+      "summary": "God made us out of love, to share his life. He has shown us who he is: one God, Father, Son and Holy Spirit.",
       "prayers": [
         "sign-of-the-cross",
-        "glory-be"
+        "glory-be",
+        "apostles-creed",
+        "nicene-creed",
+        "act-of-faith"
       ],
       "sources": [
+        {
+          "title": "Psalm 23, The Lord is my shepherd",
+          "url": "https://bible.usccb.org/bible/psalms/23"
+        },
+        {
+          "title": "Luke 24:13-35, the road to Emmaus",
+          "url": "https://bible.usccb.org/bible/luke/24"
+        },
         {
           "title": "1 John 4:7-16, God is love",
           "url": "https://bible.usccb.org/bible/1john/4"
         },
         {
-          "title": "Catechism, paragraphs 27-49: our desire for God",
+          "title": "Catechism 1, 27-30, 150, 200-202, 221, 266, 293",
           "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
         }
       ],
       "status": "draft",
       "ref": "Symbolon Part 1: Knowing the Faith · Session 1",
       "lesson": [
-        "Every person carries a longing for something more: for meaning, for love that lasts, for truth. The Church teaches that this desire is written in our hearts because we were made by God and for God. Saint Augustine put it this way: \"Our heart is restless until it rests in you.\"",
-        "We can know something about God by looking at creation and by listening to our conscience. But God did not leave us guessing. He revealed himself step by step: to Abraham, to Moses, through the prophets, and fully in Jesus Christ.",
-        "Christians believe in one God who is a communion of love: Father, Son, and Holy Spirit. That is why we begin our prayers \"in the name of the Father, and of the Son, and of the Holy Spirit.\"",
-        "Most importantly, God is not distant. \"God is love\" (1 John 4:8). He knows your name and wants a relationship with you."
+        "This session opens with Psalm 23, \"The Lord is my shepherd,\" alongside a picture of the two disciples on the road to Emmaus. Both say the same thing: we are not walking alone. God goes ahead of us, walks beside us, and leads us home.",
+        "## Made by love, for love",
+        "God did not need to create us. He is perfectly happy and complete in himself. He made us freely, out of pure goodness, so that we could share in his own blessed life (Catechism 1, 293).",
+        "That is why every human heart carries a longing that nothing in this world fully satisfies. We were made by the God who is love, and we are made for his love (Catechism 27-30).",
+        "> Our hearts are restless until they rest in you. — St. Augustine",
+        "And God is not waiting for us to find our own way to him. At every moment of our lives he comes close, calling us to seek him, to know him and to love him (Catechism 1). Like the shepherd of Psalm 23, he is the one who comes looking for us.",
+        "## One God, three Persons",
+        "There is only one God (Catechism 200-202). Yet God has revealed that his one life is a communion of three Persons: the Father, the Son and the Holy Spirit (Catechism 221). We could never have worked this out on our own. We know it because God showed us, by sending his Son, Jesus, and then his Holy Spirit.",
+        "This is God's \"inmost secret\": his very being is love shared between Persons. As the Catechism says, God himself is an eternal exchange of love, Father, Son and Holy Spirit, and he has made us to share in that exchange (Catechism 221).",
+        "The diagram below, sometimes called the Shield of the Trinity, helps keep this straight. Each Person is fully God. But the Persons are truly distinct: the Father is not the Son, the Son is not the Holy Spirit, and the Holy Spirit is not the Father.",
+        "[[figure:trinity]]",
+        "So we must avoid two mistakes. It is not three gods working together, and it is not one God simply wearing three masks. The Church worships one God in the Trinity, without mixing up the Persons or dividing God's one being. Their glory is equal and their majesty is eternal (Catechism 266).",
+        "## What faith is",
+        "Faith is our answer to the God who has made himself known. It has two sides (Catechism 150).",
+        "- Intellect: with our minds we believe, saying yes to what God has revealed.",
+        "- Will: with our hearts we choose to entrust our whole lives to him, the way you would trust a friend with everything.",
+        "[[figure:faith]]",
+        "Faith is not only agreeing with ideas, and it is not only a feeling. It is both: knowing who God is, and choosing to lean on him.",
+        "## Three key elements of prayer",
+        "Prayer is how faith becomes a relationship. Three simple elements can shape it:",
+        "- Praise: start by focusing on God, not on your problems. This is the \"truth zone\": God is in control and he loves you. Tell him you love him too.",
+        "- Petition: ask for what you and others need. Nothing is too small to bring to him.",
+        "- Forgiveness: ask God to forgive your sins, and choose to forgive the people who have hurt you.",
+        "> We must speak to God as a friend speaks to his friend, as a servant to his master; now asking some favor, now acknowledging our faults, and communicating to him all that concerns us: our thoughts, our fears, our projects, our desires, and in all things seeking his counsel. — St. Ignatius of Loyola"
       ],
-      "reflection": "When have you felt a longing for God, or sensed that there must be something more?"
+      "reflection": "Pray Psalm 23 slowly this week. Where in your life do you need to trust that God is the shepherd walking with you?",
+      "deeper": [
+        {
+          "title": "Why two creeds?",
+          "text": "A creed is a short summary of what Christians believe. The Church keeps two from the early centuries, and both proclaim faith in the Father, the Son and the Holy Spirit.\n\nThe Apostles' Creed is one of the earliest, first used in Rome when people were baptized. We still use it at Baptisms and to begin the Rosary.\n\nThe Nicene Creed was first written at the Council of Nicaea in 325 AD to answer questions that had arisen about the Trinity and about whether Jesus is truly God. Its extra detail is about clarity. It is the creed we normally say at Sunday Mass and on major feasts."
+        }
+      ]
     },
     {
       "id": "sym1-02",

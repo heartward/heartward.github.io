@@ -1,5 +1,5 @@
 /* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit. */
-var CACHE = 'heartward-v4';
+var CACHE = 'heartward-v5';
 var SHELL = [
   './',
   'index.html',
@@ -10,6 +10,7 @@ var SHELL = [
   'icon-192.png',
   'icon-512.png',
   'js/data.js',
+  'js/figures.js',
   'js/i18n-es.js',
   'js/icons.js',
   'js/liturgy.js',

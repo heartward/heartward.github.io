@@ -69,6 +69,20 @@
     ]
   },
   {
+    "id": "nicene-creed",
+    "title": "Nicene Creed",
+    "category": "Everyday",
+    "when": "At Sunday Mass and on major feasts, after the homily.",
+    "text": "I believe in one God,\nthe Father almighty,\nmaker of heaven and earth,\nof all things visible and invisible.\n\nI believe in one Lord Jesus Christ,\nthe Only Begotten Son of God,\nborn of the Father before all ages.\nGod from God, Light from Light,\ntrue God from true God,\nbegotten, not made, consubstantial with the Father;\nthrough him all things were made.\nFor us men and for our salvation\nhe came down from heaven,\nand by the Holy Spirit was incarnate of the Virgin Mary,\nand became man.\nFor our sake he was crucified under Pontius Pilate,\nhe suffered death and was buried,\nand rose again on the third day\nin accordance with the Scriptures.\nHe ascended into heaven\nand is seated at the right hand of the Father.\nHe will come again in glory\nto judge the living and the dead\nand his kingdom will have no end.\n\nI believe in the Holy Spirit, the Lord, the giver of life,\nwho proceeds from the Father and the Son,\nwho with the Father and the Son is adored and glorified,\nwho has spoken through the prophets.\n\nI believe in one, holy, catholic and apostolic Church.\nI confess one Baptism for the forgiveness of sins\nand I look forward to the resurrection of the dead\nand the life of the world to come.\nAmen.",
+    "meaning": "Written at the Councils of Nicaea (325) and Constantinople (381) to state clearly that Jesus is truly God, \"consubstantial,\" one in being, with the Father, and that the Holy Spirit is God too. At the words \"and by the Holy Spirit was incarnate\" through \"and became man,\" everyone bows, honoring the moment God became one of us.",
+    "sources": [
+      {
+        "title": "John 1:1-14",
+        "url": "https://bible.usccb.org/bible/john/1"
+      }
+    ]
+  },
+  {
     "id": "act-of-faith",
     "title": "Act of Faith",
     "category": "Faith, hope and love",
