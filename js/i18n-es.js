@@ -101,6 +101,13 @@ export const ES = {
   'Read each line out loud: "The Father is God. The Father is not the Son." Three Persons, one God.': 'Lee cada línea en voz alta: "El Padre es Dios. El Padre no es el Hijo." Tres Personas, un solo Dios.',
   'Faith uses the whole person: the mind believes, and the will trusts.': 'La fe abarca a toda la persona: la mente cree y la voluntad confía.',
 
+  'Church': 'Iglesia',
+  'Scripture': 'Escritura',
+  'Tradition': 'Tradición',
+  'Magisterium': 'Magisterio',
+  'A three-legged stool: the seat is the Church; the legs are Scripture, Tradition and the Magisterium. Remove one and it falls.': 'Un banco de tres patas: el asiento es la Iglesia; las patas son la Escritura, la Tradición y el Magisterio. Si quitas una, se cae.',
+  'Take away any one leg and the stool falls. We need all three.': 'Si quitas una pata, el banco se cae. Necesitamos las tres.',
+
   // Pray
   'Prayer': 'Oración',
   'Prayer is simply talking with God. Learn the prayers Catholics share, one at a time.': 'Orar es simplemente hablar con Dios. Aprende las oraciones que comparten los católicos, una a la vez.',

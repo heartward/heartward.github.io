@@ -396,3 +396,4 @@ input[type=file] { display: none; }
 .deeper { margin: 20px 0; padding: 16px 18px; border-radius: var(--r); background: var(--surface-2); border: 1px dashed var(--line); }
 .deeper h3 { font-family: var(--serif); margin: 2px 0 8px; font-size: 1.15rem; }
 .deeper p { margin: 0 0 8px; line-height: 1.6; }
+.diagram .leg { stroke: var(--accent); stroke-width: 12; stroke-linecap: round; fill: none; }

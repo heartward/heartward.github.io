@@ -1,5 +1,5 @@
 /* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit. */
-var CACHE = 'heartward-v5';
+var CACHE = 'heartward-v6';
 var SHELL = [
   './',
   'index.html',

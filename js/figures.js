@@ -33,12 +33,19 @@ const FIG = {
     '<line x1="160" y1="66" x2="102" y2="122" class="spoke" marker-end="url(#arr)"/><line x1="200" y1="66" x2="258" y2="122" class="spoke" marker-end="url(#arr)"/>' +
     '<rect x="12" y="128" width="156" height="84" rx="18" class="box"/>' + txt(90, 158, t('Intellect'), { cls: 'person' }) + txt(90, 180, t('believing what'), { cls: 'lbl' }) + txt(90, 198, t('God reveals'), { cls: 'lbl' }) +
     '<rect x="192" y="128" width="156" height="84" rx="18" class="box"/>' + txt(270, 158, t('Will'), { cls: 'person' }) + txt(270, 180, t('entrusting'), { cls: 'lbl' }) + txt(270, 198, t('ourselves to him'), { cls: 'lbl' }) +
+    '</svg>',
+  // Three-legged stool: the Church's teaching stands on Scripture, Tradition and the Magisterium together.
+  stool: () => '<svg viewBox="0 0 360 290" role="img" aria-label="' + esc(t('A three-legged stool: the seat is the Church; the legs are Scripture, Tradition and the Magisterium. Remove one and it falls.')) + '">' +
+    '<path d="M70 120 L52 236" class="leg"/><path d="M290 120 L308 236" class="leg"/><path d="M180 136 L180 252" class="leg"/>' +
+    '<ellipse cx="180" cy="104" rx="128" ry="36" class="core"/>' + txt(180, 111, t('Church'), { cls: 'god' }) +
+    txt(52, 266, t('Scripture'), { cls: 'person' }) + txt(308, 266, t('Tradition'), { cls: 'person' }) + txt(180, 282, t('Magisterium'), { cls: 'person' }) +
     '</svg>'
 };
 
 const CAPTION = {
   trinity: 'Read each line out loud: "The Father is God. The Father is not the Son." Three Persons, one God.',
-  faith: 'Faith uses the whole person: the mind believes, and the will trusts.'
+  faith: 'Faith uses the whole person: the mind believes, and the will trusts.',
+  stool: 'Take away any one leg and the stool falls. We need all three.'
 };
 
 export function figure(name) {
