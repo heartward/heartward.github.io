@@ -109,8 +109,9 @@ export function rosary(key) {
     '<div class="chips" style="margin-bottom:12px">' + Object.entries(r.mysteries).map(([k, v]) => '<a class="chip' + (k === key ? ' on' : '') + '" href="#/rosary/' + k + '">' + esc(t(v.name.replace(' Mysteries', ''))) + '</a>').join('') + '</div>' +
     '<details class="card flat acc" style="padding:0 16px"><summary><span>' + esc(t('How to pray the Rosary')) + '</span><span class="plus">' + icon('plus') + '</span></summary><div class="body"><p>' + esc(r.intro) + '</p></div></details>' +
     '<div class="beads" id="beads" aria-hidden="true"></div><div class="rosary-stage" id="stage" aria-live="polite"></div>' +
-    '<div class="rosary-nav"><button class="btn ghost" id="prev">' + icon('back') + esc(t('Back')) + '</button><button class="btn" id="next">' + esc(t('Next')) + icon('chevron') + '</button></div>' +
-    '<label class="check small"><input type="checkbox" id="words" checked> ' + esc(t('Show the words of each prayer')) + '</label>';
+    '<label class="check small"><input type="checkbox" id="words" checked> ' + esc(t('Show the words of each prayer')) + '</label>' +
+    // The buttons stay pinned just above the tabs, so they never move between short and long prayers.
+    '<div class="rosary-nav"><div class="in"><button class="btn ghost" id="prev">' + icon('back') + esc(t('Back')) + '</button><button class="btn" id="next">' + esc(t('Next')) + icon('chevron') + '</button></div></div><div class="rosary-pad"></div>';
   return {
     html, title: t('Rosary'),
     bind(root) {
