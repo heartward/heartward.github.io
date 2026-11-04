@@ -1,0 +1,54 @@
+{
+  "firstYear": {
+    "title": "Your first year",
+    "intro": "Easter is not the finish line. Many people drift away in the first year because classes end and the group scatters. This path gives you one short step each month to keep growing, starting the month after your baptism or reception.",
+    "months": [
+      { "id": "fy01", "title": "Living the sacraments", "lesson": "You have received the sacraments of initiation. Now the Eucharist becomes your weekly food for the journey. Each Sunday, before Mass, take a minute to bring your week to God. After Communion, stay quiet for a moment and simply thank him.", "practice": "Arrive five minutes early to Mass each Sunday this month." },
+      { "id": "fy02", "title": "A daily prayer habit", "lesson": "Faith grows like any relationship: through time spent together. A few minutes each day matters more than a long prayer once in a while. Choose a time you already have, like your morning coffee or your commute.", "practice": "Pray the Morning Offering every morning this month." },
+      { "id": "fy03", "title": "Reading Scripture", "lesson": "Try reading the Sunday Gospel before Mass. Read it slowly, notice one word or phrase that stands out, and talk to God about it. The homily will mean more when you have already met the reading.", "practice": "Read the Sunday Gospel on Saturday each week." },
+      { "id": "fy04", "title": "Confession as a habit", "lesson": "Confession is not only for big sins. Going regularly, many Catholics go monthly, keeps your heart light and honest. It is also a place to receive advice and strength.", "practice": "Go to confession once this month." },
+      { "id": "fy05", "title": "Find your people", "lesson": "Faith is not meant to be lived alone. Look for a small group, a Bible study, a young adults group or a ministry. Friendships in the parish are one of the strongest reasons people stay.", "practice": "Join one parish group or event this month." },
+      { "id": "fy06", "title": "Serving others", "lesson": "Jesus said that whatever we do for the least of his brothers and sisters, we do for him (Matthew 25:40). Serving others is a way to meet him.", "practice": "Volunteer once: a food pantry, a parish ministry, or helping a neighbor." },
+      { "id": "fy07", "title": "Through the Church year", "lesson": "The seasons of the Church year shape how Catholics live: waiting in Advent, celebrating at Christmas and Easter, turning back to God in Lent. Living the seasons at home, with an Advent wreath, a Lenten practice or a feast day meal, keeps faith part of daily life.", "practice": "Mark the next feast day on your calendar and celebrate it at home." },
+      { "id": "fy08", "title": "Your patron saint", "lesson": "Get to know the saint you chose, or choose one now. Read their story, learn their feast day, and ask them to pray for you.", "practice": "Read about your saint and celebrate their feast day." },
+      { "id": "fy09", "title": "When faith feels dry", "lesson": "Every Christian goes through seasons when prayer feels empty and God feels far. This is normal, and even the saints knew it. Keep showing up: faithfulness in dry times is a deep form of love.", "practice": "Keep your prayer time even on days you don't feel like it." },
+      { "id": "fy10", "title": "Sharing your faith", "lesson": "You don't need to preach. Being kind, honest and joyful, and being ready to say why, is how most people come to faith. Your own story of coming to the Church is a gift.", "practice": "Tell one person your story of coming to the Church." },
+      { "id": "fy11", "title": "Walking with someone new", "lesson": "Next year, someone will start the same journey you just finished. You could become a sponsor, help at OCIA, or simply welcome newcomers at Mass.", "practice": "Ask your OCIA team how you could help next year." },
+      { "id": "fy12", "title": "Your anniversary", "lesson": "One year ago you received the sacraments. Look back at how far you've walked. Celebrate your baptism or reception day the way you would a birthday.", "practice": "Celebrate your anniversary, and renew your commitment to Christ." }
+    ]
+  },
+  "welcomeBack": {
+    "title": "Welcome back",
+    "intro": "If you were baptized but have been away from the Church, for a few months or many years, you are welcome home. There is no need to explain everything at the door. These steps can help.",
+    "steps": [
+      { "id": "wb1", "title": "You are wanted here", "body": "Jesus told the story of a father who runs out to meet his son coming home, before the son can even finish his apology (Luke 15:11-32). That is how God sees you. Whatever the reason you left, the door is open." },
+      { "id": "wb2", "title": "Common reasons people leave", "body": "People drift away for many reasons: moving, a busy life, a painful experience in the Church, divorce, doubts, or simply never feeling connected. Some were hurt by people in the Church. Those wounds are real, and it is fine to name them. Coming back doesn't mean pretending nothing happened." },
+      { "id": "wb3", "title": "Just come to Mass", "body": "You can simply show up this Sunday. Sit near the back if you like. If you haven't been to confession in a long time, you can stay in your pew during Communion and pray, until you've had a chance to go." },
+      { "id": "wb4", "title": "Confession after a long time", "body": "Tell the priest: \"It's been a long time since my last confession.\" He will help you. You don't need to remember every detail of every year; confess what you can, honestly. Many priests say these are their favorite confessions to hear. See the confession guide in the Pray section." },
+      { "id": "wb5", "title": "Talk to someone", "body": "Call the parish office and ask to talk with a priest or a staff member. Questions about marriage, past decisions or the sacraments often have more hopeful answers than people expect." },
+      { "id": "wb6", "title": "Find a way to belong", "body": "Join a small group, a Bible study or a ministry. Many parishes have groups specifically for returning Catholics. Belonging is what helps people stay." }
+    ]
+  },
+  "involved": {
+    "title": "Get involved",
+    "intro": "Being part of the parish is more than attending. Here are common ways to serve and belong. Tap the ones that interest you, then ask your parish office how to start.",
+    "items": [
+      { "id": "music", "name": "Music ministry", "about": "Sing in the choir or play an instrument at Mass." },
+      { "id": "lector", "name": "Lector", "about": "Proclaim the Scripture readings at Mass." },
+      { "id": "hospitality", "name": "Hospitality", "about": "Welcome people at the door and help them find a seat." },
+      { "id": "emhc", "name": "Communion minister", "about": "Help distribute Communion at Mass or bring it to the sick and homebound." },
+      { "id": "charity", "name": "Serving the poor", "about": "Food pantry, St. Vincent de Paul Society, meals for families in need." },
+      { "id": "smallgroup", "name": "Small group or Bible study", "about": "Meet regularly with others to read Scripture and share life." },
+      { "id": "youth", "name": "Youth and children", "about": "Teach religious education or help with youth ministry." },
+      { "id": "ocia", "name": "OCIA team or sponsor", "about": "Walk with the next group of newcomers." },
+      { "id": "care", "name": "Care for the sick and grieving", "about": "Visit the homebound, help with funerals, support people who are grieving." },
+      { "id": "prayer", "name": "Prayer groups and adoration", "about": "Pray with others or spend an hour with Jesus in the Eucharist." }
+    ]
+  },
+  "habits": [
+    { "id": "mass", "name": "Went to Sunday Mass" },
+    { "id": "pray", "name": "Prayed most days" },
+    { "id": "gospel", "name": "Read the Sunday Gospel" },
+    { "id": "kindness", "name": "Did one act of kindness" }
+  ]
+}

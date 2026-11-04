@@ -1,0 +1,42 @@
+{
+  "intro": "Saints are friends in heaven who pray for us and show us how to follow Jesus. Many people choose a patron saint, especially for confirmation. Pick what draws you, and see who matches.",
+  "interests": [
+    { "id": "convert", "label": "Came to faith as an adult" },
+    { "id": "second-chances", "label": "A new start after mistakes" },
+    { "id": "thinker", "label": "Big questions and study" },
+    { "id": "family", "label": "Family and parenting" },
+    { "id": "service", "label": "Serving the poor" },
+    { "id": "nature", "label": "Nature and creation" },
+    { "id": "courage", "label": "Courage in hard times" },
+    { "id": "prayer", "label": "A simple, quiet faith" },
+    { "id": "work", "label": "Work and everyday life" },
+    { "id": "youth", "label": "Young people, sports, technology" },
+    { "id": "health", "label": "Medicine and healing" },
+    { "id": "arts", "label": "Music, art and writing" },
+    { "id": "migrants", "label": "Migrants and people far from home" }
+  ],
+  "saints": [
+    { "id": "augustine", "name": "St. Augustine of Hippo", "feast": "08-28", "years": "354-430", "patron": "theologians, people searching for God", "tags": ["convert", "second-chances", "thinker"], "story": "A brilliant teacher who spent his youth chasing pleasure and success. After years of searching, he was baptized at 32 and became a bishop and one of the Church's greatest thinkers. He wrote: \"Our heart is restless until it rests in you.\"" },
+    { "id": "monica", "name": "St. Monica", "feast": "08-27", "years": "331-387", "patron": "mothers, wives, patience", "tags": ["family", "prayer"], "story": "Augustine's mother, who prayed for her son for many years and lived to see him baptized. A model of persevering prayer for loved ones." },
+    { "id": "mary-magdalene", "name": "St. Mary Magdalene", "feast": "07-22", "years": "1st century", "patron": "converts, penitents", "tags": ["second-chances", "convert"], "story": "A follower of Jesus whom he freed from seven demons. She stayed at the cross and was the first to see the risen Lord, who sent her to tell the apostles." },
+    { "id": "peter", "name": "St. Peter", "feast": "06-29", "years": "died about 64", "patron": "the Church, popes, fishermen", "tags": ["second-chances", "work"], "story": "A fisherman Jesus called to be the rock of his Church. He denied Jesus three times, was forgiven, and gave his life for him in Rome." },
+    { "id": "paul", "name": "St. Paul", "feast": "06-29", "years": "died about 64", "patron": "missionaries, writers", "tags": ["convert", "second-chances", "arts"], "story": "Once a persecutor of Christians, he met the risen Jesus on the road to Damascus and became the great apostle to the nations. His letters fill much of the New Testament." },
+    { "id": "edith-stein", "name": "St. Teresa Benedicta of the Cross (Edith Stein)", "feast": "08-09", "years": "1891-1942", "patron": "Europe, philosophers", "tags": ["convert", "thinker", "courage"], "story": "A Jewish-born philosopher who lost her faith, then found Christ after reading the life of St. Teresa of Ávila in one night. She became a Carmelite nun and was killed at Auschwitz." },
+    { "id": "elizabeth-seton", "name": "St. Elizabeth Ann Seton", "feast": "01-04", "years": "1774-1821", "patron": "Catholic schools, widows", "tags": ["convert", "family", "service"], "story": "A New York wife and mother of five who became Catholic as a young widow, despite opposition from family and friends. She founded schools and a religious community, and was the first saint born in the United States." },
+    { "id": "bakhita", "name": "St. Josephine Bakhita", "feast": "02-08", "years": "about 1869-1947", "patron": "Sudan, victims of human trafficking", "tags": ["convert", "courage", "migrants"], "story": "Kidnapped as a child in Sudan and sold into slavery, she was eventually brought to Italy, where she found freedom and faith. Baptized as an adult, she became a sister known for her gentleness and forgiveness." },
+    { "id": "kateri", "name": "St. Kateri Tekakwitha", "feast": "07-14", "years": "1656-1680", "patron": "ecology, Native Americans", "tags": ["convert", "nature", "prayer"], "story": "A Mohawk woman who was baptized at 20 despite hostility from her community. She lived a life of deep prayer and was the first Native American saint. Her feast is July 14 in the United States." },
+    { "id": "therese", "name": "St. Thérèse of Lisieux", "feast": "10-01", "years": "1873-1897", "patron": "missions, florists", "tags": ["prayer", "youth"], "story": "A young French Carmelite nun who taught the \"Little Way\": doing small, ordinary things with great love. She died at 24 and is a Doctor of the Church." },
+    { "id": "francis", "name": "St. Francis of Assisi", "feast": "10-04", "years": "1181-1226", "patron": "animals, ecology, Italy", "tags": ["nature", "service", "second-chances"], "story": "A rich young man who gave everything away to follow Jesus in poverty, joy and love for all creation. He founded the Franciscans." },
+    { "id": "teresa-calcutta", "name": "St. Teresa of Calcutta", "feast": "09-05", "years": "1910-1997", "patron": "the Missionaries of Charity, World Youth Day", "tags": ["service", "prayer"], "story": "Known as Mother Teresa, she served the poorest of the poor in India and around the world, seeing Jesus in each person." },
+    { "id": "joseph", "name": "St. Joseph", "feast": "03-19", "years": "1st century", "patron": "fathers, workers, the universal Church", "tags": ["family", "work"], "story": "The husband of Mary and foster father of Jesus. A quiet, faithful carpenter who protected the Holy Family." },
+    { "id": "john-paul-ii", "name": "St. John Paul II", "feast": "10-22", "years": "1920-2005", "patron": "families, World Youth Day", "tags": ["family", "youth", "arts", "courage"], "story": "A Polish actor, poet and athlete who became pope in 1978. He loved young people, started World Youth Day, and taught that \"the future of humanity passes by way of the family.\"" },
+    { "id": "aquinas", "name": "St. Thomas Aquinas", "feast": "01-28", "years": "1225-1274", "patron": "students, universities", "tags": ["thinker"], "story": "A Dominican friar and one of the greatest thinkers in history, who showed that faith and reason work together." },
+    { "id": "frassati", "name": "St. Pier Giorgio Frassati", "feast": "07-04", "years": "1901-1925", "patron": "young people, mountaineers", "tags": ["youth", "nature", "service"], "story": "A joyful Italian student who loved mountain climbing, friends and the poor, whom he served in secret. He died at 24 and was canonized in 2025." },
+    { "id": "carlo-acutis", "name": "St. Carlo Acutis", "feast": "10-12", "years": "1991-2006", "patron": "young people", "tags": ["youth", "prayer"], "story": "An Italian teenager who loved video games, coding and the Eucharist. He built a website about Eucharistic miracles and died of leukemia at 15. He was canonized in 2025." },
+    { "id": "gianna", "name": "St. Gianna Beretta Molla", "feast": "04-28", "years": "1922-1962", "patron": "mothers, doctors, unborn children", "tags": ["health", "family", "courage"], "story": "An Italian doctor, wife and mother who loved skiing and the mountains. During a difficult pregnancy she chose to protect her child's life, and died shortly after her daughter's birth." },
+    { "id": "luke", "name": "St. Luke", "feast": "10-18", "years": "1st century", "patron": "doctors, artists", "tags": ["health", "arts"], "story": "A physician and companion of St. Paul who wrote the Gospel of Luke, including the road to Emmaus, and the Acts of the Apostles." },
+    { "id": "cecilia", "name": "St. Cecilia", "feast": "11-22", "years": "3rd century", "patron": "musicians", "tags": ["arts", "courage"], "story": "An early Roman martyr remembered for singing to God in her heart. She is the patron of music and musicians." },
+    { "id": "kolbe", "name": "St. Maximilian Kolbe", "feast": "08-14", "years": "1894-1941", "patron": "journalists, prisoners", "tags": ["courage", "arts", "service"], "story": "A Polish Franciscan priest and publisher who, at Auschwitz, offered to die in place of a father of a family." },
+    { "id": "frances-cabrini", "name": "St. Frances Xavier Cabrini", "feast": "11-13", "years": "1850-1917", "patron": "immigrants", "tags": ["migrants", "service", "courage"], "story": "An Italian sister who crossed the ocean to serve Italian immigrants in the United States, founding schools, orphanages and hospitals." }
+  ]
+}

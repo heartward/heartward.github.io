@@ -1,0 +1,87 @@
+{
+  "mass": {
+    "title": "A guide to the Mass",
+    "intro": "The Mass has two main parts: the Liturgy of the Word, where God speaks to us in Scripture, and the Liturgy of the Eucharist, where bread and wine become the Body and Blood of Christ. Don't worry about getting every gesture right; follow the people around you.",
+    "parts": [
+      { "group": "Introductory Rites", "name": "Entrance", "posture": "stand", "about": "Everyone stands as the priest and ministers process in, usually with a song. When you enter the church, you can dip your fingers in holy water and make the Sign of the Cross, then genuflect (bend your right knee to the floor) toward the tabernacle before entering your pew." },
+      { "group": "Introductory Rites", "name": "Greeting and Penitential Act", "posture": "stand", "about": "The priest greets us with the Sign of the Cross. We then pause to remember our sins and ask God's mercy: \"Lord, have mercy. Christ, have mercy. Lord, have mercy.\"" },
+      { "group": "Introductory Rites", "name": "Gloria", "posture": "stand", "about": "A hymn of praise beginning with the angels' song at Christmas: \"Glory to God in the highest.\" It is left out during Advent and Lent." },
+      { "group": "Introductory Rites", "name": "Collect (Opening Prayer)", "posture": "stand", "about": "The priest says \"Let us pray\" and gathers everyone's silent prayers into one. We answer \"Amen.\"" },
+      { "group": "Liturgy of the Word", "name": "First Reading and Psalm", "posture": "sit", "about": "Usually from the Old Testament. Then a psalm is sung or read, and we repeat a short response." },
+      { "group": "Liturgy of the Word", "name": "Second Reading", "posture": "sit", "about": "On Sundays, a reading from the New Testament letters, often from St. Paul." },
+      { "group": "Liturgy of the Word", "name": "Gospel", "posture": "stand", "about": "We stand to honor the words of Jesus. Before it we sing \"Alleluia\" (except in Lent). When the deacon or priest announces the Gospel, people trace a small cross on their forehead, lips and heart, asking that God's word be in our mind, on our lips and in our heart." },
+      { "group": "Liturgy of the Word", "name": "Homily", "posture": "sit", "about": "The priest or deacon explains the readings and how to live them." },
+      { "group": "Liturgy of the Word", "name": "Creed", "posture": "stand", "about": "We profess our faith together, usually with the Nicene Creed. Everyone bows at the words about Jesus becoming man." },
+      { "group": "Liturgy of the Word", "name": "Prayer of the Faithful", "posture": "stand", "about": "Prayers for the Church, the world, people in need and the local community. We usually answer \"Lord, hear our prayer.\" In many parishes, people in OCIA are sent out with their catechists after the homily to reflect on the readings together." },
+      { "group": "Liturgy of the Eucharist", "name": "Preparation of the Gifts", "posture": "sit", "about": "Bread and wine are brought to the altar, and the collection is taken. We stand when the priest says \"Pray, brethren...\"" },
+      { "group": "Liturgy of the Eucharist", "name": "Eucharistic Prayer", "posture": "kneel", "about": "The heart of the Mass. After the \"Holy, Holy, Holy,\" we kneel. The priest repeats Jesus' words from the Last Supper, and the bread and wine become the Body and Blood of Christ. Bells may ring as the priest lifts the Host and the chalice. It ends with a great \"Amen.\"" },
+      { "group": "Communion Rite", "name": "Our Father and Sign of Peace", "posture": "stand", "about": "We pray the Lord's Prayer together, then offer each other a sign of peace, usually a handshake or a nod with \"Peace be with you.\"" },
+      { "group": "Communion Rite", "name": "Lamb of God", "posture": "kneel", "about": "We sing \"Lamb of God, you take away the sins of the world.\" Then we kneel and say: \"Lord, I am not worthy that you should enter under my roof, but only say the word and my soul shall be healed.\"" },
+      { "group": "Communion Rite", "name": "Communion", "posture": "line", "about": "Catholics who are ready go forward to receive. Before you can receive, you can stay in your pew and pray, or go up with arms crossed over your chest to receive a blessing. Afterward, people kneel or sit in quiet prayer." },
+      { "group": "Concluding Rites", "name": "Blessing and Dismissal", "posture": "stand", "about": "The priest blesses us and sends us out: \"Go in peace.\" We answer \"Thanks be to God.\" It is good to stay for the closing song." }
+    ],
+    "note": "Postures can differ a little from country to country. These follow common practice in the United States."
+  },
+  "basics": {
+    "title": "First-week basics",
+    "intro": "Small things that can feel confusing at first. Nobody expects you to know them yet.",
+    "items": [
+      { "name": "Holy water", "about": "At the church door there is a font of blessed water. Dip your fingers and make the Sign of the Cross. It reminds us of our baptism. If you are not baptized yet, you are still welcome to do this." },
+      { "name": "Genuflecting", "about": "Before entering your pew, bend your right knee to the floor toward the tabernacle, the box where the consecrated Hosts are kept, usually marked by a lit candle. It is a sign of reverence to Jesus present there. If you can't kneel, a bow is fine." },
+      { "name": "The tabernacle and its candle", "about": "The red or white candle near the tabernacle is always lit when Jesus is present in the Eucharist inside. That is why Catholics keep quiet and reverent in church even before Mass." },
+      { "name": "Sign of the Cross", "about": "Touch your forehead (Father), chest (Son), left shoulder and right shoulder (Holy Spirit). Catholics in the West go left to right." },
+      { "name": "At Communion before you can receive", "about": "Stay in your pew and pray, or go up with arms crossed over your chest to receive a blessing. Both are completely normal." },
+      { "name": "Fasting before Communion", "about": "Once you can receive, Catholics fast from food and drink (except water and medicine) for one hour before Communion." },
+      { "name": "Sunday obligation", "about": "Catholics go to Mass every Sunday (or Saturday evening) and on certain holy days. Starting this habit now is one of the best ways to prepare." },
+      { "name": "What to call people", "about": "A priest is usually \"Father,\" a deacon \"Deacon,\" a religious sister \"Sister,\" and the bishop \"Bishop\" or \"Your Excellency.\"" },
+      { "name": "What to bring and wear", "about": "Nothing is required. Dress respectfully, as you would for something important. Many parishes have the readings in a missal in the pew." },
+      { "name": "Silence", "about": "Before and after Mass, people pray quietly. Save conversations for outside the church or the gathering space." }
+    ]
+  },
+  "confession": {
+    "title": "A guide to confession",
+    "intro": "In the sacrament of Reconciliation, also called confession, God forgives our sins through the priest. Nothing you say can ever be repeated by the priest. People often feel nervous the first time, and priests are used to helping. You will usually make your first confession before Easter, or after baptism if you are being baptized (baptism itself washes away all sins).",
+    "steps": [
+      { "name": "Prepare", "about": "Spend some quiet time with an examination of conscience (below). Ask the Holy Spirit to help you see honestly and without fear." },
+      { "name": "Go in", "about": "You can kneel behind a screen or sit face to face. Make the Sign of the Cross and say: \"Bless me, Father, for I have sinned. This is my first confession\" (or \"It has been ... since my last confession\")." },
+      { "name": "Confess", "about": "Tell your sins simply, especially serious ones, and roughly how often. If you're unsure what to say, tell the priest; he will help you." },
+      { "name": "Listen", "about": "The priest may give some advice and a penance: a prayer or an action to do afterward." },
+      { "name": "Say you're sorry", "about": "Pray an Act of Contrition, from the prayer library or in your own words." },
+      { "name": "Absolution", "about": "The priest says the words of absolution, ending \"I absolve you from your sins, in the name of the Father, and of the Son, and of the Holy Spirit.\" Make the Sign of the Cross and answer \"Amen.\"" },
+      { "name": "Go in peace", "about": "Thank God and do your penance soon. You are forgiven." }
+    ],
+    "examination": [
+      { "heading": "Loving God", "questions": [
+        "Have I made time for God in prayer?",
+        "Have I put anything (money, work, pleasure, approval) above God?",
+        "Have I used God's name carelessly or in anger?",
+        "Have I missed Mass on Sundays without a serious reason?"
+      ]},
+      { "heading": "Loving others", "questions": [
+        "Have I honored and cared for my parents and family?",
+        "Have I hurt anyone by violence, anger or harsh words? Have I held on to hatred?",
+        "Have I been faithful and pure in my thoughts, words and relationships?",
+        "Have I stolen, cheated, or been careless with what belongs to others?",
+        "Have I lied, gossiped, or damaged someone's reputation?",
+        "Have I been jealous or envious of others?"
+      ]},
+      { "heading": "Myself", "questions": [
+        "Have I cared for my body and my health, and avoided abuse of alcohol or drugs?",
+        "Have I been lazy in my duties at home, school or work?",
+        "Have I ignored people in need when I could have helped?"
+      ]}
+    ],
+    "privacy": "Nothing you tick here is saved. It disappears when you leave the page."
+  },
+  "rosary": {
+    "title": "Pray the Rosary",
+    "intro": "The Rosary is a meditation on the life of Jesus, prayed with Mary. While praying the Hail Marys, you think about one event (a \"mystery\") from the Gospels. A full Rosary takes about 20 minutes. You don't need beads; this guide counts for you.",
+    "mysteries": {
+      "joyful": { "name": "Joyful Mysteries", "days": "Monday and Saturday", "items": ["The Annunciation", "The Visitation", "The Nativity", "The Presentation in the Temple", "The Finding of Jesus in the Temple"] },
+      "sorrowful": { "name": "Sorrowful Mysteries", "days": "Tuesday and Friday", "items": ["The Agony in the Garden", "The Scourging at the Pillar", "The Crowning with Thorns", "The Carrying of the Cross", "The Crucifixion"] },
+      "glorious": { "name": "Glorious Mysteries", "days": "Wednesday and Sunday", "items": ["The Resurrection", "The Ascension", "The Descent of the Holy Spirit", "The Assumption of Mary", "The Coronation of Mary"] },
+      "luminous": { "name": "Luminous Mysteries", "days": "Thursday", "items": ["The Baptism of Jesus", "The Wedding at Cana", "The Proclamation of the Kingdom", "The Transfiguration", "The Institution of the Eucharist"] }
+    },
+    "byWeekday": ["glorious", "joyful", "sorrowful", "glorious", "luminous", "sorrowful", "joyful"]
+  }
+}

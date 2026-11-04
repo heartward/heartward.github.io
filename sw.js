@@ -1,8 +1,37 @@
 /* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit. */
-var CACHE = 'heartward-v2';
+var CACHE = 'heartward-v3';
 var SHELL = [
-  './', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest', 'icon.svg', 'icon-192.png', 'icon-512.png',
-  'content/sessions.json', 'content/prayers.json', 'content/faq.json'
+  './',
+  'index.html',
+  'css/styles.css',
+  'lib/qrcode.js',
+  'manifest.webmanifest',
+  'icon.svg',
+  'icon-192.png',
+  'icon-512.png',
+  'js/data.js',
+  'js/i18n-es.js',
+  'js/icons.js',
+  'js/liturgy.js',
+  'js/main.js',
+  'js/store.js',
+  'js/ui.js',
+  'js/views/journey.js',
+  'js/views/learn.js',
+  'js/views/me.js',
+  'js/views/pray.js',
+  'js/views/search.js',
+  'js/views/today.js',
+  'content/en/calendar.json',
+  'content/en/faq.json',
+  'content/en/glossary.json',
+  'content/en/guides.json',
+  'content/en/paths.json',
+  'content/en/prayers.json',
+  'content/en/saints.json',
+  'content/en/sessions.json',
+  'content/es/prayers.json',
+  'content/parish.json'
 ];
 
 self.addEventListener('install', function (e) {
