@@ -2,6 +2,7 @@ import { data } from '../data.js';
 import { icon } from '../icons.js';
 import { esc, t, head } from '../ui.js';
 import { lessonText } from '../figures.js';
+import { SPANISH } from '../store.js';
 
 // One search across everything bundled with the app. All local, so it works offline.
 function index() {
@@ -9,7 +10,7 @@ function index() {
   const add = (group, ic, href, title, sub, body) => items.push({ group, ic, href, title, sub, hay: (title + ' ' + (sub || '') + ' ' + (body || '')).toLowerCase() });
   data.sessionList.forEach(s => add('Sessions', 'road', '#/session/' + s.id, s.title, s.summary, lessonText(s.lesson) + ' ' + (s.deeper || []).map(d => d.title + ' ' + lessonText(d.text.split('\n\n'))).join(' ') + ' ' + (s.reflection || '') + ' ' + (s.ref || '')));
   data.prayers.forEach(p => {
-    const es = (data.prayersEs || {})[p.id];
+    const es = SPANISH ? (data.prayersEs || {})[p.id] : null;
     add('Prayers', 'candle', '#/prayer/' + p.id, p.title, p.when, p.text + (es ? ' ' + es.title + ' ' + es.text : ''));
   });
   data.faq.forEach(f => add('Questions', 'question', '#/questions', f.q, f.a, ''));

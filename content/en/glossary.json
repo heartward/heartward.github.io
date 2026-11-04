@@ -29,7 +29,7 @@
   },
   {
     "term": "Candidate",
-    "def": "In OCIA, someone already baptized in another Christian church who is preparing to be received into full communion."
+    "def": "In RCIA, someone already baptized in another Christian church who is preparing to be received into full communion."
   },
   {
     "term": "Catechism",
@@ -37,11 +37,11 @@
   },
   {
     "term": "Catechist",
-    "def": "Someone who teaches the faith, such as the leaders of your OCIA group."
+    "def": "Someone who teaches the faith, such as the leaders of your RCIA group."
   },
   {
     "term": "Catechumen",
-    "def": "In OCIA, someone who is not yet baptized and is preparing for baptism."
+    "def": "In RCIA, someone who is not yet baptized and is preparing for baptism."
   },
   {
     "term": "Chalice",
@@ -128,8 +128,8 @@
     "def": "A newly baptized person. From the Greek for \"new plant.\""
   },
   {
-    "term": "OCIA",
-    "def": "Order of Christian Initiation of Adults, the way adults join the Catholic Church. Formerly called RCIA."
+    "term": "RCIA",
+    "def": "Rite of Christian Initiation of Adults, the way adults join the Catholic Church. In the United States it is now called OCIA."
   },
   {
     "term": "Parish",
@@ -177,7 +177,7 @@
   },
   {
     "term": "Sponsor",
-    "def": "A Catholic who accompanies you through OCIA and stands with you at the rites."
+    "def": "A Catholic who accompanies you through RCIA and stands with you at the rites."
   },
   {
     "term": "Tabernacle",

@@ -1,6 +1,6 @@
 # Heartward
 
-A free, offline companion for people walking the journey into the Catholic faith (OCIA), and for those who come back to it. Named for the disciples on the road to Emmaus (Luke 24:32).
+A free, offline companion for people walking the journey into the Catholic faith (RCIA), and for those who come back to it. Named for the disciples on the road to Emmaus (Luke 24:32).
 
 Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 
@@ -8,9 +8,9 @@ Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 
 - **Today**: the current Church season, your progress ring, what is next, the Rosary of the day, feast days, your anniversaries and your patron saint's feast.
 - **Journey**: the road to Easter, following the Symbolon sessions in four stages with their rites. Each session has a lesson, a reflection, prayers, sources and a private journal. After Easter: a first-year path and a welcome-back path.
-- **Pray**: 12 prayers in English and Spanish with a practice mode, a step-by-step Rosary with beads, a confession guide with an examination of conscience, and calendar reminders.
+- **Pray**: 29 prayers with a practice mode, a step-by-step Rosary with beads, a confession guide with an examination of conscience, and calendar reminders.
 - **Learn**: Mass guide (when to sit, stand or kneel), first-week basics, questions, glossary, a saint finder and the Church calendar.
-- **Me**: journal, weekly habits, sacrament dates and anniversaries, friends on the journey, getting involved, parish info, settings (text size, dark mode, Spanish), backup and a QR code to share the app.
+- **Me**: journal, weekly habits, sacrament dates and anniversaries, friends on the journey, getting involved, parish info, settings (text size, dark mode), backup and a QR code to share the app.
 - **Search** across everything, offline.
 
 ## How it works
@@ -28,7 +28,7 @@ Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 | `js/main.js` | Routes and app chrome |
 | `js/views/*.js` | One file per section: today, journey, pray, learn, me, search |
 | `js/liturgy.js` | Easter date, moveable feasts and seasons, computed on the device |
-| `js/i18n-es.js` | Spanish menu text |
+| `js/i18n-es.js` | Spanish menu text (switched off for now: set `SPANISH = true` in `js/store.js` to bring it back) |
 | `content/en/sessions.json` | Stages, rites and sessions. `status` is `draft` (written) or `outline` |
 | `content/en/prayers.json` | Prayers with category, text, meaning and sources |
 | `content/en/guides.json` | Mass, basics, confession and Rosary guides |
@@ -46,7 +46,7 @@ Fork the repo and edit `content/parish.json`:
   "program": "Symbolon",
   "meets": "Tuesdays at 7 pm, parish hall",
   "welcome": "We are glad you are here.",
-  "contacts": [{ "name": "Ana", "role": "OCIA coordinator", "phone": "555-0100", "email": "ocia@example.org" }],
+  "contacts": [{ "name": "Ana", "role": "RCIA coordinator", "phone": "555-0100", "email": "ocia@example.org" }],
   "notes": { "sym1-03": "Bring a Bible to class this week." },
   "order": ["s01", "sym1-01", "s03"]
 }

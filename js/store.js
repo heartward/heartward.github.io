@@ -1,5 +1,8 @@
 // All personal data lives in this browser only (localStorage). Nothing is ever sent anywhere.
 const KEY = 'heartward:v1';
+// Spanish is switched off for now (the app is English only). Set to true to bring the language option back;
+// the translations stay in js/i18n-es.js and content/es/.
+export const SPANISH = false;
 
 const defaults = () => ({
   done: {},          // sessionId -> 'YYYY-MM-DD'
@@ -22,6 +25,7 @@ function merge(base, obj) {
   for (const k of Object.keys(out)) if (obj && obj[k] !== undefined) out[k] = obj[k];
   out.settings = Object.assign(defaults().settings, obj && obj.settings);
   out.parish = Object.assign(defaults().parish, obj && obj.parish);
+  if (!SPANISH) out.settings.lang = 'en';
   return out;
 }
 

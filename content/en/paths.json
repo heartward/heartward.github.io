@@ -13,7 +13,7 @@
       { "id": "fy08", "title": "Your patron saint", "lesson": "Get to know the saint you chose, or choose one now. Read their story, learn their feast day, and ask them to pray for you.", "practice": "Read about your saint and celebrate their feast day." },
       { "id": "fy09", "title": "When faith feels dry", "lesson": "Every Christian goes through seasons when prayer feels empty and God feels far. This is normal, and even the saints knew it. Keep showing up: faithfulness in dry times is a deep form of love.", "practice": "Keep your prayer time even on days you don't feel like it." },
       { "id": "fy10", "title": "Sharing your faith", "lesson": "You don't need to preach. Being kind, honest and joyful, and being ready to say why, is how most people come to faith. Your own story of coming to the Church is a gift.", "practice": "Tell one person your story of coming to the Church." },
-      { "id": "fy11", "title": "Walking with someone new", "lesson": "Next year, someone will start the same journey you just finished. You could become a sponsor, help at OCIA, or simply welcome newcomers at Mass.", "practice": "Ask your OCIA team how you could help next year." },
+      { "id": "fy11", "title": "Walking with someone new", "lesson": "Next year, someone will start the same journey you just finished. You could become a sponsor, help at RCIA, or simply welcome newcomers at Mass.", "practice": "Ask your RCIA team how you could help next year." },
       { "id": "fy12", "title": "Your anniversary", "lesson": "One year ago you received the sacraments. Look back at how far you've walked. Celebrate your baptism or reception day the way you would a birthday.", "practice": "Celebrate your anniversary, and renew your commitment to Christ." }
     ]
   },
@@ -40,7 +40,7 @@
       { "id": "charity", "name": "Serving the poor", "about": "Food pantry, St. Vincent de Paul Society, meals for families in need." },
       { "id": "smallgroup", "name": "Small group or Bible study", "about": "Meet regularly with others to read Scripture and share life." },
       { "id": "youth", "name": "Youth and children", "about": "Teach religious education or help with youth ministry." },
-      { "id": "ocia", "name": "OCIA team or sponsor", "about": "Walk with the next group of newcomers." },
+      { "id": "ocia", "name": "RCIA team or sponsor", "about": "Walk with the next group of newcomers." },
       { "id": "care", "name": "Care for the sick and grieving", "about": "Visit the homebound, help with funerals, support people who are grieving." },
       { "id": "prayer", "name": "Prayer groups and adoration", "about": "Pray with others or spend an hour with Jesus in the Eucharist." }
     ]
