@@ -3,6 +3,7 @@ import { state, save, today } from '../store.js';
 import { icon } from '../icons.js';
 import { esc, t, toast, back, head, sources } from '../ui.js';
 import { lessonHtml } from '../figures.js';
+import { listenButton, bindListen, sentences } from '../speech.js';
 
 export const sessionNo = s => data.sessionList.indexOf(s) + 1;
 export const nextSession = () => data.sessionList.find(s => !state.done[s.id]) || null;
@@ -52,7 +53,7 @@ export function session(id) {
     '<header class="page-head"><div class="kicker">' + esc(t('Session')) + ' ' + sessionNo(s) + ' · ' + esc(t(st.title)) + '</div><h1>' + esc(s.title) + '</h1>' +
     (s.ref ? '<p class="small muted" style="margin:0 0 6px">' + esc(t('Follows')) + ' ' + esc(s.ref) + '</p>' : '') + '<p>' + esc(s.summary) + '</p></header>';
   if (pnote) html += '<div class="parish-note"><div class="eyebrow">' + esc(t('From your parish')) + '</div>' + esc(pnote) + '</div>';
-  if (s.lesson && s.lesson.length) html += '<div class="reading">' + lessonHtml(s.lesson) + '</div>';
+  if (s.lesson && s.lesson.length) html += '<div class="listen-row">' + listenButton('ls', t('Listen to this lesson')) + '</div><div class="reading">' + lessonHtml(s.lesson) + '</div>';
   else html += '<div class="card flat"><p style="margin:0">' + esc(t('This lesson is still being written. Use the journal below to keep your notes from class, and they will be here when you come back.')) + '</p></div>';
   (s.deeper || []).forEach(d => { html += '<aside class="deeper"><div class="eyebrow">' + esc(t('Digging deeper')) + '</div><h3>' + esc(d.title) + '</h3>' + lessonHtml(d.text.split('\n\n')) + '</aside>'; });
   if (s.reflection) html += '<div class="reflection"><div class="eyebrow">' + esc(t('Reflect')) + '</div><p>' + esc(s.reflection) + '</p></div>';
@@ -74,6 +75,14 @@ export function session(id) {
   return {
     html, title: s.title,
     bind(root) {
+      // Lesson text for read-aloud: skip figures and paintings, drop the formatting marks.
+      bindListen(root, 'ls', () => {
+        const plain = p => p.startsWith('[[') ? '' : p.replace(/^(## |> |- )/, '').replace(/ — /g, '. ').replace(/\(Catechism [^)]*\)/g, '');
+        const paras = (s.lesson || []).map(plain);
+        (s.deeper || []).forEach(d => { paras.push(t('Digging deeper') + ': ' + d.title + '.'); d.text.split('\n\n').forEach(x => paras.push(plain(x))); });
+        if (s.reflection) paras.push(t('Reflect') + ': ' + s.reflection);
+        return paras.filter(Boolean).flatMap(sentences);
+      }, { gap: x => /[.!?]$/.test(x) ? 260 : 120 });
       root.querySelector('#toggle-done').onclick = () => {
         if (state.done[s.id]) delete state.done[s.id]; else { state.done[s.id] = today(); toast(t('Another step lit on your path')); }
         save(); rerender();

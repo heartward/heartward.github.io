@@ -407,3 +407,20 @@ input[type=file] { display: none; }
 .art { margin: 18px 0; }
 .art img { display: block; width: 100%; max-height: 460px; object-fit: contain; background: #111; border-radius: var(--r); box-shadow: var(--shadow-sm); }
 .art figcaption { font-size: .84rem; color: var(--muted); text-align: center; margin-top: 8px; line-height: 1.45; font-style: italic; }
+
+/* Read-aloud */
+.listen-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 14px; }
+.listen-row .btn { flex: 1 1 0; white-space: nowrap; padding-left: 12px; padding-right: 12px; }
+.btn.listen.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+.listen-row #ls.on { position: fixed; z-index: 16; right: 16px; bottom: calc(76px + env(safe-area-inset-bottom)); flex: none; box-shadow: var(--shadow-sm); }
+
+/* Welcome page */
+.welcome-hero { text-align: center; padding: 18px 8px 6px; }
+.welcome-hero img { border-radius: 16px; box-shadow: var(--shadow-sm); }
+.welcome-hero .kicker { margin-top: 14px; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); }
+.welcome-hero h1 { margin: 6px 0 10px; }
+.welcome-hero > p { font-size: 1.05rem; max-width: 30em; margin: 0 auto; }
+.welcome-hero blockquote { font-family: var(--serif); font-style: italic; color: var(--muted); margin: 18px auto 0; max-width: 26em; }
+.welcome-hero cite { display: block; font-style: normal; font-size: .82rem; margin-top: 4px; }
+ol.steps { padding: 14px 16px 14px 34px; margin: 0; }
+ol.steps li { margin: 4px 0; }

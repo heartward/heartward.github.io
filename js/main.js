@@ -2,6 +2,7 @@ import { loadData } from './data.js';
 import { state } from './store.js';
 import { icon } from './icons.js';
 import { t } from './ui.js';
+import { stop as stopSpeech } from './speech.js';
 import * as today from './views/today.js';
 import * as journey from './views/journey.js';
 import * as pray from './views/pray.js';
@@ -17,7 +18,7 @@ const routes = {
   learn: [learn.view, 'learn'], questions: [learn.questions, 'learn'], mass: [learn.mass, 'learn'], basics: [learn.basics, 'learn'],
   glossary: [learn.glossary, 'learn'], saints: [learn.saints, 'learn'], saint: [learn.saint, 'learn'], calendar: [learn.calendar, 'learn'],
   me: [me.view, 'me'], journal: [me.journal, 'me'], habits: [me.habits, 'me'], dates: [me.dates, 'me'], friends: [me.friends, 'me'],
-  involved: [me.involved, 'me'], settings: [me.settings, 'me'], share: [me.share, 'me'], parish: [me.parish, 'me'],
+  involved: [me.involved, 'me'], settings: [me.settings, 'me'], share: [me.share, 'me'], welcome: [me.welcome, ''], parish: [me.parish, 'me'],
   search: [search.view, 'search']
 };
 
@@ -45,6 +46,7 @@ export function render() {
   const view = document.getElementById('view');
   view.innerHTML = out.html || '';
   if (hash !== lastPath) {
+    if (lastPath !== null) stopSpeech();
     view.classList.remove('view-enter'); void view.offsetWidth; view.classList.add('view-enter');
     window.scrollTo(0, 0); lastPath = hash;
     document.title = (out.title ? out.title + ' · ' : '') + 'Heartward';

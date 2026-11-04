@@ -16,7 +16,7 @@ const defaults = () => ({
   saint: '',         // chosen patron saint id
   friends: [],       // { name, role, phone, email }
   parish: { name: '', meets: '' },
-  settings: { theme: 'system', size: 'normal', lang: 'en', reminder: '08:00' },
+  settings: { theme: 'system', size: 'normal', lang: 'en', reminder: '08:00', rate: 'normal' },
   updated: null
 });
 
