@@ -6,6 +6,10 @@ const txt = (x, y, s, o = {}) => '<text x="' + x + '" y="' + y + '" text-anchor=
   (o.rot ? ' transform="rotate(' + o.rot + ' ' + x + ' ' + y + ')"' : '') +
   ' class="' + (o.cls || 'lbl') + '">' + esc(s) + '</text>';
 
+// Several lines of text. "a|b" breaks the line; a Spanish translation may break its lines in other places.
+const lines = (x, y, s, cls, lh = 17, anchor = 'start') => { const full = s.split('|').join(' '), tr = t(full), ls = (tr === full ? s : tr).split('|'); return ls.map((l, k) => txt(x, y + k * lh, l, { anchor, cls })).join(''); };
+const ARROW = '<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="tip"/></marker></defs>';
+
 const FIG = {
   // Shield of the Trinity: each Person "is" God; no Person "is not" another.
   trinity: () => {
@@ -76,7 +80,48 @@ const FIG = {
         cell(C[0], y, r[1], 'sm') + cell(C[1], y, r[2], 'sm') + cell(C[2], y, r[3], 'sm');
     });
     return '<svg viewBox="0 0 360 ' + (top + H * 5 + 26) + '" role="img" aria-label="' + esc(t('God\'s covenants from Adam to Jesus, each one widening God\'s family.')) + '">' + out + '</svg>';
-  }
+  },
+  // Creation, Fall, Redemption: the bonds with God (up and down) and with each other (side to side).
+  salvation: () => {
+    const rows = [
+      ['Creation', 'Made to know and love God,|one family at peace with|him and with each other', 'spoke'],
+      ['Fall', 'Sin breaks both bonds:|with God (up and down) and|with each other (side to side)', 'broken'],
+      ['Redemption', 'Jesus restores both. In his|Church we become one|family of God again', 'spoke']
+    ];
+    const RH = 116;
+    let out = ARROW;
+    rows.forEach(([name, body, cls], i) => {
+      const y = 8 + i * RH, g = [66, y + 16], ps = i === 1 ? [[20, y + 86], [66, y + 96], [112, y + 86]] : [[30, y + 80], [66, y + 90], [102, y + 80]];
+      const ln = (a, b) => '<line x1="' + a[0] + '" y1="' + a[1] + '" x2="' + b[0] + '" y2="' + b[1] + '" class="' + cls + '"/>';
+      if (i === 2) out += '<line x1="66" y1="' + (y + 4) + '" x2="66" y2="' + (y + 72) + '" class="side"/><line x1="44" y1="' + (y + 28) + '" x2="88" y2="' + (y + 28) + '" class="side"/>';
+      else out += ps.map(p => ln(g, p)).join('');
+      out += ln(ps[0], ps[1]) + ln(ps[1], ps[2]);
+      if (i !== 2) out += '<circle cx="' + g[0] + '" cy="' + g[1] + '" r="11" class="core"/>';
+      out += ps.map(p => '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="8" class="node"/>').join('');
+      out += txt(146, y + 26, t(name), { anchor: 'start', cls: 'person' }) + lines(146, y + 50, body, 'lbl', 18);
+      if (i < 2) out += '<line x1="66" y1="' + (y + 104) + '" x2="66" y2="' + (y + RH + 2) + '" class="spoke" marker-end="url(#arr)"/>';
+    });
+    return '<svg viewBox="0 0 360 ' + (8 + RH * 3 - 6) + '" role="img" aria-label="' + esc(t('The story of salvation: in creation we are one family with God; the Fall breaks our bond with God and with each other; Jesus restores both.')) + '">' + out + '</svg>';
+  },
+  // Jesus: one divine Person, two natures. Each early heresy got one part wrong.
+  natures: () => '<svg viewBox="0 0 360 330" role="img" aria-label="' + esc(t('Jesus Christ is one divine Person with two natures, truly God and truly man. Each early heresy denied one part.')) + '">' + ARROW +
+    '<rect x="70" y="10" width="220" height="60" rx="30" class="core"/>' + txt(180, 37, t('Jesus Christ'), { cls: 'god' }) + txt(180, 58, t('one divine Person'), { cls: 'is' }) +
+    '<line x1="140" y1="72" x2="96" y2="116" class="spoke" marker-end="url(#arr)"/><line x1="220" y1="72" x2="264" y2="116" class="spoke" marker-end="url(#arr)"/>' +
+    '<rect x="12" y="122" width="150" height="72" rx="18" class="box"/>' + txt(87, 152, t('Truly God'), { cls: t('Truly God').length > 10 ? 'nm' : 'person' }) + txt(87, 176, t('divine nature'), { cls: 'lbl' }) +
+    '<rect x="198" y="122" width="150" height="72" rx="18" class="box"/>' + txt(273, 152, t('Truly man'), { cls: t('Truly man').length > 10 ? 'nm' : 'person' }) + txt(273, 176, t('human nature'), { cls: 'lbl' }) +
+    '<rect x="163" y="149" width="34" height="18" rx="9" class="pill"/>' + txt(180, 162, t('and'), { cls: 'is' }) +
+    txt(87, 218, t('Denied by'), { cls: 'edge' }) + lines(87, 238, 'Arianism|Adoptionism', 'sm', 16, 'middle') +
+    txt(273, 218, t('Denied by'), { cls: 'edge' }) + lines(273, 238, 'Docetism|Apollinarianism', 'sm', 16, 'middle') +
+    '<line x1="40" y1="270" x2="320" y2="270" class="box"/>' +
+    txt(180, 290, t('Got the union wrong'), { cls: 'edge' }) + lines(180, 309, 'Nestorianism (two persons)|Monophysitism (one blended nature)', 'sm', 16, 'middle') +
+    '</svg>',
+  // The gap of sin, and the Cross that bridges it.
+  bridge: () => '<svg viewBox="0 0 360 226" role="img" aria-label="' + esc(t('Sin opened a gap between God and humanity. The Cross of Jesus, true God and true man, bridges it.')) + '">' +
+    '<path d="M8 74 H122 V218 H8 Z" class="core"/><path d="M238 74 H352 V218 H238 Z" class="box"/>' +
+    txt(65, 150, t('God'), { cls: 'god' }) + lines(295, 144, 'Humanity', 'person', 20, 'middle') +
+    '<path d="M180 16 L180 160" class="leg"/><path d="M30 64 L330 64" class="leg"/>' +
+    txt(180, 196, t('the gap of sin'), { cls: 'edge' }) +
+    '</svg>'
 };
 
 const CAPTION = {
@@ -84,6 +129,9 @@ const CAPTION = {
   faith: 'Faith uses the whole person: the mind believes, and the will trusts.',
   stool: 'Take away any one leg and the stool falls. We need all three.',
   canon: 'The Catholic Bible has 73 books. Most Protestant Bibles have 66.',
+  salvation: 'Creation, Fall, Redemption: the whole Bible in three words.',
+  natures: 'Each early heresy got one part wrong. The Church holds it all together: one Person, truly God and truly man.',
+  bridge: 'Sin opened a gap no human could close. Jesus, God and man, bridges it with his Cross.',
   covenants: 'Each covenant widens God\'s family, from one couple to the whole world. Jesus fulfills them all.'
 };
 
@@ -92,13 +140,21 @@ export function figure(name) {
   return '<figure class="diagram">' + FIG[name]() + (CAPTION[name] ? '<figcaption>' + esc(t(CAPTION[name])) + '</figcaption>' : '') + '</figure>';
 }
 
+// A public-domain painting from Wikimedia Commons, written as "[[art:File_name.jpg|Caption]]".
+// The phone loads it once and the service worker keeps it for offline use. If it cannot load, the figure hides itself.
+export function art(file, caption) {
+  const src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(file) + '?width=800';
+  return '<figure class="art"><img src="' + src + '" alt="' + esc(t(caption)) + '" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.hidden=true">' +
+    '<figcaption>' + esc(t(caption)) + '</figcaption></figure>';
+}
+
 // Turns lesson paragraphs into HTML. Plain paragraphs stay paragraphs; a few simple markers add structure:
-// "## Heading", "> Quote — Author", "- List item", and "[[figure:name]]".
+// "## Heading", "> Quote — Author", "- List item", "[[figure:name]]" and "[[art:File.jpg|Caption]]".
 export function lessonHtml(paras) {
   let html = '', list = [];
   const flush = () => { if (list.length) { html += '<ul class="lesson-list">' + list.map(li => '<li>' + li + '</li>').join('') + '</ul>'; list = []; } };
   paras.forEach(p => {
-    const fig = p.match(/^\[\[figure:([\w-]+)\]\]$/);
+    const fig = p.match(/^\[\[figure:([\w-]+)\]\]$/), pic = p.match(/^\[\[art:([^|\]]+)\|([^\]]+)\]\]$/);
     if (p.startsWith('- ')) {
       const m = p.slice(2).match(/^([^:]{2,40}):\s(.*)$/);
       list.push(m ? '<strong>' + esc(m[1]) + ':</strong> ' + esc(m[2]) : esc(p.slice(2)));
@@ -106,6 +162,7 @@ export function lessonHtml(paras) {
     }
     flush();
     if (fig) html += figure(fig[1]);
+    else if (pic) html += art(pic[1], pic[2]);
     else if (p.startsWith('## ')) html += '<h3>' + esc(p.slice(3)) + '</h3>';
     else if (p.startsWith('> ')) {
       const [q, who] = p.slice(2).split(' — ');

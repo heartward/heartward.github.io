@@ -295,6 +295,20 @@
     ]
   },
   {
+    "id": "anima-christi",
+    "title": "Soul of Christ (Anima Christi)",
+    "category": "Short prayers",
+    "when": "After Holy Communion, or whenever you look at a crucifix.",
+    "text": "Soul of Christ, sanctify me.\nBody of Christ, save me.\nBlood of Christ, inebriate me.\nWater from the side of Christ, wash me.\nPassion of Christ, strengthen me.\nO good Jesus, hear me.\nWithin Thy wounds hide me.\nPermit me not to be separated from Thee.\nFrom the wicked foe defend me.\nAt the hour of my death call me,\nand bid me come to Thee,\nthat with Thy saints I may praise Thee\nforever and ever.\nAmen.",
+    "meaning": "A prayer from the 1300s, loved by St. Ignatius of Loyola. It asks Jesus to make everything he went through in his Passion work in us: his body, blood and wounds become our shelter and our strength.",
+    "sources": [
+      {
+        "title": "John 19:31-37: blood and water from his side",
+        "url": "https://bible.usccb.org/bible/john/19"
+      }
+    ]
+  },
+  {
     "id": "jesus-mary-joseph",
     "title": "Jesus, Mary, and Joseph",
     "category": "Short prayers",

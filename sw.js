@@ -1,5 +1,6 @@
 /* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit. */
-var CACHE = 'heartward-v7';
+var CACHE = 'heartward-v8';
+var ART = 'heartward-art'; // paintings from Wikimedia Commons, kept across app updates
 var SHELL = [
   './',
   'index.html',
@@ -41,13 +42,24 @@ self.addEventListener('install', function (e) {
 
 self.addEventListener('activate', function (e) {
   e.waitUntil(caches.keys().then(function (keys) {
-    return Promise.all(keys.filter(function (k) { return k !== CACHE; }).map(function (k) { return caches.delete(k); }));
+    return Promise.all(keys.filter(function (k) { return k !== CACHE && k !== ART; }).map(function (k) { return caches.delete(k); }));
   }).then(function () { return self.clients.claim(); }));
 });
 
 self.addEventListener('fetch', function (e) {
   var req = e.request;
-  if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
+  if (req.method !== 'GET') return;
+  var host = new URL(req.url).hostname;
+  if (host === 'commons.wikimedia.org' || host === 'upload.wikimedia.org') {
+    // Paintings: from the cache if we have them, otherwise fetch once and keep.
+    e.respondWith(caches.open(ART).then(function (cache) {
+      return cache.match(req).then(function (hit) {
+        return hit || fetch(req).then(function (res) { if (res && (res.ok || res.type === 'opaque')) cache.put(req, res.clone()); return res; });
+      });
+    }));
+    return;
+  }
+  if (new URL(req.url).origin !== self.location.origin) return;
   e.respondWith(caches.open(CACHE).then(function (cache) {
     return cache.match(req, { ignoreSearch: true }).then(function (hit) {
       var fresh = fetch(req).then(function (res) {
