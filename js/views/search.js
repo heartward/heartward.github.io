@@ -1,12 +1,13 @@
 import { data } from '../data.js';
 import { icon } from '../icons.js';
 import { esc, t, head } from '../ui.js';
+import { lessonText } from '../figures.js';
 
 // One search across everything bundled with the app. All local, so it works offline.
 function index() {
   const items = [];
   const add = (group, ic, href, title, sub, body) => items.push({ group, ic, href, title, sub, hay: (title + ' ' + (sub || '') + ' ' + (body || '')).toLowerCase() });
-  data.sessionList.forEach(s => add('Sessions', 'road', '#/session/' + s.id, s.title, s.summary, (s.lesson || []).join(' ') + ' ' + (s.reflection || '') + ' ' + (s.ref || '')));
+  data.sessionList.forEach(s => add('Sessions', 'road', '#/session/' + s.id, s.title, s.summary, lessonText(s.lesson) + ' ' + (s.deeper || []).map(d => d.title + ' ' + d.text).join(' ') + ' ' + (s.reflection || '') + ' ' + (s.ref || '')));
   data.prayers.forEach(p => {
     const es = (data.prayersEs || {})[p.id];
     add('Prayers', 'candle', '#/prayer/' + p.id, p.title, p.when, p.text + (es ? ' ' + es.title + ' ' + es.text : ''));

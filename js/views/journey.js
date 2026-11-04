@@ -2,6 +2,7 @@ import { data, byId } from '../data.js';
 import { state, save, today } from '../store.js';
 import { icon } from '../icons.js';
 import { esc, t, toast, back, head, sources } from '../ui.js';
+import { lessonHtml } from '../figures.js';
 
 export const sessionNo = s => data.sessionList.indexOf(s) + 1;
 export const nextSession = () => data.sessionList.find(s => !state.done[s.id]) || null;
@@ -51,8 +52,9 @@ export function session(id) {
     '<header class="page-head"><div class="kicker">' + esc(t('Session')) + ' ' + sessionNo(s) + ' · ' + esc(t(st.title)) + '</div><h1>' + esc(s.title) + '</h1>' +
     (s.ref ? '<p class="small muted" style="margin:0 0 6px">' + esc(t('Follows')) + ' ' + esc(s.ref) + '</p>' : '') + '<p>' + esc(s.summary) + '</p></header>';
   if (pnote) html += '<div class="parish-note"><div class="eyebrow">' + esc(t('From your parish')) + '</div>' + esc(pnote) + '</div>';
-  if (s.lesson && s.lesson.length) html += '<div class="reading">' + s.lesson.map(p => '<p>' + esc(p) + '</p>').join('') + '</div>';
+  if (s.lesson && s.lesson.length) html += '<div class="reading">' + lessonHtml(s.lesson) + '</div>';
   else html += '<div class="card flat"><p style="margin:0">' + esc(t('This lesson is still being written. Use the journal below to keep your notes from class, and they will be here when you come back.')) + '</p></div>';
+  (s.deeper || []).forEach(d => { html += '<aside class="deeper"><div class="eyebrow">' + esc(t('Digging deeper')) + '</div><h3>' + esc(d.title) + '</h3>' + d.text.split('\n\n').map(p => '<p>' + esc(p) + '</p>').join('') + '</aside>'; });
   if (s.reflection) html += '<div class="reflection"><div class="eyebrow">' + esc(t('Reflect')) + '</div><p>' + esc(s.reflection) + '</p></div>';
   if (s.prayers && s.prayers.length) {
     html += '<div class="section-title"><h2>' + esc(t('Prayers for this week')) + '</h2></div><div class="chips">' + s.prayers.map(pid => {
