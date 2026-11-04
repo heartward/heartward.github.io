@@ -12,7 +12,7 @@
     {
       "id": "catechumenate",
       "title": "Catechumenate",
-      "subtitle": "Learning the faith, week by week",
+      "subtitle": "Learning the faith with Symbolon, week by week",
       "milestone": {
         "title": "Rite of Election",
         "about": "Usually on the first Sunday of Lent, with the bishop. Your name is written in the Book of the Elect: the Church chooses you for the sacraments at Easter."
@@ -59,34 +59,6 @@
       "status": "draft"
     },
     {
-      "id": "s02",
-      "stage": "inquiry",
-      "title": "Who is God?",
-      "summary": "God made us for himself, and has shown us who he is.",
-      "lesson": [
-        "Every person carries a longing for something more: for meaning, for love that lasts, for truth. The Church teaches that this desire is written in our hearts because we were made by God and for God. Saint Augustine put it this way: \"Our heart is restless until it rests in you.\"",
-        "We can know something about God by looking at creation and by listening to our conscience. But God did not leave us guessing. He revealed himself step by step: to Abraham, to Moses, through the prophets, and fully in Jesus Christ.",
-        "Christians believe in one God who is a communion of love: Father, Son, and Holy Spirit. That is why we begin our prayers \"in the name of the Father, and of the Son, and of the Holy Spirit.\"",
-        "Most importantly, God is not distant. \"God is love\" (1 John 4:8). He knows your name and wants a relationship with you."
-      ],
-      "reflection": "When have you felt a longing for God, or sensed that there must be something more?",
-      "prayers": [
-        "sign-of-the-cross",
-        "glory-be"
-      ],
-      "sources": [
-        {
-          "title": "1 John 4:7-16, God is love",
-          "url": "https://bible.usccb.org/bible/1john/4"
-        },
-        {
-          "title": "Catechism, paragraphs 27-49: our desire for God",
-          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
-        }
-      ],
-      "status": "draft"
-    },
-    {
       "id": "s03",
       "stage": "inquiry",
       "title": "Prayer: talking with God",
@@ -116,9 +88,48 @@
       "status": "draft"
     },
     {
-      "id": "s04",
-      "stage": "inquiry",
-      "title": "The Bible: God's word",
+      "id": "sym1-01",
+      "stage": "catechumenate",
+      "title": "The journey of faith: the Trinity, faith, and the God who is love",
+      "summary": "God made us for himself, and has shown us who he is.",
+      "prayers": [
+        "sign-of-the-cross",
+        "glory-be"
+      ],
+      "sources": [
+        {
+          "title": "1 John 4:7-16, God is love",
+          "url": "https://bible.usccb.org/bible/1john/4"
+        },
+        {
+          "title": "Catechism, paragraphs 27-49: our desire for God",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 1",
+      "lesson": [
+        "Every person carries a longing for something more: for meaning, for love that lasts, for truth. The Church teaches that this desire is written in our hearts because we were made by God and for God. Saint Augustine put it this way: \"Our heart is restless until it rests in you.\"",
+        "We can know something about God by looking at creation and by listening to our conscience. But God did not leave us guessing. He revealed himself step by step: to Abraham, to Moses, through the prophets, and fully in Jesus Christ.",
+        "Christians believe in one God who is a communion of love: Father, Son, and Holy Spirit. That is why we begin our prayers \"in the name of the Father, and of the Son, and of the Holy Spirit.\"",
+        "Most importantly, God is not distant. \"God is love\" (1 John 4:8). He knows your name and wants a relationship with you."
+      ],
+      "reflection": "When have you felt a longing for God, or sensed that there must be something more?"
+    },
+    {
+      "id": "sym1-02",
+      "stage": "catechumenate",
+      "title": "Divine Revelation: God seeking us",
+      "summary": "God speaks to us through Scripture and Tradition, a compass for our lives.",
+      "prayers": [],
+      "sources": [],
+      "status": "outline",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 2"
+    },
+    {
+      "id": "sym1-03",
+      "stage": "catechumenate",
+      "title": "The Bible: God's love letter",
       "summary": "How the Bible is put together, and how Catholics read it.",
       "prayers": [],
       "sources": [
@@ -127,13 +138,14 @@
           "url": "https://bible.usccb.org/"
         }
       ],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 3"
     },
     {
-      "id": "s05",
+      "id": "sym1-04",
       "stage": "catechumenate",
-      "title": "Creation and the fall",
-      "summary": "God made a good world; sin wounded it.",
+      "title": "The story of salvation: creation, fall, and redemption",
+      "summary": "God made a good world; sin wounded it; God set out to save us.",
       "prayers": [],
       "sources": [
         {
@@ -141,22 +153,14 @@
           "url": "https://bible.usccb.org/bible/genesis/1"
         }
       ],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 4"
     },
     {
-      "id": "s06",
+      "id": "sym1-05",
       "stage": "catechumenate",
-      "title": "God's covenant: Abraham, Moses, the prophets",
-      "summary": "God's promises to his people, preparing for Jesus.",
-      "prayers": [],
-      "sources": [],
-      "status": "outline"
-    },
-    {
-      "id": "s07",
-      "stage": "catechumenate",
-      "title": "Jesus Christ: true God and true man",
-      "summary": "Who Jesus is, and why it matters.",
+      "title": "Who is Jesus?",
+      "summary": "True God and true man: just a good teacher, or Lord of our lives?",
       "prayers": [
         "apostles-creed"
       ],
@@ -166,185 +170,172 @@
           "url": "https://bible.usccb.org/bible/john/1"
         }
       ],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 5"
     },
     {
-      "id": "s08",
+      "id": "sym1-06",
       "stage": "catechumenate",
-      "title": "The cross and the resurrection",
-      "summary": "Jesus' death and rising: the center of our faith.",
+      "title": "The Paschal Mystery",
+      "summary": "Jesus' death and resurrection: the center of our faith.",
       "prayers": [],
       "sources": [],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 6"
     },
     {
-      "id": "s09",
+      "id": "sym1-07",
       "stage": "catechumenate",
-      "title": "The Holy Spirit",
-      "summary": "The Spirit who gives life to the Church and to us.",
+      "title": "The Holy Spirit and the life of grace",
+      "summary": "God's own life within us.",
       "prayers": [],
       "sources": [
         {
-          "title": "Acts 2",
+          "title": "Acts 2, Pentecost",
           "url": "https://bible.usccb.org/bible/acts/2"
         }
       ],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 7"
     },
     {
-      "id": "s10",
+      "id": "sym1-08",
       "stage": "catechumenate",
-      "title": "The Trinity",
-      "summary": "One God, three Persons, a communion of love.",
-      "prayers": [
-        "glory-be"
-      ],
-      "sources": [],
-      "status": "outline"
-    },
-    {
-      "id": "s11",
-      "stage": "catechumenate",
-      "title": "The Church",
-      "summary": "One, holy, catholic and apostolic: what the Church is.",
+      "title": "Why do I need the Church?",
+      "summary": "The mystery of the Church Jesus founded.",
       "prayers": [],
       "sources": [],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 8"
     },
     {
-      "id": "s12",
+      "id": "sym1-09",
       "stage": "catechumenate",
       "title": "Mary and the saints",
-      "summary": "Why Catholics honor Mary and ask the saints to pray for us.",
+      "summary": "Our spiritual mother and the communion of saints.",
       "prayers": [
         "hail-mary"
       ],
       "sources": [],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 9"
     },
     {
-      "id": "s13",
+      "id": "sym1-10",
       "stage": "catechumenate",
-      "title": "Scripture and Tradition",
-      "summary": "How God's word is handed on.",
+      "title": "The last things",
+      "summary": "What happens after we die: judgment, heaven, hell, and purgatory.",
       "prayers": [],
       "sources": [],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 10"
     },
     {
-      "id": "s14",
+      "id": "sym2-01",
       "stage": "catechumenate",
-      "title": "The Mass, part 1: the Liturgy of the Word",
-      "summary": "What happens in the first half of Mass.",
+      "title": "Baptism and Confirmation",
+      "summary": "New life in Christ, sealed with the Holy Spirit.",
       "prayers": [],
       "sources": [],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 2: Living the Faith · Session 1"
     },
     {
-      "id": "s15",
+      "id": "sym2-02",
       "stage": "catechumenate",
-      "title": "The Mass, part 2: the Liturgy of the Eucharist",
-      "summary": "The heart of the Mass.",
-      "prayers": [],
-      "sources": [],
-      "status": "outline"
-    },
-    {
-      "id": "s16",
-      "stage": "catechumenate",
-      "title": "The Church year",
-      "summary": "Advent, Christmas, Lent, Easter and Ordinary Time.",
-      "prayers": [],
-      "sources": [],
-      "status": "outline"
-    },
-    {
-      "id": "s17",
-      "stage": "catechumenate",
-      "title": "The sacraments",
-      "summary": "Seven signs through which Christ gives us his grace.",
-      "prayers": [],
-      "sources": [],
-      "status": "outline"
-    },
-    {
-      "id": "s18",
-      "stage": "catechumenate",
-      "title": "Baptism",
-      "summary": "New life in Christ.",
-      "prayers": [],
-      "sources": [],
-      "status": "outline"
-    },
-    {
-      "id": "s19",
-      "stage": "catechumenate",
-      "title": "Confirmation",
-      "summary": "Sealed with the gift of the Holy Spirit.",
-      "prayers": [],
-      "sources": [],
-      "status": "outline"
-    },
-    {
-      "id": "s20",
-      "stage": "catechumenate",
-      "title": "The Eucharist",
+      "title": "The Eucharist: source and summit",
       "summary": "Jesus truly present in the bread and wine.",
       "prayers": [],
       "sources": [
         {
-          "title": "John 6",
+          "title": "John 6, the Bread of Life",
           "url": "https://bible.usccb.org/bible/john/6"
         }
       ],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 2: Living the Faith · Session 2"
     },
     {
-      "id": "s21",
+      "id": "sym2-03",
       "stage": "catechumenate",
-      "title": "Reconciliation",
-      "summary": "God's mercy in confession.",
+      "title": "A walk through the Mass",
+      "summary": "What happens at each part of the Mass, and why.",
+      "prayers": [],
+      "sources": [],
+      "status": "outline",
+      "ref": "Symbolon Part 2: Living the Faith · Session 3"
+    },
+    {
+      "id": "sym2-04",
+      "stage": "catechumenate",
+      "title": "Penance and Anointing of the Sick",
+      "summary": "God's mercy in confession, and his care for the sick.",
       "prayers": [
         "act-of-contrition"
       ],
       "sources": [],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 2: Living the Faith · Session 4"
     },
     {
-      "id": "s22",
+      "id": "sym2-05",
       "stage": "catechumenate",
-      "title": "Anointing of the Sick",
-      "summary": "Christ's care for the sick and suffering.",
+      "title": "Matrimony and Holy Orders",
+      "summary": "The sacraments of service and communion.",
       "prayers": [],
       "sources": [],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 2: Living the Faith · Session 5"
     },
     {
-      "id": "s23",
+      "id": "sym2-06",
       "stage": "catechumenate",
-      "title": "Marriage and Holy Orders",
-      "summary": "Sacraments of love and service.",
+      "title": "A Catholic moral vision",
+      "summary": "Virtue, grace, and the path to happiness.",
       "prayers": [],
       "sources": [],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 2: Living the Faith · Session 6"
     },
     {
-      "id": "s24",
+      "id": "sym2-07",
       "stage": "catechumenate",
-      "title": "Living as a disciple: conscience and the commandments",
-      "summary": "How Christians make moral choices.",
+      "title": "A love that lasts: discovering authentic love",
+      "summary": "What real love is, and where it comes from.",
       "prayers": [],
       "sources": [],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 2: Living the Faith · Session 7"
     },
     {
-      "id": "s25",
+      "id": "sym2-08",
       "stage": "catechumenate",
-      "title": "Love your neighbor",
-      "summary": "Catholic social teaching and caring for others.",
+      "title": "A love that lasts: God's plan for sexuality",
+      "summary": "The Church's vision of the body, love, and family.",
       "prayers": [],
       "sources": [],
-      "status": "outline"
+      "status": "outline",
+      "ref": "Symbolon Part 2: Living the Faith · Session 8"
+    },
+    {
+      "id": "sym2-09",
+      "stage": "catechumenate",
+      "title": "Catholic social teaching: a civilization of love",
+      "summary": "Caring for the poor and building a just society.",
+      "prayers": [],
+      "sources": [],
+      "status": "outline",
+      "ref": "Symbolon Part 2: Living the Faith · Session 9"
+    },
+    {
+      "id": "sym2-10",
+      "stage": "catechumenate",
+      "title": "Catholic social teaching: the dignity of every person",
+      "summary": "Why every human life is sacred.",
+      "prayers": [],
+      "sources": [],
+      "status": "outline",
+      "ref": "Symbolon Part 2: Living the Faith · Session 10"
     },
     {
       "id": "s26",
