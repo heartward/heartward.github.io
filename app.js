@@ -132,6 +132,7 @@
     var done = !!state.done[s.id];
     var html = '<a class="back" href="#/journey">‹ Journey</a>' +
       '<div class="eyebrow">Session ' + sessionNumber(s) + ' · ' + esc(st ? st.title : '') + '</div>' +
+      (s.ref ? '<p class="small muted" style="margin:0 0 6px">Follows ' + esc(s.ref) + '</p>' : '') +
       '<h1>' + esc(s.title) + '</h1><p class="muted">' + esc(s.summary) + '</p>';
     if (s.lesson && s.lesson.length) {
       html += '<div class="reading">' + s.lesson.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') + '</div>';
