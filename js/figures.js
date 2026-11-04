@@ -39,13 +39,52 @@ const FIG = {
     '<path d="M70 120 L52 236" class="leg"/><path d="M290 120 L308 236" class="leg"/><path d="M180 136 L180 252" class="leg"/>' +
     '<ellipse cx="180" cy="104" rx="128" ry="36" class="core"/>' + txt(180, 111, t('Church'), { cls: 'god' }) +
     txt(52, 266, t('Scripture'), { cls: 'person' }) + txt(308, 266, t('Tradition'), { cls: 'person' }) + txt(180, 282, t('Magisterium'), { cls: 'person' }) +
-    '</svg>'
+    '</svg>',
+  // The 73 books of the Catholic Bible, grouped by kind.
+  canon: () => {
+    const groups = [
+      [t('Old Testament'), 46, [[t('Pentateuch (Law)'), 5], [t('Historical books'), 16], [t('Wisdom books'), 7], [t('Prophets'), 18]]],
+      [t('New Testament'), 27, [[t('Gospels'), 4], [t('Acts of the Apostles'), 1], [t('Letters of Paul'), 13], [t('Other letters'), 8], [t('Revelation'), 1]]]
+    ];
+    let y = 8, out = '';
+    groups.forEach(([name, n, parts]) => {
+      out += txt(12, y + 20, name, { anchor: 'start', cls: 'person' }) + txt(348, y + 20, n + ' ' + t('books'), { anchor: 'end', cls: 'god' });
+      y += 32;
+      parts.forEach(([p, k]) => {
+        const w = Math.max(30, Math.round(k / 18 * 190));
+        out += txt(12, y + 17, p, { anchor: 'start', cls: 'lbl' }) + '<rect x="150" y="' + (y + 4) + '" width="' + w + '" height="18" rx="9" class="core"/>' + txt(150 + w + 8, y + 18, String(k), { anchor: 'start', cls: 'is' });
+        y += 26;
+      });
+      y += 10;
+    });
+    return '<svg viewBox="0 0 360 ' + y + '" role="img" aria-label="' + esc(t('The 73 books of the Catholic Bible: 46 in the Old Testament and 27 in the New Testament.')) + '">' + out + '</svg>';
+  },
+  // God's covenants, from Adam to Jesus: each one wider than the last.
+  covenants: () => {
+    const rows = [
+      ['Adam', 'Husband', 'Marriage', 'Sabbath'], ['Noah', 'Father', 'Household', 'Rainbow'], ['Abraham', 'Chieftain', 'Tribe', 'Circumcision'],
+      ['Moses', 'Judge', 'Nation', 'Passover'], ['David', 'King', 'Kingdom', 'Throne'], ['Jesus', 'Priest-King', 'Universal|Church', 'Eucharist']
+    ];
+    const C = [112, 194, 268], H = 50, top = 44;
+    const cell = (x, y, s, cls) => { const full = s.replace('|', ' '), tr = t(full), lines = (tr === full ? s : tr).split('|'); return lines.map((l, k) => txt(x, y + 5 + (k - (lines.length - 1) / 2) * 15, l, { anchor: 'start', cls })).join(''); };
+    let out = txt(16, 20, t('With'), { anchor: 'start', cls: 'edge' }) + txt(C[0], 20, t('Role'), { anchor: 'start', cls: 'edge' }) + txt(C[1], 20, t('Family'), { anchor: 'start', cls: 'edge' }) + txt(C[2], 20, t('Sign'), { anchor: 'start', cls: 'edge' });
+    out += '<line x1="22" y1="' + top + '" x2="22" y2="' + (top + H * 5) + '" class="spoke"/>';
+    rows.forEach((r, i) => {
+      const y = top + i * H, last = i === rows.length - 1;
+      out += '<circle cx="22" cy="' + y + '" r="' + (5 + i * 1.4) + '" class="' + (last ? 'node' : 'core') + '"/>' +
+        txt(40, y + 5, t(r[0]), { anchor: 'start', cls: last ? 'nm hi' : 'nm' }) +
+        cell(C[0], y, r[1], 'sm') + cell(C[1], y, r[2], 'sm') + cell(C[2], y, r[3], 'sm');
+    });
+    return '<svg viewBox="0 0 360 ' + (top + H * 5 + 26) + '" role="img" aria-label="' + esc(t('God\'s covenants from Adam to Jesus, each one widening God\'s family.')) + '">' + out + '</svg>';
+  }
 };
 
 const CAPTION = {
   trinity: 'Read each line out loud: "The Father is God. The Father is not the Son." Three Persons, one God.',
   faith: 'Faith uses the whole person: the mind believes, and the will trusts.',
-  stool: 'Take away any one leg and the stool falls. We need all three.'
+  stool: 'Take away any one leg and the stool falls. We need all three.',
+  canon: 'The Catholic Bible has 73 books. Most Protestant Bibles have 66.',
+  covenants: 'Each covenant widens God\'s family, from one couple to the whole world. Jesus fulfills them all.'
 };
 
 export function figure(name) {

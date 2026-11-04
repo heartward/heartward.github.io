@@ -397,3 +397,7 @@ input[type=file] { display: none; }
 .deeper h3 { font-family: var(--serif); margin: 2px 0 8px; font-size: 1.15rem; }
 .deeper p { margin: 0 0 8px; line-height: 1.6; }
 .diagram .leg { stroke: var(--accent); stroke-width: 12; stroke-linecap: round; fill: none; }
+.diagram .sm { font-size: 12.5px; fill: var(--text); }
+.diagram .nm { font-size: 15px; font-weight: 700; }
+.diagram .nm.hi { fill: var(--accent-ink); }
+.diagram .sm { font-size: 12px; }
