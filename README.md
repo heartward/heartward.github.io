@@ -1,26 +1,60 @@
 # Heartward
 
-A free, offline-friendly companion for people walking the journey into the Catholic faith (OCIA): session-by-session lessons, a prayer library with a practice mode, questions and answers, and progress that lights up a path.
+A free, offline companion for people walking the journey into the Catholic faith (OCIA), and for those who come back to it. Named for the disciples on the road to Emmaus (Luke 24:32).
 
 Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 
+## What is inside
+
+- **Today**: the current Church season, your progress ring, what is next, the Rosary of the day, feast days, your anniversaries and your patron saint's feast.
+- **Journey**: the road to Easter, following the Symbolon sessions in four stages with their rites. Each session has a lesson, a reflection, prayers, sources and a private journal. After Easter: a first-year path and a welcome-back path.
+- **Pray**: 12 prayers in English and Spanish with a practice mode, a step-by-step Rosary with beads, a confession guide with an examination of conscience, and calendar reminders.
+- **Learn**: Mass guide (when to sit, stand or kneel), first-week basics, questions, glossary, a saint finder and the Church calendar.
+- **Me**: journal, weekly habits, sacrament dates and anniversaries, friends on the journey, getting involved, parish info, settings (text size, dark mode, Spanish), backup and a QR code to share the app.
+- **Search** across everything, offline.
+
 ## How it works
 
-- Plain HTML, CSS and JavaScript. No build step, no server, no accounts.
-- Progress is saved only in the visitor's browser. The Home page has Save backup / Restore backup buttons.
-- A service worker caches everything, so the app works offline after the first visit and can be added to the home screen.
+- Plain HTML, CSS and JavaScript modules. No build step, no server, no accounts, no ads.
+- Personal data stays in the browser (`localStorage`). Settings has Save backup / Restore.
+- Reminders are calendar files (`.ics`) that the phone's own calendar runs.
+- A service worker caches everything, so the app works offline and can be added to the home screen.
 
-## Editing content
+## Files
 
-All content lives in `content/`:
-
-| File | What it holds |
+| Path | What it holds |
 | --- | --- |
-| `sessions.json` | The four stages (with their rites) and every session: title, summary, lesson paragraphs, reflection question, prayer ids, sources. `status` is `draft` (written) or `outline` (title only, shows "coming soon"). |
-| `prayers.json` | Each prayer: text, when it is prayed, what it means, sources. |
-| `faq.json` | Questions and answers. |
+| `index.html`, `css/styles.css` | Page shell and design |
+| `js/main.js` | Routes and app chrome |
+| `js/views/*.js` | One file per section: today, journey, pray, learn, me, search |
+| `js/liturgy.js` | Easter date, moveable feasts and seasons, computed on the device |
+| `js/i18n-es.js` | Spanish menu text |
+| `content/en/sessions.json` | Stages, rites and sessions. `status` is `draft` (written) or `outline` |
+| `content/en/prayers.json` | Prayers with category, text, meaning and sources |
+| `content/en/guides.json` | Mass, basics, confession and Rosary guides |
+| `content/en/faq.json`, `glossary.json`, `saints.json`, `calendar.json`, `paths.json` | Questions, words, saints, feasts, and the first-year, welcome-back and get-involved paths |
+| `content/es/prayers.json` | Spanish prayer texts |
+| `content/parish.json` | Settings for one parish (see below) |
 
-After changing content, bump `CACHE` in `sw.js` (for example `heartward-v2`) so returning visitors get the update.
+## Setting it up for a parish
+
+Fork the repo and edit `content/parish.json`:
+
+```json
+{
+  "name": "St. Mary's",
+  "program": "Symbolon",
+  "meets": "Tuesdays at 7 pm, parish hall",
+  "welcome": "We are glad you are here.",
+  "contacts": [{ "name": "Ana", "role": "OCIA coordinator", "phone": "555-0100", "email": "ocia@example.org" }],
+  "notes": { "sym1-03": "Bring a Bible to class this week." },
+  "order": ["s01", "sym1-01", "s03"]
+}
+```
+
+`notes` adds a parish note to a session by its id. `order` (optional) lists session ids in your parish's order; sessions not listed are hidden.
+
+After changing any file, bump `CACHE` in `sw.js` (for example `heartward-v4`) so returning visitors get the update.
 
 ## Run locally
 
