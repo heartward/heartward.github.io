@@ -54,7 +54,7 @@ export function session(id) {
   if (pnote) html += '<div class="parish-note"><div class="eyebrow">' + esc(t('From your parish')) + '</div>' + esc(pnote) + '</div>';
   if (s.lesson && s.lesson.length) html += '<div class="reading">' + lessonHtml(s.lesson) + '</div>';
   else html += '<div class="card flat"><p style="margin:0">' + esc(t('This lesson is still being written. Use the journal below to keep your notes from class, and they will be here when you come back.')) + '</p></div>';
-  (s.deeper || []).forEach(d => { html += '<aside class="deeper"><div class="eyebrow">' + esc(t('Digging deeper')) + '</div><h3>' + esc(d.title) + '</h3>' + d.text.split('\n\n').map(p => '<p>' + esc(p) + '</p>').join('') + '</aside>'; });
+  (s.deeper || []).forEach(d => { html += '<aside class="deeper"><div class="eyebrow">' + esc(t('Digging deeper')) + '</div><h3>' + esc(d.title) + '</h3>' + lessonHtml(d.text.split('\n\n')) + '</aside>'; });
   if (s.reflection) html += '<div class="reflection"><div class="eyebrow">' + esc(t('Reflect')) + '</div><p>' + esc(s.reflection) + '</p></div>';
   if (s.prayers && s.prayers.length) {
     html += '<div class="section-title"><h2>' + esc(t('Prayers for this week')) + '</h2></div><div class="chips">' + s.prayers.map(pid => {

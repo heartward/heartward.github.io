@@ -225,16 +225,72 @@
       "id": "sym1-03",
       "stage": "catechumenate",
       "title": "The Bible: God's love letter",
-      "summary": "How the Bible is put together, and how Catholics read it.",
-      "prayers": [],
+      "summary": "The Bible is God's love letter to his children: inspired by the Holy Spirit, read with the Church, and meant to be prayed.",
+      "prayers": [
+        "sign-of-the-cross",
+        "glory-be",
+        "act-of-faith"
+      ],
       "sources": [
+        {
+          "title": "Today's Mass readings (US bishops)",
+          "url": "https://bible.usccb.org/daily-bible-reading"
+        },
         {
           "title": "Read the Bible online (US bishops)",
           "url": "https://bible.usccb.org/"
+        },
+        {
+          "title": "Luke 22:14-20, the new covenant",
+          "url": "https://bible.usccb.org/bible/luke/22"
+        },
+        {
+          "title": "Dei Verbum (Vatican II on Divine Revelation)",
+          "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html"
+        },
+        {
+          "title": "Catechism 101-141: Sacred Scripture",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
         }
       ],
-      "status": "outline",
-      "ref": "Symbolon Part 1: Knowing the Faith · Session 3"
+      "status": "draft",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 3",
+      "lesson": [
+        "The Bible is not a dry history book or a collection of moral fables where the good guy always wins. It is the story of a God who comes looking for the lost and saves them at great cost to himself. Think of it as a long love letter from a Father to his children who are still on the road home.",
+        "## Inspired by the Holy Spirit",
+        "- The Word of God in human words: Scripture is God speaking to us through the language of people (Catechism 101).",
+        "- Two authors at once: God is the author of Scripture. He inspired human writers who were real authors too, using their own language, style and abilities, yet they wrote what God wanted written, and nothing more (Catechism 105-106).",
+        "- Always true: because the Holy Spirit stands behind what the human authors affirm, Scripture teaches faithfully and without error the truth God wanted written for our salvation (Catechism 107).",
+        "## Reading it the Catholic way",
+        "Catholics do not read the Bible literalistically, as if every sentence were a newspaper report. We read it literarily: paying attention to what each human author meant to say, and to what God wants to reveal through them (Catechism 109-114).",
+        "That means asking about the time and culture it was written in, and the kind of writing it is. The Bible contains history, prophecy, poetry, law, letters and more, and each tells the truth in its own way (Catechism 110). A psalm is read like a song, not like a legal document.",
+        "## The four senses of Scripture",
+        "An ancient tradition sees two main levels of meaning in Scripture: the literal and the spiritual. The spiritual sense has three parts (Catechism 115-118).",
+        "- Literal: what the words actually mean, found through careful study. Every other sense is built on this one.",
+        "- Allegorical: how events point to Christ. For example, Israel crossing the Red Sea is a sign of Baptism.",
+        "- Moral: how the text teaches us to live justly. St. Paul says these things were written \"for our instruction\" (1 Corinthians 10:11).",
+        "- Anagogical: from a Greek word meaning \"leading up.\" How events point to our eternal destiny. Jerusalem, for example, points to the heavenly city.",
+        "> The Letter speaks of deeds; Allegory to faith; The Moral how to act; Anagogy our destiny. — Medieval saying, quoted in the Catechism 118",
+        "## Which books belong: the canon",
+        "All of Scripture tells one story, the story of salvation that reaches its climax in Jesus. The Old Testament prepares for the New, and the New fulfills the Old (Catechism 121-123, 128-129).",
+        "Guided by the Holy Spirit through apostolic Tradition, the Church discerned which books belong in the Bible. That complete list is called the canon (Catechism 120): 46 books in the Old Testament and 27 in the New, 73 in all.",
+        "[[figure:canon]]",
+        "Most Protestant Bibles have 66 books. During the Reformation, Martin Luther moved seven Old Testament books into a separate section, and later Protestant Bibles dropped them: Tobit, Judith, Wisdom, Sirach, Baruch, and 1 and 2 Maccabees, along with parts of Esther and Daniel. Catholics call these the deuterocanonical books. They were in the Greek Old Testament used by the early Christians, and the Church has always counted them as Scripture.",
+        "## How to start reading and praying the Bible",
+        "The Church has always seen Scripture as food for Christian life (Catechism 131). St. Jerome put it bluntly: \"Ignorance of Scripture is ignorance of Christ\" (Catechism 133).",
+        "> The Holy Bible is like a mirror before our mind's eye. In it we see our inner face. — Pope St. Gregory the Great",
+        "- Start with Sunday: you already hear Scripture at every Mass. Read the Sunday readings ahead of time. Magazines and apps like The Word Among Us and Magnificat give each day's readings with a short meditation and prayer.",
+        "- Make it part of daily prayer: read one of the Gospels, a chapter or even a few verses a day. The Psalms are great for prayer too; many are prayers of King David, written in good times and bad.",
+        "- Just begin: God speaks to you personally through Scripture. Even one line can bring insight or comfort. The Word of God is for everyone, so do not worry about how much you know.",
+        "Mother Angelica, the American nun who founded EWTN, used to say that the Gospel is not only a record of the past: it is a guide for living today, so we read it to put it into practice."
+      ],
+      "deeper": [
+        {
+          "title": "Covenant: the thread through the whole Bible",
+          "text": "A covenant is a sacred bond. A contract exchanges property and makes promises; a covenant exchanges persons and is sealed with a solemn oath, making people family. That is why Scripture is better read as a family story than a courtroom drama: God is a Father, not just a judge.\n\nAll through the Old Testament, God makes covenants with his people, and each one widens his family: a couple (Adam), a household (Noah), a tribe (Abraham), a nation (Moses), a kingdom (David). Again and again the people break their side of the covenant, and they suffer the consequences.\n\nJesus establishes the New Covenant. He keeps it perfectly, takes on himself the curse of our broken promises, and opens God's family to the whole world. He is the one mediator between God and humanity (1 Timothy 2:5), and the sign of this covenant is the Eucharist: \"This cup is the new covenant in my blood\" (Luke 22:20).\n\n[[figure:covenants]]"
+        }
+      ],
+      "reflection": "Choose one Gospel and read a few verses each day this week. Which line stayed with you, and why?"
     },
     {
       "id": "sym1-04",

@@ -214,5 +214,25 @@
   {
     "term": "Deposit of faith",
     "def": "Everything God has revealed, contained in Scripture and Tradition and entrusted by the apostles to the Church."
+  },
+  {
+    "term": "Inspiration",
+    "def": "The Holy Spirit's action guiding the human authors of the Bible so that they wrote what God wanted written."
+  },
+  {
+    "term": "Canon of Scripture",
+    "def": "The official list of books the Church recognizes as the Bible: 73 books, 46 in the Old Testament and 27 in the New."
+  },
+  {
+    "term": "Deuterocanonical books",
+    "def": "Seven Old Testament books (Tobit, Judith, Wisdom, Sirach, Baruch, 1 and 2 Maccabees) plus parts of Esther and Daniel, found in Catholic Bibles but not in most Protestant ones."
+  },
+  {
+    "term": "Covenant",
+    "def": "A sacred bond, sealed with an oath, by which God makes people his family. Jesus established the New Covenant."
+  },
+  {
+    "term": "Senses of Scripture",
+    "def": "The ways of reading the Bible: the literal sense, and the spiritual sense with its allegorical, moral and anagogical parts."
   }
 ]
