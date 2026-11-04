@@ -370,6 +370,9 @@ export const ES = {
   'of': 'de',
 
   // Lessons 4-6 figures and art
+  "Andrei Rublev, The Trinity (about 1410): the three visitors to Abraham, an image of the Father, the Son and the Holy Spirit": "Andréi Rubliov, La Trinidad (hacia 1410): los tres visitantes de Abraham, imagen del Padre, el Hijo y el Espíritu Santo",
+  "Rembrandt, The Return of the Prodigal Son (about 1668): the Father who comes looking for us": "Rembrandt, El regreso del hijo pródigo (hacia 1668): el Padre que sale a buscarnos",
+  "Caravaggio, Saint Jerome Writing (about 1606): Jerome translated the Bible into Latin": "Caravaggio, San Jerónimo escribiendo (hacia 1606): Jerónimo tradujo la Biblia al latín",
   "Creation": "Creación",
   "Fall": "Caída",
   "Redemption": "Redención",

@@ -27,7 +27,7 @@ const FIG = {
       '<circle cx="' + G[0] + '" cy="' + G[1] + '" r="30" class="core"/>' + txt(G[0], G[1] + 6, t('God'), { cls: 'god' }) +
       '<circle cx="' + F[0] + '" cy="' + F[1] + '" r="9" class="node"/>' + txt(F[0], F[1] - 20, t('Father'), { cls: 'person' }) +
       '<circle cx="' + S[0] + '" cy="' + S[1] + '" r="9" class="node"/>' + txt(S[0], S[1] + 38, t('Son (Jesus)'), { cls: 'person' }) +
-      '<circle cx="' + H[0] + '" cy="' + H[1] + '" r="9" class="node"/>' + txt(H[0], H[1] + 38, t('Holy Spirit'), { cls: 'person' }) +
+      '<circle cx="' + H[0] + '" cy="' + H[1] + '" r="9" class="node"/>' + txt(H[0] + 12, H[1] + 38, t('Holy Spirit'), { cls: 'person' }) +
       '</svg>';
   },
   // Faith involves the whole person: the mind believes and the will entrusts.
