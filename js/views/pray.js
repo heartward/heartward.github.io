@@ -1,5 +1,5 @@
 import { data, byId } from '../data.js';
-import { state, save } from '../store.js';
+import { state, save, SPANISH } from '../store.js';
 import { icon } from '../icons.js';
 import { esc, t, toast, back, head, sources, tile, acc, download, ics } from '../ui.js';
 import { rosaryForDay } from '../liturgy.js';
@@ -43,7 +43,7 @@ function practiceHtml(text, level) {
 export function prayer(id) {
   const p = byId(data.prayers, id);
   if (!p) return { html: back('#/pray', t('Pray')) + '<p class="empty">' + esc(t('Not found')) + '</p>' };
-  const es = data.prayersEs[id];
+  const es = SPANISH ? data.prayersEs[id] : null;
   let lang = state.settings.lang === 'es' && es ? 'es' : 'en';
   const l = !!state.learned[p.id];
   const textFor = () => lang === 'es' && es ? es.text : p.text;

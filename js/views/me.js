@@ -1,5 +1,5 @@
 import { data, byId } from '../data.js';
-import { state, save, weekKey, replaceState, localISO } from '../store.js';
+import { state, save, weekKey, replaceState, localISO, SPANISH } from '../store.js';
 import { icon } from '../icons.js';
 import { esc, t, toast, back, head, row, download, ics, parseISO, fmtDate, safeUrl } from '../ui.js';
 import { progress } from './journey.js';
@@ -155,8 +155,8 @@ export function settings() {
   const html = back('#/me', t('Me')) + head(t('App'), t('Settings'), '') +
     '<div class="card"><div class="eyebrow">' + esc(t('Text size')) + '</div>' + seg('size', [['small', 'A−'], ['normal', 'A'], ['large', 'A+'], ['xlarge', 'A++']]) +
     '<div class="eyebrow" style="margin-top:18px">' + esc(t('Appearance')) + '</div>' + seg('theme', [['system', esc(t('Auto'))], ['light', esc(t('Light'))], ['dark', esc(t('Dark'))]]) +
-    '<div class="eyebrow" style="margin-top:18px">' + esc(t('Language')) + '</div>' + seg('lang', [['en', 'English'], ['es', 'Español']]) +
-    '<p class="small muted" style="margin:10px 0 0">' + esc(t('Spanish covers the app\'s menus and the prayers. Lessons are in English for now.')) + '</p></div>' +
+    (SPANISH ? '<div class="eyebrow" style="margin-top:18px">' + esc(t('Language')) + '</div>' + seg('lang', [['en', 'English'], ['es', 'Español']]) +
+    '<p class="small muted" style="margin:10px 0 0">' + esc(t('Spanish covers the app\'s menus and the prayers. Lessons are in English for now.')) + '</p>' : '') + '</div>' +
     '<div class="section-title"><h2>' + esc(t('Backup')) + '</h2></div><div class="card"><p class="small muted">' + esc(t('Your progress, journal and dates are saved only on this device. Save a backup file before changing phones or clearing your browser.')) + '</p>' +
     '<div class="btn-row" style="margin:0"><button class="btn soft" id="bk">' + icon('download') + esc(t('Save backup')) + '</button><button class="btn ghost" id="rs">' + icon('upload') + esc(t('Restore')) + '</button><input type="file" id="rf" accept="application/json,.json"></div></div>' +
     '<div class="section-title"><h2>' + esc(t('About')) + '</h2></div><div class="card flat small muted"><p>' + esc(t('Heartward is free, has no ads and no accounts, and works offline. Named for the disciples on the road to Emmaus, whose hearts burned within them as they walked with Jesus (Luke 24:32).')) + '</p><p style="margin:0">' + esc(t('Content is a draft for review by a catechist or priest. Always follow what your parish teaches.')) + '</p></div>';
