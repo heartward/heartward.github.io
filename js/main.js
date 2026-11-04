@@ -48,6 +48,8 @@ export function render() {
   if (hash !== lastPath) {
     if (lastPath !== null) stopSpeech();
     view.classList.remove('view-enter'); void view.offsetWidth; view.classList.add('view-enter');
+    // Move keyboard and screen-reader focus to the new page (not on first load).
+    if (lastPath !== null) view.focus({ preventScroll: true });
     window.scrollTo(0, 0); lastPath = hash;
     document.title = (out.title ? out.title + ' · ' : '') + 'Heartward';
   }

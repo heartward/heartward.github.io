@@ -16,6 +16,7 @@ const defaults = () => ({
   saint: '',         // chosen patron saint id
   friends: [],       // { name, role, phone, email }
   parish: { name: '', meets: '' },
+  introDone: false,  // the first-visit welcome on Today has been dismissed
   settings: { theme: 'system', size: 'normal', lang: 'en', reminder: '08:00', rate: 'normal' },
   updated: null
 });
