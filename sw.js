@@ -1,5 +1,5 @@
 /* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit. */
-var CACHE = 'heartward-v12';
+var CACHE = 'heartward-v13';
 var ART = 'heartward-art'; // paintings from Wikimedia Commons, kept across app updates
 var SHELL = [
   './',

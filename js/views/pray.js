@@ -171,7 +171,7 @@ export function reminder() {
   let html = back('#/pray', t('Pray')) + head(t('Reminders'), t('Daily reminder'), t('Heartward has no server, so it uses your own phone calendar to remind you. Pick a time, download the event, and open it to add it to your calendar.'));
   html += '<div class="card"><label class="field"><span>' + esc(t('Daily prayer time')) + '</span><input type="time" id="rtime" value="' + esc(state.settings.reminder) + '"></label>' +
     '<button class="btn block" id="daily">' + icon('bell') + esc(t('Add daily prayer reminder')) + '</button></div>' +
-    '<div class="card"><h3>' + esc(t('Sunday Mass')) + '</h3><p class="muted small">' + esc(t('A weekly reminder on Saturday evening to plan for Sunday Mass.')) + '</p>' +
+    '<div class="card"><h2 class="h3">' + esc(t('Sunday Mass')) + '</h2><p class="muted small">' + esc(t('A weekly reminder on Saturday evening to plan for Sunday Mass.')) + '</p>' +
     '<button class="btn ghost block" id="sunday">' + icon('calendar') + esc(t('Add weekly Mass reminder')) + '</button></div>' +
     '<p class="small muted">' + esc(t('Anniversary reminders for your baptism and other dates are in Me > My dates.')) + '</p>';
   return {

@@ -44,7 +44,7 @@ export function journal() {
   if (!entries.length) html += '<div class="card empty">' + icon('pen') + '<p>' + esc(t('No notes yet. Open a session and write what stood out to you.')) + '</p><a class="btn soft sm" href="#/journey">' + esc(t('Go to Journey')) + '</a></div>';
   entries.forEach(s => {
     const j = state.journal[s.id];
-    html += '<a class="card" style="display:block;text-decoration:none;color:inherit" href="#/session/' + s.id + '"><div class="eyebrow">' + esc(j.updated || '') + '</div><h3>' + esc(s.title) + '</h3>' +
+    html += '<a class="card" style="display:block;text-decoration:none;color:inherit" href="#/session/' + s.id + '"><div class="eyebrow">' + esc(j.updated || '') + '</div><h2 class="h3">' + esc(s.title) + '</h2>' +
       (j.notes ? '<p style="white-space:pre-line;font-family:var(--serif)">' + esc(j.notes) + '</p>' : '') +
       (j.questions ? '<div class="reflection" style="margin:8px 0 0"><div class="eyebrow">' + esc(t('Questions to ask')) + '</div><p style="white-space:pre-line;font-style:normal">' + esc(j.questions) + '</p></div>' : '') + '</a>';
   });
@@ -185,7 +185,7 @@ export function settings() {
 
 export function share() {
   const html = back('#/me', t('Me')) + head(t('Share'), t('Share with your class'), t('Heartward is free for anyone. Your sponsor or classmates can scan this code with their phone camera, or you can send them the link. It opens a short welcome page.')) +
-    '<div class="qr" id="qr" aria-label="' + esc(t('QR code for')) + ' ' + WELCOME_URL + '"></div>' +
+    '<div class="qr" id="qr" role="img" aria-label="' + esc(t('QR code for')) + ' ' + WELCOME_URL + '"></div>' +
     '<p class="center" style="font-weight:600">' + APP_URL.replace('https://', '').replace(/\/$/, '') + '</p>' +
     '<div class="btn-row"><button class="btn block" id="sh">' + icon('share') + esc(t('Share link')) + '</button><button class="btn ghost block" id="cp">' + icon('link') + esc(t('Copy link')) + '</button></div>' +
     '<a class="card row" href="#/welcome"><span class="lead">' + icon('door') + '</span><span class="grow"><span class="title">' + esc(t('See the welcome page')) + '</span><span class="sub">' + esc(t('What your classmates will see first')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>' +

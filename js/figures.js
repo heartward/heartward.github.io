@@ -163,7 +163,7 @@ export function lessonHtml(paras) {
     flush();
     if (fig) html += figure(fig[1]);
     else if (pic) html += art(pic[1], pic[2]);
-    else if (p.startsWith('## ')) html += '<h3>' + esc(p.slice(3)) + '</h3>';
+    else if (p.startsWith('## ')) html += '<h2 class="lh">' + esc(p.slice(3)) + '</h2>';
     else if (p.startsWith('> ')) {
       const [q, who] = p.slice(2).split(' — ');
       html += '<blockquote><p>' + esc(q) + '</p>' + (who ? '<cite>' + esc(who) + '</cite>' : '') + '</blockquote>';
