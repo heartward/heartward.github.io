@@ -1,5 +1,6 @@
 import { data, byId } from '../data.js';
 import { state, save, SPANISH } from '../store.js';
+import { canSpeak, speak, stop as stopSpeech, listenButton, bindListen } from '../speech.js';
 import { icon } from '../icons.js';
 import { esc, t, toast, back, head, sources, tile, acc, download, ics } from '../ui.js';
 import { rosaryForDay } from '../liturgy.js';
@@ -50,6 +51,8 @@ export function prayer(id) {
   let html = back('#/pray', t('Pray')) + head(t(p.category), lang === 'es' && es ? es.title : p.title, p.when);
   if (es) html += '<div class="seg-control lang-toggle" role="group" aria-label="' + esc(t('Language')) + '"><button data-lang="en" aria-pressed="' + (lang === 'en') + '">English</button><button data-lang="es" aria-pressed="' + (lang === 'es') + '">Español</button></div>';
   html += '<div class="card"><div class="prayer-text" id="ptext">' + esc(textFor()) + '</div></div>' +
+    (canSpeak ? '<div class="listen-row">' + listenButton('say', t('Listen')) + listenButton('rep', t('Say it after me'), 'ghost') + '</div>' +
+      '<p class="small muted" style="margin:-4px 2px 14px">' + esc(t('"Say it after me" reads one line, then pauses so you can repeat it out loud.')) + '</p>' : '') +
     '<div class="card flat"><label class="field" style="margin:0"><span>' + esc(t('Practice mode: hide words')) + ' <span id="lvl-name">(' + esc(t('off')) + ')</span></span>' +
     '<input type="range" id="lvl" min="0" max="4" step="1" value="0" style="width:100%;accent-color:var(--accent)"></label>' +
     '<p class="small muted" style="margin:6px 0 0">' + esc(t('Say the prayer from memory. Tap a blank to peek.')) + '</p></div>' +
@@ -63,6 +66,10 @@ export function prayer(id) {
       const lvl = root.querySelector('#lvl'), out = root.querySelector('#ptext');
       const draw = () => { out.innerHTML = practiceHtml(textFor(), +lvl.value); root.querySelector('#lvl-name').textContent = '(' + t(names[+lvl.value]) + ')'; };
       lvl.oninput = draw;
+      const lines = () => textFor().split('\n');
+      bindListen(root, 'say', lines, { gap: () => 120 });
+      // Pause after each line for about as long as it takes to say it again.
+      bindListen(root, 'rep', lines, { gap: l => 900 + l.split(/\s+/).length * 480 * ({ slow: 1.3, fast: .85 }[state.settings.rate] || 1) });
       out.onclick = e => { if (e.target.classList.contains('hid')) e.target.classList.toggle('peek'); };
       out.onkeydown = e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('hid')) { e.preventDefault(); e.target.classList.toggle('peek'); } };
       root.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => {
@@ -102,7 +109,7 @@ export function rosary(key) {
   key = data.guides.rosary.mysteries[key] ? key : def;
   const { steps, m } = rosarySteps(key);
   const beadIdx = steps.map((s, i) => s.bead ? i : -1).filter(i => i >= 0);
-  let i = 0, showWords = true;
+  let i = 0, showWords = true, aloud = canSpeak && !!state.settings.rosaryAloud;
   const r = data.guides.rosary;
   const html = back('#/pray', t('Pray')) +
     '<header class="page-head"><div class="kicker">' + esc(t(m.name)) + ' · ' + esc(t(m.days)) + '</div><h1>' + esc(t(r.title)) + '</h1></header>' +
@@ -110,6 +117,7 @@ export function rosary(key) {
     '<details class="card flat acc" style="padding:0 16px"><summary><span>' + esc(t('How to pray the Rosary')) + '</span><span class="plus">' + icon('plus') + '</span></summary><div class="body"><p>' + esc(r.intro) + '</p></div></details>' +
     '<div class="beads" id="beads" aria-hidden="true"></div><div class="rosary-stage" id="stage" aria-live="polite"></div>' +
     '<label class="check small"><input type="checkbox" id="words" checked> ' + esc(t('Show the words of each prayer')) + '</label>' +
+    (canSpeak ? '<label class="check small"><input type="checkbox" id="aloud"' + (state.settings.rosaryAloud ? ' checked' : '') + '> ' + esc(t('Read each prayer aloud')) + '</label>' : '') +
     // The buttons stay pinned just above the tabs, so they never move between short and long prayers.
     '<div class="rosary-nav"><div class="in"><button class="btn ghost" id="prev">' + icon('back') + esc(t('Back')) + '</button><button class="btn" id="next">' + esc(t('Next')) + icon('chevron') + '</button></div></div><div class="rosary-pad"></div>';
   return {
@@ -129,12 +137,15 @@ export function rosary(key) {
         }
         if (s.end) h += '<p class="muted" style="margin-top:14px">' + esc(t('You have finished the Rosary. Well done.')) + '</p>';
         stage.innerHTML = h;
+        if (aloud) speak(s.announce ? [t(['First', 'Second', 'Third', 'Fourth', 'Fifth'][s.decade]) + ' ' + t('Mystery') + ': ' + s.name + '.'] : [s.prayer.title + '.'].concat(s.prayer.text.split('\n')), { gap: () => 120 });
         root.querySelector('#prev').disabled = i === 0;
         root.querySelector('#next').innerHTML = s.end ? icon('check') + esc(t('Finish')) : esc(t('Next')) + icon('chevron');
       };
       root.querySelector('#prev').onclick = () => { if (i > 0) { i--; draw(); } };
       root.querySelector('#next').onclick = () => { if (i < steps.length - 1) { i++; draw(); } else { toast(t('Rosary complete')); location.hash = '#/pray'; } };
       root.querySelector('#words').onchange = e => { showWords = e.target.checked; draw(); };
+      const al = root.querySelector('#aloud');
+      if (al) al.onchange = e => { aloud = e.target.checked; state.settings.rosaryAloud = aloud; save(); if (aloud) draw(); else stopSpeech(); };
       draw();
     }
   };

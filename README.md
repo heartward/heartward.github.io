@@ -11,6 +11,8 @@ Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 - **Pray**: 29 prayers with a practice mode, a step-by-step Rosary with beads, a confession guide with an examination of conscience, and calendar reminders.
 - **Learn**: Mass guide (when to sit, stand or kneel), first-week basics, questions, glossary, a saint finder and the Church calendar.
 - **Me**: journal, weekly habits, sacrament dates and anniversaries, friends on the journey, getting involved, parish info, settings (text size, dark mode), backup and a QR code to share the app.
+- **Listen**: read-aloud for prayers, lessons and the Rosary using the phone's own voice, with a "say it after me" mode for memorizing.
+- **Share with your class**: a welcome page (`#/welcome`) with a QR code and link for sponsors and classmates.
 - **Search** across everything, offline.
 
 ## How it works
@@ -27,6 +29,7 @@ Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 | `index.html`, `css/styles.css` | Page shell and design |
 | `js/main.js` | Routes and app chrome |
 | `js/views/*.js` | One file per section: today, journey, pray, learn, me, search |
+| `js/speech.js` | Read-aloud (Web Speech API, no server) |
 | `js/liturgy.js` | Easter date, moveable feasts and seasons, computed on the device |
 | `js/i18n-es.js` | Spanish menu text (switched off for now: set `SPANISH = true` in `js/store.js` to bring it back) |
 | `content/en/sessions.json` | Stages, rites and sessions. `status` is `draft` (written) or `outline` |

@@ -4,9 +4,11 @@ import { icon } from '../icons.js';
 import { esc, t, toast, back, head, row, download, ics, parseISO, fmtDate, safeUrl } from '../ui.js';
 import { progress } from './journey.js';
 import { applySettings } from '../main.js';
+import { canSpeak, speak } from '../speech.js';
 
 const rerender = () => document.dispatchEvent(new Event('heartward:render'));
 const APP_URL = 'https://heartward.github.io/';
+const WELCOME_URL = APP_URL + '#/welcome';
 
 export function view() {
   const p = progress();
@@ -28,8 +30,8 @@ export function view() {
     row('#/parish', 'church', t('My parish'), state.parish.name || data.parish.name || t('Add your parish')) +
     row('#/involved', 'hands', t('Get involved'), Object.keys(state.involved).length ? Object.keys(state.involved).length + ' ' + t('interests') : t('Ways to serve and belong')) +
     '</ul><div class="section-title"><h2>' + esc(t('App')) + '</h2></div><ul class="list card tight">' +
-    row('#/settings', 'gear', t('Settings and backup'), t('Text size, theme, language')) +
-    row('#/share', 'share', t('Share Heartward'), t('Link and QR code')) +
+    row('#/settings', 'gear', t('Settings and backup'), t('Text size, theme, voice speed')) +
+    row('#/share', 'share', t('Share with your class'), t('A welcome page, link and QR code')) +
     row('#/reminder', 'bell', t('Daily reminder'), t('Add prayer time to your calendar')) +
     '</ul><p class="notice">' + esc(t('Heartward is a free companion and does not replace your parish program. Lessons are drafts meant to be reviewed by a catechist or priest. Your data stays only on this device.')) + '</p>';
   return { html, title: t('Me') };
@@ -155,6 +157,9 @@ export function settings() {
   const html = back('#/me', t('Me')) + head(t('App'), t('Settings'), '') +
     '<div class="card"><div class="eyebrow">' + esc(t('Text size')) + '</div>' + seg('size', [['small', 'A−'], ['normal', 'A'], ['large', 'A+'], ['xlarge', 'A++']]) +
     '<div class="eyebrow" style="margin-top:18px">' + esc(t('Appearance')) + '</div>' + seg('theme', [['system', esc(t('Auto'))], ['light', esc(t('Light'))], ['dark', esc(t('Dark'))]]) +
+    (canSpeak ? '<div class="eyebrow" style="margin-top:18px">' + esc(t('Voice speed')) + '</div>' + seg('rate', [['slow', esc(t('Slow'))], ['normal', esc(t('Normal'))], ['fast', esc(t('Fast'))]]) +
+      '<button class="btn ghost" id="vtest" style="margin-top:10px">' + icon('volume') + esc(t('Test the voice')) + '</button>' +
+      '<p class="small muted" style="margin:8px 0 0">' + esc(t('Read-aloud uses your phone\'s own voice. To get a nicer one, look in your phone\'s settings under Accessibility, Spoken Content (iPhone) or Text-to-speech (Android).')) + '</p>' : '') +
     (SPANISH ? '<div class="eyebrow" style="margin-top:18px">' + esc(t('Language')) + '</div>' + seg('lang', [['en', 'English'], ['es', 'Español']]) +
     '<p class="small muted" style="margin:10px 0 0">' + esc(t('Spanish covers the app\'s menus and the prayers. Lessons are in English for now.')) + '</p>' : '') + '</div>' +
     '<div class="section-title"><h2>' + esc(t('Backup')) + '</h2></div><div class="card"><p class="small muted">' + esc(t('Your progress, journal and dates are saved only on this device. Save a backup file before changing phones or clearing your browser.')) + '</p>' +
@@ -164,6 +169,8 @@ export function settings() {
     html, title: t('Settings'),
     bind(root) {
       root.querySelectorAll('[data-k]').forEach(b => b.onclick = () => { state.settings[b.dataset.k] = b.dataset.v; save(); applySettings(); rerender(); });
+      const vt = root.querySelector('#vtest');
+      if (vt) vt.onclick = () => speak(['Our Father, who art in heaven, hallowed be thy name.']);
       root.querySelector('#bk').onclick = () => download('heartward-backup-' + localISO(new Date()) + '.json', JSON.stringify({ app: 'heartward', version: 2, state }, null, 2), 'application/json');
       const rf = root.querySelector('#rf');
       root.querySelector('#rs').onclick = () => rf.click();
@@ -177,25 +184,50 @@ export function settings() {
 }
 
 export function share() {
-  const html = back('#/me', t('Me')) + head(t('Share'), t('Share Heartward'), t('Heartward is free for anyone. Show this code at your class so others can scan it with their phone camera.')) +
-    '<div class="qr" id="qr" aria-label="' + esc(t('QR code for')) + ' ' + APP_URL + '"></div>' +
+  const html = back('#/me', t('Me')) + head(t('Share'), t('Share with your class'), t('Heartward is free for anyone. Your sponsor or classmates can scan this code with their phone camera, or you can send them the link. It opens a short welcome page.')) +
+    '<div class="qr" id="qr" aria-label="' + esc(t('QR code for')) + ' ' + WELCOME_URL + '"></div>' +
     '<p class="center" style="font-weight:600">' + APP_URL.replace('https://', '').replace(/\/$/, '') + '</p>' +
     '<div class="btn-row"><button class="btn block" id="sh">' + icon('share') + esc(t('Share link')) + '</button><button class="btn ghost block" id="cp">' + icon('link') + esc(t('Copy link')) + '</button></div>' +
-    '<div class="card flat small"><strong>' + esc(t('Add to your home screen')) + '</strong><p class="muted" style="margin:6px 0 0">' + esc(t('iPhone: open in Safari, tap Share, then "Add to Home Screen." Android: open in Chrome, tap the menu, then "Add to Home screen" or "Install app."')) + '</p></div>';
+    '<a class="card row" href="#/welcome"><span class="lead">' + icon('door') + '</span><span class="grow"><span class="title">' + esc(t('See the welcome page')) + '</span><span class="sub">' + esc(t('What your classmates will see first')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>' +
+    '<div class="card flat small"><strong>' + esc(t('Nothing is shared but the link')) + '</strong><p class="muted" style="margin:6px 0 0">' + esc(t('Your journal, progress and dates stay on your phone. Each person who opens the link gets their own fresh copy of the app.')) + '</p></div>';
   return {
-    html, title: t('Share Heartward'),
+    html, title: t('Share with your class'),
     bind(root) {
       try {
-        const qr = window.qrcode(0, 'M'); qr.addData(APP_URL); qr.make();
+        const qr = window.qrcode(0, 'M'); qr.addData(WELCOME_URL); qr.make();
         root.querySelector('#qr').innerHTML = qr.createSvgTag({ cellSize: 6, margin: 2, scalable: true });
-      } catch (e) { root.querySelector('#qr').textContent = APP_URL; }
+      } catch (e) { root.querySelector('#qr').textContent = WELCOME_URL; }
       root.querySelector('#sh').onclick = () => {
-        if (navigator.share) navigator.share({ title: 'Heartward', text: t('A companion for the journey into the Catholic faith'), url: APP_URL }).catch(() => {});
+        if (navigator.share) navigator.share({ title: 'Heartward', text: t('A free companion for RCIA: lessons, prayers and the Rosary on your phone.'), url: WELCOME_URL }).catch(() => {});
         else root.querySelector('#cp').click();
       };
       root.querySelector('#cp').onclick = () => {
-        (navigator.clipboard ? navigator.clipboard.writeText(APP_URL) : Promise.reject()).then(() => toast(t('Link copied'))).catch(() => toast(APP_URL));
+        (navigator.clipboard ? navigator.clipboard.writeText(WELCOME_URL) : Promise.reject()).then(() => toast(t('Link copied'))).catch(() => toast(WELCOME_URL));
       };
     }
   };
+}
+
+// The first page a sponsor or classmate sees when they open a shared link.
+export function welcome() {
+  const pname = (data.parish && data.parish.name) || '';
+  const feat = (ic, title, sub) => '<li><div class="row"><span class="lead">' + icon(ic) + '</span><span class="grow"><span class="title">' + esc(title) + '</span><span class="sub">' + esc(sub) + '</span></span></div></li>';
+  const html =
+    '<section class="welcome-hero"><img src="icon.svg" alt="" width="64" height="64"><div class="kicker">' + esc(pname ? t('For') + ' ' + pname : t('Welcome')) + '</div>' +
+    '<h1>' + esc(t('Welcome to Heartward')) + '</h1>' +
+    '<p>' + esc(t('A free companion for anyone walking toward the Catholic faith in RCIA, for sponsors walking beside them, and for Catholics coming home.')) + '</p>' +
+    '<blockquote>' + esc(t('"Were not our hearts burning within us while he spoke to us on the way?"')) + '<cite>Luke 24:32</cite></blockquote></section>' +
+    '<div class="section-title"><h2>' + esc(t('What is inside')) + '</h2></div><ul class="list card tight">' +
+    feat('road', t('The journey, week by week'), t('Lessons that follow the class, with pictures, charts and a private journal.')) +
+    feat('candle', t('Prayers to learn by heart'), t('Listen to each prayer, repeat it line by line, and practice from memory.')) +
+    feat('rosary', t('The Rosary, step by step'), t('Bead by bead, with the words, or read aloud as you pray.')) +
+    feat('church', t('Mass guide and answers'), t('When to sit, stand and kneel, common questions, words and saints.')) +
+    '</ul>' +
+    '<div class="section-title"><h2>' + esc(t('Free and private')) + '</h2></div><div class="card flat"><p style="margin:0">' + esc(t('No sign-up, no ads, nothing to pay. Your notes and progress stay on your own phone, and after the first visit it works without internet.')) + '</p></div>' +
+    '<div class="section-title"><h2>' + esc(t('Put it on your home screen')) + '</h2></div><ol class="steps card">' +
+    '<li><strong>iPhone:</strong> ' + esc(t('open this page in Safari, tap the Share button, then "Add to Home Screen."')) + '</li>' +
+    '<li><strong>Android:</strong> ' + esc(t('open it in Chrome, tap the ⋮ menu, then "Add to Home screen" or "Install app."')) + '</li></ol>' +
+    '<div class="btn-row" style="margin-top:20px"><a class="btn block" href="#/journey">' + icon('road') + esc(t('Start the journey')) + '</a><a class="btn ghost block" href="#/pray">' + icon('candle') + esc(t('Explore prayers')) + '</a></div>' +
+    '<p class="small muted center" style="margin-top:18px">' + esc(t('Heartward does not replace your parish program. Always follow what your catechist and priest teach.')) + '</p>';
+  return { html, title: t('Welcome') };
 }
