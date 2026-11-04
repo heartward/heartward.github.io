@@ -2,6 +2,7 @@
   {
     "id": "sign-of-the-cross",
     "title": "Sign of the Cross",
+    "category": "Everyday",
     "when": "At the start and end of every prayer, and when entering a church with holy water.",
     "text": "In the name of the Father,\nand of the Son,\nand of the Holy Spirit.\nAmen.",
     "meaning": "With a simple gesture, touching forehead, chest, left shoulder and right shoulder, we name the Trinity: one God in three Persons. It recalls our baptism, which was done \"in the name of the Father, and of the Son, and of the Holy Spirit\" (Matthew 28:19), and marks us with the cross of Christ.",
@@ -10,12 +11,12 @@
         "title": "Matthew 28:19",
         "url": "https://bible.usccb.org/bible/matthew/28"
       }
-    ],
-    "category": "Everyday"
+    ]
   },
   {
     "id": "our-father",
     "title": "Our Father",
+    "category": "Everyday",
     "when": "At every Mass, in the Rosary, and any time of day.",
     "text": "Our Father, who art in heaven,\nhallowed be thy name;\nthy kingdom come,\nthy will be done\non earth as it is in heaven.\nGive us this day our daily bread,\nand forgive us our trespasses,\nas we forgive those who trespass against us;\nand lead us not into temptation,\nbut deliver us from evil.\nAmen.",
     "meaning": "This is the prayer Jesus himself taught his disciples when they asked, \"Lord, teach us to pray\" (Luke 11:1). We call God \"Father\" because Jesus invites us to share his own relationship with the Father. The prayer asks first for God's glory and kingdom, then for what we need: daily bread, forgiveness, and protection from evil.",
@@ -28,12 +29,12 @@
         "title": "Luke 11:1-4",
         "url": "https://bible.usccb.org/bible/luke/11"
       }
-    ],
-    "category": "Everyday"
+    ]
   },
   {
     "id": "hail-mary",
     "title": "Hail Mary",
+    "category": "Everyday",
     "when": "In the Rosary, the Angelus, and personal prayer.",
     "text": "Hail Mary, full of grace,\nthe Lord is with thee.\nBlessed art thou among women,\nand blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners,\nnow and at the hour of our death.\nAmen.",
     "meaning": "The first half repeats the words of the angel Gabriel and of Elizabeth to Mary (Luke 1:28 and 1:42). The second half asks Mary to pray for us, the way we might ask a friend to pray for us. Catholics do not worship Mary; we honor her as the mother of Jesus and ask her prayers.",
@@ -42,21 +43,21 @@
         "title": "Luke 1:26-45",
         "url": "https://bible.usccb.org/bible/luke/1"
       }
-    ],
-    "category": "Everyday"
+    ]
   },
   {
     "id": "glory-be",
     "title": "Glory Be",
+    "category": "Everyday",
     "when": "After the psalms, at the end of each decade of the Rosary, and as a short prayer of praise.",
     "text": "Glory be to the Father,\nand to the Son,\nand to the Holy Spirit,\nas it was in the beginning,\nis now, and ever shall be,\nworld without end.\nAmen.",
     "meaning": "A short prayer of praise to the Trinity. It says that God's glory has no beginning and no end.",
-    "sources": [],
-    "category": "Everyday"
+    "sources": []
   },
   {
     "id": "apostles-creed",
     "title": "Apostles' Creed",
+    "category": "Everyday",
     "when": "At the start of the Rosary, and in many prayers; it is a summary of what Christians believe.",
     "text": "I believe in God, the Father almighty,\nCreator of heaven and earth;\nand in Jesus Christ, his only Son, our Lord,\nwho was conceived by the Holy Spirit,\nborn of the Virgin Mary,\nsuffered under Pontius Pilate,\nwas crucified, died, and was buried.\nHe descended into hell;\non the third day he rose again from the dead;\nhe ascended into heaven,\nand is seated at the right hand of God the Father almighty;\nfrom there he will come to judge the living and the dead.\nI believe in the Holy Spirit,\nthe holy catholic Church,\nthe communion of saints,\nthe forgiveness of sins,\nthe resurrection of the body,\nand life everlasting.\nAmen.",
     "meaning": "One of the oldest summaries of the Christian faith, used in baptism since the early Church. Its three parts follow the Trinity: God the Father who creates, Jesus Christ who saves, and the Holy Spirit who gives life to the Church.",
@@ -65,85 +66,264 @@
         "title": "Catechism of the Catholic Church, Part One: The Profession of Faith",
         "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
       }
-    ],
-    "category": "Everyday"
+    ]
   },
   {
-    "id": "act-of-contrition",
-    "title": "Act of Contrition",
-    "when": "In the sacrament of confession, and at night before sleep.",
-    "text": "O my God, I am heartily sorry\nfor having offended thee,\nand I detest all my sins\nbecause of thy just punishments,\nbut most of all because they offend thee, my God,\nwho art all good and deserving of all my love.\nI firmly resolve, with the help of thy grace,\nto sin no more and to avoid the near occasion of sin.\nAmen.",
-    "meaning": "A prayer telling God we are sorry for our sins and want to change. There are several versions; your priest will accept any sincere words of sorrow. Ask your parish which version they teach.",
+    "id": "act-of-faith",
+    "title": "Act of Faith",
+    "category": "Faith, hope and love",
+    "when": "Any time, especially in the morning or when faith feels weak.",
+    "text": "O my God, I firmly believe\nthat Thou art one God in three Divine Persons:\nthe Father, the Son, and the Holy Spirit.\nI believe that Thy Divine Son became man,\nand died for our sins,\nand that He shall come to judge the living and the dead.\nI believe these and all the truths\nwhich the Holy Catholic Church teaches,\nbecause Thou hast revealed them,\nWho canst neither deceive nor be deceived.\nAmen.",
+    "meaning": "Faith, hope and love are the three \"theological virtues\": gifts that come from God and lead back to him. This prayer says yes to the heart of what Christians believe: the Trinity, Jesus who became man, died and will come again. We believe not because we have worked it all out, but because we trust the God who reveals it.",
     "sources": [
       {
-        "title": "Luke 15:11-32, the prodigal son",
-        "url": "https://bible.usccb.org/bible/luke/15"
+        "title": "Hebrews 11:1-6",
+        "url": "https://bible.usccb.org/bible/hebrews/11"
       }
-    ],
-    "category": "Confession"
+    ]
+  },
+  {
+    "id": "act-of-hope",
+    "title": "Act of Hope",
+    "category": "Faith, hope and love",
+    "when": "Any time, especially in worry or discouragement.",
+    "text": "O my God, relying on Thy almighty power\nand infinite mercy and promises,\nI hope to obtain pardon of my sins,\nthe help of Thy grace, and life everlasting,\nthrough the merits of Jesus Christ,\nmy Lord and Redeemer.\nAmen.",
+    "meaning": "Hope is trust that God will keep his promises: forgiveness, help for today, and life with him forever. It does not rest on how well we are doing, but on God's power and mercy, and on what Jesus has already done for us.",
+    "sources": [
+      {
+        "title": "Romans 5:1-5",
+        "url": "https://bible.usccb.org/bible/romans/5"
+      }
+    ]
+  },
+  {
+    "id": "act-of-charity",
+    "title": "Act of Charity (Love)",
+    "category": "Faith, hope and love",
+    "when": "Any time, especially when it is hard to forgive.",
+    "text": "O my God, I love Thee above all things,\nwith my whole heart and soul,\nbecause Thou art all-good and worthy of all love.\nI love my neighbor as myself for the love of Thee.\nI forgive all who have injured me,\nand ask pardon of all whom I have injured.\nAmen.",
+    "meaning": "\"Charity\" is the old word for love. Jesus said the greatest commandments are to love God with all your heart and your neighbor as yourself (Matthew 22:37-39). This prayer puts both into words, and adds the hardest part: forgiving others and asking their forgiveness.",
+    "sources": [
+      {
+        "title": "Matthew 22:34-40",
+        "url": "https://bible.usccb.org/bible/matthew/22"
+      }
+    ]
+  },
+  {
+    "id": "morning-offering",
+    "title": "Morning Offering",
+    "category": "Morning and night",
+    "when": "First thing in the morning.",
+    "text": "O Jesus, through the Immaculate Heart of Mary,\nI offer Thee all my prayers, works, joys, and sufferings of this day\nfor all the intentions of Thy Sacred Heart,\nin union with the Holy Sacrifice of the Mass throughout the world,\nin reparation for all my sins,\nfor the intentions of all our associates,\nand in particular for the special intentions of our Holy Father for this month.\nAmen.",
+    "meaning": "A way to give your whole day to God before it starts, so that ordinary work and even hard moments become a prayer.",
+    "sources": []
+  },
+  {
+    "id": "morning-offering-fatima",
+    "title": "Another Morning Offering",
+    "category": "Morning and night",
+    "when": "In the morning. Based on Our Lady of Fatima's requests.",
+    "text": "O Jesus, through the Immaculate Heart of Mary,\nI offer Thee all my prayers, works, joys, and sufferings\nand all that this day may bring:\nfor the love of Thee,\nfor the conversion of sinners,\nand in reparation for the sins committed\nagainst the Sacred Heart of Jesus\nand the Immaculate Heart of Mary.\nAmen.",
+    "meaning": "A shorter way to give the whole day to God. Whatever comes, good or hard, becomes a gift offered out of love and for others who need God.",
+    "sources": []
   },
   {
     "id": "guardian-angel",
     "title": "Prayer to your Guardian Angel",
+    "category": "Morning and night",
     "when": "Morning and evening.",
-    "text": "Angel of God, my guardian dear,\nto whom God's love commits me here,\never this day be at my side,\nto light and guard, to rule and guide.\nAmen.",
+    "text": "Angel of God, my guardian dear,\nto whom God's love commits me here,\never this day (night) be at my side,\nto light and guard, to rule and guide.\nAmen.",
     "meaning": "The Church teaches that each person has an angel watching over them (see Matthew 18:10). This short prayer asks for that angel's help through the day.",
     "sources": [
       {
         "title": "Matthew 18:10",
         "url": "https://bible.usccb.org/bible/matthew/18"
       }
-    ],
-    "category": "Morning and night"
+    ]
   },
   {
     "id": "grace-before-meals",
     "title": "Grace Before Meals",
+    "category": "Meals",
     "when": "Before eating.",
     "text": "Bless us, O Lord, and these thy gifts,\nwhich we are about to receive from thy bounty,\nthrough Christ our Lord.\nAmen.",
     "meaning": "A short thank-you to God for food, often said with the Sign of the Cross.",
-    "sources": [],
-    "category": "Everyday"
+    "sources": []
+  },
+  {
+    "id": "grace-after-meals",
+    "title": "Grace After Meals",
+    "category": "Meals",
+    "when": "After eating.",
+    "text": "We give Thee thanks, Almighty God,\nfor these and all Thy benefits,\nWho livest and reignest forever.\nAmen.\n\nMay the souls of the faithful departed,\nthrough the mercy of God, rest in peace.\nAmen.",
+    "meaning": "We thank God before eating and again after. The second line remembers those who have died, because Catholics keep praying for loved ones even after death.",
+    "sources": []
+  },
+  {
+    "id": "act-of-contrition",
+    "title": "Act of Contrition",
+    "category": "Confession",
+    "when": "In the sacrament of confession, and at night before sleep.",
+    "text": "O my God, I am heartily sorry\nfor having offended Thee,\nand I detest all my sins\nbecause I dread the loss of Heaven and the pains of Hell;\nbut most of all because they offend Thee, my God,\nWho art all good and deserving of all my love.\nI firmly resolve, with the help of Thy grace,\nto confess my sins, to do penance,\nand to amend my life.\nAmen.",
+    "meaning": "A prayer telling God we are sorry for our sins and want to change. There are several versions; your priest will accept any sincere words of sorrow. Ask your parish which version they teach.",
+    "sources": [
+      {
+        "title": "Luke 15:11-32, the prodigal son",
+        "url": "https://bible.usccb.org/bible/luke/15"
+      }
+    ]
+  },
+  {
+    "id": "confiteor",
+    "title": "The Confiteor (I Confess)",
+    "category": "Confession",
+    "when": "At the start of Mass in the Penitential Act, and in personal prayer.",
+    "text": "I confess to almighty God\nand to you, my brothers and sisters,\nthat I have greatly sinned,\nin my thoughts and in my words,\nin what I have done\nand in what I have failed to do,\nthrough my fault, through my fault,\nthrough my most grievous fault;\ntherefore I ask blessed Mary ever-Virgin,\nall the Angels and Saints,\nand you, my brothers and sisters,\nto pray for me to the Lord our God.\nAmen.",
+    "meaning": "Confiteor is Latin for \"I confess.\" At Mass we say it together, which reminds us that sin is never only private: it touches the whole family of God, and so we ask that family, in heaven and in the pews, to pray for us. At \"through my fault\" many people gently strike their chest.",
+    "sources": []
+  },
+  {
+    "id": "memorare",
+    "title": "The Memorare",
+    "category": "Mary",
+    "when": "In any need. A famous prayer associated with St. Bernard of Clairvaux.",
+    "text": "Remember, O most gracious Virgin Mary,\nthat never was it known\nthat anyone who fled to thy protection,\nimplored thy help,\nor sought thy intercession\nwas left unaided.\nInspired with this confidence,\nI fly unto thee, O Virgin of virgins, my Mother.\nTo thee do I come, before thee I stand,\nsinful and sorrowful.\nO Mother of the Word Incarnate,\ndespise not my petitions,\nbut in thy mercy hear and answer me.\nAmen.",
+    "meaning": "Memorare is Latin for \"Remember.\" We come to Mary as children come to their mother, confident she will bring our needs to her Son. Catholics do not worship Mary; we ask her to pray for us, the way we ask friends to pray for us.",
+    "sources": [
+      {
+        "title": "John 19:25-27",
+        "url": "https://bible.usccb.org/bible/john/19"
+      }
+    ]
+  },
+  {
+    "id": "angelus",
+    "title": "The Angelus",
+    "category": "Mary",
+    "when": "At 6 am, noon and 6 pm throughout the year, except during the Easter season.",
+    "text": "V. The Angel of the Lord declared unto Mary,\nR. And she conceived of the Holy Spirit.\nHail Mary...\n\nV. Behold the handmaid of the Lord.\nR. Be it done unto me according to Your Word.\nHail Mary...\n\nV. And the Word was made flesh,\nR. And dwelt among us.\nHail Mary...\n\nV. Pray for us, O holy Mother of God.\nR. That we may be made worthy of the promises of Christ.\n\nLet us pray:\nPour forth, we beseech You, O Lord,\nYour Grace into our hearts;\nthat as we have known the incarnation of Christ,\nyour Son, by the message of an angel,\nso by His passion and cross\nwe may be brought to the glory of His Resurrection.\nThrough the same Christ, our Lord.\nAmen.",
+    "meaning": "The Angelus remembers the moment God became man: the angel's message to Mary, her yes, and the Word made flesh (Luke 1:26-38; John 1:14). Church bells traditionally ring at these hours so people can pause wherever they are. \"V.\" is said by a leader and \"R.\" is the response; alone, you say both.",
+    "sources": [
+      {
+        "title": "Luke 1:26-38",
+        "url": "https://bible.usccb.org/bible/luke/1"
+      }
+    ]
+  },
+  {
+    "id": "regina-caeli",
+    "title": "The Regina Caeli",
+    "category": "Mary",
+    "when": "At 6 am, noon and 6 pm during the Easter season, in place of the Angelus.",
+    "text": "V. Queen of Heaven, rejoice, alleluia.\nR. For He whom you did merit to bear, alleluia.\nV. Has risen, as he said, alleluia.\nR. Pray for us to God, alleluia.\nV. Rejoice and be glad, O Virgin Mary, alleluia.\nR. For the Lord has truly risen, alleluia.\n\nLet us pray:\nO God, who gave joy to the world\nthrough the resurrection of Thy Son,\nour Lord Jesus Christ,\ngrant we beseech Thee,\nthat through the intercession of the Virgin Mary, His Mother,\nwe may obtain the joys of everlasting life.\nThrough the same Christ our Lord.\nAmen.",
+    "meaning": "Regina Caeli means \"Queen of Heaven.\" From Easter Sunday to Pentecost, the Church replaces the Angelus with this joyful prayer, sharing with Mary the joy that her Son is risen.",
+    "sources": [
+      {
+        "title": "Matthew 28:1-10",
+        "url": "https://bible.usccb.org/bible/matthew/28"
+      }
+    ]
+  },
+  {
+    "id": "fatima-prayer",
+    "title": "O My Jesus (Fatima Prayer)",
+    "category": "Rosary",
+    "when": "After the Glory Be in each decade of the Rosary. Requested by Our Lady of Fatima in 1917.",
+    "text": "O my Jesus, forgive us our sins,\nsave us from the fires of hell,\nlead all souls to heaven,\nespecially those in most need of thy mercy.\nAmen.",
+    "meaning": "A short prayer for mercy, associated with the appearances of Mary at Fatima, Portugal, in 1917. Many people add it to each decade of the Rosary.",
+    "sources": []
   },
   {
     "id": "hail-holy-queen",
     "title": "Hail, Holy Queen",
+    "category": "Rosary",
     "when": "At the end of the Rosary.",
     "text": "Hail, holy Queen, Mother of mercy,\nour life, our sweetness and our hope.\nTo thee do we cry, poor banished children of Eve;\nto thee do we send up our sighs,\nmourning and weeping in this valley of tears.\nTurn, then, most gracious advocate,\nthine eyes of mercy toward us;\nand after this our exile,\nshow unto us the blessed fruit of thy womb, Jesus.\nO clement, O loving, O sweet Virgin Mary.\n\nPray for us, O holy Mother of God,\nthat we may be made worthy of the promises of Christ.\nAmen.",
     "meaning": "An ancient prayer (in Latin, the Salve Regina) asking Mary, as a loving mother, to bring us to her Son. It closes the Rosary.",
-    "sources": [],
-    "category": "Rosary"
+    "sources": []
   },
   {
-    "id": "fatima-prayer",
-    "title": "Fatima Prayer",
-    "when": "After the Glory Be in each decade of the Rosary.",
-    "text": "O my Jesus, forgive us our sins,\nsave us from the fires of hell,\nlead all souls to heaven,\nespecially those in most need of thy mercy.\nAmen.",
-    "meaning": "A short prayer for mercy, associated with the appearances of Mary at Fatima, Portugal, in 1917. Many people add it to each decade of the Rosary.",
-    "sources": [],
-    "category": "Rosary"
+    "id": "prayer-after-rosary",
+    "title": "Prayer After the Rosary",
+    "category": "Rosary",
+    "when": "At the end of the Rosary, after the Hail, Holy Queen.",
+    "text": "O God, Whose only begotten Son,\nby His life, death, and Resurrection,\nhas purchased for us the rewards of eternal salvation,\ngrant, we beseech Thee,\nthat meditating upon these Mysteries\nof the Most Holy Rosary of the Blessed Virgin Mary,\nwe may both imitate what they contain\nand obtain what they promise.\nThrough the same Christ Our Lord.\nAmen.",
+    "meaning": "The Rosary is not only repeating words: it is thinking about Jesus' life with Mary. This closing prayer asks that what we just pondered would change how we live.",
+    "sources": []
   },
   {
-    "id": "morning-offering",
-    "title": "Morning Offering",
-    "when": "First thing in the morning.",
-    "text": "O Jesus, through the Immaculate Heart of Mary,\nI offer you my prayers, works, joys and sufferings of this day\nfor all the intentions of your Sacred Heart,\nin union with the Holy Sacrifice of the Mass throughout the world,\nfor the salvation of souls, the reparation of sins,\nand the reunion of all Christians.\nAmen.",
-    "meaning": "A way to give your whole day to God before it starts, so that ordinary work and even hard moments become a prayer.",
-    "sources": [],
-    "category": "Morning and night"
+    "id": "sacred-heart",
+    "title": "Most Sacred Heart of Jesus",
+    "category": "Short prayers",
+    "when": "A short prayer for any moment, often said three times.",
+    "text": "Most Sacred Heart of Jesus,\nhave mercy on us.\nMost Sacred Heart of Jesus,\nhave mercy on us.\nMost Sacred Heart of Jesus,\nhave mercy on us.",
+    "meaning": "The Sacred Heart is a sign of Jesus' human and divine love for each person. This tiny prayer can be said anywhere: on a walk, in traffic, in a hard moment.",
+    "sources": [
+      {
+        "title": "Matthew 11:28-30",
+        "url": "https://bible.usccb.org/bible/matthew/11"
+      }
+    ]
+  },
+  {
+    "id": "o-sacrament",
+    "title": "O Sacrament Most Holy",
+    "category": "Short prayers",
+    "when": "Before the Blessed Sacrament, or when passing a church.",
+    "text": "O Sacrament most holy,\nO Sacrament divine!\nAll praise and all thanksgiving\nbe every moment Thine!",
+    "meaning": "Catholics believe Jesus is truly present in the Eucharist. This short verse is a way to greet him, for example when you visit a church and see the tabernacle with its lit candle.",
+    "sources": [
+      {
+        "title": "John 6:51-58",
+        "url": "https://bible.usccb.org/bible/john/6"
+      }
+    ]
+  },
+  {
+    "id": "jesus-mary-joseph",
+    "title": "Jesus, Mary, and Joseph",
+    "category": "Short prayers",
+    "when": "Any time, and especially when praying for a good death.",
+    "text": "Jesus, Mary, and Joseph,\nI give Thee my heart and my soul.\nJesus, Mary, and Joseph,\nassist me in my last agony.\nJesus, Mary, and Joseph,\nmay I breathe forth my soul in peace with Thee.\nAmen.",
+    "meaning": "The Holy Family is a model for every family. St. Joseph is the patron of a happy death because, tradition says, he died with Jesus and Mary beside him.",
+    "sources": []
+  },
+  {
+    "id": "sacrifice-prayer",
+    "title": "Sacrifice Prayer",
+    "category": "Short prayers",
+    "when": "Whenever you make a small sacrifice. Our Lady of Fatima asked that it be said often.",
+    "text": "O my Jesus, I offer this for the love of Thee,\nfor the conversion of sinners,\nand in reparation for sins committed\nagainst the Immaculate Heart of Mary.",
+    "meaning": "A small sacrifice, like skipping a treat or being patient instead of snapping, can become a prayer when you offer it to God for others.",
+    "sources": []
+  },
+  {
+    "id": "eternal-rest",
+    "title": "Eternal Rest",
+    "category": "Short prayers",
+    "when": "For those who have died, at any time and especially in November.",
+    "text": "Eternal rest grant unto them, O Lord,\nand let perpetual light shine upon them.\nMay the souls of all the faithful departed,\nthrough the mercy of God, rest in peace.\nAmen.",
+    "meaning": "Love does not end at death. Catholics pray for the dead, trusting God to finish his work of mercy in them. November is the month the Church especially remembers them.",
+    "sources": [
+      {
+        "title": "2 Maccabees 12:43-46",
+        "url": "https://bible.usccb.org/bible/2maccabees/12"
+      }
+    ]
   },
   {
     "id": "st-michael",
     "title": "Prayer to St. Michael",
+    "category": "Protection",
     "when": "Any time, especially in temptation or trouble.",
-    "text": "St. Michael the Archangel,\ndefend us in battle.\nBe our protection against the wickedness and snares of the devil.\nMay God rebuke him, we humbly pray;\nand do thou, O Prince of the heavenly host,\nby the power of God,\ncast into hell Satan and all the evil spirits\nwho prowl about the world seeking the ruin of souls.\nAmen.",
+    "text": "St. Michael the Archangel,\ndefend us in battle;\nbe our safeguard against the wickedness and snares of the devil.\nMay God rebuke him, we humbly pray,\nand do thou, O Prince of the heavenly host,\nby the power of God,\ncast into Hell Satan and all the other evil spirits\nwho prowl about the world,\nseeking the ruin of souls.\nAmen.",
     "meaning": "Written by Pope Leo XIII, this prayer asks the archangel Michael, who in Scripture fights against evil (Revelation 12:7), to protect us.",
     "sources": [
       {
         "title": "Revelation 12:7-9",
         "url": "https://bible.usccb.org/bible/revelation/12"
       }
-    ],
-    "category": "Protection"
+    ]
   }
 ]

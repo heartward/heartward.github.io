@@ -1,12 +1,87 @@
 [
-  { "id": "sign-of-the-cross", "title": "La Señal de la Cruz", "text": "En el nombre del Padre,\ny del Hijo,\ny del Espíritu Santo.\nAmén." },
-  { "id": "our-father", "title": "Padre Nuestro", "text": "Padre nuestro, que estás en el cielo,\nsantificado sea tu Nombre;\nvenga a nosotros tu reino;\nhágase tu voluntad\nen la tierra como en el cielo.\nDanos hoy nuestro pan de cada día;\nperdona nuestras ofensas,\ncomo también nosotros perdonamos\na los que nos ofenden;\nno nos dejes caer en la tentación,\ny líbranos del mal.\nAmén." },
-  { "id": "hail-mary", "title": "Ave María", "text": "Dios te salve, María,\nllena eres de gracia,\nel Señor es contigo.\nBendita tú eres entre todas las mujeres,\ny bendito es el fruto de tu vientre, Jesús.\nSanta María, Madre de Dios,\nruega por nosotros, pecadores,\nahora y en la hora de nuestra muerte.\nAmén." },
-  { "id": "glory-be", "title": "Gloria", "text": "Gloria al Padre,\ny al Hijo,\ny al Espíritu Santo.\nComo era en el principio,\nahora y siempre,\npor los siglos de los siglos.\nAmén." },
-  { "id": "apostles-creed", "title": "Credo de los Apóstoles", "text": "Creo en Dios, Padre todopoderoso,\nCreador del cielo y de la tierra.\nCreo en Jesucristo, su único Hijo, nuestro Señor,\nque fue concebido por obra y gracia del Espíritu Santo,\nnació de Santa María Virgen,\npadeció bajo el poder de Poncio Pilato,\nfue crucificado, muerto y sepultado,\ndescendió a los infiernos,\nal tercer día resucitó de entre los muertos,\nsubió a los cielos\ny está sentado a la derecha de Dios, Padre todopoderoso.\nDesde allí ha de venir a juzgar a vivos y muertos.\nCreo en el Espíritu Santo,\nla santa Iglesia católica,\nla comunión de los santos,\nel perdón de los pecados,\nla resurrección de la carne\ny la vida eterna.\nAmén." },
-  { "id": "act-of-contrition", "title": "Acto de Contrición", "text": "Dios mío, me arrepiento de todo corazón\nde todos mis pecados\ny los aborrezco,\nporque al pecar, no sólo merezco las penas establecidas por ti,\nsino principalmente porque te ofendí a ti,\nsumo Bien y digno de amor por encima de todas las cosas.\nPor eso propongo firmemente,\ncon ayuda de tu gracia,\nno pecar más en adelante\ny huir de toda ocasión de pecado.\nAmén." },
-  { "id": "guardian-angel", "title": "Ángel de la Guarda", "text": "Ángel de la guarda,\ndulce compañía,\nno me desampares\nni de noche ni de día.\nAmén." },
-  { "id": "grace-before-meals", "title": "Bendición de la mesa", "text": "Bendícenos, Señor,\ny bendice estos alimentos\nque por tu bondad vamos a recibir.\nPor Cristo nuestro Señor.\nAmén." },
-  { "id": "hail-holy-queen", "title": "Salve", "text": "Dios te salve, Reina y Madre de misericordia,\nvida, dulzura y esperanza nuestra;\nDios te salve.\nA ti llamamos los desterrados hijos de Eva;\na ti suspiramos, gimiendo y llorando\nen este valle de lágrimas.\nEa, pues, Señora, abogada nuestra,\nvuelve a nosotros esos tus ojos misericordiosos;\ny después de este destierro muéstranos a Jesús,\nfruto bendito de tu vientre.\n¡Oh clementísima, oh piadosa, oh dulce Virgen María!\n\nRuega por nosotros, santa Madre de Dios,\npara que seamos dignos de alcanzar\nlas promesas de nuestro Señor Jesucristo.\nAmén." },
-  { "id": "fatima-prayer", "title": "Oración de Fátima", "text": "Oh Jesús mío, perdona nuestros pecados,\nlíbranos del fuego del infierno,\nlleva al cielo a todas las almas,\nespecialmente a las más necesitadas de tu misericordia.\nAmén." }
+  {
+    "id": "sign-of-the-cross",
+    "title": "La Señal de la Cruz",
+    "text": "En el nombre del Padre,\ny del Hijo,\ny del Espíritu Santo.\nAmén."
+  },
+  {
+    "id": "our-father",
+    "title": "Padre Nuestro",
+    "text": "Padre nuestro, que estás en el cielo,\nsantificado sea tu Nombre;\nvenga a nosotros tu reino;\nhágase tu voluntad\nen la tierra como en el cielo.\nDanos hoy nuestro pan de cada día;\nperdona nuestras ofensas,\ncomo también nosotros perdonamos\na los que nos ofenden;\nno nos dejes caer en la tentación,\ny líbranos del mal.\nAmén."
+  },
+  {
+    "id": "hail-mary",
+    "title": "Ave María",
+    "text": "Dios te salve, María,\nllena eres de gracia,\nel Señor es contigo.\nBendita tú eres entre todas las mujeres,\ny bendito es el fruto de tu vientre, Jesús.\nSanta María, Madre de Dios,\nruega por nosotros, pecadores,\nahora y en la hora de nuestra muerte.\nAmén."
+  },
+  {
+    "id": "glory-be",
+    "title": "Gloria",
+    "text": "Gloria al Padre,\ny al Hijo,\ny al Espíritu Santo.\nComo era en el principio,\nahora y siempre,\npor los siglos de los siglos.\nAmén."
+  },
+  {
+    "id": "apostles-creed",
+    "title": "Credo de los Apóstoles",
+    "text": "Creo en Dios, Padre todopoderoso,\nCreador del cielo y de la tierra.\nCreo en Jesucristo, su único Hijo, nuestro Señor,\nque fue concebido por obra y gracia del Espíritu Santo,\nnació de Santa María Virgen,\npadeció bajo el poder de Poncio Pilato,\nfue crucificado, muerto y sepultado,\ndescendió a los infiernos,\nal tercer día resucitó de entre los muertos,\nsubió a los cielos\ny está sentado a la derecha de Dios, Padre todopoderoso.\nDesde allí ha de venir a juzgar a vivos y muertos.\nCreo en el Espíritu Santo,\nla santa Iglesia católica,\nla comunión de los santos,\nel perdón de los pecados,\nla resurrección de la carne\ny la vida eterna.\nAmén."
+  },
+  {
+    "id": "guardian-angel",
+    "title": "Ángel de la Guarda",
+    "text": "Ángel de la guarda,\ndulce compañía,\nno me desampares\nni de noche ni de día.\nAmén."
+  },
+  {
+    "id": "grace-before-meals",
+    "title": "Bendición de la mesa",
+    "text": "Bendícenos, Señor,\ny bendice estos alimentos\nque por tu bondad vamos a recibir.\nPor Cristo nuestro Señor.\nAmén."
+  },
+  {
+    "id": "act-of-contrition",
+    "title": "Acto de Contrición",
+    "text": "Dios mío, me arrepiento de todo corazón\nde todos mis pecados\ny los aborrezco,\nporque al pecar, no sólo merezco las penas establecidas por ti,\nsino principalmente porque te ofendí a ti,\nsumo Bien y digno de amor por encima de todas las cosas.\nPor eso propongo firmemente,\ncon ayuda de tu gracia,\nno pecar más en adelante\ny huir de toda ocasión de pecado.\nAmén."
+  },
+  {
+    "id": "confiteor",
+    "title": "Yo confieso",
+    "text": "Yo confieso ante Dios todopoderoso\ny ante ustedes, hermanos,\nque he pecado mucho\nde pensamiento, palabra, obra y omisión.\nPor mi culpa, por mi culpa,\npor mi gran culpa.\nPor eso ruego a santa María, siempre Virgen,\na los ángeles, a los santos\ny a ustedes, hermanos,\nque intercedan por mí ante Dios, nuestro Señor.\nAmén."
+  },
+  {
+    "id": "memorare",
+    "title": "Acordaos",
+    "text": "Acordaos, oh piadosísima Virgen María,\nque jamás se ha oído decir\nque ninguno de los que han acudido a vuestra protección,\nimplorando vuestra asistencia\ny reclamando vuestro socorro,\nhaya sido abandonado de vos.\nAnimado con esta confianza,\na vos también acudo, oh Madre, Virgen de las vírgenes,\ny aunque gimiendo bajo el peso de mis pecados,\nme atrevo a comparecer ante vuestra presencia soberana.\nNo desechéis, oh Madre de Dios, mis humildes súplicas;\nantes bien, escuchadlas y acogedlas benignamente.\nAmén."
+  },
+  {
+    "id": "angelus",
+    "title": "El Ángelus",
+    "text": "V. El Ángel del Señor anunció a María.\nR. Y concibió por obra del Espíritu Santo.\nDios te salve, María...\n\nV. He aquí la esclava del Señor.\nR. Hágase en mí según tu palabra.\nDios te salve, María...\n\nV. Y el Verbo se hizo carne.\nR. Y habitó entre nosotros.\nDios te salve, María...\n\nV. Ruega por nosotros, santa Madre de Dios.\nR. Para que seamos dignos de alcanzar las promesas de nuestro Señor Jesucristo.\n\nOremos:\nDerrama, Señor, tu gracia en nuestros corazones,\npara que, habiendo conocido por el anuncio del Ángel\nla encarnación de tu Hijo Jesucristo,\nlleguemos por su pasión y su cruz\na la gloria de la resurrección.\nPor el mismo Jesucristo nuestro Señor.\nAmén."
+  },
+  {
+    "id": "regina-caeli",
+    "title": "Regina Coeli",
+    "text": "V. Reina del cielo, alégrate; aleluya.\nR. Porque el Señor, a quien mereciste llevar; aleluya.\nV. Resucitó, según su palabra; aleluya.\nR. Ruega al Señor por nosotros; aleluya.\nV. Gózate y alégrate, Virgen María; aleluya.\nR. Porque verdaderamente ha resucitado el Señor; aleluya.\n\nOremos:\nOh Dios, que por la resurrección de tu Hijo,\nnuestro Señor Jesucristo,\nte has dignado dar la alegría al mundo,\nconcédenos que por su Madre, la Virgen María,\nalcancemos los gozos de la vida eterna.\nPor el mismo Cristo nuestro Señor.\nAmén."
+  },
+  {
+    "id": "fatima-prayer",
+    "title": "Oración de Fátima",
+    "text": "Oh Jesús mío, perdona nuestros pecados,\nlíbranos del fuego del infierno,\nlleva al cielo a todas las almas,\nespecialmente a las más necesitadas de tu misericordia.\nAmén."
+  },
+  {
+    "id": "hail-holy-queen",
+    "title": "Salve",
+    "text": "Dios te salve, Reina y Madre de misericordia,\nvida, dulzura y esperanza nuestra;\nDios te salve.\nA ti llamamos los desterrados hijos de Eva;\na ti suspiramos, gimiendo y llorando\nen este valle de lágrimas.\nEa, pues, Señora, abogada nuestra,\nvuelve a nosotros esos tus ojos misericordiosos;\ny después de este destierro muéstranos a Jesús,\nfruto bendito de tu vientre.\n¡Oh clementísima, oh piadosa, oh dulce Virgen María!\n\nRuega por nosotros, santa Madre de Dios,\npara que seamos dignos de alcanzar\nlas promesas de nuestro Señor Jesucristo.\nAmén."
+  },
+  {
+    "id": "jesus-mary-joseph",
+    "title": "Jesús, José y María",
+    "text": "Jesús, José y María,\nos doy el corazón y el alma mía.\nJesús, José y María,\nasistidme en mi última agonía.\nJesús, José y María,\ncon vos descanse en paz el alma mía.\nAmén."
+  },
+  {
+    "id": "eternal-rest",
+    "title": "Descanso eterno",
+    "text": "Dales, Señor, el descanso eterno,\ny brille para ellos la luz perpetua.\nDescansen en paz.\nAmén."
+  },
+  {
+    "id": "st-michael",
+    "title": "Oración a San Miguel Arcángel",
+    "text": "San Miguel Arcángel,\ndefiéndenos en la batalla.\nSé nuestro amparo\ncontra la perversidad y asechanzas del demonio.\nQue Dios manifieste sobre él su poder,\nes nuestra humilde súplica.\nY tú, oh Príncipe de la Milicia Celestial,\ncon el poder que Dios te ha conferido,\narroja al infierno a Satanás\ny a los demás espíritus malignos\nque vagan por el mundo para la perdición de las almas.\nAmén."
+  }
 ]
