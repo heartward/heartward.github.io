@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Heartward</title>
+  <meta name="description" content="A free companion for people walking the journey into the Catholic faith: sessions, prayers, and answers, all on your phone.">
+  <meta name="theme-color" content="#f7f1e6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16181f" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#/" class="brand" aria-label="Heartward home">
+      <img src="icon.svg" alt="" width="28" height="28">
+      <span>Heartward</span>
+    </a>
+  </header>
+
+  <main id="view" tabindex="-1" aria-live="polite">
+    <p class="loading">Lighting the way…</p>
+  </main>
+
+  <nav class="tabbar" aria-label="Main">
+    <a href="#/" data-tab="home"><span class="ico" aria-hidden="true">⌂</span>Home</a>
+    <a href="#/journey" data-tab="journey"><span class="ico" aria-hidden="true">↟</span>Journey</a>
+    <a href="#/prayers" data-tab="prayers"><span class="ico" aria-hidden="true">✢</span>Prayers</a>
+    <a href="#/questions" data-tab="questions"><span class="ico" aria-hidden="true">?</span>Questions</a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
