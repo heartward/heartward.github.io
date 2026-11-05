@@ -34,7 +34,6 @@ export function view() {
     '</ul><div class="section-title"><h2>' + esc(t('App')) + '</h2></div><ul class="list card tight">' +
     row('#/settings', 'gear', t('Settings and backup'), t('Text size, theme, voice speed')) +
     row('#/share', 'share', t('Share with your class'), t('A welcome page, link and QR code')) +
-    row('#/reminder', 'bell', t('Daily reminder'), t('Add prayer time to your calendar')) +
     '</ul><p class="notice">' + esc(t('Heartward is a free companion and does not replace your parish program. Lessons are drafts meant to be reviewed by a catechist or priest. Your data stays only on this device.')) + '</p>';
   return { html, title: t('Me') };
 }

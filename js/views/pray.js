@@ -2,38 +2,45 @@ import { data, byId } from '../data.js';
 import { state, save, SPANISH } from '../store.js';
 import { canSpeak, speak, stop as stopSpeech, listenButton, bindListen } from '../speech.js';
 import { icon } from '../icons.js';
-import { esc, t, toast, back, head, sources, tile, acc, download, ics } from '../ui.js';
-import { rosaryForDay } from '../liturgy.js';
+import { esc, t, toast, back, head, sources, tile, row, acc, download, ics } from '../ui.js';
+import { rosaryForDay, season } from '../liturgy.js';
 
 const rerender = () => document.dispatchEvent(new Event('heartward:render'));
 
 export function view() {
   const myst = data.guides.rosary.mysteries[rosaryForDay(data.guides, new Date())];
   let html = head(t('Pray'), t('Prayer'), t('Prayer is simply talking with God. Learn the prayers Catholics share, one at a time.'));
-  html += '<div class="tiles">' +
-    tile('#/rosary', 'rosary', t('Pray the Rosary'), t('Today') + ': ' + t(myst.name), 'dark wide') +
-    tile('#/intentions', 'people', t('People I pray for'), state.intentions.filter(x => !x.answered).length ? state.intentions.filter(x => !x.answered).length + ' ' + t('intentions') : t('Names and needs to pray for')) +
-    tile('#/examen', 'moon', t('Evening Examen'), t('Five minutes at bedtime')) +
-    tile('#/stations', 'candle', t('Stations of the Cross'), t('Walk with Jesus to the cross')) +
-    tile('#/readings', 'book', t('Today\'s readings'), t('The Mass readings for today')) +
-    tile('#/confession', 'heart', t('Confession guide'), t('Steps and examination of conscience')) +
-    tile('#/first-confession', 'check', t('First Confession'), t('Prepare step by step')) +
-    tile('#/lectio', 'book', t('Sunday Gospel'), t('Pray it with Lectio Divina')) +
-    tile('#/verse', 'sparkle', t('Memory verses'), t('Flashcards with audio')) +
-    tile('#/reminder', 'bell', t('Daily reminder'), t('Add prayer time to your calendar')) +
-    '</div>';
+  const lent = ['lent', 'triduum'].includes(season(new Date()));
+  const open = state.intentions.filter(x => !x.answered).length;
+  const group = (title, rows) => '<div class="section-title"><h2>' + esc(title) + '</h2></div><ul class="list card tight">' + rows.join('') + '</ul>';
+  // The Rosary always leads; in Lent the Stations of the Cross join it at the top.
+  html += '<div class="tiles">' + tile('#/rosary', 'rosary', t('Pray the Rosary'), t('Today') + ': ' + t(myst.name), 'dark wide') +
+    (lent ? tile('#/stations', 'candle', t('Stations of the Cross'), t('Walk with Jesus to the cross'), 'wide') : '') + '</div>';
+  html += group(t('Every day'), [
+    row('#/readings', 'book', t('Today\'s readings'), t('The Mass readings and a thought for today')),
+    row('#/intentions', 'people', t('People I pray for'), open ? open + ' ' + t('intentions') : t('Names and needs to pray for')),
+    row('#/examen', 'moon', t('Evening Examen'), t('Five minutes at bedtime'))
+  ]);
+  html += group(t('Confession'), [
+    row('#/confession', 'heart', t('Confession guide'), t('Steps and examination of conscience')),
+    row('#/first-confession', 'check', t('First Confession'), t('Prepare step by step'))
+  ]);
+  html += group(t('More ways to pray'), [
+    row('#/lectio', 'book', t('Sunday Gospel'), t('Pray it with Lectio Divina')),
+    row('#/verse', 'sparkle', t('Memory verses'), t('Flashcards with audio'))
+  ].concat(lent ? [] : [row('#/stations', 'candle', t('Stations of the Cross'), t('Walk with Jesus to the cross'))]));
   const learned = data.prayers.filter(p => state.learned[p.id]).length;
   html += '<div class="section-title"><h2>' + esc(t('Prayers to learn')) + '</h2><span class="small muted">' + learned + ' / ' + data.prayers.length + ' ' + esc(t('learned')) + '</span></div>' +
-    '<p class="small muted" style="margin:-4px 2px 8px">' + esc(t('Any of these prayers can begin and end with the Sign of the Cross, with or without holy water.')) + '</p>';
+    '<p class="small muted" style="margin:-4px 2px 8px">' + esc(t('Any of these prayers can begin and end with the Sign of the Cross, with or without holy water.')) + '</p><div class="card tight prayer-groups">';
   const cats = [...new Set(data.prayers.map(p => p.category))];
-  cats.forEach(c => {
-    html += '<div class="eyebrow" style="margin:16px 2px 6px">' + esc(t(c)) + '</div><ul class="list card tight">';
-    data.prayers.filter(p => p.category === c).forEach(p => {
+  cats.forEach((c, k) => {
+    const ps = data.prayers.filter(p => p.category === c), n = ps.filter(p => state.learned[p.id]).length;
+    html += acc(t(c) + ' · ' + n + '/' + ps.length, '<ul class="list tight">' + ps.map(p => {
       const l = !!state.learned[p.id];
-      html += '<li><a class="row' + (l ? ' done' : '') + '" href="#/prayer/' + p.id + '"><span class="lead">' + (l ? icon('check') : icon('candle')) + '</span><span class="grow"><span class="title">' + esc(p.title) + '</span><span class="sub">' + esc(p.when) + '</span></span><span class="chev">' + icon('chevron') + '</span></a></li>';
-    });
-    html += '</ul>';
+      return '<li><a class="row' + (l ? ' done' : '') + '" href="#/prayer/' + p.id + '"><span class="lead">' + (l ? icon('check') : icon('candle')) + '</span><span class="grow"><span class="title">' + esc(p.title) + '</span><span class="sub">' + esc(p.when) + '</span></span><span class="chev">' + icon('chevron') + '</span></a></li>';
+    }).join('') + '</ul>', k === 0);
   });
+  html += '</div>' + '<p class="small muted" style="margin-top:14px"><a href="#/reminder">' + esc(t('Add a daily prayer reminder to your calendar')) + '</a></p>';
   return { html, title: t('Pray') };
 }
 

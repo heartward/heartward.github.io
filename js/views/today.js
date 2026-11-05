@@ -76,10 +76,7 @@ export function view() {
   html += '<div class="section-title"><h2>' + esc(t('Explore')) + '</h2></div><div class="tiles">' +
     tile('#/mass', 'church', t('Mass guide'), t('What happens and why')) +
     tile('#/questions', 'question', t('Questions'), t('Common newcomer questions')) +
-    tile('#/saint-quiz', 'star', t('Find my saint'), t('A short quiz')) +
-    tile('#/welcome-back', 'door', t('Welcome back'), t('For anyone returning to the Church')) +
-    tile('#/journal', 'pen', t('Journal'), t('Your notes and questions')) +
-    tile('#/share', 'share', t('Share with your class'), t('Link and QR code')) +
+    (state.saint ? '' : tile('#/saint-quiz', 'star', t('Find my saint'), t('A short quiz'), 'wide')) +
     '</div>';
   return { html, title: t('Today') };
 }
