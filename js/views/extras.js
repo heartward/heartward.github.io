@@ -115,7 +115,7 @@ export function sponsor() {
 // ---------- Confirmation saint ----------
 export function saintQuiz() {
   const X = data.extras.confirmationSaint, S = data.saints.saints;
-  let html = back('#/saints', t('Saints')) + head(t('Confirmation'), t('Choosing your saint'), X.intro) +
+  let html = back('#/saints', t('Saints')) + head(t('Saints'), t('Find my saint'), X.intro) +
     '<section class="card"><h2 class="h3">' + esc(t('How to choose')) + '</h2><ol class="qs">' + X.how.map(x => '<li>' + esc(x) + '</li>').join('') + '</ol></section>' +
     '<div class="section-title"><h2>' + esc(t('A short quiz')) + '</h2></div><form id="sqz">';
   X.quiz.forEach((q, i) => {
@@ -124,7 +124,7 @@ export function saintQuiz() {
   });
   html += '<button class="btn block" type="submit">' + icon('star') + esc(t('See my saints')) + '</button></form><div id="sres" aria-live="polite"></div>';
   return {
-    html, title: t('Choosing your saint'),
+    html, title: t('Find my saint'),
     bind(root) {
       root.querySelector('#sqz').onsubmit = e => {
         e.preventDefault();
@@ -135,8 +135,14 @@ export function saintQuiz() {
         if (!answered) { out.innerHTML = '<p class="card flat">' + esc(t('Pick at least one answer.')) + '</p>'; return; }
         const top = S.map(s => ({ s, n: s.tags.reduce((a, tg) => a + (score[tg] || 0), 0) })).filter(x => x.n > 0).sort((a, b) => b.n - a.n).slice(0, 3);
         out.innerHTML = '<div class="section-title"><h2>' + esc(t('Saints to get to know')) + '</h2></div><ul class="list card tight">' + top.map(({ s }) =>
-          '<li><a class="row" href="#/saint/' + s.id + '"><span class="lead">' + icon('star') + '</span><span class="grow"><span class="title">' + esc(s.name) + '</span><span class="sub">' + esc(t('Patron of')) + ' ' + esc(s.patron) + '</span></span><span class="chev">' + icon('chevron') + '</span></a></li>').join('') + '</ul>' +
-          '<p class="small muted">' + esc(t('Read each story, pray about it, and choose the one that feels like a friend. Tap "Choose as my patron" on their page.')) + '</p>';
+          '<li class="saint-pick"><a class="row" href="#/saint/' + s.id + '"><span class="lead">' + icon('star') + '</span><span class="grow"><span class="title">' + esc(s.name) + '</span><span class="sub">' + esc(t('Patron of')) + ' ' + esc(s.patron) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>' +
+          '<p class="small" style="margin:0 16px 8px">' + esc(s.story.split('. ')[0] + '.') + '</p>' +
+          '<button class="btn sm ' + (state.saint === s.id ? 'ok' : 'soft') + '" data-pick="' + s.id + '" style="margin:0 16px 14px">' + (state.saint === s.id ? icon('check') + esc(t('My patron saint')) : icon('star') + esc(t('Choose as my patron'))) + '</button></li>').join('') + '</ul>' +
+          '<p class="small muted">' + esc(t('Tap a name to read the whole story. Pray about it, and choose the one that feels like a friend. You can change your mind any time.')) + '</p>';
+        out.querySelectorAll('[data-pick]').forEach(b => b.onclick = () => {
+          state.saint = b.dataset.pick; save(); toast(t('Patron saint chosen'));
+          out.querySelectorAll('[data-pick]').forEach(x => { const on = x.dataset.pick === state.saint; x.className = 'btn sm ' + (on ? 'ok' : 'soft'); x.innerHTML = on ? icon('check') + esc(t('My patron saint')) : icon('star') + esc(t('Choose as my patron')); });
+        });
         out.querySelector('h2').scrollIntoView({ behavior: 'smooth', block: 'start' });
       };
     }
