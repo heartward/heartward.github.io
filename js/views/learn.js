@@ -1,4 +1,4 @@
-import { data, byId } from '../data.js';
+import { data, byId, mySaint } from '../data.js';
 import { state, save, localISO } from '../store.js';
 import { icon } from '../icons.js';
 import { esc, t, toast, back, head, tile, acc, fmtDate } from '../ui.js';
@@ -80,9 +80,9 @@ const feastLabel = s => { const [m, d] = s.feast.split('-').map(Number); return 
 export function saints() {
   const S = data.saints;
   const picked = new Set();
-  const mine = byId(S.saints, state.saint);
+  const mine = mySaint();
   let html = back('#/learn', t('Learn')) + head(t('Saints'), t('Choose a saint'), S.intro);
-  if (mine) html += '<a class="card row" href="#/saint/' + mine.id + '" style="text-decoration:none"><span class="lead" style="background:var(--accent-soft)">' + icon('star') + '</span><span class="grow"><span class="eyebrow">' + esc(t('My patron saint')) + '</span><span class="title">' + esc(mine.name) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
+  if (mine) html += '<a class="card row" href="' + (mine.id ? '#/saint/' + mine.id : '#/saint-quiz') + '" style="text-decoration:none"><span class="lead" style="background:var(--accent-soft)">' + icon('star') + '</span><span class="grow"><span class="eyebrow">' + esc(t('My patron saint')) + '</span><span class="title">' + esc(mine.name) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
   html += '<a class="card row" href="#/saint-quiz"><span class="lead">' + icon('sparkle') + '</span><span class="grow"><span class="title">' + esc(t('Find my saint')) + '</span><span class="sub">' + esc(t('A short quiz, and how to choose a Confirmation saint')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
   html += '<div class="section-title"><h2>' + esc(t('What draws you?')) + '</h2></div><div class="chips" id="ints">' +
     S.interests.map(x => '<button class="chip" data-int="' + x.id + '" aria-pressed="false">' + esc(t(x.label)) + '</button>').join('') + '</div>' +

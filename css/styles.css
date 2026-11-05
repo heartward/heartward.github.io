@@ -520,3 +520,9 @@ fieldset.quiz-q legend { font-weight: 600; padding: 0; margin-bottom: 8px; float
 label.opt { display: flex; gap: 10px; align-items: center; }
 label.opt:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
 label.opt input { accent-color: var(--accent); width: 20px; height: 20px; flex: none; }
+.bday-list { list-style: none; margin: 6px 0 0; padding: 0; }
+.bday-saint { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.bday-saint:last-child { border-bottom: 0; }
+.bday-saint .grow { flex: 1; min-width: 0; }
+.bday-saint a { color: var(--accent); }
+.bday-saint .btn { flex: none; }

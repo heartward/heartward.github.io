@@ -117,7 +117,10 @@ export function saintQuiz() {
   const X = data.extras.confirmationSaint, S = data.saints.saints;
   let html = back('#/saints', t('Saints')) + head(t('Saints'), t('Find my saint'), X.intro) +
     '<section class="card"><h2 class="h3">' + esc(t('How to choose')) + '</h2><ol class="qs">' + X.how.map(x => '<li>' + esc(x) + '</li>').join('') + '</ol></section>' +
-    '<div class="section-title"><h2>' + esc(t('A short quiz')) + '</h2></div><form id="sqz">';
+    '<div class="section-title"><h2>' + esc(t('Saint of my birthday')) + '</h2></div><section class="card">' +
+    '<p class="small muted" style="margin:0 0 10px">' + esc(t('Some people take the saint whose feast falls on their birthday. It is one lovely tradition among several; your Confirmation saint is yours to choose freely.')) + '</p>' +
+    '<label class="field" style="margin:0"><span>' + esc(t('My birthday')) + '</span><input type="date" id="bday" value="' + esc(state.dates.birthday || '') + '"></label><div id="bres" aria-live="polite"></div></section>' +
+    '<div class="section-title"><h2>' + esc(t('Or take a short quiz')) + '</h2></div><form id="sqz">';
   X.quiz.forEach((q, i) => {
     html += '<fieldset class="card quiz-q"><legend><span class="eyebrow">' + (i + 1) + ' / ' + X.quiz.length + '</span><br>' + esc(q.q) + '</legend>' +
       q.options.map((o, j) => '<label class="opt"><input type="radio" name="q' + i + '" value="' + j + '"> <span>' + esc(o.label) + '</span></label>').join('') + '</fieldset>';
@@ -126,6 +129,10 @@ export function saintQuiz() {
   return {
     html, title: t('Find my saint'),
     bind(root) {
+      const bday = root.querySelector('#bday');
+      const showBday = () => { if (bday.value) root.querySelector('#bres').innerHTML = birthdayHtml(bday.value.slice(5)); bindPicks(root.querySelector('#bres')); };
+      bday.onchange = () => { if (bday.value) state.dates.birthday = bday.value; else delete state.dates.birthday; save(); showBday(); };
+      if (bday.value) showBday();
       root.querySelector('#sqz').onsubmit = e => {
         e.preventDefault();
         const f = new FormData(e.target), score = {};
@@ -137,14 +144,51 @@ export function saintQuiz() {
         out.innerHTML = '<div class="section-title"><h2>' + esc(t('Saints to get to know')) + '</h2></div><ul class="list card tight">' + top.map(({ s }) =>
           '<li class="saint-pick"><a class="row" href="#/saint/' + s.id + '"><span class="lead">' + icon('star') + '</span><span class="grow"><span class="title">' + esc(s.name) + '</span><span class="sub">' + esc(t('Patron of')) + ' ' + esc(s.patron) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>' +
           '<p class="small" style="margin:0 16px 8px">' + esc(s.story.split('. ')[0] + '.') + '</p>' +
-          '<button class="btn sm ' + (state.saint === s.id ? 'ok' : 'soft') + '" data-pick="' + s.id + '" style="margin:0 16px 14px">' + (state.saint === s.id ? icon('check') + esc(t('My patron saint')) : icon('star') + esc(t('Choose as my patron'))) + '</button></li>').join('') + '</ul>' +
+          pickBtn(s.id, 'margin:0 16px 14px') + '</li>').join('') + '</ul>' +
           '<p class="small muted">' + esc(t('Tap a name to read the whole story. Pray about it, and choose the one that feels like a friend. You can change your mind any time.')) + '</p>';
-        out.querySelectorAll('[data-pick]').forEach(b => b.onclick = () => {
-          state.saint = b.dataset.pick; save(); toast(t('Patron saint chosen'));
-          out.querySelectorAll('[data-pick]').forEach(x => { const on = x.dataset.pick === state.saint; x.className = 'btn sm ' + (on ? 'ok' : 'soft'); x.innerHTML = on ? icon('check') + esc(t('My patron saint')) : icon('star') + esc(t('Choose as my patron')); });
-        });
+        bindPicks(out);
         out.querySelector('h2').scrollIntoView({ behavior: 'smooth', block: 'start' });
       };
     }
   };
+}
+
+// A Choose button; value is an app saint id or 'cal:MM-DD|Name'.
+function pickBtn(v, style) {
+  const on = state.saint === v;
+  return '<button class="btn sm ' + (on ? 'ok' : 'soft') + '" data-pick="' + esc(v) + '"' + (style ? ' style="' + style + '"' : '') + '>' + (on ? icon('check') + esc(t('My patron saint')) : icon('star') + esc(t('Choose as my patron'))) + '</button>';
+}
+function bindPicks(root) {
+  root.querySelectorAll('[data-pick]').forEach(b => b.onclick = () => {
+    state.saint = b.dataset.pick; save(); toast(t('Patron saint chosen'));
+    document.querySelectorAll('[data-pick]').forEach(x => { x.outerHTML = pickBtn(x.dataset.pick, x.getAttribute('style')); });
+    document.querySelectorAll('[data-pick]').forEach(x => bindPicks(x.parentNode));
+  });
+}
+
+const firstName = n => n.replace(/^(St\.|Sts\.|The)\s+/, '').split(/[ ,(]/)[0].toLowerCase();
+// Saints on a day (MM-DD): the app's own saints (with a story) plus the Church calendar.
+export function saintsOn(md) {
+  const app = data.saints.saints.filter(s => s.feast === md);
+  const cal = (data.feasts.days[md] || []).filter(n => !app.some(s => firstName(s.name) === firstName(n)));
+  return { app, cal };
+}
+const mdLabel = md => { const [m, d] = md.split('-').map(Number); return fmtDate(new Date(2024, m - 1, d), { month: 'long', day: 'numeric' }); };
+function birthdayHtml(md) {
+  const { app, cal } = saintsOn(md);
+  const item = (name, v, href, sub) => '<li class="bday-saint"><div class="grow">' + (href ? '<a href="' + href + '"><strong>' + esc(name) + '</strong></a>' : '<strong>' + esc(name) + '</strong>') +
+    (sub ? '<div class="small muted">' + esc(sub) + '</div>' : '') + '</div>' + pickBtn(v) + '</li>';
+  let html = '<div class="eyebrow" style="margin-top:14px">' + esc(mdLabel(md)) + '</div>';
+  if (app.length || cal.length) {
+    html += '<ul class="bday-list">' + app.map(s => item(s.name, s.id, '#/saint/' + s.id, t('Patron of') + ' ' + s.patron)).join('') +
+      cal.map(n => item(n, 'cal:' + md + '|' + n, '', '')).join('') + '</ul>';
+  } else {
+    // No saint in the general calendar that day: show the nearest days before and after.
+    const days = Object.keys(data.feasts.days).sort();
+    const prev = days.filter(d => d < md).pop() || days[days.length - 1], next = days.find(d => d > md) || days[0];
+    html += '<p class="small" style="margin:6px 0 0">' + esc(t('The Church calendar has no saint\'s day on your birthday, but every day many saints are remembered. Here are the closest:')) + '</p>';
+    [prev, next].forEach(d => { const r = saintsOn(d); html += '<div class="eyebrow" style="margin-top:12px">' + esc(mdLabel(d)) + '</div><ul class="bday-list">' +
+      r.app.map(s => item(s.name, s.id, '#/saint/' + s.id, t('Patron of') + ' ' + s.patron)).join('') + r.cal.map(n => item(n, 'cal:' + d + '|' + n, '', '')).join('') + '</ul>'; });
+  }
+  return html + '<p class="small muted" style="margin:10px 0 0">' + esc(data.feasts.note) + '</p>';
 }

@@ -1,4 +1,4 @@
-import { data, byId } from '../data.js';
+import { data, byId, mySaint } from '../data.js';
 import { state, save, weekKey, replaceState, localISO, SPANISH } from '../store.js';
 import { icon } from '../icons.js';
 import { esc, t, toast, back, head, row, download, ics, parseISO, fmtDate, safeUrl } from '../ui.js';
@@ -12,7 +12,7 @@ const WELCOME_URL = APP_URL + '#/welcome';
 
 export function view() {
   const p = progress();
-  const mine = byId(data.saints.saints, state.saint);
+  const mine = mySaint();
   const jCount = Object.keys(state.journal).length;
   const w = state.habits[weekKey()] || {};
   const hDone = data.paths.habits.filter(h => w[h.id]).length;
@@ -24,7 +24,7 @@ export function view() {
     row('#/journal', 'pen', t('Journal'), jCount ? jCount + ' ' + t('sessions with notes') : t('Notes and questions from each session')) +
     row('#/habits', 'check', t('Weekly habits'), t('Small practices, no guilt')) +
     row('#/dates', 'calendar', t('My dates'), t('Baptism and other anniversaries')) +
-    row(mine ? '#/saint/' + mine.id : '#/saint-quiz', 'star', t('My patron saint'), mine ? mine.name : t('Find my saint with a short quiz')) +
+    row(mine && mine.id ? '#/saint/' + mine.id : '#/saint-quiz', 'star', t('My patron saint'), mine ? mine.name : t('Find my saint with a short quiz')) +
     row('#/sponsor', 'hands', t('My sponsor'), t('Questions and notes for your next talk')) +
     row('#/friends', 'people', t('Friends on the journey'), state.friends.length ? state.friends.length + ' ' + t('people') : t('Sponsor, catechist and group')) +
     '</ul><div class="section-title"><h2>' + esc(t('Parish')) + '</h2></div><ul class="list card tight">' +
@@ -89,7 +89,7 @@ export function dates() {
       root.querySelectorAll('[data-d]').forEach(i => i.onchange = () => { if (i.value) state.dates[i.dataset.d] = i.value; else delete state.dates[i.dataset.d]; save(); toast(t('Saved')); });
       root.querySelector('#ics').onclick = () => {
         const ev = DATE_FIELDS.filter(([k]) => state.dates[k]).map(([k, label]) => ({ date: parseISO(state.dates[k]), rrule: 'FREQ=YEARLY', title: t(label) + ' ' + t('anniversary'), desc: t('Give thanks for this day. https://heartward.github.io') }));
-        const s = byId(data.saints.saints, state.saint);
+        const s = mySaint();
         if (s) { const [m, d] = s.feast.split('-').map(Number); ev.push({ date: new Date(new Date().getFullYear(), m - 1, d), rrule: 'FREQ=YEARLY', title: t('Feast of') + ' ' + s.name }); }
         if (!ev.length) { toast(t('Add a date first')); return; }
         download('heartward-anniversaries.ics', ics(ev), 'text/calendar'); toast(t('Open the downloaded file to add it'));
