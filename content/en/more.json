@@ -1,0 +1,61 @@
+{
+  "intentions": {
+    "intro": "Keep the people and needs you are praying for in one place. Look back now and then: you may be surprised how God has answered, sometimes in ways you did not expect. This list stays only on your phone."
+  },
+  "readings": {
+    "intro": "Every day the Church reads the same passages at Mass all over the world. Reading them at home, even for five minutes, is a simple way to stay close to God's word.",
+    "thoughts": [
+      "Read slowly. Which word or line stays with you? Carry it with you today.",
+      "Where in today's readings do you see God's mercy?",
+      "Is there someone in today's Gospel you can relate to? What would you say to Jesus in their place?",
+      "Pick one sentence and pray it back to God in your own words.",
+      "What does today's reading ask you to do, not only to know?",
+      "Notice a promise of God in today's readings. Thank him for it.",
+      "Imagine you are standing in the crowd in today's Gospel. What do you see and hear?",
+      "Is there a word you do not understand? Look it up, or ask your sponsor.",
+      "Read the Psalm as your own prayer today.",
+      "What does today's Gospel tell you about who Jesus is?",
+      "Who could you share one line of today's readings with?",
+      "Where do you need courage today? Ask for it with a line from the readings.",
+      "Read the Gospel twice: once for the story, once for yourself.",
+      "What surprised you in today's readings?",
+      "Thank God for one thing in your life that today's readings bring to mind."
+    ]
+  },
+  "examen": {
+    "intro": "A five-minute prayer at the end of the day, taught by St. Ignatius of Loyola. You look back over the day with God, like reviewing it together with a friend. It is also a gentle way to prepare for Confession.",
+    "steps": [
+      { "name": "Be still", "text": "Breathe slowly. Remember that God is here with you, and that he loves you. Ask the Holy Spirit to help you see your day as God sees it." },
+      { "name": "Give thanks", "text": "Think of three good things from today, big or small: a kind word, a meal, a moment of peace. Thank God for each one." },
+      { "name": "Look back", "text": "Walk through your day from morning until now. When did you feel close to God, or at peace? When did you feel far away, anxious or upset? Just notice, without judging." },
+      { "name": "Say sorry", "text": "Is there something you did or said, or failed to do, that you regret? Tell God simply, and ask for his forgiveness. He is always glad to forgive." },
+      { "name": "Look ahead", "text": "Think about tomorrow. What are you looking forward to, or worried about? Ask God for the one grace you need most. End with an Our Father." }
+    ]
+  },
+  "stations": {
+    "intro": "For centuries Christians have walked with Jesus on his way to the cross, stopping at fourteen moments called stations. Most churches have them on the walls, and many parishes pray them together on Fridays in Lent. You can pray them anywhere.",
+    "how": "At each station, say the response, read the short reflection, and pause for a moment of silence.",
+    "verse": "We adore you, O Christ, and we praise you.",
+    "response": "Because by your holy cross you have redeemed the world.",
+    "list": [
+      { "title": "Jesus is condemned to death", "ref": "Mark 15:1-15", "text": "Pilate knows Jesus is innocent, but he gives in to the crowd. Jesus stays silent and accepts an unjust sentence for our sake.", "prayer": "Jesus, help me stand up for what is right, even when it is hard." },
+      { "title": "Jesus takes up his cross", "ref": "John 19:16-17", "text": "The heavy wood is laid on shoulders already wounded. Jesus does not refuse it. He carries what we could not carry.", "prayer": "Jesus, help me carry my own crosses with you." },
+      { "title": "Jesus falls the first time", "ref": "Isaiah 53:4-6", "text": "Weak and in pain, Jesus falls. God himself knows what it is to be exhausted and on the ground.", "prayer": "Jesus, when I fall, help me get up again." },
+      { "title": "Jesus meets his mother", "ref": "Luke 2:34-35", "text": "Mary cannot take away her son's pain, but she does not look away. Her love stays with him.", "prayer": "Mary, stay close to me and to everyone who suffers." },
+      { "title": "Simon of Cyrene helps Jesus carry the cross", "ref": "Mark 15:21", "text": "A stranger coming in from the fields is made to help. He did not choose it, yet he walked closest to Jesus that day.", "prayer": "Jesus, open my eyes to the people I can help today." },
+      { "title": "Veronica wipes the face of Jesus", "ref": "Matthew 25:40", "text": "Tradition says a woman pushed through the crowd to wipe his face, a small act of courage and kindness.", "prayer": "Jesus, let me see your face in the people I meet." },
+      { "title": "Jesus falls the second time", "ref": "Psalm 22:15-16", "text": "Again he falls. Again he rises. Love keeps going when strength is gone.", "prayer": "Jesus, give me patience with my own weakness and with others'." },
+      { "title": "Jesus meets the women of Jerusalem", "ref": "Luke 23:27-31", "text": "Even in his own suffering, Jesus turns to comfort the women weeping for him.", "prayer": "Jesus, teach me to think of others even when I am hurting." },
+      { "title": "Jesus falls the third time", "ref": "Lamentations 3:22-23", "text": "Close to the end, he falls once more. He goes on to the place where he will give his life.", "prayer": "Jesus, when I want to give up, carry me." },
+      { "title": "Jesus is stripped of his garments", "ref": "John 19:23-24", "text": "The soldiers take everything from him, even his clothes. He has nothing left to give but himself.", "prayer": "Jesus, free me from holding on to things more than to you." },
+      { "title": "Jesus is nailed to the cross", "ref": "Luke 23:33-34", "text": "As they drive in the nails, Jesus prays: 'Father, forgive them.'", "prayer": "Jesus, help me forgive those who have hurt me." },
+      { "title": "Jesus dies on the cross", "ref": "John 19:25-30", "text": "He gives his mother to his friend, and says 'It is finished.' Love has gone all the way. (Pause and kneel for a moment if you can.)", "prayer": "Jesus, thank you for loving me to the end." },
+      { "title": "Jesus is taken down from the cross", "ref": "John 19:38", "text": "His friends lower his body into the arms of his mother. Their grief is real, and so is their love.", "prayer": "Jesus, comfort everyone who is grieving tonight." },
+      { "title": "Jesus is laid in the tomb", "ref": "John 19:40-42", "text": "The stone is rolled shut and everything goes quiet. But this silence is not the end of the story.", "prayer": "Jesus, I wait in hope for your resurrection." }
+    ],
+    "closing": "Christians often end by remembering the empty tomb on Easter morning, and by praying an Our Father, Hail Mary and Glory Be for the Pope's intentions."
+  },
+  "keepsake": {
+    "intro": "A page to remember your journey into the Church. Fill in what you know; save it as a PDF or print it after the Easter Vigil."
+  }
+}

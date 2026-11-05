@@ -11,6 +11,7 @@ import * as me from './views/me.js';
 import * as search from './views/search.js';
 import * as week from './views/week.js';
 import * as extras from './views/extras.js';
+import * as more from './views/more.js';
 
 const routes = {
   '': [today.view, 'today'],
@@ -23,6 +24,7 @@ const routes = {
   involved: [me.involved, 'me'], settings: [me.settings, 'me'], share: [me.share, 'me'], welcome: [me.welcome, ''], parish: [me.parish, 'me'],
   week: [week.week, 'journey'], verse: [week.verse, 'journey'], quiz: [week.quiz, 'journey'], lectio: [week.lectio, 'pray'], 'first-confession': [week.firstConfession, 'pray'],
   rites: [extras.rites, 'journey'], sponsor: [extras.sponsor, 'me'], 'saint-quiz': [extras.saintQuiz, 'learn'],
+  intentions: [more.intentions, 'pray'], readings: [more.readings, 'today'], examen: [more.examen, 'pray'], stations: [more.stations, 'pray'], keepsake: [more.keepsake, 'me'],
   search: [search.view, 'search']
 };
 
@@ -61,12 +63,14 @@ export function render() {
   if (out.bind) out.bind(view);
 }
 
-window.addEventListener('hashchange', render);
+// Render only after the content has loaded; a hash change before that would find no data.
+let ready = false;
+window.addEventListener('hashchange', () => { if (ready) render(); });
 window.addEventListener('scroll', () => document.querySelector('.topbar').classList.toggle('scrolled', window.scrollY > 4), { passive: true });
-document.addEventListener('heartward:render', render);
+document.addEventListener('heartward:render', () => { if (ready) render(); });
 
 applySettings();
-loadData().then(render).catch(err => {
+loadData().then(() => { ready = true; render(); }).catch(err => {
   console.error(err);
   document.getElementById('view').innerHTML = '<div class="empty"><h2>' + t('Could not load') + '</h2><p>' + t('Please check your connection and reload. After the first visit, Heartward works offline.') + '</p></div>';
 });

@@ -12,6 +12,10 @@ export function view() {
   let html = head(t('Pray'), t('Prayer'), t('Prayer is simply talking with God. Learn the prayers Catholics share, one at a time.'));
   html += '<div class="tiles">' +
     tile('#/rosary', 'rosary', t('Pray the Rosary'), t('Today') + ': ' + t(myst.name), 'dark wide') +
+    tile('#/intentions', 'people', t('People I pray for'), state.intentions.filter(x => !x.answered).length ? state.intentions.filter(x => !x.answered).length + ' ' + t('intentions') : t('Names and needs to pray for')) +
+    tile('#/examen', 'moon', t('Evening Examen'), t('Five minutes at bedtime')) +
+    tile('#/stations', 'candle', t('Stations of the Cross'), t('Walk with Jesus to the cross')) +
+    tile('#/readings', 'book', t('Today\'s readings'), t('The Mass readings for today')) +
     tile('#/confession', 'heart', t('Confession guide'), t('Steps and examination of conscience')) +
     tile('#/first-confession', 'check', t('First Confession'), t('Prepare step by step')) +
     tile('#/lectio', 'book', t('Sunday Gospel'), t('Pray it with Lectio Divina')) +

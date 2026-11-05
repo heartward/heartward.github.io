@@ -61,6 +61,7 @@ export function view() {
   html += '<div class="section-title"><h2>' + esc(t('Today')) + '</h2><a href="#/calendar">' + esc(t('Calendar')) + '</a></div><div class="tiles">';
   html += tile('#/rosary', 'rosary', t('Pray the Rosary'), t(myst.name), 'dark');
   if (ups.length) html += tile(ups[0].saintId ? '#/saint/' + ups[0].saintId : '#/calendar', 'star', ups[0].name, t('Celebrated today'));
+  html += tile('#/readings', 'book', t('Today\'s readings'), t('A thought for today'));
   html += hourPrayer(now);
   html += tile('#/habits', 'check', t('This week'), habitSummary());
   html += '</div>';
