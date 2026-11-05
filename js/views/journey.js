@@ -81,7 +81,7 @@ export function session(id) {
     bind(root) {
       // Lesson text for read-aloud: skip figures and paintings, drop the formatting marks.
       bindListen(root, 'ls', () => {
-        const plain = p => p.startsWith('[[') ? '' : p.replace(/^(## |> |- )/, '').replace(/ — /g, '. ').replace(/\(Catechism [^)]*\)/g, '');
+        const plain = p => p.startsWith('[[') ? '' : p.replace(/^(### |## |> |- )/, '').replace(/ — /g, '. ').replace(/\(Catechism [^)]*\)/g, '');
         const paras = (s.lesson || []).map(plain);
         (s.deeper || []).forEach(d => { paras.push(t('Digging deeper') + ': ' + d.title + '.'); d.text.split('\n\n').forEach(x => paras.push(plain(x))); });
         if (s.reflection) paras.push(t('Reflect') + ': ' + s.reflection);

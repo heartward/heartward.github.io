@@ -66,12 +66,12 @@ const FIG = {
   // God's covenants, from Adam to Jesus: each one wider than the last.
   covenants: () => {
     const rows = [
-      ['Adam', 'Husband', 'Marriage', 'Sabbath'], ['Noah', 'Father', 'Household', 'Rainbow'], ['Abraham', 'Chieftain', 'Tribe', 'Circumcision'],
-      ['Moses', 'Judge', 'Nation', 'Passover'], ['David', 'King', 'Kingdom', 'Throne'], ['Jesus', 'Priest-King', 'Universal|Church', 'Eucharist']
+      ['Adam', 'Husband', 'Marriage', 'Sabbath'], ['Noah', 'Father', 'Household', 'Rainbow'], ['Abram', 'Chieftain', 'Tribe', 'Circumcision'],
+      ['Moses', 'Judge', 'Nation', 'Passover'], ['David', 'King', 'National|Kingdom', 'Throne'], ['Jesus', 'Royal High|Priest', 'Catholic|Church', 'Eucharist']
     ];
     const C = [112, 194, 268], H = 50, top = 44;
     const cell = (x, y, s, cls) => { const full = s.replace('|', ' '), tr = t(full), lines = (tr === full ? s : tr).split('|'); return lines.map((l, k) => txt(x, y + 5 + (k - (lines.length - 1) / 2) * 15, l, { anchor: 'start', cls })).join(''); };
-    let out = txt(16, 20, t('With'), { anchor: 'start', cls: 'edge' }) + txt(C[0], 20, t('Role'), { anchor: 'start', cls: 'edge' }) + txt(C[1], 20, t('Family'), { anchor: 'start', cls: 'edge' }) + txt(C[2], 20, t('Sign'), { anchor: 'start', cls: 'edge' });
+    let out = txt(16, 20, t('Mediator'), { anchor: 'start', cls: 'edge' }) + txt(C[0], 20, t('Role'), { anchor: 'start', cls: 'edge' }) + txt(C[1], 20, t('Form'), { anchor: 'start', cls: 'edge' }) + txt(C[2], 20, t('Sign'), { anchor: 'start', cls: 'edge' });
     out += '<line x1="22" y1="' + top + '" x2="22" y2="' + (top + H * 5) + '" class="spoke"/>';
     rows.forEach((r, i) => {
       const y = top + i * H, last = i === rows.length - 1;
@@ -149,7 +149,7 @@ export function art(file, caption) {
 }
 
 // Turns lesson paragraphs into HTML. Plain paragraphs stay paragraphs; a few simple markers add structure:
-// "## Heading", "> Quote — Author", "- List item", "[[figure:name]]" and "[[art:File.jpg|Caption]]".
+// "## Heading", "### Subheading", "> Quote — Author", "- List item", "[[figure:name]]" and "[[art:File.jpg|Caption]]".
 export function lessonHtml(paras) {
   let html = '', list = [];
   const flush = () => { if (list.length) { html += '<ul class="lesson-list">' + list.map(li => '<li>' + li + '</li>').join('') + '</ul>'; list = []; } };
@@ -163,6 +163,7 @@ export function lessonHtml(paras) {
     flush();
     if (fig) html += figure(fig[1]);
     else if (pic) html += art(pic[1], pic[2]);
+    else if (p.startsWith('### ')) html += '<h3 class="lh3">' + esc(p.slice(4)) + '</h3>';
     else if (p.startsWith('## ')) html += '<h2 class="lh">' + esc(p.slice(3)) + '</h2>';
     else if (p.startsWith('> ')) {
       const [q, who] = p.slice(2).split(' — ');
@@ -174,4 +175,4 @@ export function lessonHtml(paras) {
 }
 
 // Plain text of a lesson, for search.
-export const lessonText = paras => (paras || []).filter(p => !p.startsWith('[[')).map(p => p.replace(/^(## |> |- )/, '')).join(' ');
+export const lessonText = paras => (paras || []).filter(p => !p.startsWith('[[')).map(p => p.replace(/^(### |## |> |- )/, '')).join(' ');

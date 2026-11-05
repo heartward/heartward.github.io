@@ -374,6 +374,7 @@ input[type=file] { display: none; }
 
 /* Lesson structure */
 .reading h3, .reading h2.lh, .deeper h2.lh { font-family: var(--serif); font-size: 1.28rem; margin: 26px 0 6px; color: var(--accent-ink); }
+.reading h3.lh3, .deeper h3.lh3 { font-family: var(--serif); font-size: 1.08rem; margin: 18px 0 4px; color: var(--accent-ink); }
 .reading blockquote { margin: 18px 0; padding: 4px 0 4px 16px; border-left: 3px solid var(--accent); }
 .reading blockquote p { font-style: italic; margin: 0 0 6px; }
 .reading blockquote cite { font-style: normal; font-size: .9rem; color: var(--muted); }
