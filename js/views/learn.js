@@ -13,7 +13,8 @@ export function view() {
     tile('#/basics', 'sparkle', t('First-week basics'), t('Holy water, genuflecting and more')) +
     tile('#/questions', 'question', t('Questions'), data.faq.length + ' ' + t('answers')) +
     tile('#/glossary', 'list', t('Glossary'), data.glossary.length + ' ' + t('Catholic words explained')) +
-    tile('#/saints', 'star', t('Choose a saint'), t('Find a patron who fits you')) +
+    tile('#/saint-quiz', 'star', t('Find my saint'), t('A short quiz to meet your patron')) +
+    tile('#/saints', 'people', t('All saints'), t('Read their stories')) +
     tile('#/calendar', 'calendar', t('Church calendar'), t('Seasons and feast days')) +
     tile('#/welcome-back', 'door', t('Welcome back'), t('For anyone returning to the Church'), 'wide') +
     '</div>';
@@ -82,7 +83,7 @@ export function saints() {
   const mine = byId(S.saints, state.saint);
   let html = back('#/learn', t('Learn')) + head(t('Saints'), t('Choose a saint'), S.intro);
   if (mine) html += '<a class="card row" href="#/saint/' + mine.id + '" style="text-decoration:none"><span class="lead" style="background:var(--accent-soft)">' + icon('star') + '</span><span class="grow"><span class="eyebrow">' + esc(t('My patron saint')) + '</span><span class="title">' + esc(mine.name) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
-  html += '<a class="card row" href="#/saint-quiz"><span class="lead">' + icon('sparkle') + '</span><span class="grow"><span class="title">' + esc(t('Choosing your Confirmation saint')) + '</span><span class="sub">' + esc(t('How to choose, and a short quiz')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
+  html += '<a class="card row" href="#/saint-quiz"><span class="lead">' + icon('sparkle') + '</span><span class="grow"><span class="title">' + esc(t('Find my saint')) + '</span><span class="sub">' + esc(t('A short quiz, and how to choose a Confirmation saint')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
   html += '<div class="section-title"><h2>' + esc(t('What draws you?')) + '</h2></div><div class="chips" id="ints">' +
     S.interests.map(x => '<button class="chip" data-int="' + x.id + '" aria-pressed="false">' + esc(t(x.label)) + '</button>').join('') + '</div>' +
     '<div class="section-title"><h2 id="sh">' + esc(t('All saints')) + '</h2></div><ul class="list card tight" id="sl"></ul>';

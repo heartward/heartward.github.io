@@ -24,7 +24,7 @@ export function view() {
     row('#/journal', 'pen', t('Journal'), jCount ? jCount + ' ' + t('sessions with notes') : t('Notes and questions from each session')) +
     row('#/habits', 'check', t('Weekly habits'), t('Small practices, no guilt')) +
     row('#/dates', 'calendar', t('My dates'), t('Baptism and other anniversaries')) +
-    row('#/saints', 'star', t('My patron saint'), mine ? mine.name : t('Not chosen yet')) +
+    row(mine ? '#/saint/' + mine.id : '#/saint-quiz', 'star', t('My patron saint'), mine ? mine.name : t('Find my saint with a short quiz')) +
     row('#/sponsor', 'hands', t('My sponsor'), t('Questions and notes for your next talk')) +
     row('#/friends', 'people', t('Friends on the journey'), state.friends.length ? state.friends.length + ' ' + t('people') : t('Sponsor, catechist and group')) +
     '</ul><div class="section-title"><h2>' + esc(t('Parish')) + '</h2></div><ul class="list card tight">' +
