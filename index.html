@@ -28,6 +28,25 @@
 
   <nav id="tabbar" class="tabbar" aria-label="Main"></nav>
 
+  <script>
+    // If the app has not started after a few seconds (for example a broken saved copy), offer a clean reload.
+    setTimeout(function () {
+      var v = document.getElementById('view');
+      if (!v || !v.querySelector('.loading')) return;
+      v.innerHTML = '<div class="empty"><h2>Still loading</h2><p>Heartward may have saved an old copy. Tap below to get the newest version. Your progress and journal are kept.</p><button class="btn" id="fixload">Reload Heartward</button></div>';
+      document.getElementById('fixload').onclick = function () {
+        var jobs = [];
+        if (window.caches) jobs.push(caches.keys().then(function (k) { return Promise.all(k.filter(function (n) { return n !== 'heartward-art'; }).map(function (n) { return caches.delete(n); })); }));
+        if (navigator.serviceWorker) jobs.push(navigator.serviceWorker.getRegistrations().then(function (r) { return Promise.all(r.map(function (x) { return x.unregister(); })); }));
+        Promise.all(jobs).catch(function () {}).then(function () { location.reload(); });
+      };
+    }, 6000);
+    // When a newer version takes over while the page is still stuck loading, reload into it.
+    if (navigator.serviceWorker) navigator.serviceWorker.addEventListener('controllerchange', function () {
+      var v = document.getElementById('view');
+      if (v && (v.querySelector('.loading') || document.getElementById('fixload'))) location.reload();
+    });
+  </script>
   <script src="lib/qrcode.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>
