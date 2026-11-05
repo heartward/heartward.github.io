@@ -10,14 +10,35 @@ export const RATES = { slow: 0.75, normal: 0.95, fast: 1.15 };
 let run = 0;        // each new reading gets a number; an older one stops when the number changes
 let onStop = null;
 
+// Use the phone's default voice when it is English. Picking another voice by hand can choose one that is
+// listed but not downloaded, which on iPhone reads nothing. Otherwise only the language is set.
 function voice() {
-  const vs = synth.getVoices().filter(v => /^en(-|_|$)/i.test(v.lang));
-  return vs.find(v => v.localService && /en-(US|CA|GB)/i.test(v.lang)) || vs.find(v => v.localService) || vs[0] || null;
+  const vs = synth.getVoices();
+  const d = vs.find(v => v.default);
+  return d && /^en(-|_|$)/i.test(d.lang) ? d : null;
+}
+
+// On iPhone the silent switch mutes web audio. Asking for "playback" (Safari 17+) lets it play like a podcast.
+function unmute() {
+  try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
+}
+
+let warn = null;
+function hint(show) {
+  clearTimeout(warn);
+  const old = document.getElementById('speak-hint'); if (old) old.remove();
+  if (!show) return;
+  const el = document.createElement('div');
+  el.id = 'speak-hint'; el.className = 'toast'; el.setAttribute('role', 'status');
+  el.textContent = 'No sound? Turn up the volume and turn off silent mode, then tap Listen again.';
+  document.body.appendChild(el);
+  warn = setTimeout(() => el.remove(), 7000);
 }
 
 export function stop() {
   run++;
-  if (canSpeak) synth.cancel();
+  // Safari can drop the next reading if cancel() runs when nothing is playing.
+  if (canSpeak && (synth.speaking || synth.pending)) synth.cancel();
   const f = onStop; onStop = null; if (f) f();
 }
 
@@ -28,17 +49,23 @@ export function speak(pieces, { gap = () => 250, onPiece, done } = {}) {
   if (!canSpeak) return;
   const id = run, list = pieces.map(s => String(s).trim()).filter(Boolean);
   onStop = done || null;
-  let i = 0;
+  unmute();
+  hint(false);
+  let i = 0, started = false;
+  // If nothing has started after 2.5 seconds, the phone is probably muted.
+  warn = setTimeout(() => { if (id === run && !started) hint(true); }, 2500);
   const next = () => {
     if (id !== run) return;
     if (i >= list.length) { const f = onStop; onStop = null; if (f) f(); return; }
     const k = i++, u = new SpeechSynthesisUtterance(list[k]);
     const v = voice(); if (v) u.voice = v;
     u.lang = v ? v.lang : 'en-US';
+    u.onstart = () => { started = true; hint(false); };
     u.rate = RATES[state.settings.rate] || RATES.normal;
     u.onend = () => { if (id === run) setTimeout(next, gap(list[k])); };
     u.onerror = () => { if (id === run) setTimeout(next, 50); };
     if (onPiece) onPiece(k);
+    if (synth.paused) synth.resume();
     synth.speak(u);
   };
   next();
