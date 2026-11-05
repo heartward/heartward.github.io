@@ -1,5 +1,6 @@
-/* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit. */
-var CACHE = 'heartward-v18';
+/* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit.
+   Every download skips the browser's own HTTP cache, so a new version never mixes in files from an older one. */
+var CACHE = 'heartward-v19';
 var ART = 'heartward-art'; // paintings from Wikimedia Commons, kept across app updates
 var SHELL = [
   './',
@@ -43,7 +44,7 @@ var SHELL = [
 ];
 
 self.addEventListener('install', function (e) {
-  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
+  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL.map(function (u) { return new Request(u, { cache: 'reload' }); })); }).then(function () { return self.skipWaiting(); }));
 });
 
 self.addEventListener('activate', function (e) {
@@ -68,7 +69,7 @@ self.addEventListener('fetch', function (e) {
   if (new URL(req.url).origin !== self.location.origin) return;
   e.respondWith(caches.open(CACHE).then(function (cache) {
     return cache.match(req, { ignoreSearch: true }).then(function (hit) {
-      var fresh = fetch(req).then(function (res) {
+      var fresh = fetch(req, { cache: 'no-cache' }).then(function (res) {
         if (res && res.ok) cache.put(req, res.clone());
         return res;
       }).catch(function () { return hit; });
