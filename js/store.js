@@ -21,6 +21,8 @@ const defaults = () => ({
   verses: {},        // sessionId -> true when the memory verse is known
   challenges: {},    // weekKey -> true when the weekly challenge is done
   lectio: {},        // Sunday 'YYYY-MM-DD' -> [notes for each step]
+  sponsor: { asks: '', notes: '' }, // questions and notes for talks with the sponsor
+  rites: {},         // acceptance -> 'YYYY-MM-DD' (set by the parish)
   introDone: false,  // the first-visit welcome on Today has been dismissed
   settings: { theme: 'system', size: 'normal', lang: 'en', reminder: '08:00', rate: 'normal' },
   updated: null
@@ -31,6 +33,7 @@ function merge(base, obj) {
   for (const k of Object.keys(out)) if (obj && obj[k] !== undefined) out[k] = obj[k];
   out.settings = Object.assign(defaults().settings, obj && obj.settings);
   out.parish = Object.assign(defaults().parish, obj && obj.parish);
+  out.sponsor = Object.assign(defaults().sponsor, obj && obj.sponsor);
   if (!SPANISH) out.settings.lang = 'en';
   return out;
 }
