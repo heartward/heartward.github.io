@@ -11,6 +11,7 @@ Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 - **Pray**: 29 prayers with a practice mode, a step-by-step Rosary with beads, a confession guide with an examination of conscience, and calendar reminders.
 - **Learn**: Mass guide (when to sit, stand or kneel), first-week basics, questions, glossary, a saint finder and the Church calendar.
 - **Me**: journal, weekly habits, sacrament dates and anniversaries, friends on the journey, getting involved, parish info, settings (text size, dark mode), backup and a QR code to share the app.
+- **This week** (`#/week`): for the current class, a memory verse (Douay-Rheims, public domain) with flashcards and audio, a Bible study with questions and notes, a review quiz, discussion questions to send to a sponsor, this Sunday's Gospel with a Lectio Divina guide, a saint of the week with a small action, and a weekly challenge. Plus a first Confession preparation page.
 - **Listen**: read-aloud for prayers, lessons and the Rosary using the phone's own voice, with a "say it after me" mode for memorizing.
 - **Share with your class**: a welcome page (`#/welcome`) with a QR code and link for sponsors and classmates.
 - **Search** across everything, offline.
@@ -33,6 +34,7 @@ Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 | `js/liturgy.js` | Easter date, moveable feasts and seasons, computed on the device |
 | `js/i18n-es.js` | Spanish menu text (switched off for now: set `SPANISH = true` in `js/store.js` to bring it back) |
 | `content/en/sessions.json` | Stages, rites and sessions. `status` is `draft` (written) or `outline` |
+| `content/en/study.json` | Per-session memory verse, Bible study, quiz and discussion; weekly challenges, saint actions, Lectio Divina and first Confession guides |
 | `content/en/prayers.json` | Prayers with category, text, meaning and sources |
 | `content/en/guides.json` | Mass, basics, confession and Rosary guides |
 | `content/en/faq.json`, `glossary.json`, `saints.json`, `calendar.json`, `paths.json` | Questions, words, saints, feasts, and the first-year, welcome-back and get-involved paths |
