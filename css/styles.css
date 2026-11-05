@@ -551,3 +551,7 @@ label.opt input { accent-color: var(--accent); width: 20px; height: 20px; flex: 
   body { background: #fff !important; }
   .keepsake { border-color: #b98a2e; box-shadow: none; margin: 0; }
 }
+/* Prayers grouped in folding sections on the Pray tab */
+.prayer-groups { padding: 0 16px; }
+.prayer-groups details.acc .body { padding: 0 0 8px; }
+.prayer-groups .list.tight .row { padding-left: 0; padding-right: 0; }
