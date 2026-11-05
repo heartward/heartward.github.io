@@ -25,6 +25,7 @@ export function view() {
     row('#/habits', 'check', t('Weekly habits'), t('Small practices, no guilt')) +
     row('#/dates', 'calendar', t('My dates'), t('Baptism and other anniversaries')) +
     row('#/saints', 'star', t('My patron saint'), mine ? mine.name : t('Not chosen yet')) +
+    row('#/sponsor', 'hands', t('My sponsor'), t('Questions and notes for your next talk')) +
     row('#/friends', 'people', t('Friends on the journey'), state.friends.length ? state.friends.length + ' ' + t('people') : t('Sponsor, catechist and group')) +
     '</ul><div class="section-title"><h2>' + esc(t('Parish')) + '</h2></div><ul class="list card tight">' +
     row('#/parish', 'church', t('My parish'), state.parish.name || data.parish.name || t('Add your parish')) +

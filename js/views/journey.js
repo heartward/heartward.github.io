@@ -4,6 +4,7 @@ import { icon } from '../icons.js';
 import { esc, t, toast, back, head, sources } from '../ui.js';
 import { lessonHtml } from '../figures.js';
 import { listenButton, bindListen, sentences } from '../speech.js';
+import { daysToVigil } from './extras.js';
 
 export const sessionNo = s => data.sessionList.indexOf(s) + 1;
 export const nextSession = () => data.sessionList.find(s => !state.done[s.id]) || null;
@@ -20,6 +21,8 @@ const rerender = () => document.dispatchEvent(new Event('heartward:render'));
 export function view() {
   const next = nextSession();
   let html = head(t('Your journey'), t('The road to Easter'), t('Like the disciples on the road to Emmaus, you are not walking alone. Each session you finish lights another step. Your parish sets the exact schedule.'));
+  const nv = daysToVigil();
+  html += '<a class="card row" href="#/rites"><span class="lead">' + icon('candle') + '</span><span class="grow"><span class="title">' + esc(t('Steps along the way')) + '</span><span class="sub">' + esc(t('The rites before Easter and their dates')) + (nv > 0 ? ' · ' + nv + ' ' + esc(t('days to the Easter Vigil')) : '') + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
   data.stages.forEach(st => {
     const ss = data.sessionList.filter(s => s.stage === st.id);
     if (!ss.length) return;

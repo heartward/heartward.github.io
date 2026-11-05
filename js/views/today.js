@@ -4,6 +4,7 @@ import { icon } from '../icons.js';
 import { esc, t, fmtDate, parseISO, tile } from '../ui.js';
 import { season, seasonColor, upcoming, rosaryForDay } from '../liturgy.js';
 import { progress, nextSession, sessionNo } from './journey.js';
+import { daysToVigil } from './extras.js';
 
 export function view() {
   const now = new Date();
@@ -28,6 +29,9 @@ export function view() {
     '<div class="sub">' + Object.keys(state.learned).length + ' ' + esc(t('prayers learned by heart')) + '</div></div></div>' +
     '<div class="stagebar">' + p.stages.map(st => '<div class="seg"><div class="bar"><div class="fill" style="width:' + Math.round(st.pct * 100) + '%"></div></div><div class="lbl">' + esc(t(st.title)) + '</div></div>').join('') + '</div>' +
     '</section>';
+
+  const nv = daysToVigil();
+  if (nv >= 0) html += '<a class="countdown-strip" href="#/rites">' + icon('candle') + '<span><strong>' + (nv > 1 ? nv + ' ' + esc(t('days')) : nv === 1 ? esc(t('Tomorrow')) : esc(t('Tonight'))) + '</strong> ' + esc(t('to the Easter Vigil')) + '</span><span class="chev">' + icon('chevron') + '</span></a>';
 
   // Anniversary or feast-day banner
   const md = localISO(now).slice(5);

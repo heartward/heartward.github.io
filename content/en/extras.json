@@ -1,0 +1,73 @@
+{
+  "rites": {
+    "intro": "RCIA is not only classes. Along the way the Church celebrates a few short rites, usually at Sunday Mass, that mark how far you have come. Your parish chooses some of the dates, so check with your coordinator. The dates below come from the Church calendar.",
+    "steps": [
+      { "id": "acceptance", "when": "parish", "title": "Rite of Acceptance or Welcome",
+        "about": "You stand at the church door with your sponsor and say that you want to follow Christ. The priest and your sponsor trace the sign of the cross on your forehead, ears, eyes, lips, heart and shoulders. If you are not baptized you become a catechumen; if you are already baptized it is called the Rite of Welcome.",
+        "tip": "Usually in the fall or early winter. Your sponsor stands right behind you." },
+      { "id": "election", "when": "lent1", "title": "Rite of Election",
+        "about": "On the first Sunday of Lent the bishop, usually at the cathedral, calls you by name. Your name is written in the Book of the Elect and you are now called one of 'the elect'. Your sponsor says before everyone that you are ready. Baptized candidates have a similar rite, the Call to Continuing Conversion.",
+        "tip": "Your parish often has a short Rite of Sending at Mass that morning, before you go to the cathedral." },
+      { "id": "scrutinies", "when": "lent3", "title": "The Scrutinies",
+        "about": "On the third, fourth and fifth Sundays of Lent the parish prays over you. The Gospels are the woman at the well, the man born blind, and the raising of Lazarus. They are not tests. They are prayers that God heal what is weak and strengthen what is good in you.",
+        "tip": "Before each one, read that Sunday's Gospel and ask: what do I want Jesus to heal in me?" },
+      { "id": "presentations", "when": "lent", "title": "The Creed and the Our Father",
+        "about": "During Lent the Church hands on to you its two great treasures: the Creed, what we believe, and the Lord's Prayer, how we pray. You will say the Creed at the Easter Vigil.",
+        "tip": "Practice both in the Pray tab with Listen and Say it after me." },
+      { "id": "vigil", "when": "vigil", "title": "The Easter Vigil",
+        "about": "The holiest night of the year. It begins in the dark with the Easter fire and candle. Then you are baptized (if you are not yet), confirmed, and receive Holy Communion for the first time. From this night you are called a neophyte, which means 'new plant'.",
+        "tip": "It is a long Mass, often two to three hours. Eat beforehand, arrive early, and if your parish baptizes by immersion bring a change of clothes and a towel." },
+      { "id": "mystagogy", "when": "mystagogy", "title": "Mystagogy, Easter to Pentecost",
+        "about": "Fifty days to understand what you received. You keep meeting with your group and begin to find your place in the parish.",
+        "tip": "Look at 'Your first year' in the Journey tab for one small step each month." }
+    ],
+    "sources": [
+      { "title": "Catechism 1229–1233: Christian initiation", "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM" },
+      { "title": "Catechism 1247–1249: Baptism of adults", "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM" }
+    ]
+  },
+  "sponsor": {
+    "intro": "Your sponsor is a Catholic friend who walks beside you, prays for you and stands with you at each rite. Use this page to get ready for your next talk.",
+    "together": [
+      "Go to Sunday Mass together and talk about the homily over coffee.",
+      "Pray a decade of the Rosary together.",
+      "Visit a church for quiet time in front of the Blessed Sacrament.",
+      "Go to a parish event, like a potluck or a service day.",
+      "Ask your sponsor how they came to faith, or what keeps them going.",
+      "Read the next Sunday's Gospel together and share one line that stood out."
+    ],
+    "forSponsors": {
+      "title": "For sponsors",
+      "points": [
+        "You don't need to be a theologian. Your friendship and your example matter most.",
+        "Try to come to class sometimes, and to every rite. At the Rite of Election and the Easter Vigil you put your hand on their shoulder.",
+        "Pray for them by name every day.",
+        "Ask how they are, not only what they learned. Questions and doubts are normal.",
+        "If you don't know an answer, say 'Let's find out together.'",
+        "The Church asks that a sponsor be a confirmed Catholic, at least 16, who has received the Eucharist and lives the faith."
+      ]
+    }
+  },
+  "confirmationSaint": {
+    "intro": "At Confirmation many people choose a saint's name. The saint becomes a special friend in heaven who prays for you and shows you a way to follow Jesus. Some people keep their baptismal name instead, which is fine too. Ask your parish what they do.",
+    "how": [
+      "Pray about it. Ask the Holy Spirit to guide you.",
+      "Take the short quiz below, then read about the saints it suggests.",
+      "Look for a life that speaks to your own story, not only a name you like.",
+      "Talk it over with your sponsor.",
+      "Once you choose, tell your RCIA coordinator so the name can be used at Confirmation."
+    ],
+    "quiz": [
+      { "q": "What part of your story feels most important right now?",
+        "options": [ { "label": "I found faith later in life", "tags": ["convert"] }, { "label": "I'm starting over after mistakes", "tags": ["second-chances"] }, { "label": "I've been through a hard time", "tags": ["courage"] }, { "label": "I moved far from home", "tags": ["migrants"] } ] },
+      { "q": "Where do you feel closest to God?",
+        "options": [ { "label": "In quiet prayer", "tags": ["prayer"] }, { "label": "Outdoors, in nature", "tags": ["nature"] }, { "label": "Helping people in need", "tags": ["service"] }, { "label": "Reading and asking questions", "tags": ["thinker"] } ] },
+      { "q": "What fills most of your days?",
+        "options": [ { "label": "Family and home", "tags": ["family"] }, { "label": "Work", "tags": ["work"] }, { "label": "Study or school", "tags": ["youth", "thinker"] }, { "label": "Caring for others' health", "tags": ["health"] } ] },
+      { "q": "Which gift would you most like to give back?",
+        "options": [ { "label": "Music, art or writing", "tags": ["arts"] }, { "label": "Time with the poor", "tags": ["service"] }, { "label": "Faith shared with my family", "tags": ["family"] }, { "label": "Courage to speak up", "tags": ["courage"] } ] },
+      { "q": "Which saying speaks to you?",
+        "options": [ { "label": "\"Our heart is restless until it rests in you.\"", "tags": ["convert", "thinker"] }, { "label": "\"Do small things with great love.\"", "tags": ["prayer", "service"] }, { "label": "\"Be not afraid.\"", "tags": ["courage", "youth"] }, { "label": "\"Praised be you, my Lord, through all your creatures.\"", "tags": ["nature", "service"] } ] }
+    ]
+  }
+}
