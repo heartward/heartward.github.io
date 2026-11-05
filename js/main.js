@@ -9,6 +9,7 @@ import * as pray from './views/pray.js';
 import * as learn from './views/learn.js';
 import * as me from './views/me.js';
 import * as search from './views/search.js';
+import * as week from './views/week.js';
 
 const routes = {
   '': [today.view, 'today'],
@@ -19,6 +20,7 @@ const routes = {
   glossary: [learn.glossary, 'learn'], saints: [learn.saints, 'learn'], saint: [learn.saint, 'learn'], calendar: [learn.calendar, 'learn'],
   me: [me.view, 'me'], journal: [me.journal, 'me'], habits: [me.habits, 'me'], dates: [me.dates, 'me'], friends: [me.friends, 'me'],
   involved: [me.involved, 'me'], settings: [me.settings, 'me'], share: [me.share, 'me'], welcome: [me.welcome, ''], parish: [me.parish, 'me'],
+  week: [week.week, 'journey'], verse: [week.verse, 'journey'], quiz: [week.quiz, 'journey'], lectio: [week.lectio, 'pray'], 'first-confession': [week.firstConfession, 'pray'],
   search: [search.view, 'search']
 };
 

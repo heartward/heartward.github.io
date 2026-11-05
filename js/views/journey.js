@@ -56,6 +56,7 @@ export function session(id) {
   if (s.lesson && s.lesson.length) html += '<div class="listen-row">' + listenButton('ls', t('Listen to this lesson')) + '</div><div class="reading">' + lessonHtml(s.lesson) + '</div>';
   else html += '<div class="card flat"><p style="margin:0">' + esc(t('This lesson is still being written. Use the journal below to keep your notes from class, and they will be here when you come back.')) + '</p></div>';
   (s.deeper || []).forEach(d => { html += '<aside class="deeper"><div class="eyebrow">' + esc(t('Digging deeper')) + '</div><h3>' + esc(d.title) + '</h3>' + lessonHtml(d.text.split('\n\n')) + '</aside>'; });
+  html += '<a class="card row week-link" href="#/week/' + s.id + '"><span class="lead">' + icon('sparkle') + '</span><span class="grow"><span class="title">' + esc(t('This week\'s activities')) + '</span><span class="sub">' + esc(t('Memory verse, Bible study, quiz, questions to discuss, saint and challenge')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
   if (s.reflection) html += '<div class="reflection"><div class="eyebrow">' + esc(t('Reflect')) + '</div><p>' + esc(s.reflection) + '</p></div>';
   if (s.prayers && s.prayers.length) {
     html += '<div class="section-title"><h2>' + esc(t('Prayers for this week')) + '</h2></div><div class="chips">' + s.prayers.map(pid => {

@@ -16,6 +16,11 @@ const defaults = () => ({
   saint: '',         // chosen patron saint id
   friends: [],       // { name, role, phone, email }
   parish: { name: '', meets: '' },
+  study: {},         // sessionId -> { notes } for Bible study
+  quiz: {},          // sessionId -> best score
+  verses: {},        // sessionId -> true when the memory verse is known
+  challenges: {},    // weekKey -> true when the weekly challenge is done
+  lectio: {},        // Sunday 'YYYY-MM-DD' -> [notes for each step]
   introDone: false,  // the first-visit welcome on Today has been dismissed
   settings: { theme: 'system', size: 'normal', lang: 'en', reminder: '08:00', rate: 'normal' },
   updated: null

@@ -42,6 +42,11 @@ export function view() {
     html += '<a class="card next-card" href="#/session/' + next.id + '" style="text-decoration:none;color:inherit">' +
       '<span class="num-badge">' + sessionNo(next) + '</span><span><span class="eyebrow">' + esc(t('Up next')) + ' · ' + esc(t(st.title)) + '</span>' +
       '<h2 class="h3">' + esc(next.title) + '</h2><span class="muted small">' + esc(next.summary) + '</span></span></a>';
+    const sv = (data.study.sessions[next.id] || {}).verse;
+    html += '<a class="card week-card" href="#/week"><span class="eyebrow">' + esc(t('This week')) + '</span>' +
+      (sv ? '<span class="wk-verse">“' + esc(sv.text.length > 110 ? sv.text.slice(0, sv.text.lastIndexOf(' ', 105)) + '…' : sv.text) + '” <span class="muted small">' + esc(sv.ref) + '</span></span>' : '') +
+      '<span class="wk-chips">' + [t('Memory verse'), t('Bible study'), t('Quiz'), t('Saint'), t('Challenge')].map(x => '<span>' + esc(x) + '</span>').join('') + '</span>' +
+      '<span class="chev">' + icon('chevron') + '</span></a>';
   } else {
     html += '<div class="card"><h2 class="h3">' + esc(t('You walked the whole road')) + '</h2><p class="muted">' + esc(t('Every session is lit. Keep going with your first year.')) + '</p><a class="btn soft sm" href="#/first-year">' + esc(t('Your first year')) + '</a></div>';
   }
@@ -93,6 +98,7 @@ function intro(first) {
     feat('#/journey', 'road', t('Follow your class'), t('A short lesson for each RCIA session, with pictures, charts and a private journal.')) +
     feat('#/pray', 'candle', t('Learn the prayers'), t('Listen, repeat line by line, and practice until you know them by heart.')) +
     feat('#/rosary', 'rosary', t('Pray the Rosary'), t('Bead by bead, with the words in front of you.')) +
+    feat('#/week', 'sparkle', t('Practice each week'), t('A memory verse, Bible study, quiz, saint of the week and a small challenge.')) +
     feat('#/learn', 'church', t('Understand the Mass'), t('When to sit, stand and kneel, plus answers to common questions.')) +
     '</div>' +
     '<p class="notice">' + esc(t('Free, no sign-up and no ads. Everything you write stays on your phone.')) + '</p>';

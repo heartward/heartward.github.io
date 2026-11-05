@@ -1,5 +1,5 @@
 /* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit. */
-var CACHE = 'heartward-v13';
+var CACHE = 'heartward-v14';
 var ART = 'heartward-art'; // paintings from Wikimedia Commons, kept across app updates
 var SHELL = [
   './',
@@ -24,6 +24,7 @@ var SHELL = [
   'js/views/pray.js',
   'js/views/search.js',
   'js/views/today.js',
+  'js/views/week.js',
   'js/speech.js',
   'content/en/calendar.json',
   'content/en/faq.json',
@@ -33,6 +34,7 @@ var SHELL = [
   'content/en/prayers.json',
   'content/en/saints.json',
   'content/en/sessions.json',
+  'content/en/study.json',
   'content/es/prayers.json',
   'content/parish.json'
 ];

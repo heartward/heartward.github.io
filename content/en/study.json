@@ -1,0 +1,1126 @@
+{
+  "sessions": {
+    "s01": {
+      "verse": {
+        "ref": "Luke 24:32",
+        "text": "And they said one to the other: Was not our heart burning within us, whilst he spoke in the way, and opened to us the scriptures?"
+      },
+      "bible": {
+        "ref": "Luke 24:13-35",
+        "url": "https://bible.usccb.org/bible/luke/24",
+        "intro": "The road to Emmaus. Read it slowly, and picture yourself as the third person walking with the two disciples.",
+        "questions": [
+          "What were the two disciples feeling as they walked? When have you felt the same way?",
+          "Jesus walked with them before they recognized him. Where might he have been walking with you without your noticing?",
+          "They recognized him \"in the breaking of the bread.\" What do you think that phrase points to?"
+        ]
+      },
+      "discuss": [
+        "What first made you curious about the Catholic faith?",
+        "What is one question you hope to have answered this year?",
+        "Who has walked beside you on your spiritual journey so far?"
+      ],
+      "quiz": [
+        {
+          "q": "About how far was Emmaus from Jerusalem?",
+          "options": [
+            "Two miles",
+            "About seven miles",
+            "Forty miles"
+          ],
+          "a": 1,
+          "why": "Luke says the village was about seven miles from Jerusalem (Luke 24:13)."
+        },
+        {
+          "q": "When did the disciples recognize Jesus?",
+          "options": [
+            "When he first joined them",
+            "When he broke the bread",
+            "When they reached Jerusalem"
+          ],
+          "a": 1,
+          "why": "Their eyes were opened at the table, when he took bread, blessed it and broke it (Luke 24:30-31)."
+        },
+        {
+          "q": "What do you need before starting this journey?",
+          "options": [
+            "All the answers",
+            "A perfect past",
+            "Nothing but an open heart and your questions"
+          ],
+          "a": 2,
+          "why": "The disciples were full of doubts too. Questions are welcome; that is what this time is for."
+        }
+      ]
+    },
+    "s03": {
+      "verse": {
+        "ref": "Matthew 7:7",
+        "text": "Ask, and it shall be given you: seek, and you shall find: knock, and it shall be opened to you."
+      },
+      "bible": {
+        "ref": "Matthew 6:5-15",
+        "url": "https://bible.usccb.org/bible/matthew/6",
+        "intro": "Jesus teaches about prayer and gives us the Our Father.",
+        "questions": [
+          "Jesus says to pray in your \"inner room.\" Where could your quiet place be this week?",
+          "Which line of the Our Father speaks to you most right now? Why?",
+          "Jesus links our forgiveness with forgiving others. Is there someone you find it hard to forgive?"
+        ]
+      },
+      "discuss": [
+        "How did you pray as a child, if at all? How do you pray now?",
+        "What makes prayer hard for you: time, distraction, not knowing what to say?",
+        "What is one small prayer habit you could try this week?"
+      ],
+      "quiz": [
+        {
+          "q": "What is prayer, at its simplest?",
+          "options": [
+            "Saying the right words",
+            "Lifting your heart and mind to God",
+            "Something only priests do"
+          ],
+          "a": 1,
+          "why": "Prayer is lifting the heart and mind to God (Catechism 2559). No special words are needed."
+        },
+        {
+          "q": "Which prayer did Jesus himself teach his disciples?",
+          "options": [
+            "The Hail Mary",
+            "The Our Father",
+            "The Glory Be"
+          ],
+          "a": 1,
+          "why": "When the disciples asked \"Lord, teach us to pray,\" he gave them the Our Father (Luke 11:1-4)."
+        },
+        {
+          "q": "Which of these is a good simple daily habit?",
+          "options": [
+            "Praying only in emergencies",
+            "Offering your day to God when you wake up",
+            "Waiting until you feel holy"
+          ],
+          "a": 1,
+          "why": "Start the day with the Sign of the Cross and an offering, and end it by thanking God for one good thing."
+        }
+      ]
+    },
+    "sym1-01": {
+      "verse": {
+        "ref": "1 John 4:16",
+        "text": "And we have known, and have believed the charity, which God hath to us. God is charity: and he that abideth in charity, abideth in God, and God in him.",
+        "note": "\"Charity\" is the old English word for love."
+      },
+      "bible": {
+        "ref": "Matthew 28:16-20",
+        "url": "https://bible.usccb.org/bible/matthew/28",
+        "intro": "Jesus sends the apostles to baptize \"in the name of the Father, and of the Son, and of the Holy Spirit.\"",
+        "questions": [
+          "Notice it says \"in the name\" (one name), not \"names.\" What does that hint about the Trinity?",
+          "Some of the disciples \"doubted\" even as they worshiped. What do you make of that?",
+          "Jesus promises \"I am with you always.\" Where do you need to hear that this week?"
+        ]
+      },
+      "discuss": [
+        "How would you explain the Trinity to a friend in one or two sentences?",
+        "Faith is both believing and trusting. Which comes easier to you?",
+        "What does \"God is love\" mean to you personally?"
+      ],
+      "quiz": [
+        {
+          "q": "How many Persons are in the one God?",
+          "options": [
+            "One",
+            "Two",
+            "Three"
+          ],
+          "a": 2,
+          "why": "One God in three Persons: the Father, the Son and the Holy Spirit (Catechism 253)."
+        },
+        {
+          "q": "Is the Father the same Person as the Son?",
+          "options": [
+            "Yes",
+            "No, but each is fully God"
+          ],
+          "a": 1,
+          "why": "Each Person is fully God, and each is distinct from the others (Catechism 253-254)."
+        },
+        {
+          "q": "Faith involves...",
+          "options": [
+            "Only the mind",
+            "Only feelings",
+            "The mind believing and the will trusting"
+          ],
+          "a": 2,
+          "why": "Faith is the intellect believing what God reveals and the will entrusting ourselves to him (Catechism 150, 155)."
+        },
+        {
+          "q": "What does 1 John 4:16 say God is?",
+          "options": [
+            "Power",
+            "Love",
+            "Law"
+          ],
+          "a": 1,
+          "why": "\"God is love\" (1 John 4:8, 16)."
+        }
+      ]
+    },
+    "sym1-02": {
+      "verse": {
+        "ref": "Hebrews 1:1-2",
+        "text": "God, who, at sundry times and in divers manners, spoke in times past to the fathers by the prophets, last of all, in these days hath spoken to us by his Son."
+      },
+      "bible": {
+        "ref": "Luke 15:1-10",
+        "url": "https://bible.usccb.org/bible/luke/15",
+        "intro": "The lost sheep and the lost coin: a God who goes looking for us.",
+        "questions": [
+          "The shepherd leaves ninety-nine to find one. What does that say about how God sees you?",
+          "Have you ever felt lost, or been found? What was it like?",
+          "Heaven rejoices over one sinner who repents. How does that change how you see confession?"
+        ]
+      },
+      "discuss": [
+        "Has there been a moment when you felt God was reaching out to you?",
+        "Why do you think God reveals himself step by step instead of all at once?",
+        "Scripture, Tradition and the Magisterium: which of these was new to you?"
+      ],
+      "quiz": [
+        {
+          "q": "Divine Revelation is...",
+          "options": [
+            "Humans figuring out God on their own",
+            "God making himself and his plan known to us",
+            "A new book written every century"
+          ],
+          "a": 1,
+          "why": "Revelation is God freely making himself known (Catechism 50-51)."
+        },
+        {
+          "q": "How is God's Word handed on in the Church?",
+          "options": [
+            "Scripture only",
+            "Scripture and Tradition, guarded by the Magisterium",
+            "Personal feelings only"
+          ],
+          "a": 1,
+          "why": "Like a three-legged stool: Scripture, Tradition and the Magisterium work together (Catechism 95)."
+        },
+        {
+          "q": "What is the Magisterium?",
+          "options": [
+            "A book",
+            "The teaching office of the Pope and bishops",
+            "A Church building"
+          ],
+          "a": 1,
+          "why": "The Magisterium is the living teaching office of the Church (Catechism 85)."
+        },
+        {
+          "q": "Is there new public revelation after Jesus?",
+          "options": [
+            "Yes, every year",
+            "No, in Jesus God has said everything"
+          ],
+          "a": 1,
+          "why": "In his Son, God has spoken his full and final Word (Catechism 65-66)."
+        }
+      ]
+    },
+    "sym1-03": {
+      "verse": {
+        "ref": "Psalm 118:105",
+        "text": "Thy word is a lamp to my feet, and a light to my paths.",
+        "note": "Psalm 119:105 in newer Bibles; the old Latin-based numbering is one behind for most psalms."
+      },
+      "bible": {
+        "ref": "2 Timothy 3:14-17",
+        "url": "https://bible.usccb.org/bible/2timothy/3",
+        "intro": "Paul tells Timothy what Scripture is for.",
+        "questions": [
+          "Paul says Scripture is \"inspired by God.\" What does inspired mean to you after this lesson?",
+          "Who taught you the faith \"from infancy,\" or who is teaching you now?",
+          "Which of the four uses (teaching, correcting, training, equipping) do you need most?"
+        ]
+      },
+      "discuss": [
+        "Do you own a Bible? Which translation, and how do you find reading it?",
+        "Which book of the Bible would you like to read first, and why?",
+        "Why do you think the Church reads the Bible with Tradition, not alone?"
+      ],
+      "quiz": [
+        {
+          "q": "How many books are in the Catholic Bible?",
+          "options": [
+            "66",
+            "73",
+            "100"
+          ],
+          "a": 1,
+          "why": "46 in the Old Testament and 27 in the New Testament. Most Protestant Bibles have 66."
+        },
+        {
+          "q": "Who is the author of Scripture?",
+          "options": [
+            "Only human writers",
+            "Only God",
+            "God, working through real human authors"
+          ],
+          "a": 2,
+          "why": "God inspired human writers who used their own words and skills (Catechism 105-106)."
+        },
+        {
+          "q": "Catholics read the Bible...",
+          "options": [
+            "Literalistically, like a newspaper",
+            "Paying attention to what each author meant and the kind of writing it is"
+          ],
+          "a": 1,
+          "why": "We read it literarily, with attention to history, culture and literary form (Catechism 109-110)."
+        },
+        {
+          "q": "A covenant is...",
+          "options": [
+            "A contract for goods",
+            "A sacred family bond sealed with an oath"
+          ],
+          "a": 1,
+          "why": "Contracts exchange property; covenants exchange persons and make us family."
+        }
+      ]
+    },
+    "sym1-04": {
+      "verse": {
+        "ref": "John 3:16",
+        "text": "For God so loved the world, as to give his only begotten Son; that whosoever believeth in him, may not perish, but may have life everlasting."
+      },
+      "bible": {
+        "ref": "Genesis 3:1-15",
+        "url": "https://bible.usccb.org/bible/genesis/3",
+        "intro": "The fall, and the first promise of a Savior.",
+        "questions": [
+          "How does the serpent twist God's words? Where do you hear similar lies today?",
+          "After they sin, Adam and Eve hide and blame. How do you see that pattern in yourself?",
+          "Verse 15 is called the \"first Gospel.\" What promise does God make even here?"
+        ]
+      },
+      "discuss": [
+        "Where do you see the \"broken lines\" between people in the world today?",
+        "Why do you think God gave us freedom, knowing we could misuse it?",
+        "What does it mean to you that the Church is God's family?"
+      ],
+      "quiz": [
+        {
+          "q": "What are the three parts of the story of salvation?",
+          "options": [
+            "Creation, Fall, Redemption",
+            "Law, Prophets, Gospels",
+            "Birth, Life, Death"
+          ],
+          "a": 0,
+          "why": "Creation, Fall and Redemption: the shape of the whole Bible."
+        },
+        {
+          "q": "Original sin is...",
+          "options": [
+            "A sin you personally committed",
+            "A wounded human nature we inherit"
+          ],
+          "a": 1,
+          "why": "We are born without the holiness and friendship with God we were made for (Catechism 404-405)."
+        },
+        {
+          "q": "Which promise to Abraham is fulfilled in Jesus?",
+          "options": [
+            "A great nation",
+            "A kingdom",
+            "A blessing for every nation"
+          ],
+          "a": 2,
+          "why": "Jesus opens God's family to the whole world in the new covenant."
+        },
+        {
+          "q": "\"Catholic\" means...",
+          "options": [
+            "Roman",
+            "Universal",
+            "Ancient"
+          ],
+          "a": 1,
+          "why": "From the Greek for \"according to the whole\" (Catechism 830-831)."
+        }
+      ]
+    },
+    "sym1-05": {
+      "verse": {
+        "ref": "John 14:6",
+        "text": "Jesus saith to him: I am the way, and the truth, and the life. No man cometh to the Father, but by me."
+      },
+      "bible": {
+        "ref": "Matthew 16:13-20",
+        "url": "https://bible.usccb.org/bible/matthew/16",
+        "intro": "\"Who do you say that I am?\"",
+        "questions": [
+          "Jesus first asks what others say, then what you say. Why both?",
+          "Peter gets the answer right, but not from his own cleverness. Where did it come from?",
+          "How would you answer Jesus' question today, in your own words?"
+        ]
+      },
+      "discuss": [
+        "Who did you think Jesus was before you started RCIA? Has that changed?",
+        "Why does it matter that Jesus is both truly God and truly man?",
+        "What is one way you could get to know Jesus personally this week?"
+      ],
+      "quiz": [
+        {
+          "q": "Jesus is...",
+          "options": [
+            "Only God, appearing human",
+            "Only a great man",
+            "Truly God and truly man"
+          ],
+          "a": 2,
+          "why": "One divine Person with two natures (Catechism 464, 469)."
+        },
+        {
+          "q": "Which heresy said the Son was a creature, not God?",
+          "options": [
+            "Arianism",
+            "Nestorianism",
+            "Docetism"
+          ],
+          "a": 0,
+          "why": "The Council of Nicaea (325) answered Arius: \"begotten, not made.\""
+        },
+        {
+          "q": "Why is Mary called Theotokos, Mother of God?",
+          "options": [
+            "She existed before God",
+            "Her Son is one divine Person"
+          ],
+          "a": 1,
+          "why": "Ephesus (431) taught this to protect the truth about who Jesus is (Catechism 466)."
+        },
+        {
+          "q": "Docetism taught that Jesus...",
+          "options": [
+            "Only seemed to have a body",
+            "Was two persons"
+          ],
+          "a": 0,
+          "why": "From the Greek dokein, \"to seem.\""
+        }
+      ]
+    },
+    "sym1-06": {
+      "verse": {
+        "ref": "John 15:13",
+        "text": "Greater love than this no man hath, that a man lay down his life for his friends."
+      },
+      "bible": {
+        "ref": "John 19:16-30",
+        "url": "https://bible.usccb.org/bible/john/19",
+        "intro": "The crucifixion of Jesus.",
+        "questions": [
+          "Who stands at the foot of the cross? Where would you have been?",
+          "Jesus gives Mary to John, and John to Mary. What might that mean for you?",
+          "\"It is finished.\" What did Jesus finish?"
+        ]
+      },
+      "discuss": [
+        "What do you usually do when you suffer? What would \"offering it up\" look like?",
+        "Why do you think the cross became the main sign of Christianity?",
+        "What does the Resurrection change about how you see death?"
+      ],
+      "quiz": [
+        {
+          "q": "\"Paschal\" comes from the word for...",
+          "options": [
+            "Peace",
+            "Passover",
+            "Pastor"
+          ],
+          "a": 1,
+          "why": "Jesus is the new Passover Lamb (1 Corinthians 5:7)."
+        },
+        {
+          "q": "Why could Jesus bridge the gap of sin?",
+          "options": [
+            "He was a very good man",
+            "He is both God and man",
+            "He kept every rule"
+          ],
+          "a": 1,
+          "why": "As man he could stand in our place; as God his offering had infinite worth."
+        },
+        {
+          "q": "\"He descended into hell\" in the Creed means...",
+          "options": [
+            "The hell of the damned",
+            "The realm of the dead, to free the just"
+          ],
+          "a": 1,
+          "why": "Sheol or Hades, the realm of the dead (Catechism 632-637)."
+        },
+        {
+          "q": "We share in Christ's cross by...",
+          "options": [
+            "Avoiding all suffering",
+            "Uniting our work, joys and sufferings with his"
+          ],
+          "a": 1,
+          "why": "Catechism 618."
+        }
+      ]
+    },
+    "sym1-07": {
+      "verse": {
+        "ref": "Romans 5:5",
+        "text": "And hope confoundeth not: because the charity of God is poured forth in our hearts, by the Holy Ghost, who is given to us."
+      },
+      "bible": {
+        "ref": "Acts 2:1-13",
+        "url": "https://bible.usccb.org/bible/acts/2",
+        "intro": "Pentecost: the Holy Spirit comes on the Church.",
+        "questions": [
+          "What signs show the Spirit's coming? What might each mean?",
+          "The crowd hears in their own languages. What does that say about the Church?",
+          "Where do you need the Spirit's courage this week?"
+        ]
+      },
+      "discuss": [
+        "When have you felt a nudge or strength that you couldn't explain?",
+        "Which gift of the Spirit do you most want: wisdom, courage, understanding?",
+        "What does \"grace\" mean to you so far?"
+      ]
+    },
+    "sym1-08": {
+      "verse": {
+        "ref": "Matthew 16:18",
+        "text": "And I say to thee: That thou art Peter; and upon this rock I will build my church, and the gates of hell shall not prevail against it."
+      },
+      "bible": {
+        "ref": "Acts 2:42-47",
+        "url": "https://bible.usccb.org/bible/acts/2",
+        "intro": "The life of the first Christian community.",
+        "questions": [
+          "List the four things the first Christians \"devoted themselves\" to. Which do you already share?",
+          "What would it look like for your parish to be like this?",
+          "Why do you think people were drawn to them?"
+        ]
+      },
+      "discuss": [
+        "Have you ever thought you could follow Jesus without the Church? What changed?",
+        "What has helped you feel at home in your parish, or what would?",
+        "Why do you think Jesus built a Church instead of leaving only a book?"
+      ]
+    },
+    "sym1-09": {
+      "verse": {
+        "ref": "Luke 1:46-47",
+        "text": "And Mary said: My soul doth magnify the Lord. And my spirit hath rejoiced in God my Saviour."
+      },
+      "bible": {
+        "ref": "Luke 1:26-38",
+        "url": "https://bible.usccb.org/bible/luke/1",
+        "intro": "The Annunciation: Mary's yes.",
+        "questions": [
+          "Mary asks a question but still says yes. What is the difference between her question and doubt?",
+          "What is God asking you to say yes to right now?",
+          "How does Mary's yes help you see her role in the Church?"
+        ]
+      },
+      "discuss": [
+        "What did you think about Mary before RCIA?",
+        "Do you have a favorite saint, or one you'd like to know?",
+        "How is asking a saint to pray for you like asking a friend?"
+      ]
+    },
+    "sym1-10": {
+      "verse": {
+        "ref": "John 11:25",
+        "text": "Jesus said to her: I am the resurrection and the life: he that believeth in me, although he be dead, shall live:"
+      },
+      "bible": {
+        "ref": "John 11:17-44",
+        "url": "https://bible.usccb.org/bible/john/11",
+        "intro": "Jesus raises Lazarus.",
+        "questions": [
+          "Martha is honest about her disappointment. Can you be that honest with Jesus?",
+          "\"Jesus wept.\" What does that tell you about how he sees your grief?",
+          "What would you like to say to Jesus about death and eternal life?"
+        ]
+      },
+      "discuss": [
+        "How do you feel when you think about death?",
+        "What do you imagine heaven is like? What does the Church say?",
+        "Why do Catholics pray for those who have died?"
+      ]
+    },
+    "sym2-01": {
+      "verse": {
+        "ref": "John 3:5",
+        "text": "Jesus answered: Amen, amen I say to thee, unless a man be born again of water and the Holy Ghost, he cannot enter into the kingdom of God."
+      },
+      "bible": {
+        "ref": "John 3:1-17",
+        "url": "https://bible.usccb.org/bible/john/3",
+        "intro": "Nicodemus comes to Jesus at night.",
+        "questions": [
+          "Nicodemus comes \"at night.\" Why might he have come then?",
+          "What do you think \"born of water and Spirit\" means?",
+          "How is Baptism a new birth?"
+        ]
+      },
+      "discuss": [
+        "If you are already baptized, what do you know about your baptism? If not, what do you hope for?",
+        "What does it mean to be sealed with the Holy Spirit in Confirmation?",
+        "Who could be your sponsor or godparent, and why?"
+      ]
+    },
+    "sym2-02": {
+      "verse": {
+        "ref": "John 6:51-52",
+        "text": "I am the living bread which came down from heaven. If any man eat of this bread, he shall live for ever; and the bread that I will give, is my flesh, for the life of the world.",
+        "note": "John 6:51 in newer Bibles."
+      },
+      "bible": {
+        "ref": "John 6:35-69",
+        "url": "https://bible.usccb.org/bible/john/6",
+        "intro": "The Bread of Life discourse.",
+        "questions": [
+          "What does Jesus mean by \"I am the bread of life\"?",
+          "Many walk away when the teaching is hard. Why does Peter stay?",
+          "What do you hunger for that only God can fill?"
+        ]
+      },
+      "discuss": [
+        "What do you understand about the Real Presence so far?",
+        "Why do you think Jesus chose bread and wine?",
+        "How can you prepare to receive Communion for the first time?"
+      ]
+    },
+    "sym2-03": {
+      "verse": {
+        "ref": "Luke 22:19",
+        "text": "And taking bread, he gave thanks, and brake; and gave to them, saying: This is my body, which is given for you. Do this for a commemoration of me."
+      },
+      "bible": {
+        "ref": "Luke 22:14-20",
+        "url": "https://bible.usccb.org/bible/luke/22",
+        "intro": "The Last Supper.",
+        "questions": [
+          "Jesus says \"do this in memory of me.\" What is the \"this\"?",
+          "Which part of the Mass do you understand least so far?",
+          "How could you prepare differently for Mass this Sunday?"
+        ]
+      },
+      "discuss": [
+        "What surprised you most the first time you went to Mass?",
+        "Which part of the Mass are you starting to love?",
+        "Why do you think the Mass follows the same pattern everywhere in the world?"
+      ]
+    },
+    "sym2-04": {
+      "verse": {
+        "ref": "John 20:22-23",
+        "text": "Receive ye the Holy Ghost. Whose sins you shall forgive, they are forgiven them; and whose sins you shall retain, they are retained."
+      },
+      "bible": {
+        "ref": "Luke 15:11-32",
+        "url": "https://bible.usccb.org/bible/luke/15",
+        "intro": "The prodigal son and the merciful father.",
+        "questions": [
+          "Which son do you relate to more, and why?",
+          "The father runs to meet his son. What does that say about confession?",
+          "What does the older brother need to hear?"
+        ]
+      },
+      "discuss": [
+        "What feelings come up when you think about confession?",
+        "Why do you think Jesus gave us a sacrament for forgiveness instead of only private prayer?",
+        "Who in your life needs the comfort of the Anointing of the Sick?"
+      ]
+    },
+    "sym2-05": {
+      "verse": {
+        "ref": "Mark 10:9",
+        "text": "What therefore God hath joined together, let not man put asunder."
+      },
+      "bible": {
+        "ref": "John 2:1-11",
+        "url": "https://bible.usccb.org/bible/john/2",
+        "intro": "The wedding at Cana.",
+        "questions": [
+          "Why might Jesus have chosen a wedding for his first sign?",
+          "Mary says \"Do whatever he tells you.\" How could you live that this week?",
+          "Water becomes wine. Where do you need God to transform something ordinary?"
+        ]
+      },
+      "discuss": [
+        "What marriages have inspired you, and why?",
+        "Why do you think marriage and priesthood are called sacraments \"at the service of communion\"?",
+        "How could you pray for the priests and married couples in your parish?"
+      ]
+    },
+    "sym2-06": {
+      "verse": {
+        "ref": "John 14:15",
+        "text": "If you love me, keep my commandments."
+      },
+      "bible": {
+        "ref": "Matthew 5:1-12",
+        "url": "https://bible.usccb.org/bible/matthew/5",
+        "intro": "The Beatitudes.",
+        "questions": [
+          "Which Beatitude surprises you most?",
+          "Which one describes someone you admire?",
+          "Which one would you like to grow in?"
+        ]
+      },
+      "discuss": [
+        "Is it freeing or hard to think of commandments as a way of love?",
+        "Where do you see the difference between freedom to do anything and freedom to do good?",
+        "What helps you choose the good when it's hard?"
+      ]
+    },
+    "sym2-07": {
+      "verse": {
+        "ref": "1 Corinthians 13:4",
+        "text": "Charity is patient, is kind: charity envieth not, dealeth not perversely; is not puffed up;"
+      },
+      "bible": {
+        "ref": "1 Corinthians 13:1-13",
+        "url": "https://bible.usccb.org/bible/1corinthians/13",
+        "intro": "Paul's hymn to love.",
+        "questions": [
+          "Replace \"love\" with your own name. Which lines feel true, and which don't yet?",
+          "Why does Paul say that without love, even great gifts are nothing?",
+          "Which quality of love would you like to grow in this week?"
+        ]
+      },
+      "discuss": [
+        "Where did you learn what love is?",
+        "How is real love different from how love is shown in movies?",
+        "Who in your life loves in the way Paul describes?"
+      ]
+    },
+    "sym2-08": {
+      "verse": {
+        "ref": "1 Corinthians 6:19",
+        "text": "Or know you not, that your members are the temple of the Holy Ghost, who is in you, whom you have from God; and you are not your own?"
+      },
+      "bible": {
+        "ref": "Genesis 2:18-25",
+        "url": "https://bible.usccb.org/bible/genesis/2",
+        "intro": "Man and woman made for each other.",
+        "questions": [
+          "What does \"it is not good for the man to be alone\" tell us about people?",
+          "Why do you think the body matters to God?",
+          "How does seeing your body as a temple change how you treat it?"
+        ]
+      },
+      "discuss": [
+        "What messages about the body and sex did you grow up with?",
+        "What part of the Church's teaching here is new or hard for you?",
+        "How can we speak about this with kindness and truth?"
+      ]
+    },
+    "sym2-09": {
+      "verse": {
+        "ref": "Matthew 25:40",
+        "text": "Amen I say to you, as long as you did it to one of these my least brethren, you did it to me."
+      },
+      "bible": {
+        "ref": "Matthew 25:31-46",
+        "url": "https://bible.usccb.org/bible/matthew/25",
+        "intro": "The judgment of the nations.",
+        "questions": [
+          "Which of the six works of mercy is easiest for you? Which is hardest?",
+          "Both groups are surprised. Why?",
+          "Who are \"the least\" in your town?"
+        ]
+      },
+      "discuss": [
+        "Where do you see Jesus in people who are struggling?",
+        "What is one need in your community your parish could help with?",
+        "How can small acts of mercy change a neighborhood?"
+      ]
+    },
+    "sym2-10": {
+      "verse": {
+        "ref": "Genesis 1:27",
+        "text": "And God created man to his own image: to the image of God he created him. Male and female he created them."
+      },
+      "bible": {
+        "ref": "Genesis 1:26-31",
+        "url": "https://bible.usccb.org/bible/genesis/1",
+        "intro": "Made in God's image.",
+        "questions": [
+          "What does it mean to be made \"in God's image\"?",
+          "God calls creation \"very good.\" Do you believe that about yourself?",
+          "Whose dignity is easy to forget in our world?"
+        ]
+      },
+      "discuss": [
+        "Have you ever been treated as less than you are? How did it feel?",
+        "Where do you see human dignity ignored today?",
+        "What would change if we saw every person as God's image?"
+      ]
+    },
+    "s26": {
+      "verse": {
+        "ref": "Joel 2:12-13",
+        "text": "Now therefore saith the Lord: Be converted to me with all your heart, in fasting, and in weeping, and in mourning. And rend your hearts, and not your garments, and turn to the Lord your God."
+      },
+      "bible": {
+        "ref": "Matthew 6:1-18",
+        "url": "https://bible.usccb.org/bible/matthew/6",
+        "intro": "Jesus on almsgiving, prayer and fasting.",
+        "questions": [
+          "Why does Jesus stress doing these things in secret?",
+          "Which of the three is hardest for you?",
+          "What could you give up, and what could you add, this Lent?"
+        ]
+      },
+      "discuss": [
+        "What have your Lents looked like before, if any?",
+        "What is one habit you want to break, and one you want to build?",
+        "How can your class support each other through Lent?"
+      ]
+    },
+    "s27": {
+      "verse": {
+        "ref": "John 8:12",
+        "text": "I am the light of the world: he that followeth me, walketh not in darkness, but shall have the light of life."
+      },
+      "bible": {
+        "ref": "John 9:1-41",
+        "url": "https://bible.usccb.org/bible/john/9",
+        "intro": "The man born blind.",
+        "questions": [
+          "The man's sight comes in stages. How has your faith grown in stages?",
+          "Who in the story is really blind?",
+          "Where do you need Jesus to open your eyes?"
+        ]
+      },
+      "discuss": [
+        "What does it mean to \"turn toward Christ\"?",
+        "What would you like Jesus to heal in you before Easter?",
+        "How can we pray for each other during the scrutinies?"
+      ]
+    },
+    "s28": {
+      "verse": {
+        "ref": "Romans 10:9",
+        "text": "For if thou confess with thy mouth the Lord Jesus, and believe in thy heart that God hath raised him up from the dead, thou shalt be saved."
+      },
+      "bible": {
+        "ref": "1 Corinthians 15:1-11",
+        "url": "https://bible.usccb.org/bible/1corinthians/15",
+        "intro": "The heart of what we believe.",
+        "questions": [
+          "Paul lists what he \"handed on.\" What is at the center?",
+          "Why does Paul list witnesses?",
+          "Which line of the Creed means most to you now?"
+        ]
+      },
+      "discuss": [
+        "Which part of the Creed was hardest for you to believe at first?",
+        "What does it mean that the Creed is \"handed on\" to you?",
+        "How would you say the Creed in your own words?"
+      ]
+    },
+    "s29": {
+      "verse": {
+        "ref": "Matthew 6:9",
+        "text": "Thus therefore shall you pray: Our Father who art in heaven, hallowed be thy name."
+      },
+      "bible": {
+        "ref": "Luke 11:1-13",
+        "url": "https://bible.usccb.org/bible/luke/11",
+        "intro": "Jesus teaches us to pray and to keep asking.",
+        "questions": [
+          "Why does Jesus follow the Our Father with a story about persistence?",
+          "What does calling God \"Father\" mean to you?",
+          "What are you asking God for right now?"
+        ]
+      },
+      "discuss": [
+        "Which line of the Our Father do you pray most sincerely?",
+        "What does it mean to pray \"thy will be done\"?",
+        "How has your prayer changed since you started RCIA?"
+      ]
+    },
+    "s30": {
+      "verse": {
+        "ref": "Matthew 28:6",
+        "text": "He is not here, for he is risen, as he said. Come, and see the place where the Lord was laid."
+      },
+      "bible": {
+        "ref": "John 20:1-18",
+        "url": "https://bible.usccb.org/bible/john/20",
+        "intro": "Easter morning and Mary Magdalene.",
+        "questions": [
+          "Mary doesn't recognize Jesus until he says her name. Why?",
+          "What do you think Jesus would say to you by name?",
+          "How do you want to spend Holy Week?"
+        ]
+      },
+      "discuss": [
+        "What are you most looking forward to at the Easter Vigil?",
+        "What are you nervous about?",
+        "Who will you invite to share the night with you?"
+      ]
+    },
+    "s31": {
+      "verse": {
+        "ref": "Galatians 2:20",
+        "text": "And I live, now not I; but Christ liveth in me."
+      },
+      "bible": {
+        "ref": "Acts 2:42-47",
+        "url": "https://bible.usccb.org/bible/acts/2",
+        "intro": "Living as the early Church lived.",
+        "questions": [
+          "Which of these habits do you want to keep for life?",
+          "How did the sacraments change you?",
+          "What does Sunday Mass mean to you now?"
+        ]
+      },
+      "discuss": [
+        "What has changed in you since Easter?",
+        "How will you stay connected to your parish?",
+        "What do you want to remember from this year?"
+      ]
+    },
+    "s32": {
+      "verse": {
+        "ref": "Matthew 28:19",
+        "text": "Going therefore, teach ye all nations; baptizing them in the name of the Father, and of the Son, and of the Holy Ghost."
+      },
+      "bible": {
+        "ref": "Luke 24:13-35",
+        "url": "https://bible.usccb.org/bible/luke/24",
+        "intro": "Back to Emmaus: now you are the one who runs to tell.",
+        "questions": [
+          "The disciples go back to Jerusalem the same hour. Why the hurry?",
+          "Who walked with you this year?",
+          "Who could you walk with next?"
+        ]
+      },
+      "discuss": [
+        "How would you tell your faith story in two minutes?",
+        "What gifts could you share with your parish?",
+        "Who is someone you could invite to Mass or RCIA next year?"
+      ]
+    }
+  },
+  "challenges": [
+    {
+      "title": "Make the Sign of the Cross",
+      "body": "Begin and end each day this week with the Sign of the Cross. Notice how it frames your day."
+    },
+    {
+      "title": "Pray the Our Father slowly",
+      "body": "Once a day, pray the Our Father so slowly that you notice every word."
+    },
+    {
+      "title": "Visit a church",
+      "body": "Stop into a Catholic church outside of Mass and sit quietly for five minutes."
+    },
+    {
+      "title": "Read a Gospel chapter a day",
+      "body": "Start the Gospel of Mark and read one chapter each day."
+    },
+    {
+      "title": "Say grace",
+      "body": "Say grace before every meal this week, even at work or in public."
+    },
+    {
+      "title": "Phone off at Mass",
+      "body": "Arrive five minutes early on Sunday and leave your phone off until you're home."
+    },
+    {
+      "title": "Thank three people",
+      "body": "Thank three people this week for something specific they did."
+    },
+    {
+      "title": "Fast from complaining",
+      "body": "Try a day, then three, without complaining. Offer each slip-up to God."
+    },
+    {
+      "title": "Learn one prayer by heart",
+      "body": "Pick one prayer from the Pray tab and practice it until you know it."
+    },
+    {
+      "title": "Pray for your sponsor",
+      "body": "Pray by name for your sponsor and catechist every day."
+    },
+    {
+      "title": "A small sacrifice",
+      "body": "Give up one small comfort this week and offer it for someone who is struggling."
+    },
+    {
+      "title": "Examine your day",
+      "body": "Before sleep, look back on the day: where was God? Where did you fall short?"
+    },
+    {
+      "title": "Ask a question",
+      "body": "Bring one honest question to class or to your sponsor."
+    },
+    {
+      "title": "Write a note",
+      "body": "Write a short note of encouragement to someone in your class."
+    },
+    {
+      "title": "Read about a saint",
+      "body": "Read the story of the saint of the week and share one thing you learned."
+    },
+    {
+      "title": "Pray the Angelus",
+      "body": "At noon, stop and pray the Angelus (or the Regina Caeli in Easter)."
+    },
+    {
+      "title": "Give something away",
+      "body": "Give away one thing you don't need to someone who does."
+    },
+    {
+      "title": "Forgive someone",
+      "body": "Bring someone you struggle to forgive to God in prayer each day."
+    },
+    {
+      "title": "Visit the Blessed Sacrament",
+      "body": "Spend fifteen minutes in Eucharistic adoration if your parish has it."
+    },
+    {
+      "title": "Read Sunday's readings early",
+      "body": "Read this Sunday's readings before Mass and choose a line to listen for."
+    },
+    {
+      "title": "Pray a decade of the Rosary",
+      "body": "Pray one decade of the Rosary each day this week."
+    },
+    {
+      "title": "Serve without being seen",
+      "body": "Do a kind act no one will know about."
+    },
+    {
+      "title": "Call someone lonely",
+      "body": "Call or visit someone who might be lonely."
+    },
+    {
+      "title": "Bless your home",
+      "body": "Hang a crucifix or put a holy image somewhere you'll see it every day."
+    },
+    {
+      "title": "Pray for the dead",
+      "body": "Pray Eternal Rest for someone who has died."
+    },
+    {
+      "title": "Learn a Mass response",
+      "body": "Learn one Mass response by heart, like the Gloria or the Holy, Holy."
+    },
+    {
+      "title": "Unplug for an hour",
+      "body": "Take one hour this week with no screens, and spend part of it in prayer."
+    },
+    {
+      "title": "Practice patience",
+      "body": "Pick one situation that makes you impatient and offer it up each time."
+    },
+    {
+      "title": "Tell your story",
+      "body": "Tell someone why you started RCIA."
+    },
+    {
+      "title": "Make a gratitude list",
+      "body": "Write down ten things you're grateful to God for."
+    },
+    {
+      "title": "Pray for your enemies",
+      "body": "Pray for someone who has hurt you, as Jesus asks (Matthew 5:44)."
+    },
+    {
+      "title": "Invite someone",
+      "body": "Invite a friend to Mass or to a parish event."
+    }
+  ],
+  "saintActions": {
+    "augustine": "Write down one thing you are still searching for, and give it to God in prayer.",
+    "monica": "Pray every day this week for someone you love who is far from God.",
+    "mary-magdalene": "Tell one person something good Jesus has done for you.",
+    "peter": "Think of a time you failed. Tell Jesus you love him anyway, as Peter did.",
+    "paul": "Write a short letter of encouragement to a friend.",
+    "edith-stein": "Spend ten minutes in silence, searching for the truth with an open heart.",
+    "elizabeth-seton": "Help a child learn something new, or pray for teachers.",
+    "bakhita": "Pray for victims of human trafficking, and forgive someone who hurt you.",
+    "kateri": "Pray outside in creation for a few minutes each day.",
+    "therese": "Do one small, hidden act of love each day, the \"little way.\"",
+    "francis": "Give away something you don't need, and thank God for creation.",
+    "teresa-calcutta": "Do something kind for a person others overlook.",
+    "joseph": "Do your daily work carefully and quietly, offering it to God.",
+    "john-paul-ii": "Pray for young people and for your country's leaders.",
+    "aquinas": "Ask God for understanding before you read or study.",
+    "frassati": "Invite a friend on a walk or hike and pray along the way.",
+    "carlo-acutis": "Spend a few minutes before the Blessed Sacrament, or use your phone for something holy.",
+    "gianna": "Pray for mothers, doctors, and families expecting a baby.",
+    "luke": "Read a chapter of Luke's Gospel.",
+    "cecilia": "Sing or listen to a hymn as a prayer.",
+    "kolbe": "Offer a small sacrifice for someone in a hard situation.",
+    "frances-cabrini": "Welcome a newcomer, or pray for immigrants and refugees."
+  },
+  "lectio": {
+    "intro": "Lectio Divina (\"divine reading\") is an old, simple way to pray with Scripture. Take this Sunday's Gospel and give it 15 to 20 quiet minutes, in four steps.",
+    "steps": [
+      {
+        "name": "Read",
+        "latin": "Lectio",
+        "how": "Read the Gospel slowly, twice. Notice which word or phrase catches your attention.",
+        "prompt": "The word or phrase that stood out to me"
+      },
+      {
+        "name": "Reflect",
+        "latin": "Meditatio",
+        "how": "Read it again. Ask: why this word? What might God be saying to me through it today?",
+        "prompt": "What it might mean for my life"
+      },
+      {
+        "name": "Respond",
+        "latin": "Oratio",
+        "how": "Talk to God about it, honestly, in your own words: thanks, sorrow, a request.",
+        "prompt": "My prayer"
+      },
+      {
+        "name": "Rest",
+        "latin": "Contemplatio",
+        "how": "Be quiet with God for a few minutes. No words needed. Then choose one small way to live the Gospel this week.",
+        "prompt": "One thing I will do this week"
+      }
+    ]
+  },
+  "firstConfession": {
+    "intro": "Your first Confession is a gift, not an exam. These steps help you prepare calmly. Nothing you tick here is saved: it disappears when you leave this page.",
+    "before": [
+      "Pray to the Holy Spirit to help you see your life honestly and kindly.",
+      "Go through the questions below slowly. Tick anything you want to remember to confess.",
+      "Remember the father in the parable of the prodigal son: he runs to meet his child."
+    ],
+    "say": [
+      "Make the Sign of the Cross and say: \"Bless me, Father, for I have sinned. This is my first Confession.\"",
+      "Tell the priest your sins, simply. You can say \"I'm nervous, please help me.\" Priests are glad to.",
+      "Listen to his advice and the penance he gives you.",
+      "Pray the Act of Contrition.",
+      "Listen as he gives absolution, and answer \"Amen.\""
+    ],
+    "after": [
+      "Do your penance soon.",
+      "Thank God. You are forgiven and free.",
+      "Many people say they feel lighter. Some feel nothing special, and that is fine too: the grace is real either way."
+    ]
+  }
+}

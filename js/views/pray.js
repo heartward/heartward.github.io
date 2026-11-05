@@ -13,6 +13,9 @@ export function view() {
   html += '<div class="tiles">' +
     tile('#/rosary', 'rosary', t('Pray the Rosary'), t('Today') + ': ' + t(myst.name), 'dark wide') +
     tile('#/confession', 'heart', t('Confession guide'), t('Steps and examination of conscience')) +
+    tile('#/first-confession', 'check', t('First Confession'), t('Prepare step by step')) +
+    tile('#/lectio', 'book', t('Sunday Gospel'), t('Pray it with Lectio Divina')) +
+    tile('#/verse', 'sparkle', t('Memory verses'), t('Flashcards with audio')) +
     tile('#/reminder', 'bell', t('Daily reminder'), t('Add prayer time to your calendar')) +
     '</div>';
   const learned = data.prayers.filter(p => state.learned[p.id]).length;
@@ -30,7 +33,7 @@ export function view() {
   return { html, title: t('Pray') };
 }
 
-function practiceHtml(text, level) {
+export function practiceHtml(text, level) {
   if (!level) return esc(text);
   let n = 0;
   return text.split(/(\s+)/).map(tok => {
