@@ -1,0 +1,629 @@
+{
+"note": "Saints and feasts of the General Roman Calendar, with a few days kept only in Canada or the USA. Many other saints are remembered each day in the Roman Martyrology.",
+"days": {
+"01-02": [
+"St. Basil the Great",
+"St. Gregory Nazianzen"
+],
+"01-04": [
+"St. Elizabeth Ann Seton (USA)"
+],
+"01-05": [
+"St. John Neumann (USA)"
+],
+"01-07": [
+"St. Raymond of Penyafort",
+"St. André Bessette (Canada)"
+],
+"01-13": [
+"St. Hilary of Poitiers"
+],
+"01-17": [
+"St. Anthony, Abbot"
+],
+"01-20": [
+"St. Fabian",
+"St. Sebastian"
+],
+"01-21": [
+"St. Agnes"
+],
+"01-22": [
+"St. Vincent, deacon"
+],
+"01-24": [
+"St. Francis de Sales"
+],
+"01-25": [
+"St. Paul (his conversion)"
+],
+"01-26": [
+"St. Timothy",
+"St. Titus"
+],
+"01-27": [
+"St. Angela Merici"
+],
+"01-28": [
+"St. Thomas Aquinas"
+],
+"01-31": [
+"St. John Bosco"
+],
+"02-03": [
+"St. Blaise",
+"St. Ansgar"
+],
+"02-05": [
+"St. Agatha"
+],
+"02-06": [
+"St. Paul Miki and companions"
+],
+"02-08": [
+"St. Josephine Bakhita",
+"St. Jerome Emiliani"
+],
+"02-10": [
+"St. Scholastica"
+],
+"02-11": [
+"Our Lady of Lourdes"
+],
+"02-14": [
+"St. Cyril",
+"St. Methodius"
+],
+"02-17": [
+"The Seven Holy Founders of the Servites"
+],
+"02-21": [
+"St. Peter Damian"
+],
+"02-22": [
+"St. Peter (the Chair of St. Peter)"
+],
+"02-23": [
+"St. Polycarp"
+],
+"03-03": [
+"St. Katharine Drexel (USA)"
+],
+"03-04": [
+"St. Casimir"
+],
+"03-07": [
+"St. Perpetua",
+"St. Felicity"
+],
+"03-08": [
+"St. John of God"
+],
+"03-09": [
+"St. Frances of Rome"
+],
+"03-17": [
+"St. Patrick"
+],
+"03-18": [
+"St. Cyril of Jerusalem"
+],
+"03-19": [
+"St. Joseph"
+],
+"03-23": [
+"St. Turibius of Mogrovejo"
+],
+"04-02": [
+"St. Francis of Paola"
+],
+"04-04": [
+"St. Isidore of Seville"
+],
+"04-05": [
+"St. Vincent Ferrer"
+],
+"04-07": [
+"St. John Baptist de la Salle"
+],
+"04-11": [
+"St. Stanislaus"
+],
+"04-13": [
+"St. Martin I"
+],
+"04-17": [
+"St. Kateri Tekakwitha (Canada)"
+],
+"04-21": [
+"St. Anselm"
+],
+"04-23": [
+"St. George",
+"St. Adalbert"
+],
+"04-24": [
+"St. Fidelis of Sigmaringen"
+],
+"04-25": [
+"St. Mark"
+],
+"04-28": [
+"St. Peter Chanel",
+"St. Louis Grignion de Montfort"
+],
+"04-29": [
+"St. Catherine of Siena"
+],
+"04-30": [
+"St. Pius V",
+"St. Marie of the Incarnation (Canada)"
+],
+"05-01": [
+"St. Joseph the Worker"
+],
+"05-02": [
+"St. Athanasius"
+],
+"05-03": [
+"St. Philip",
+"St. James"
+],
+"05-10": [
+"St. John of Avila",
+"St. Damien of Molokai (USA)"
+],
+"05-12": [
+"St. Nereus",
+"St. Achilleus",
+"St. Pancras"
+],
+"05-13": [
+"Our Lady of Fatima"
+],
+"05-14": [
+"St. Matthias"
+],
+"05-15": [
+"St. Isidore the Farmer (USA)"
+],
+"05-18": [
+"St. John I"
+],
+"05-20": [
+"St. Bernardine of Siena"
+],
+"05-21": [
+"St. Christopher Magallanes and companions"
+],
+"05-22": [
+"St. Rita of Cascia"
+],
+"05-25": [
+"St. Bede the Venerable",
+"St. Gregory VII",
+"St. Mary Magdalene de' Pazzi"
+],
+"05-26": [
+"St. Philip Neri"
+],
+"05-27": [
+"St. Augustine of Canterbury"
+],
+"05-29": [
+"St. Paul VI"
+],
+"06-01": [
+"St. Justin"
+],
+"06-02": [
+"St. Marcellinus",
+"St. Peter, exorcist"
+],
+"06-03": [
+"St. Charles Lwanga and companions"
+],
+"06-05": [
+"St. Boniface"
+],
+"06-06": [
+"St. Norbert"
+],
+"06-09": [
+"St. Ephrem"
+],
+"06-11": [
+"St. Barnabas"
+],
+"06-13": [
+"St. Anthony of Padua"
+],
+"06-19": [
+"St. Romuald"
+],
+"06-21": [
+"St. Aloysius Gonzaga"
+],
+"06-22": [
+"St. Thomas More",
+"St. John Fisher",
+"St. Paulinus of Nola"
+],
+"06-24": [
+"St. John the Baptist (his birth)"
+],
+"06-27": [
+"St. Cyril of Alexandria"
+],
+"06-28": [
+"St. Irenaeus"
+],
+"06-29": [
+"St. Peter",
+"St. Paul"
+],
+"06-30": [
+"The First Martyrs of Rome"
+],
+"07-01": [
+"St. Junípero Serra (USA)"
+],
+"07-03": [
+"St. Thomas, Apostle"
+],
+"07-04": [
+"St. Elizabeth of Portugal"
+],
+"07-05": [
+"St. Anthony Zaccaria"
+],
+"07-06": [
+"St. Maria Goretti"
+],
+"07-09": [
+"St. Augustine Zhao Rong and companions"
+],
+"07-11": [
+"St. Benedict"
+],
+"07-13": [
+"St. Henry"
+],
+"07-14": [
+"St. Camillus de Lellis",
+"St. Kateri Tekakwitha (USA)"
+],
+"07-15": [
+"St. Bonaventure"
+],
+"07-16": [
+"Our Lady of Mount Carmel"
+],
+"07-20": [
+"St. Apollinaris"
+],
+"07-21": [
+"St. Lawrence of Brindisi"
+],
+"07-22": [
+"St. Mary Magdalene"
+],
+"07-23": [
+"St. Bridget of Sweden"
+],
+"07-24": [
+"St. Sharbel Makhlūf"
+],
+"07-25": [
+"St. James, Apostle"
+],
+"07-26": [
+"St. Joachim",
+"St. Anne"
+],
+"07-29": [
+"St. Martha",
+"St. Mary of Bethany",
+"St. Lazarus"
+],
+"07-30": [
+"St. Peter Chrysologus"
+],
+"07-31": [
+"St. Ignatius of Loyola"
+],
+"08-01": [
+"St. Alphonsus Liguori"
+],
+"08-02": [
+"St. Eusebius of Vercelli",
+"St. Peter Julian Eymard"
+],
+"08-04": [
+"St. John Vianney"
+],
+"08-07": [
+"St. Sixtus II and companions",
+"St. Cajetan"
+],
+"08-08": [
+"St. Dominic"
+],
+"08-09": [
+"St. Teresa Benedicta of the Cross (Edith Stein)"
+],
+"08-10": [
+"St. Lawrence"
+],
+"08-11": [
+"St. Clare"
+],
+"08-12": [
+"St. Jane Frances de Chantal"
+],
+"08-13": [
+"St. Pontian",
+"St. Hippolytus"
+],
+"08-14": [
+"St. Maximilian Kolbe"
+],
+"08-15": [
+"Mary (her Assumption)"
+],
+"08-16": [
+"St. Stephen of Hungary"
+],
+"08-19": [
+"St. John Eudes"
+],
+"08-20": [
+"St. Bernard"
+],
+"08-21": [
+"St. Pius X"
+],
+"08-22": [
+"Mary, Queen"
+],
+"08-23": [
+"St. Rose of Lima"
+],
+"08-24": [
+"St. Bartholomew"
+],
+"08-25": [
+"St. Louis",
+"St. Joseph Calasanz"
+],
+"08-27": [
+"St. Monica"
+],
+"08-28": [
+"St. Augustine"
+],
+"08-29": [
+"St. John the Baptist (his martyrdom)"
+],
+"09-03": [
+"St. Gregory the Great"
+],
+"09-08": [
+"Mary (her birth)"
+],
+"09-09": [
+"St. Peter Claver"
+],
+"09-12": [
+"The Holy Name of Mary"
+],
+"09-13": [
+"St. John Chrysostom"
+],
+"09-15": [
+"Our Lady of Sorrows"
+],
+"09-16": [
+"St. Cornelius",
+"St. Cyprian"
+],
+"09-17": [
+"St. Robert Bellarmine",
+"St. Hildegard of Bingen"
+],
+"09-19": [
+"St. Januarius"
+],
+"09-20": [
+"St. Andrew Kim Tae-gŏn, St. Paul Chŏng Ha-sang and companions"
+],
+"09-21": [
+"St. Matthew"
+],
+"09-23": [
+"St. Pio of Pietrelcina (Padre Pio)"
+],
+"09-26": [
+"St. Cosmas",
+"St. Damian",
+"The Canadian Martyrs (Canada)"
+],
+"09-27": [
+"St. Vincent de Paul"
+],
+"09-28": [
+"St. Wenceslaus",
+"St. Lawrence Ruiz and companions"
+],
+"09-29": [
+"St. Michael",
+"St. Gabriel",
+"St. Raphael"
+],
+"09-30": [
+"St. Jerome"
+],
+"10-01": [
+"St. Thérèse of the Child Jesus"
+],
+"10-02": [
+"The Holy Guardian Angels"
+],
+"10-04": [
+"St. Francis of Assisi"
+],
+"10-05": [
+"St. Faustina Kowalska"
+],
+"10-06": [
+"St. Bruno"
+],
+"10-07": [
+"Our Lady of the Rosary"
+],
+"10-09": [
+"St. Denis and companions",
+"St. John Leonardi"
+],
+"10-11": [
+"St. John XXIII"
+],
+"10-14": [
+"St. Callistus I"
+],
+"10-15": [
+"St. Teresa of Ávila"
+],
+"10-16": [
+"St. Hedwig",
+"St. Margaret Mary Alacoque"
+],
+"10-17": [
+"St. Ignatius of Antioch"
+],
+"10-18": [
+"St. Luke"
+],
+"10-19": [
+"St. Paul of the Cross",
+"St. John de Brébeuf, St. Isaac Jogues and companions (USA)"
+],
+"10-22": [
+"St. John Paul II"
+],
+"10-23": [
+"St. John of Capistrano"
+],
+"10-24": [
+"St. Anthony Mary Claret"
+],
+"10-28": [
+"St. Simon",
+"St. Jude"
+],
+"11-01": [
+"All Saints"
+],
+"11-03": [
+"St. Martin de Porres"
+],
+"11-04": [
+"St. Charles Borromeo"
+],
+"11-10": [
+"St. Leo the Great"
+],
+"11-11": [
+"St. Martin of Tours"
+],
+"11-12": [
+"St. Josaphat"
+],
+"11-13": [
+"St. Frances Xavier Cabrini (USA)"
+],
+"11-15": [
+"St. Albert the Great"
+],
+"11-16": [
+"St. Margaret of Scotland",
+"St. Gertrude"
+],
+"11-17": [
+"St. Elizabeth of Hungary"
+],
+"11-18": [
+"St. Rose Philippine Duchesne (USA)"
+],
+"11-21": [
+"Mary (her Presentation)"
+],
+"11-22": [
+"St. Cecilia"
+],
+"11-23": [
+"St. Clement I",
+"St. Columban"
+],
+"11-24": [
+"St. Andrew Dũng-Lạc and companions"
+],
+"11-25": [
+"St. Catherine of Alexandria"
+],
+"11-30": [
+"St. Andrew"
+],
+"12-03": [
+"St. Francis Xavier"
+],
+"12-04": [
+"St. John Damascene"
+],
+"12-06": [
+"St. Nicholas"
+],
+"12-07": [
+"St. Ambrose"
+],
+"12-08": [
+"Mary (the Immaculate Conception)"
+],
+"12-09": [
+"St. Juan Diego"
+],
+"12-11": [
+"St. Damasus I"
+],
+"12-12": [
+"Our Lady of Guadalupe"
+],
+"12-13": [
+"St. Lucy"
+],
+"12-14": [
+"St. John of the Cross"
+],
+"12-21": [
+"St. Peter Canisius"
+],
+"12-23": [
+"St. John of Kanty"
+],
+"12-26": [
+"St. Stephen"
+],
+"12-27": [
+"St. John, Apostle"
+],
+"12-28": [
+"The Holy Innocents"
+],
+"12-29": [
+"St. Thomas Becket"
+],
+"12-31": [
+"St. Sylvester I"
+]
+}
+}

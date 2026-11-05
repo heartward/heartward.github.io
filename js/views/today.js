@@ -1,4 +1,4 @@
-import { data } from '../data.js';
+import { data, mySaint as getMySaint } from '../data.js';
 import { state, save, weekKey, localISO } from '../store.js';
 import { icon } from '../icons.js';
 import { esc, t, fmtDate, parseISO, tile } from '../ui.js';
@@ -38,7 +38,7 @@ export function view() {
   const anniv = [['baptism', 'Happy baptism anniversary!'], ['reception', 'Happy anniversary of your reception into the Church!'], ['confirmation', 'Happy confirmation anniversary!'], ['communion', 'Happy First Communion anniversary!']]
     .filter(([k]) => state.dates[k] && state.dates[k].slice(5) === md && state.dates[k] < localISO(now));
   anniv.forEach(([, msg]) => { html += '<div class="banner">' + icon('candle') + '<div><strong>' + esc(t(msg)) + '</strong><div class="small">' + esc(t('Light a candle and thank God for this day.')) + '</div></div></div>'; });
-  const mySaint = data.saints.saints.find(x => x.id === state.saint);
+  const mySaint = getMySaint();
   if (mySaint && mySaint.feast === md) html += '<div class="banner">' + icon('star') + '<div><strong>' + esc(t('Today is the feast of your patron,')) + ' ' + esc(mySaint.name) + '</strong></div></div>';
 
   if (next) {
