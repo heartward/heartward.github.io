@@ -60,11 +60,14 @@ export function hub() {
     B().method.map((m, i) => '<li><span class="n">' + (i + 1) + '</span><span><strong>' + esc(m.name) + '</strong><span class="small muted"> ' + esc(m.about) + '</span></span></li>').join('') + '</ol>';
 
   html += '<div class="section-title"><h2>' + esc(t('Reading plans')) + '</h2></div>' +
-    planCard('rcia', t('Session') + ' ' + sessionNo(cur) + ': ' + cur.title) + planCard('mark') + planCard('story');
+    yearCard() + planCard('rcia', t('Session') + ' ' + sessionNo(cur) + ': ' + cur.title) + planCard('mark') + planCard('story');
 
   html += '<div class="section-title"><h2>' + esc(t('Get ready for Sunday')) + '</h2></div><ul class="list card tight">' +
     '<li><a class="row" href="#/lectio"><span class="lead">' + icon('book') + '</span><span class="grow"><span class="title">' + esc(t('Sunday Gospel with Lectio Divina')) + '</span><span class="sub">' + esc(fmtDate(nextSunday())) + '</span></span><span class="chev">' + icon('chevron') + '</span></a></li>' +
     '<li><a class="row" href="' + esc(readingsUrl(nextSunday())) + '" target="_blank" rel="noopener"><span class="lead">' + icon('church') + '</span><span class="grow"><span class="title">' + esc(t('Sunday\'s readings for Canada')) + '</span><span class="sub">' + esc(t('From the Canadian Lectionary, on Living with Christ')) + '</span></span><span class="chev">' + icon('external') + '</span></a></li></ul>';
+
+  html += '<div class="section-title"><h2>' + esc(t('The whole Bible')) + '</h2></div><ul class="list card tight">' +
+    '<li><a class="row" href="#/bible-books"><span class="lead">' + icon('book') + '</span><span class="grow"><span class="title">' + esc(t('All 73 books')) + '</span><span class="sub">' + esc(t('A guide to every book, and the full text to read chapter by chapter')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a></li></ul>';
 
   html += '<div class="section-title"><h2>' + esc(t('Mine')) + '</h2></div><ul class="list card tight">' +
     '<li><a class="row" href="#/bible-notes"><span class="lead">' + icon('list') + '</span><span class="grow"><span class="title">' + esc(t('My Bible notes')) + '</span><span class="sub">' + esc(anyNotes ? t('Everything you wrote, in one place') : t('Your notes from each study will gather here')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a></li>' +
@@ -154,14 +157,213 @@ export function study(id) {
 // ---------- My Bible notes ----------
 export function notes() {
   const withNotes = allStudies().filter(s => notesOf(s.id).trim());
+  const yearNotes = Object.keys(state.study).filter(k => k.startsWith('year-') && notesOf(k).trim())
+    .sort((a, b) => parseInt(a.slice(5), 10) - parseInt(b.slice(5), 10) || a.localeCompare(b));
   let html = back('#/bible', t('Bible study')) + head(t('Bible study'), t('My Bible notes'), t('Everything you wrote in your Bible studies. It stays only on this device; Backup in Settings saves it too.'));
-  if (!withNotes.length) html += '<p class="empty">' + esc(t('No notes yet. Open a study and write a line or two in step 3.')) + '</p><div class="btn-row" style="justify-content:center"><a class="btn" href="#/bible-plan/rcia">' + esc(t('Open My RCIA road')) + '</a></div>';
+  if (!withNotes.length && !yearNotes.length) html += '<p class="empty">' + esc(t('No notes yet. Open a study and write a line or two in step 3.')) + '</p><div class="btn-row" style="justify-content:center"><a class="btn" href="#/bible-plan/rcia">' + esc(t('Open My RCIA road')) + '</a></div>';
   PLAN_IDS.forEach(pid => {
     const list = withNotes.filter(s => s.plan === pid);
     if (!list.length) return;
     html += '<div class="section-title"><h2>' + esc(B().plans[pid].title) + '</h2></div>' + list.map(s =>
       '<a class="card note-card" href="#/bible/' + s.id + '"><span class="eyebrow">' + esc(s.ref) + ' · ' + esc(s.title) + '</span><span class="note-text">' + esc(notesOf(s.id)) + '</span></a>').join('');
   });
+  if (yearNotes.length) html += '<div class="section-title"><h2>' + esc(t('The whole Bible')) + '</h2></div>' + yearNotes.map(k =>
+    '<a class="card note-card" href="#/bible-day/' + k.slice(5) + '"><span class="eyebrow">' + esc(state.study[k].ref || k) + '</span><span class="note-text">' + esc(notesOf(k)) + '</span></a>').join('');
   return { html, title: t('My Bible notes') };
 }
 
+
+// ---------- The whole Bible in a year ----------
+// content/en/year.json: books [{ id, name, dr, nt, v: verses per chapter, s: { chapter: first verse number } }]
+// and 365 days. Each day is [whole day, first half, second half]; each part is a list of readings
+// [book, chapterFrom, positionFrom, chapterTo, positionTo] (positions count verses from 1 in a chapter).
+// One year reads whole days; the gentler two-year pace reads halves. Progress is shared: a day counts as done
+// when it or both its halves are done, so switching pace never loses anything.
+// Book texts (content/bible/*.json) load one book at a time and are kept for offline use by the service worker.
+const Y = () => data.year;
+const BK = name => (data.books || {})[name] || null;
+const bookCache = {};
+export const loadBook = id => bookCache[id] || (bookCache[id] = fetch('content/bible/' + id + '.json').then(r => { if (!r.ok) throw new Error(id); return r.json(); }).catch(e => { delete bookCache[id]; throw e; }));
+const pace = () => state.bibleYear.pace === 2 ? 2 : 1;
+// Entries of the current pace: '12' (a whole day) or '12-a' / '12-b' (halves).
+const entries = () => pace() === 1 ? Y().days.map((_, i) => String(i + 1)) : Y().days.flatMap((_, i) => [(i + 1) + '-a', (i + 1) + '-b']);
+const parseEntry = e => { const m = /^(\d+)(?:-([ab]))?$/.exec(e || ''); return m ? { day: +m[1], half: m[2] || '' } : null; };
+const partsOf = e => { const p = parseEntry(e); const d = p && Y().days[p.day - 1]; return d ? d[p.half === 'a' ? 1 : p.half === 'b' ? 2 : 0] : null; };
+const isDone = e => {
+  const p = parseEntry(e); if (!p) return false;
+  const k = n => !!state.bible['year-' + n];
+  if (p.half) return k(p.day + '-' + p.half) || k(p.day);
+  return k(p.day) || (k(p.day + '-a') && k(p.day + '-b'));
+};
+const setDone = (e, on) => {
+  const p = parseEntry(e), today = localISO(new Date());
+  if (on) state.bible['year-' + e] = today;
+  else { delete state.bible['year-' + e]; if (!p.half) { delete state.bible['year-' + p.day + '-a']; delete state.bible['year-' + p.day + '-b']; } else delete state.bible['year-' + p.day]; }
+};
+const entryLabel = e => { const p = parseEntry(e); return pace() === 1 ? t('Day') + ' ' + p.day : t('Day') + ' ' + ((p.day - 1) * 2 + (p.half === 'b' ? 2 : 1)); };
+const yearTitle = () => pace() === 1 ? t('The whole Bible in a year') : t('The whole Bible in two years');
+const verseNo = (b, c, pos) => ((b.s || {})[c] || 1) + pos - 1;
+// "Genesis 1-3", "Psalms 118:1-88", "Luke 9:24-45", "Luke 9:51-10:12"
+export function refOf(r) {
+  const [bi, c1, p1, c2, p2] = r, b = Y().books[bi];
+  const whole = p1 === 1 && p2 === b.v[c2 - 1];
+  if (whole) return b.name + ' ' + (c1 === c2 ? c1 : c1 + '-' + c2);
+  const v1 = verseNo(b, c1, p1), v2 = verseNo(b, c2, p2);
+  return b.name + ' ' + c1 + ':' + v1 + '-' + (c1 === c2 ? v2 : c2 + ':' + v2);
+}
+const isPsalms = r => Y().books[r[0]].name === 'Psalms';
+function versesOf(r, bk) {
+  const [, c1, p1, c2, p2] = r, out = [];
+  for (let c = c1; c <= c2; c++) (bk.c[c - 1] || []).forEach((txt, i) => {
+    const pos = i + 1;
+    if ((c === c1 && pos < p1) || (c === c2 && pos > p2)) return;
+    out.push([c, ((bk.s || {})[c] || 1) + i, txt]);
+  });
+  return out;
+}
+const scriptureHtml = (vs, showChap = true) => '<div class="scripture">' + vs.map(([c, n, v], i) => (showChap && (i === 0 || vs[i - 1][0] !== c) ? '<span class="chap">' + c + '</span>' : '') + '<span class="vn">' + n + '</span>' + esc(v) + ' ').join('') + '</div>';
+const minutes = parts => Math.max(3, Math.round(parts.reduce((n, r) => { const b = Y().books[r[0]]; let v = 0; for (let c = r[1]; c <= r[3]; c++) v += (c === r[3] ? r[4] : b.v[c - 1]) - (c === r[1] ? r[2] - 1 : 0); return n + v; }, 0) / 6));
+const section = (name, c) => { const o = (BK(name) || {}).outline || []; let cur = null; o.forEach(x => { if (x[0] <= c) cur = x[1]; }); return cur; };
+
+// About a book: what it is, what to look for, how it points to Christ, its outline.
+function bookGuideHtml(name, open, here) {
+  const g = BK(name); if (!g) return '';
+  const b = Y().books.find(x => x.name === name);
+  const body = '<p class="small muted" style="margin:0 0 6px">' + esc(g.kind) + (b && b.dr !== name ? ' · ' + esc(t('In the Douay-Rheims:')) + ' ' + esc(b.dr) : '') + '</p>' +
+    '<p>' + esc(g.about) + '</p><p><strong>' + esc(t('Look for')) + ':</strong> ' + esc(g.look) + '</p><p><strong>' + esc(t('Pointing to Christ')) + ':</strong> ' + esc(g.christ) + '</p>' +
+    '<div class="eyebrow" style="margin-top:10px">' + esc(t('The shape of the book')) + '</div><ol class="outline">' + g.outline.map(([c, title], i) => {
+      const next = g.outline[i + 1], last = next ? next[0] - 1 : (b ? b.chapters || b.v.length : c);
+      return '<li' + (here && here >= c && here <= last ? ' class="here"' : '') + '><span class="oc">' + (c === last ? c : c + '-' + last) + '</span>' + esc(title) + '</li>';
+    }).join('') + '</ol>' +
+    (g.ccc ? '<p class="small muted" style="margin:8px 0 0">' + esc(t('Catechism')) + ' ' + esc(g.ccc) + '</p>' : '');
+  return acc((open ? t('Starting a new book') + ': ' : t('About')) + ' ' + name, body, open);
+}
+
+function yearCard() {
+  const es = entries(), n = es.filter(isDone).length, pct = Math.round(n / es.length * 100);
+  return '<a class="card plan-card year-card" href="#/bible-year"><span class="eyebrow">' + esc(pace() === 1 ? t('All 73 books in 365 days') : t('All 73 books in two years')) + '</span><h3>' + esc(yearTitle()) + '</h3>' +
+    '<span class="small muted">' + esc(t('A few chapters of the Old Testament and a passage of the New each day, with a guide to every book')) + '</span>' +
+    '<span class="plan-bar" role="img" aria-label="' + n + ' / ' + es.length + '"><span style="width:' + pct + '%"></span></span>' +
+    '<span class="small muted">' + n + ' / ' + es.length + ' ' + esc(t('days done')) + '</span><span class="chev">' + icon('chevron') + '</span></a>';
+}
+export { yearCard };
+
+export function year() {
+  const es = entries(), total = es.length, n = es.filter(isDone).length, next = es.find(e => !isDone(e)), pct = Math.round(n / total * 100);
+  let html = back('#/bible', t('Bible study')) + head(t('Reading plan'), yearTitle(),
+      t('The whole Bible, all 73 books, in the order of a Catholic Bible. Each day has a few chapters of the Old Testament and a passage of the New Testament, a guide to each book, and a question to pray with. The plan waits for you: no dates, no falling behind.')) +
+    '<section class="card"><span class="plan-bar"><span style="width:' + pct + '%"></span></span><p class="small muted" style="margin:4px 0 12px">' + n + ' / ' + total + ' ' + esc(t('days done')) + '</p>' +
+    (next ? '<a class="btn block" href="#/bible-day/' + next + '">' + esc(n ? t('Continue') : t('Start')) + ': ' + esc(entryLabel(next)) + icon('chevron') + '</a><p class="small muted" style="margin:8px 0 0">' + esc(partsOf(next).map(refOf).join(' · ')) + ' · ' + t('about') + ' ' + minutes(partsOf(next)) + ' ' + esc(t('minutes')) + '</p>'
+      : '<p style="margin:0"><strong>' + esc(t('You have read the whole Bible. Thanks be to God!')) + '</strong></p>') + '</section>' +
+    '<section class="card"><div class="eyebrow">' + esc(t('Pace')) + '</div><div class="seg" role="radiogroup" aria-label="' + esc(t('Pace')) + '">' +
+      [[1, t('One year'), t('15-20 min a day')], [2, t('Two years'), t('8-10 min a day')]].map(([v, l, sub]) => '<button role="radio" aria-checked="' + (pace() === v) + '" data-pace="' + v + '" class="' + (pace() === v ? 'on' : '') + '"><strong>' + esc(l) + '</strong><span class="small">' + esc(sub) + '</span></button>').join('') +
+    '</div><p class="small muted" style="margin:8px 0 0">' + esc(t('Switch any time. What you have read stays read.')) + '</p></section>' +
+    '<div class="card flat small"><p style="margin:0 0 8px">' + esc(t('The text is the Douay-Rheims, a Catholic translation free for anyone to share. A few books have older names, and most Psalms are numbered one lower than in a modern Bible. Each reading links to the NRSV, the translation of the Lectionary used at Mass in Canada.')) + '</p>' +
+    '<button class="btn soft sm" id="offline">' + icon('check') + esc(t('Save the whole Bible for offline')) + '</button> <span class="small muted" id="offmsg"></span></div>';
+  html += '<div class="section-title"><h2>' + esc(t('Every day')) + '</h2><a class="linkish" href="#/bible-books">' + esc(t('Book guides')) + '</a></div><div class="card tight">';
+  const step = 30;
+  for (let m = 0; m < total; m += step) {
+    const slice = es.slice(m, m + step), done = slice.filter(isDone).length;
+    const rows = slice.map(e => '<li><a class="row' + (isDone(e) ? ' done' : '') + '" href="#/bible-day/' + e + '"><span class="lead">' + (isDone(e) ? icon('check') : esc(entryLabel(e).replace(/\D+/g, ''))) + '</span><span class="grow"><span class="sub" style="color:var(--text)">' + esc(partsOf(e).map(refOf).join(' · ')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a></li>').join('');
+    html += acc(t('Days') + ' ' + (m + 1) + '-' + (m + slice.length) + ' · ' + done + '/' + slice.length, '<ul class="list tight">' + rows + '</ul>', !!next && slice.includes(next));
+  }
+  html += '</div>';
+  return {
+    html, title: yearTitle(),
+    bind(root) {
+      root.querySelectorAll('[data-pace]').forEach(b => b.onclick = () => { state.bibleYear.pace = +b.dataset.pace; save(); rerender(); });
+      const btn = root.querySelector('#offline'), msg = root.querySelector('#offmsg');
+      btn.onclick = async () => {
+        btn.disabled = true; let k = 0; const books = Y().books;
+        try {
+          for (const b of books) { await loadBook(b.id); k++; msg.textContent = k + ' / ' + books.length; }
+          msg.textContent = t('Saved. The whole Bible now works offline.');
+        } catch (e) { msg.textContent = t('Could not finish. Check your internet and try again.'); btn.disabled = false; }
+      };
+    }
+  };
+}
+
+export function day(e) {
+  const parts = partsOf(e);
+  if (!parts) return { html: back('#/bible-year', t('Bible study')) + '<p class="empty">' + esc(t('Not found')) + '</p>' };
+  const es = entries(), idx = es.indexOf(e), done = isDone(e), key = 'year-' + e, p = parseEntry(e);
+  // Show a guide when a reading starts a new book; otherwise where we are in the book.
+  const q = r => { const g = BK(Y().books[r[0]].name); return g && g.pray.length ? g.pray[(p.day + (p.half === 'b' ? 1 : 0)) % g.pray.length] : ''; };
+  let html = back('#/bible-year', yearTitle()) +
+    head(yearTitle() + ' · ' + entryLabel(e), parts.map(refOf).join(' · '), t('About') + ' ' + minutes(parts) + ' ' + t('minutes') + '. ' + t('Read slowly. If a part is hard, keep going: the guide below each reading helps.')) +
+    '<p class="small muted prayer-line">' + icon('candle') + ' ' + esc(B().prayer) + '</p>' +
+    '<div class="btn-row" style="margin:0 0 10px">' + listenButton('ylisten', t('Listen to all of today'), 'soft sm') + '</div>';
+  parts.forEach((r, i) => {
+    const b = Y().books[r[0]], starts = r[1] === 1 && r[2] === 1, where = section(b.name, r[1]);
+    html += '<section class="card study-step"><div class="step-head"><span class="n sm">' + (b.nt ? t('NT') : t('OT')) + '</span><h2>' + esc(refOf(r)) + '</h2></div>' +
+      (where && !starts ? '<p class="small muted" style="margin:-4px 0 8px">' + esc(t('Where you are')) + ': ' + esc(where) + '</p>' : '') +
+      '<div class="card tight flat" style="margin:0 0 10px">' + bookGuideHtml(b.name, starts, r[1]) + '</div>' +
+      '<div id="yr' + i + '"><p class="muted">' + esc(t('Opening…')) + '</p></div>' +
+      '<div class="btn-row" style="margin:10px 0 0">' + (isPsalms(r) ? '' : ext(nrsvUrl(refOf(r)), t('Read in the NRSV'), 'ghost sm')) + listenButton('yl' + i, t('Listen'), 'ghost sm') + '</div></section>';
+  });
+  const qs = [...new Set(parts.map(q).filter(Boolean))];
+  html += '<section class="card study-step"><div class="step-head"><span class="n">' + icon('heart') + '</span><h2>' + esc(t('Pray')) + '</h2></div>' +
+    '<ol class="qs">' + qs.map(x => '<li>' + esc(x) + '</li>').join('') + '</ol>' +
+    '<label class="field" style="margin:0"><span>' + esc(t('My notes')) + ' <span class="saved-hint" id="bsaved"></span></span><textarea id="bnotes" placeholder="' + esc(t('One line: what struck you today?')) + '">' + esc(notesOf(key)) + '</textarea></label></section>' +
+    '<div class="btn-row" style="justify-content:center;margin-top:16px"><button class="btn ' + (done ? 'ok' : '') + '" id="bdone" aria-pressed="' + done + '">' + (done ? icon('check') + esc(t('Read')) : esc(t('Mark as read'))) + '</button></div>' +
+    '<div class="study-nav">' + (idx > 0 ? '<a class="btn ghost sm" href="#/bible-day/' + es[idx - 1] + '">' + icon('back') + esc(entryLabel(es[idx - 1])) + '</a>' : '<span></span>') +
+    (idx >= 0 && idx < es.length - 1 ? '<a class="btn ghost sm" href="#/bible-day/' + es[idx + 1] + '">' + esc(entryLabel(es[idx + 1])) + icon('chevron') + '</a>' : '') + '</div>';
+  return {
+    html, title: entryLabel(e),
+    bind(root) {
+      const per = parts.map(() => []);
+      Promise.all(parts.map(r => loadBook(Y().books[r[0]].id))).then(bks => parts.forEach((r, i) => {
+        const vs = versesOf(r, bks[i]), el = root.querySelector('#yr' + i);
+        if (el) el.innerHTML = scriptureHtml(vs);
+        per[i].push(refOf(r) + '.', ...vs.flatMap(v => sentences(v[2])));
+      })).catch(() => parts.forEach((r, i) => { const el = root.querySelector('#yr' + i); if (el) el.innerHTML = '<p>' + esc(t('This reading needs the internet the first time. Connect once, or use "Save the whole Bible for offline" on the plan page.')) + '</p>'; }));
+      bindListen(root, 'ylisten', () => per.flat());
+      parts.forEach((_, i) => bindListen(root, 'yl' + i, () => per[i]));
+      const ta = root.querySelector('#bnotes'); let timer;
+      ta.oninput = () => { clearTimeout(timer); timer = setTimeout(() => { state.study[key] = { notes: ta.value, ref: entryLabel(e) + ': ' + parts.map(refOf).join(' · '), updated: localISO(new Date()) }; save(); root.querySelector('#bsaved').textContent = t('Saved'); }, 400); };
+      root.querySelector('#bdone').onclick = () => {
+        const on = !isDone(e); setDone(e, on); save();
+        if (on) toast(idx === es.length - 1 ? t('You have read the whole Bible!') : t('Well done'));
+        rerender();
+      };
+    }
+  };
+}
+
+// ---------- Book guides and the whole Bible to browse ----------
+export function books() {
+  const bs = Y().books, list = nt => '<ul class="list card tight">' + bs.filter(b => b.nt === nt).map(b => {
+    const g = BK(b.name);
+    return '<li><a class="row" href="#/bible-read/' + b.id + '/1"><span class="lead">' + icon('book') + '</span><span class="grow"><span class="title">' + esc(b.name) + (b.dr !== b.name ? ' <span class="small muted">(' + esc(b.dr) + ')</span>' : '') + '</span><span class="sub clamp">' + esc(g ? g.about : '') + '</span></span><span class="chev">' + icon('chevron') + '</span></a></li>';
+  }).join('') + '</ul>';
+  const html = back('#/bible', t('Bible study')) + head(t('Bible study'), t('All 73 books'), t('A guide to every book of the Bible: what it is, what to look for, how it points to Christ, and its outline. Open a book to read it, chapter by chapter.')) +
+    '<div class="section-title"><h2>' + esc(t('Old Testament')) + ' · 46</h2></div>' + list(false) +
+    '<div class="section-title"><h2>' + esc(t('New Testament')) + ' · 27</h2></div>' + list(true);
+  return { html, title: t('All 73 books') };
+}
+
+export function read(id, cStr) {
+  const b = Y().books.find(x => x.id === id);
+  if (!b) return { html: back('#/bible-books', t('All 73 books')) + '<p class="empty">' + esc(t('Not found')) + '</p>' };
+  const n = b.v.length, c = Math.min(Math.max(1, parseInt(cStr, 10) || 1), n), ref = b.name + ' ' + c;
+  const html = back('#/bible-books', t('All 73 books')) + head(b.nt ? t('New Testament') : t('Old Testament'), ref, section(b.name, c) || '') +
+    '<div class="card tight">' + bookGuideHtml(b.name, c === 1, c) + '</div>' +
+    '<div class="btn-row" style="margin:12px 0 10px">' + listenButton('rlisten', t('Listen'), 'soft sm') + (b.name === 'Psalms' ? '' : ext(nrsvUrl(ref), t('Read in the NRSV'), 'ghost sm')) + '</div>' +
+    '<section class="card"><div id="rtext"><p class="muted">' + esc(t('Opening…')) + '</p></div></section>' +
+    '<div class="study-nav">' + (c > 1 ? '<a class="btn ghost sm" href="#/bible-read/' + id + '/' + (c - 1) + '">' + icon('back') + esc(t('Chapter')) + ' ' + (c - 1) + '</a>' : '<span></span>') +
+    (c < n ? '<a class="btn ghost sm" href="#/bible-read/' + id + '/' + (c + 1) + '">' + esc(t('Chapter')) + ' ' + (c + 1) + icon('chevron') + '</a>' : '') + '</div>' +
+    (n > 1 ? '<div class="eyebrow" style="margin:14px 2px 6px">' + esc(t('Chapters')) + '</div><div class="chip-wrap">' + Array.from({ length: n }, (_, i) => '<a class="chip-link' + (i + 1 === c ? ' on' : '') + '" href="#/bible-read/' + id + '/' + (i + 1) + '"' + (i + 1 === c ? ' aria-current="page"' : '') + '>' + (i + 1) + '</a>').join('') + '</div>' : '');
+  return {
+    html, title: ref,
+    bind(root) {
+      let pieces = [];
+      loadBook(id).then(bk => {
+        const vs = (bk.c[c - 1] || []).map((v, i) => [c, ((bk.s || {})[c] || 1) + i, v]);
+        root.querySelector('#rtext').innerHTML = scriptureHtml(vs, false);
+        pieces = [ref + '.', ...vs.flatMap(v => sentences(v[2]))];
+      }).catch(() => { root.querySelector('#rtext').innerHTML = '<p>' + esc(t('This book needs the internet the first time you open it.')) + '</p>'; });
+      bindListen(root, 'rlisten', () => pieces);
+    }
+  };
+}

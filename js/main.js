@@ -27,6 +27,7 @@ const routes = {
   rites: [extras.rites, 'journey'], sponsor: [extras.sponsor, 'me'], 'saint-quiz': [extras.saintQuiz, 'learn'],
   intentions: [more.intentions, 'pray'], readings: [more.readings, 'today'], examen: [more.examen, 'pray'], stations: [more.stations, 'pray'], keepsake: [more.keepsake, 'me'],
   bible: [id => id ? bible.study(id) : bible.hub(), 'learn'], 'bible-guide': [bible.guide, 'learn'], 'bible-plan': [bible.plan, 'learn'], 'bible-notes': [bible.notes, 'learn'],
+  'bible-year': [bible.year, 'learn'], 'bible-day': [bible.day, 'learn'], 'bible-books': [bible.books, 'learn'], 'bible-read': [bible.read, 'learn'],
   search: [search.view, 'search']
 };
 
