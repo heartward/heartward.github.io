@@ -167,10 +167,23 @@ export function settings() {
     '<p class="small muted" style="margin:10px 0 0">' + esc(t('Persian shows the whole app right to left. Each prayer can also be shown in English, to pray along at Mass.')) + '</p>' + '</div>' +
     '<div class="section-title"><h2>' + esc(t('Backup')) + '</h2></div><div class="card"><p class="small muted">' + esc(t('Your progress, journal and dates are saved only on this device. Save a backup file before changing phones or clearing your browser.')) + '</p>' +
     '<div class="btn-row" style="margin:0"><button class="btn soft" id="bk">' + icon('download') + esc(t('Save backup')) + '</button><button class="btn ghost" id="rs">' + icon('upload') + esc(t('Restore')) + '</button><input type="file" id="rf" accept="application/json,.json"></div></div>' +
-    '<div class="section-title"><h2>' + esc(t('About')) + '</h2></div><div class="card flat small muted"><p>' + esc(t('Heartward is free, has no ads and no accounts, and works offline. Named for the disciples on the road to Emmaus, whose hearts burned within them as they walked with Jesus (Luke 24:32).')) + '</p><p style="margin:0">' + esc(t('Content is a draft for review by a catechist or priest. Always follow what your parish teaches.')) + '</p></div>';
+    '<div class="section-title"><h2>' + esc(t('About')) + '</h2></div><div class="card flat small muted"><p>' + esc(t('Heartward is free, has no ads and no accounts, and works offline. Named for the disciples on the road to Emmaus, whose hearts burned within them as they walked with Jesus (Luke 24:32).')) + '</p><p>' + esc(t('Content is a draft for review by a catechist or priest. Always follow what your parish teaches.')) + '</p>' +
+      '<p style="margin:0">' + esc(t('Version')) + ' <span id="appver">…</span> · <button class="linkish" id="appupd">' + esc(t('Check for updates')) + '</button></p></div>';
   return {
     html, title: t('Settings'),
     bind(root) {
+      const ver = root.querySelector('#appver'), upd = root.querySelector('#appupd');
+      const showVer = () => (window.caches ? caches.keys() : Promise.resolve([])).then(ks => { const v = ks.map(k => (/^heartward-v(\d+)$/.exec(k) || [])[1]).filter(Boolean).sort((x, y) => y - x)[0]; ver.textContent = v || '-'; }).catch(() => { ver.textContent = '-'; });
+      showVer();
+      upd.onclick = () => {
+        if (!navigator.serviceWorker) return toast(t('Updates are automatic in this browser.'));
+        upd.disabled = true; toast(t('Checking…'));
+        navigator.serviceWorker.getRegistration().then(r => r ? r.update().then(() => r) : null).then(r => {
+          upd.disabled = false;
+          if (r && (r.installing || r.waiting)) toast(t('A new version is downloading. Heartward will restart in a moment.'));
+          else toast(t('You have the latest version.'));
+        }).catch(() => { upd.disabled = false; toast(t('Could not check. Are you online?')); });
+      };
       root.querySelectorAll('[data-k]').forEach(b => b.onclick = () => {
         const langChange = b.dataset.k === 'lang' && state.settings.lang !== b.dataset.v;
         state.settings[b.dataset.k] = b.dataset.v; save();

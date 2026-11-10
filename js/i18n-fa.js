@@ -826,5 +826,12 @@ export const FA = {
   "The Persian text is the Old Persian Version (1895), the classic Persian Bible, free for anyone to share. It has 66 books: Tobit, Judith, Wisdom, Sirach, Baruch, 1 and 2 Maccabees and the Greek parts of Esther and Daniel are not in it, so those are shown in English from the Douay-Rheims. Psalms carry the numbers used in Persian Bibles.": "متن فارسی، ترجمهٔ قدیم (۱۸۹۵) است، کتاب مقدس کلاسیک فارسی که همه می‌توانند آزادانه آن را به اشتراک بگذارند. این ترجمه ۶۶ کتاب دارد: طوبیا، یهودیت، حکمت، یشوع بن سیراخ، باروک، اول و دوم مکابیان و بخش‌های یونانی استر و دانیال در آن نیست، پس این‌ها به انگلیسی از ترجمهٔ دوئی‌ریمز نشان داده می‌شوند. شمارهٔ مزمورها همان شماره‌های کتاب مقدس فارسی است.",
   "Old Persian Version (1895), public domain.": "ترجمهٔ قدیم (۱۸۹۵)، آزاد برای همه.",
   "This part is not in the Old Persian Version; it is shown in English from the Douay-Rheims.": "این بخش در ترجمهٔ قدیم نیست؛ به انگلیسی از ترجمهٔ دوئی‌ریمز آمده است.",
-  "part": "بخشی"
+  "part": "بخشی",
+  "Version": "نسخه",
+  "Check for updates": "بررسی به‌روزرسانی",
+  "Checking…": "در حال بررسی…",
+  "A new version is downloading. Heartward will restart in a moment.": "نسخهٔ تازه در حال دریافت است. Heartward تا چند لحظهٔ دیگر دوباره باز می‌شود.",
+  "You have the latest version.": "تازه‌ترین نسخه را دارید.",
+  "Could not check. Are you online?": "بررسی ممکن نشد. به اینترنت وصل هستید؟",
+  "Updates are automatic in this browser.": "در این مرورگر به‌روزرسانی خودکار است."
 };
