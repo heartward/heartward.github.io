@@ -4,7 +4,13 @@ import { icon } from './icons.js';
 import { esc, t } from './ui.js';
 
 const synth = typeof window !== 'undefined' && window.speechSynthesis;
-export const canSpeak = !!synth && typeof SpeechSynthesisUtterance !== 'undefined';
+const hasSynth = !!synth && typeof SpeechSynthesisUtterance !== 'undefined';
+// Persian needs a Persian voice on the phone; most phones have none, so Listen is hidden until one is found.
+const SPEECH_LANG = { en: 'en-US', fa: 'fa-IR', es: 'es-ES' };
+const appLang = () => state.settings.lang || 'en';
+const voiceFor = lang => { const vs = synth.getVoices(), re = new RegExp('^' + lang + '(-|_|$)', 'i'), d = vs.find(v => v.default); return d && re.test(d.lang) ? d : (lang === 'en' ? null : vs.find(v => re.test(v.lang)) || null); };
+export let canSpeak = hasSynth && (appLang() !== 'fa' || !!voiceFor('fa'));
+if (hasSynth && synth.addEventListener) synth.addEventListener('voiceschanged', () => { const was = canSpeak; canSpeak = appLang() !== 'fa' || !!voiceFor('fa'); if (was !== canSpeak) document.dispatchEvent(new Event('heartward:render')); });
 export const RATES = { slow: 0.75, normal: 0.95, fast: 1.15 };
 
 let run = 0;        // each new reading gets a number; an older one stops when the number changes
@@ -12,11 +18,7 @@ let onStop = null;
 
 // Use the phone's default voice when it is English. Picking another voice by hand can choose one that is
 // listed but not downloaded, which on iPhone reads nothing. Otherwise only the language is set.
-function voice() {
-  const vs = synth.getVoices();
-  const d = vs.find(v => v.default);
-  return d && /^en(-|_|$)/i.test(d.lang) ? d : null;
-}
+function voice(lang) { return voiceFor(lang); }
 
 // On iPhone the silent switch mutes web audio. Asking for "playback" (Safari 17+) lets it play like a podcast.
 function unmute() {
@@ -30,7 +32,7 @@ function hint(show) {
   if (!show) return;
   const el = document.createElement('div');
   el.id = 'speak-hint'; el.className = 'toast'; el.setAttribute('role', 'status');
-  el.textContent = 'No sound? Turn up the volume and turn off silent mode, then tap Listen again.';
+  el.textContent = t('No sound? Turn up the volume and turn off silent mode, then tap Listen again.');
   document.body.appendChild(el);
   warn = setTimeout(() => el.remove(), 7000);
 }
@@ -44,9 +46,10 @@ export function stop() {
 
 // Speaks a list of text pieces one after another. Short pieces avoid browsers cutting off long readings.
 // gap(piece) returns a pause in ms after each piece (used to leave time to repeat a line).
-export function speak(pieces, { gap = () => 250, onPiece, done } = {}) {
+export function speak(pieces, { gap = () => 250, onPiece, done, lang } = {}) {
   stop();
-  if (!canSpeak) return;
+  if (!hasSynth) return;
+  const L = lang || appLang();
   const id = run, list = pieces.map(s => String(s).trim()).filter(Boolean);
   onStop = done || null;
   unmute();
@@ -58,8 +61,8 @@ export function speak(pieces, { gap = () => 250, onPiece, done } = {}) {
     if (id !== run) return;
     if (i >= list.length) { const f = onStop; onStop = null; if (f) f(); return; }
     const k = i++, u = new SpeechSynthesisUtterance(list[k]);
-    const v = voice(); if (v) u.voice = v;
-    u.lang = v ? v.lang : 'en-US';
+    const v = voice(L); if (v) u.voice = v;
+    u.lang = v ? v.lang : SPEECH_LANG[L] || 'en-US';
     u.onstart = () => { started = true; hint(false); };
     u.rate = RATES[state.settings.rate] || RATES.normal;
     u.onend = () => { if (id === run) setTimeout(next, gap(list[k])); };
@@ -72,7 +75,7 @@ export function speak(pieces, { gap = () => 250, onPiece, done } = {}) {
 }
 
 // Splits long text into sentence-sized pieces.
-export const sentences = text => (String(text).match(/[^.!?;:]+[.!?;:]*["')\]]*\s*/g) || [text]).map(s => s.trim()).filter(Boolean);
+export const sentences = text => (String(text).match(/[^.!?;:؟؛]+[.!?;:؟؛]*["')\]»]*\s*/g) || [text]).map(s => s.trim()).filter(Boolean);
 
 // A Listen button that becomes Stop while it plays. getPieces runs on tap, so it reads the page as it is then.
 export function listenButton(id, label, cls = 'soft') {
