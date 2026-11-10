@@ -6,7 +6,7 @@ export const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '
 export const safeUrl = u => /^(https:\/\/|mailto:|tel:)/.test(u || '') ? u : '#';
 // UI strings: English is the key; other languages map from it.
 export function t(s) { return state.settings.lang === 'es' && ES[s] ? ES[s] : s; }
-export function locale() { return state.settings.lang === 'es' ? 'es' : 'en-US'; }
+export function locale() { return state.settings.lang === 'es' ? 'es' : 'en-CA'; }
 export function fmtDate(d, opts) { return d.toLocaleDateString(locale(), opts || { weekday: 'long', month: 'long', day: 'numeric' }); }
 export function parseISO(s) { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); }
 

@@ -43,7 +43,7 @@
         "group": "Liturgy of the Word",
         "name": "Gospel",
         "posture": "stand",
-        "about": "We stand to honor the words of Jesus. Before it we sing \"Alleluia\" (except in Lent). When the deacon or priest announces the Gospel, people trace a small cross on their forehead, lips and heart, asking that God's word be in our mind, on our lips and in our heart."
+        "about": "We stand to honour the words of Jesus. Before it we sing \"Alleluia\" (except in Lent). When the deacon or priest announces the Gospel, people trace a small cross on their forehead, lips and heart, asking that God's word be in our mind, on our lips and in our heart."
       },
       {
         "group": "Liturgy of the Word",
@@ -73,7 +73,7 @@
         "group": "Liturgy of the Eucharist",
         "name": "Eucharistic Prayer",
         "posture": "kneel",
-        "about": "The heart of the Mass. After the \"Holy, Holy, Holy,\" we kneel. The priest repeats Jesus' words from the Last Supper, and the bread and wine become the Body and Blood of Christ. Bells may ring as the priest lifts the Host and the chalice. It ends with a great \"Amen.\""
+        "about": "The heart of the Mass. After the \"Holy, Holy, Holy,\" we kneel, as is the custom in Canada. The priest repeats Jesus' words from the Last Supper, and the bread and wine become the Body and Blood of Christ. Bells may ring as the priest lifts the Host and the chalice. It ends with a great \"Amen.\""
       },
       {
         "group": "Communion Rite",
@@ -85,7 +85,7 @@
         "group": "Communion Rite",
         "name": "Lamb of God",
         "posture": "kneel",
-        "about": "We sing \"Lamb of God, you take away the sins of the world.\" Then we kneel and say: \"Lord, I am not worthy that you should enter under my roof, but only say the word and my soul shall be healed.\""
+        "about": "We sing \"Lamb of God, you take away the sins of the world.\" In many Canadian parishes we then kneel; in some, everyone stays standing until all have received. Then we say: \"Lord, I am not worthy that you should enter under my roof, but only say the word and my soul shall be healed.\""
       },
       {
         "group": "Communion Rite",
@@ -100,7 +100,7 @@
         "about": "The priest blesses us and sends us out: \"Go in peace.\" We answer \"Thanks be to God.\" It is good to stay for the closing song."
       }
     ],
-    "note": "Postures can differ a little from country to country. These follow common practice in the United States."
+    "note": "These follow the Roman Missal for Canada and common practice in Canadian parishes. Each bishop can set some local customs, so postures can differ a little from one diocese to another."
   },
   "basics": {
     "title": "First-week basics",
@@ -194,7 +194,7 @@
       {
         "heading": "Loving others",
         "questions": [
-          "Have I honored and cared for my parents and family?",
+          "Have I honoured and cared for my parents and family?",
           "Have I hurt anyone by violence, anger or harsh words? Have I held on to hatred?",
           "Have I been faithful and pure in my thoughts, words and relationships?",
           "Have I stolen, cheated, or been careless with what belongs to others?",

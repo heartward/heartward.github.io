@@ -1,7 +1,7 @@
 [
   {
     "q": "What is RCIA? Is it the same as OCIA?",
-    "a": "Yes. RCIA (Rite of Christian Initiation of Adults) is the name used in Canada and many other places. In the United States it is now called OCIA (Order of Christian Initiation of Adults). It is the way adults join the Catholic Church: a journey of learning, prayer and community that leads to baptism, confirmation and first Communion, usually at Easter.",
+    "a": "Yes. RCIA (Rite of Christian Initiation of Adults) is the name used in Canada. In the United States it is now called OCIA (Order of Christian Initiation of Adults), so you may see that name in American books and videos. It is the way adults join the Catholic Church: a journey of learning, prayer and community that leads to baptism, confirmation and first Communion, usually at Easter.",
     "tags": [
       "journey"
     ]
@@ -37,14 +37,14 @@
   },
   {
     "q": "What is a sponsor?",
-    "a": "A sponsor is a practicing Catholic who walks with you through the journey: they pray for you, answer questions, go to Mass with you, and stand with you at the rites. Your parish can help you find one.",
+    "a": "A sponsor is a practising Catholic who walks with you through the journey: they pray for you, answer questions, go to Mass with you, and stand with you at the rites. Your parish can help you find one.",
     "tags": [
       "journey"
     ]
   },
   {
     "q": "Do Catholics worship Mary?",
-    "a": "No. Worship belongs to God alone. Catholics honor Mary as the mother of Jesus and ask her to pray for us, the same way you might ask a friend to pray for you.",
+    "a": "No. Worship belongs to God alone. Catholics honour Mary as the mother of Jesus and ask her to pray for us, the same way you might ask a friend to pray for you.",
     "tags": [
       "beliefs"
     ]
@@ -58,7 +58,14 @@
   },
   {
     "q": "When do I sit, stand and kneel at Mass?",
-    "a": "Generally: stand for the opening, the Gospel, the Creed and the Our Father; sit for the readings and the homily; kneel during the Eucharistic Prayer. Customs differ a little by country, so following the people around you is perfectly fine.",
+    "a": "In Canadian parishes, generally: stand for the opening, the Gospel, the Creed and the Our Father; sit for the readings and the homily; kneel during the Eucharistic Prayer, after the \"Holy, Holy, Holy.\" After the Lamb of God, some parishes kneel and others stay standing until everyone has received, because each diocese can set its own custom. Following the people around you is perfectly fine.",
+    "tags": [
+      "mass"
+    ]
+  },
+  {
+    "q": "Which days do Catholics in Canada have to go to Mass?",
+    "a": "Every Sunday (or the Saturday evening Mass), plus two holy days of obligation: Christmas (December 25) and Mary, Mother of God (January 1). In Canada the Epiphany, the Ascension and the Body and Blood of Christ are celebrated on Sundays, and other big feasts like the Assumption and All Saints are encouraged but not required. Until you are received into the Church this is not an obligation for you yet, but it is a wonderful habit to start.",
     "tags": [
       "mass"
     ]
@@ -92,6 +99,13 @@
     ]
   },
   {
+    "q": "Which Bible translation is read at Mass in Canada?",
+    "a": "English-speaking parishes in Canada use the Canadian Lectionary, approved by the Canadian Conference of Catholic Bishops, which uses the New Revised Standard Version (NRSV). That is why the links in Heartward open the NRSV Catholic Edition. American missals and apps use a different translation (the NABRE), so if you buy a missal or a magazine like Magnificat, get the Canadian edition.",
+    "tags": [
+      "beliefs"
+    ]
+  },
+  {
     "q": "Do I have to choose a confirmation name?",
     "a": "It is a common custom, but not required everywhere. Many people choose a saint's name as a patron. Ask your parish what they do. See \"Choose a saint\" in the Learn section for ideas.",
     "tags": [
@@ -100,7 +114,7 @@
   },
   {
     "q": "What should I give up for Lent?",
-    "a": "Catholics fast and abstain from meat on Ash Wednesday and Good Friday, and abstain from meat on the Fridays of Lent (if age 14 and up). Beyond that, many people give up something they enjoy or add a good habit, like extra prayer or helping others.",
+    "a": "In Canada, Ash Wednesday and Good Friday are days of fasting (ages 18 to 59: one full meal and two small ones) and of no meat (age 14 and up). Every Friday of the year is a day of penance: Catholics in Canada abstain from meat, or the bishops allow you to do a special act of charity or prayer instead. Beyond that, many people give up something they enjoy or add a good habit, like extra prayer or helping others.",
     "tags": [
       "seasons"
     ]
