@@ -31,7 +31,7 @@ function index() {
   add('Bible study', 'sparkle', '#/bible-guide', t('Start here: how to read the Bible'), t('Bible study'), data.bible.guide.map(g => g.title + ' ' + g.body.join(' ')).join(' '));
   data.year.books.forEach(b => { const g = data.books[b.name]; if (g) add('Bible study', 'book', '#/bible-read/' + b.id + '/1', b.name + (b.dr !== b.name ? ' (' + b.dr + ')' : ''), g.kind, [g.about, g.look, g.christ, g.outline.map(o => o[1]).join(' ')].join(' ')); });
   add('Bible study', 'book', '#/bible-year', t('The whole Bible in a year'), t('All 73 books, a little each day'), '');
-  allStudies().forEach(st => add('Bible study', 'book', '#/bible/' + st.id, st.ref, st.title + ' · ' + data.bible.plans[st.plan].title, [st.intro, st.understand, st.live, (st.questions || []).join(' '), ((data.scripture.passages || {})[st.ref] || []).map(v => v[1]).join(' ')].join(' ')));
+  allStudies().forEach(st => add('Bible study', 'book', '#/bible/' + st.id, st.ref, st.title + ' · ' + data.bible.plans[st.plan].title, [st.intro, st.understand, st.live, (st.questions || []).join(' '), ((data.scripture.passages || {})[st.refEn || st.ref] || []).map(v => v[1]).join(' ')].join(' ')));
   data.paths.firstYear.months.forEach(m => add('Guides', 'sparkle', '#/first-year', m.title, t(data.paths.firstYear.title), m.lesson + ' ' + m.practice));
   return items;
 }

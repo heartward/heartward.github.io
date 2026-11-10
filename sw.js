@@ -64,6 +64,10 @@ var SHELL = [
   'content/fa/extras.json',
   'content/fa/feasts.json',
   'content/fa/more.json',
+  'content/fa/bible.json',
+  'content/fa/scripture.json',
+  'content/fa/year.json',
+  'content/fa/books.json',
   'content/parish.json'
 ];
 

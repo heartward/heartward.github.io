@@ -7,11 +7,17 @@ const get = p => fetch(p).then(r => { if (!r.ok) throw new Error(p); return r.js
 // Translations (content/fa/<file>.json) map each English text to its translation. Any text without one
 // (for example something added to the English files later) simply shows in English.
 // Fields that hold ids, links or codes are never translated.
-const KEEP = new Set(['id', 'url', 'stage', 'status', 'prayers', 'color', 'date', 'feast', 'byWeekday', 'posture', 'tags', 'program', 'answer']);
+const KEEP = new Set(['id', 'url', 'stage', 'status', 'prayers', 'color', 'date', 'feast', 'byWeekday', 'posture', 'tags', 'program', 'answer', 'figure']);
 function overlay(x, map, key) {
   if (typeof x === 'string') return KEEP.has(key) ? x : (map[x] || x);
   if (Array.isArray(x)) return x.map(v => overlay(v, map, key));
-  if (x && typeof x === 'object') { const o = {}; for (const k of Object.keys(x)) o[k] = overlay(x[k], map, KEEP.has(key) ? key : k); return o; }
+  if (x && typeof x === 'object') {
+    const o = {};
+    for (const k of Object.keys(x)) o[k] = overlay(x[k], map, KEEP.has(key) ? key : k);
+    // A Bible reference is shown translated, but the English one still finds the passage and builds links.
+    if (typeof x.ref === 'string') o.refEn = x.ref;
+    return o;
+  }
   return x;
 }
 
