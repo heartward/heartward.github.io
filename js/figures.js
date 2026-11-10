@@ -84,9 +84,9 @@ const FIG = {
   // Creation, Fall, Redemption: the bonds with God (up and down) and with each other (side to side).
   salvation: () => {
     const rows = [
-      ['Creation', 'Made to know and love God,|one family at peace with|him and with each other', 'spoke'],
-      ['Fall', 'Sin breaks both bonds:|with God (up and down) and|with each other (side to side)', 'broken'],
-      ['Redemption', 'Jesus restores both. In his|Church we become one|family of God again', 'spoke']
+      ['Creation', 'Adam and Eve: unity in the|human family.|A united family', 'spoke'],
+      ['Fall', 'Sin hurt our relationship with|God and each other, both the|vertical and the horizontal.|A broken human family', 'broken'],
+      ['Redemption', 'Jesus restores us to the|Father and each other.|One family of God', 'spoke']
     ];
     const RH = 116;
     let out = ARROW;
@@ -103,17 +103,31 @@ const FIG = {
     });
     return '<svg viewBox="0 0 360 ' + (8 + RH * 3 - 6) + '" role="img" aria-label="' + esc(t('The story of salvation: in creation we are one family with God; the Fall breaks our bond with God and with each other; Jesus restores both.')) + '">' + out + '</svg>';
   },
+  // Her drawn chart: God widens his family through certain leaders, up to the one universal Church.
+  ladder: () => {
+    const steps = [['Adam & Eve', 'couple'], ['Noah', 'one family'], ['Abraham', 'one tribe'], ['Moses', 'one nation'], ['David', 'one kingdom']];
+    const yAt = x => 196 - (x - 14) * 0.6;
+    let out = '<line x1="10" y1="196" x2="350" y2="196" class="side"/><line x1="14" y1="196" x2="268" y2="' + yAt(268) + '" class="spoke"/>';
+    steps.forEach(([who, fam], i) => {
+      const x = 36 + i * 50, top = yAt(x);
+      out += '<line x1="' + x + '" y1="196" x2="' + x + '" y2="' + top + '" class="side"/>' +
+        txt(x + 2, top - 6, t(fam), { anchor: 'start', rot: -62, cls: 'sm' }) +
+        lines(x, 214, who === 'Adam & Eve' ? 'Adam|& Eve' : who, 'sm', 14, 'middle');
+    });
+    out += '<path d="M306 44 V196 M284 84 H328" class="leg"/>' + lines(306, 214, 'One universal|Catholic Church', 'sm', 14, 'middle');
+    return '<svg viewBox="0 0 360 276" role="img" aria-label="' + esc(t('God widens his family step by step: a couple, one family, one tribe, one nation, one kingdom, and in Jesus one universal Catholic Church.')) + '"><g transform="translate(0 32)">' + out + '</g></svg>';
+  },
   // Jesus: one divine Person, two natures. Each early heresy got one part wrong.
-  natures: () => '<svg viewBox="0 0 360 330" role="img" aria-label="' + esc(t('Jesus Christ is one divine Person with two natures, truly God and truly man. Each early heresy denied one part.')) + '">' + ARROW +
+  natures: () => '<svg viewBox="0 0 360 336" role="img" aria-label="' + esc(t('Jesus Christ is one divine Person with two natures, truly God and truly man. Each early heresy denied one part.')) + '">' + ARROW +
     '<rect x="70" y="10" width="220" height="60" rx="30" class="core"/>' + txt(180, 37, t('Jesus Christ'), { cls: 'god' }) + txt(180, 58, t('one divine Person'), { cls: 'is' }) +
     '<line x1="140" y1="72" x2="96" y2="116" class="spoke" marker-end="url(#arr)"/><line x1="220" y1="72" x2="264" y2="116" class="spoke" marker-end="url(#arr)"/>' +
     '<rect x="12" y="122" width="150" height="72" rx="18" class="box"/>' + txt(87, 152, t('Truly God'), { cls: t('Truly God').length > 10 ? 'nm' : 'person' }) + txt(87, 176, t('divine nature'), { cls: 'lbl' }) +
     '<rect x="198" y="122" width="150" height="72" rx="18" class="box"/>' + txt(273, 152, t('Truly man'), { cls: t('Truly man').length > 10 ? 'nm' : 'person' }) + txt(273, 176, t('human nature'), { cls: 'lbl' }) +
     '<rect x="163" y="149" width="34" height="18" rx="9" class="pill"/>' + txt(180, 162, t('and'), { cls: 'is' }) +
     txt(87, 218, t('Denied by'), { cls: 'edge' }) + lines(87, 238, 'Arianism|Adoptionism', 'sm', 16, 'middle') +
-    txt(273, 218, t('Denied by'), { cls: 'edge' }) + lines(273, 238, 'Docetism|Apollinarianism', 'sm', 16, 'middle') +
-    '<line x1="40" y1="270" x2="320" y2="270" class="box"/>' +
-    txt(180, 290, t('Got the union wrong'), { cls: 'edge' }) + lines(180, 309, 'Nestorianism (two persons)|Monophysitism (one blended nature)', 'sm', 16, 'middle') +
+    txt(273, 218, t('Denied by'), { cls: 'edge' }) + lines(273, 238, 'Docetism, Gnosticism|Apollinarianism|Monophysitism', 'sm', 16, 'middle') +
+    '<line x1="40" y1="284" x2="320" y2="284" class="box"/>' +
+    txt(180, 304, t('Distorted the union'), { cls: 'edge' }) + lines(180, 323, 'Nestorianism (two persons)', 'sm', 16, 'middle') +
     '</svg>',
   // The gap of sin, and the Cross that bridges it.
   bridge: () => '<svg viewBox="0 0 360 226" role="img" aria-label="' + esc(t('Sin opened a gap between God and humanity. The Cross of Jesus, true God and true man, bridges it.')) + '">' +
@@ -132,6 +146,7 @@ const CAPTION = {
   salvation: 'Creation, Fall, Redemption: the whole Bible in three words.',
   natures: 'Each early heresy got one part wrong. The Church holds it all together: one Person, truly God and truly man.',
   bridge: 'Sin opened a gap no human could close. Jesus, God and man, bridges it with his Cross.',
+  ladder: 'God had a plan to restore humanity to Him and each other through certain leaders.',
   covenants: 'Each covenant widens God\'s family, from one couple to the whole world. Jesus fulfills them all.'
 };
 
