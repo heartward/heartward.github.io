@@ -17,7 +17,8 @@ const defaults = () => ({
   friends: [],       // { name, role, phone, email }
   parish: { name: '', meets: '' },
   study: {},         // study id (session id, or a plan day like 'mark-01') -> { notes } for Bible study
-  bible: {},         // study id -> 'YYYY-MM-DD' when marked as studied
+  bible: {},         // study id -> 'YYYY-MM-DD' when marked as studied (whole-Bible days: 'year-12', 'year-12-a')
+  bibleYear: { pace: 1 }, // whole Bible: 1 = one year, 2 = two years
   quiz: {},          // sessionId -> best score
   verses: {},        // sessionId -> true when the memory verse is known
   challenges: {},    // weekKey -> true when the weekly challenge is done
@@ -37,6 +38,7 @@ function merge(base, obj) {
   out.settings = Object.assign(defaults().settings, obj && obj.settings);
   out.parish = Object.assign(defaults().parish, obj && obj.parish);
   out.sponsor = Object.assign(defaults().sponsor, obj && obj.sponsor);
+  out.bibleYear = Object.assign(defaults().bibleYear, obj && obj.bibleYear);
   out.keepsake = Object.assign(defaults().keepsake, obj && obj.keepsake);
   if (!SPANISH) out.settings.lang = 'en';
   return out;

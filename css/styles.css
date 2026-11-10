@@ -598,3 +598,18 @@ ol.steps4 .n, .study-step .n { flex: 0 0 auto; width: 28px; height: 28px; border
 .study-nav { display: flex; justify-content: space-between; gap: 8px; margin: 16px 0 8px; flex-wrap: wrap; }
 .note-card { display: block; text-decoration: none; color: var(--text); margin-bottom: 10px; }
 .note-card .note-text { display: block; white-space: pre-wrap; margin-top: 4px; font-family: var(--serif); }
+.year-card { background: linear-gradient(160deg, var(--surface), var(--accent-soft)); }
+.study-step .n.sm { width: auto; padding: 0 8px; border-radius: 999px; font-size: .72rem; letter-spacing: .04em; }
+.study-step .n svg { width: 16px; height: 16px; }
+.scripture .chap { display: inline-block; font-family: var(--serif); font-weight: 700; font-size: 1.5rem; line-height: 1; color: var(--accent-ink); margin: 0 6px 0 0; vertical-align: -2px; }
+.scripture .chap:not(:first-child) { display: block; margin: 14px 0 4px; }
+ol.outline { list-style: none; margin: 4px 0 0; padding: 0; }
+ol.outline li { display: flex; gap: 10px; padding: 5px 8px; border-radius: 8px; font-size: .92rem; }
+ol.outline li.here { background: var(--accent-soft); font-weight: 600; }
+ol.outline .oc { flex: 0 0 4.2em; color: var(--muted); font-variant-numeric: tabular-nums; }
+.seg { display: flex; gap: 8px; margin-top: 8px; }
+.seg button { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 56px; padding: 8px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); color: var(--text); font: inherit; cursor: pointer; }
+.seg button.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-ink); }
+.chip-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip-link { min-width: 40px; min-height: 40px; display: inline-flex; align-items: center; justify-content: center; padding: 0 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; font-size: .9rem; }
+.chip-link.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }

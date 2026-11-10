@@ -1,6 +1,7 @@
 /* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit.
    Every download skips the browser's own HTTP cache, so a new version never mixes in files from an older one. */
-var CACHE = 'heartward-v26';
+var CACHE = 'heartward-v27';
+var BIBLE = 'heartward-bible'; // the 73 book texts, loaded one at a time and kept across app updates
 var ART = 'heartward-art'; // paintings from Wikimedia Commons, kept across app updates
 var SHELL = [
   './',
@@ -44,6 +45,8 @@ var SHELL = [
   'content/en/more.json',
   'content/en/bible.json',
   'content/en/scripture.json',
+  'content/en/year.json',
+  'content/en/books.json',
   'content/es/prayers.json',
   'content/parish.json'
 ];
@@ -54,7 +57,7 @@ self.addEventListener('install', function (e) {
 
 self.addEventListener('activate', function (e) {
   e.waitUntil(caches.keys().then(function (keys) {
-    return Promise.all(keys.filter(function (k) { return k !== CACHE && k !== ART; }).map(function (k) { return caches.delete(k); }));
+    return Promise.all(keys.filter(function (k) { return k !== CACHE && k !== ART && k !== BIBLE; }).map(function (k) { return caches.delete(k); }));
   }).then(function () { return self.clients.claim(); }));
 });
 
@@ -72,6 +75,15 @@ self.addEventListener('fetch', function (e) {
     return;
   }
   if (new URL(req.url).origin !== self.location.origin) return;
+  if (new URL(req.url).pathname.indexOf('/content/bible/') !== -1) {
+    // Bible books never change once published: keep them, and fetch only the first time.
+    e.respondWith(caches.open(BIBLE).then(function (cache) {
+      return cache.match(req, { ignoreSearch: true }).then(function (hit) {
+        return hit || fetch(req).then(function (res) { if (res && res.ok) cache.put(req, res.clone()); return res; });
+      });
+    }));
+    return;
+  }
   e.respondWith(caches.open(CACHE).then(function (cache) {
     return cache.match(req, { ignoreSearch: true }).then(function (hit) {
       var fresh = fetch(req, { cache: 'no-cache' }).then(function (res) {
