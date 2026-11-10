@@ -90,4 +90,19 @@ loadData().then(() => { ready = true; render(); }).catch(err => {
   document.getElementById('view').innerHTML = '<div class="empty"><h2>' + t('Could not load') + '</h2><p>' + t('Please check your connection and reload. After the first visit, Heartward works offline.') + '</p></div>';
 });
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+// Updates: an installed app on a phone is usually resumed rather than reopened, so look for a new version
+// each time it comes back to the screen, and switch to it as soon as it is ready (after any typing is saved).
+if ('serviceWorker' in navigator) window.addEventListener('load', () => {
+  const sw = navigator.serviceWorker, hadController = !!sw.controller;
+  sw.register('sw.js').then(reg => {
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') reg.update().catch(() => {}); });
+  }).catch(() => {});
+  let switching = false;
+  sw.addEventListener('controllerchange', () => {
+    if (!hadController || switching) return;
+    switching = true;
+    const el = document.activeElement, typing = el && /^(TEXTAREA|INPUT|SELECT)$/.test(el.tagName);
+    if (typing) el.addEventListener('blur', () => setTimeout(() => location.reload(), 800), { once: true });
+    else location.reload();
+  });
+});
