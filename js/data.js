@@ -24,11 +24,12 @@ function overlay(x, map, key) {
 export async function loadData() {
   const lang = state.settings.lang;
   const tr = lang === 'fa' ? FILES.map(f => get('content/fa/' + f + '.json').catch(() => ({}))) : [];
-  const [base, es, parish, maps] = await Promise.all([
+  const [base, es, parish, maps, passagesFa] = await Promise.all([
     Promise.all(FILES.map(f => get('content/en/' + f + '.json'))),
     get('content/es/prayers.json').catch(() => []),
     get('content/parish.json').catch(() => ({})),
-    Promise.all(tr)
+    Promise.all(tr),
+    lang === 'fa' ? get('content/fa/passages.json').catch(() => null) : null
   ]);
   data.prayersEn = Object.fromEntries(base[FILES.indexOf('prayers')].map(p => [p.id, p]));
   FILES.forEach((f, i) => { data[f] = maps[i] ? overlay(base[i], maps[i], null) : base[i]; });
@@ -36,6 +37,7 @@ export async function loadData() {
   data.sessionList = applyParishOrder(data.sessions.sessions, parish);
   data.prayersEs = Object.fromEntries(es.map(p => [p.id, p]));
   data.parish = parish || {};
+  data.passagesFa = passagesFa; // study passages from the Old Persian Version
   return data;
 }
 

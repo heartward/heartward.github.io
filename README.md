@@ -41,6 +41,8 @@ Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 | `content/es/prayers.json` | Spanish prayer texts |
 | `js/i18n-fa.js` | Persian (فارسی) menu text, Bible book names and chart labels |
 | `content/fa/*.json` | Persian translations of the content, keyed by the English text. Any text not in the map (for example a lesson edited later in English) shows in English until it is translated |
+| `content/bible-fa/*.json` | The Old Persian Version (ترجمه قدیم, 1895, public domain), 66 books, from the eBible.org text (BibleNLP corpus) with verses missing there filled from a second copy. Joel 3:21, Malachi 4:4-6 and Ezekiel 25:5 were missing in both and were typed in; please check them against a printed copy |
+| `content/fa/passages.json` | Bible study passages in the Old Persian Version, generated from `content/bible-fa` |
 | `fonts/` | Vazirmatn, the Persian font, bundled so it works offline (SIL Open Font License) |
 | `content/parish.json` | Settings for one parish (see below) |
 

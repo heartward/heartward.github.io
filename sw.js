@@ -1,6 +1,6 @@
 /* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit.
    Every download skips the browser's own HTTP cache, so a new version never mixes in files from an older one. */
-var CACHE = 'heartward-v28';
+var CACHE = 'heartward-v29';
 var BIBLE = 'heartward-bible'; // the 73 book texts, loaded one at a time and kept across app updates
 var ART = 'heartward-art'; // paintings from Wikimedia Commons, kept across app updates
 var SHELL = [
@@ -68,6 +68,7 @@ var SHELL = [
   'content/fa/scripture.json',
   'content/fa/year.json',
   'content/fa/books.json',
+  'content/fa/passages.json',
   'content/parish.json'
 ];
 
@@ -95,8 +96,8 @@ self.addEventListener('fetch', function (e) {
     return;
   }
   if (new URL(req.url).origin !== self.location.origin) return;
-  if (new URL(req.url).pathname.indexOf('/content/bible/') !== -1) {
-    // Bible books never change once published: keep them, and fetch only the first time.
+  if (/\/content\/bible(-fa)?\//.test(new URL(req.url).pathname)) {
+    // Bible books (English and Persian) never change once published: keep them, and fetch only the first time.
     e.respondWith(caches.open(BIBLE).then(function (cache) {
       return cache.match(req, { ignoreSearch: true }).then(function (hit) {
         return hit || fetch(req).then(function (res) { if (res && res.ok) cache.put(req, res.clone()); return res; });
