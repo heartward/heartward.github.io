@@ -51,7 +51,7 @@ Fork the repo and edit `content/parish.json`:
   "program": "Symbolon",
   "meets": "Tuesdays at 7 pm, parish hall",
   "welcome": "We are glad you are here.",
-  "contacts": [{ "name": "Ana", "role": "RCIA coordinator", "phone": "555-0100", "email": "ocia@example.org" }],
+  "contacts": [{ "name": "Ana", "role": "RCIA coordinator", "phone": "555-0100", "email": "rcia@example.org" }],
   "notes": { "sym1-03": "Bring a Bible to class this week." },
   "order": ["s01", "sym1-01", "s03"]
 }

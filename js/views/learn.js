@@ -75,7 +75,7 @@ export function glossary() {
   };
 }
 
-const feastLabel = s => { const [m, d] = s.feast.split('-').map(Number); return new Date(2024, m - 1, d).toLocaleDateString(state.settings.lang === 'es' ? 'es' : 'en-US', { month: 'long', day: 'numeric' }); };
+const feastLabel = s => { const [m, d] = s.feast.split('-').map(Number); return new Date(2024, m - 1, d).toLocaleDateString(state.settings.lang === 'es' ? 'es' : 'en-CA', { month: 'long', day: 'numeric' }); };
 
 export function saints() {
   const S = data.saints;
@@ -131,13 +131,13 @@ export function calendar() {
     '<div class="section-title"><h2>' + esc(t('Coming up')) + '</h2></div><div class="card tight">';
   ups.forEach(u => {
     const isToday = localISO(u.date) === localISO(d0);
-    const inner = '<div class="cal-date"' + (isToday ? ' style="background:var(--accent-soft)"' : '') + '><div class="m">' + esc(u.date.toLocaleDateString(state.settings.lang === 'es' ? 'es' : 'en-US', { month: 'short' })) + '</div><div class="d">' + u.date.getDate() + '</div></div>' +
-      '<div style="flex:1"><strong>' + esc(u.name) + '</strong><div class="small muted">' + esc(u.date.toLocaleDateString(state.settings.lang === 'es' ? 'es' : 'en-US', { weekday: 'long' })) +
+    const inner = '<div class="cal-date"' + (isToday ? ' style="background:var(--accent-soft)"' : '') + '><div class="m">' + esc(u.date.toLocaleDateString(state.settings.lang === 'es' ? 'es' : 'en-CA', { month: 'short' })) + '</div><div class="d">' + u.date.getDate() + '</div></div>' +
+      '<div style="flex:1"><strong>' + esc(u.name) + '</strong><div class="small muted">' + esc(u.date.toLocaleDateString(state.settings.lang === 'es' ? 'es' : 'en-CA', { weekday: 'long' })) +
       (u.obligation ? ' · <span class="tag gold">' + esc(t('Holy day of obligation')) + '</span>' : '') + (u.kind === 'saint' ? ' · ' + esc(t('Saint')) : '') + '</div></div>';
     html += u.saintId ? '<a class="cal-item" style="text-decoration:none;color:inherit" href="#/saint/' + u.saintId + '">' + inner + '</a>' : '<div class="cal-item">' + inner + '</div>';
   });
   html += '</div><div class="section-title"><h2>' + esc(t('The seasons')) + '</h2></div><div class="card tight">' +
     Object.values(data.calendar.seasons).map(s => '<div class="cal-item"><span style="width:14px;height:14px;border-radius:50%;flex:none;background:' + seasonColor[s.color] + ';box-shadow:0 0 0 1px var(--line)"></span><div><strong>' + esc(t(s.name)) + '</strong><div class="small muted">' + esc(s.about) + '</div></div></div>').join('') + '</div>' +
-    '<p class="small muted">' + esc(t('Holy days of obligation can move when they fall on a Saturday or Monday. Check your parish bulletin.')) + '</p>';
+    '<p class="small muted">' + esc(t('In Canada the holy days of obligation are every Sunday, Christmas (December 25) and Mary, Mother of God (January 1). The Epiphany, the Ascension and the Body and Blood of Christ are kept on Sundays.')) + '</p>';
   return { html, title: t('Church calendar') };
 }

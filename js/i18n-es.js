@@ -264,7 +264,7 @@ export const ES = {
   'Coming up': 'Próximamente',
   'The seasons': 'Los tiempos litúrgicos',
   'Holy day of obligation': 'Día de precepto',
-  'Holy days of obligation can move when they fall on a Saturday or Monday. Check your parish bulletin.': 'Los días de precepto pueden cambiar cuando caen en sábado o lunes. Consulta el boletín de tu parroquia.',
+  'In Canada the holy days of obligation are every Sunday, Christmas (December 25) and Mary, Mother of God (January 1). The Epiphany, the Ascension and the Body and Blood of Christ are kept on Sundays.': 'En Canadá los días de precepto son todos los domingos, Navidad (25 de diciembre) y Santa María, Madre de Dios (1 de enero). La Epifanía, la Ascensión y el Cuerpo y la Sangre de Cristo se celebran en domingo.',
   'Advent': 'Adviento',
   'Christmas': 'Navidad',
   'Ordinary Time': 'Tiempo Ordinario',

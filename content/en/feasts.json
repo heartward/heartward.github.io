@@ -1,19 +1,16 @@
 {
-"note": "Saints and feasts of the General Roman Calendar, with a few days kept only in Canada or the USA. Many other saints are remembered each day in the Roman Martyrology.",
+"note": "Saints and feasts of the Roman Calendar as it is kept in Canada (Canadian Conference of Catholic Bishops). Days marked (Canada) are Canada's own saints and blesseds. Many other saints are remembered each day in the Roman Martyrology.",
 "days": {
 "01-02": [
 "St. Basil the Great",
 "St. Gregory Nazianzen"
 ],
-"01-04": [
-"St. Elizabeth Ann Seton (USA)"
-],
-"01-05": [
-"St. John Neumann (USA)"
-],
 "01-07": [
 "St. Raymond of Penyafort",
 "St. André Bessette (Canada)"
+],
+"01-12": [
+"St. Marguerite Bourgeoys (Canada)"
 ],
 "01-13": [
 "St. Hilary of Poitiers"
@@ -86,9 +83,6 @@
 "02-23": [
 "St. Polycarp"
 ],
-"03-03": [
-"St. Katharine Drexel (USA)"
-],
 "03-04": [
 "St. Casimir"
 ],
@@ -109,7 +103,7 @@
 "St. Cyril of Jerusalem"
 ],
 "03-19": [
-"St. Joseph"
+"St. Joseph, principal patron of Canada"
 ],
 "03-23": [
 "St. Turibius of Mogrovejo"
@@ -169,9 +163,14 @@
 "St. Philip",
 "St. James"
 ],
+"05-06": [
+"St. François de Laval (Canada)"
+],
+"05-08": [
+"Bl. Catherine of St. Augustine (Canada)"
+],
 "05-10": [
-"St. John of Avila",
-"St. Damien of Molokai (USA)"
+"St. John of Avila"
 ],
 "05-12": [
 "St. Nereus",
@@ -184,9 +183,6 @@
 "05-14": [
 "St. Matthias"
 ],
-"05-15": [
-"St. Isidore the Farmer (USA)"
-],
 "05-18": [
 "St. John I"
 ],
@@ -198,6 +194,9 @@
 ],
 "05-22": [
 "St. Rita of Cascia"
+],
+"05-24": [
+"Bl. Louis-Zéphirin Moreau (Canada)"
 ],
 "05-25": [
 "St. Bede the Venerable",
@@ -265,9 +264,6 @@
 "06-30": [
 "The First Martyrs of Rome"
 ],
-"07-01": [
-"St. Junípero Serra (USA)"
-],
 "07-03": [
 "St. Thomas, Apostle"
 ],
@@ -290,8 +286,7 @@
 "St. Henry"
 ],
 "07-14": [
-"St. Camillus de Lellis",
-"St. Kateri Tekakwitha (USA)"
+"St. Camillus de Lellis"
 ],
 "07-15": [
 "St. Bonaventure"
@@ -319,7 +314,7 @@
 ],
 "07-26": [
 "St. Joachim",
-"St. Anne"
+"St. Anne, patroness of Quebec"
 ],
 "07-29": [
 "St. Martha",
@@ -341,6 +336,9 @@
 ],
 "08-04": [
 "St. John Vianney"
+],
+"08-05": [
+"Bl. Frédéric Janssoone (Canada)"
 ],
 "08-07": [
 "St. Sixtus II and companions",
@@ -405,8 +403,14 @@
 "08-29": [
 "St. John the Baptist (his martyrdom)"
 ],
+"09-02": [
+"Bl. André Grasset (Canada)"
+],
 "09-03": [
 "St. Gregory the Great"
+],
+"09-04": [
+"Bl. Dina Bélanger (Canada)"
 ],
 "09-08": [
 "Mary (her birth)"
@@ -443,10 +447,15 @@
 "09-23": [
 "St. Pio of Pietrelcina (Padre Pio)"
 ],
-"09-26": [
+"09-24": [
+"Bl. Émilie Tavernier-Gamelin (Canada)"
+],
+"09-25": [
 "St. Cosmas",
-"St. Damian",
-"The Canadian Martyrs (Canada)"
+"St. Damian"
+],
+"09-26": [
+"The Canadian Martyrs: St. John de Brébeuf, St. Isaac Jogues and companions (Canada)"
 ],
 "09-27": [
 "St. Vincent de Paul"
@@ -476,7 +485,8 @@
 "St. Faustina Kowalska"
 ],
 "10-06": [
-"St. Bruno"
+"St. Bruno",
+"Bl. Marie-Rose Durocher (Canada)"
 ],
 "10-07": [
 "Our Lady of the Rosary"
@@ -496,7 +506,8 @@
 ],
 "10-16": [
 "St. Hedwig",
-"St. Margaret Mary Alacoque"
+"St. Margaret Mary Alacoque",
+"St. Marguerite d'Youville (Canada)"
 ],
 "10-17": [
 "St. Ignatius of Antioch"
@@ -505,8 +516,7 @@
 "St. Luke"
 ],
 "10-19": [
-"St. Paul of the Cross",
-"St. John de Brébeuf, St. Isaac Jogues and companions (USA)"
+"St. Paul of the Cross"
 ],
 "10-22": [
 "St. John Paul II"
@@ -539,9 +549,6 @@
 "11-12": [
 "St. Josaphat"
 ],
-"11-13": [
-"St. Frances Xavier Cabrini (USA)"
-],
 "11-15": [
 "St. Albert the Great"
 ],
@@ -551,9 +558,6 @@
 ],
 "11-17": [
 "St. Elizabeth of Hungary"
-],
-"11-18": [
-"St. Rose Philippine Duchesne (USA)"
 ],
 "11-21": [
 "Mary (her Presentation)"

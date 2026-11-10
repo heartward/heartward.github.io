@@ -18,7 +18,7 @@ export const currentSession = () => nextSession() || data.sessionList[data.sessi
 export const saintOfWeek = () => data.saints.saints[((weekNo() % data.saints.saints.length) + data.saints.saints.length) % data.saints.saints.length];
 export const challengeOfWeek = () => { const c = data.study.challenges; return c[((weekNo() % c.length) + c.length) % c.length]; };
 export function nextSunday(d = new Date()) { const x = new Date(d.getFullYear(), d.getMonth(), d.getDate()); x.setDate(x.getDate() + ((7 - x.getDay()) % 7)); return x; }
-const readingsUrl = d => { const z = n => String(n).padStart(2, '0'); return 'https://bible.usccb.org/bible/readings/' + z(d.getMonth() + 1) + z(d.getDate()) + String(d.getFullYear()).slice(2) + '.cfm'; };
+const readingsUrl = d => { const z = n => String(n).padStart(2, '0'); return 'https://universalis.com/canada/' + d.getFullYear() + z(d.getMonth() + 1) + z(d.getDate()) + '/mass.htm'; };
 
 // ---------- This week (hub) ----------
 export function week(id) {

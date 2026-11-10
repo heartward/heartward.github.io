@@ -1,4 +1,4 @@
-// Liturgical calendar computed locally: seasons and moveable feasts (US general calendar).
+// Liturgical calendar computed locally: seasons and moveable feasts (liturgical calendar for Canada, CCCB).
 import { localISO } from './store.js';
 
 export function easter(y) {
@@ -11,10 +11,13 @@ export function easter(y) {
 }
 const add = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
 function advent1(y) { const xmas = new Date(y, 11, 25); return add(xmas, -(xmas.getDay() || 7) - 21); }
-function epiphanyUS(y) { // Sunday between Jan 2 and Jan 8
+function epiphany(y) { // In Canada: the Sunday between Jan 2 and Jan 8
   const j2 = new Date(y, 0, 2); return add(j2, (7 - j2.getDay()) % 7);
 }
-function baptismLord(y) { const ep = epiphanyUS(y); return ep.getDate() >= 7 ? add(ep, 1) : add(ep, 7); }
+function baptismLord(y) { const ep = epiphany(y); return ep.getDate() >= 7 ? add(ep, 1) : add(ep, 7); }
+function thanksgiving(y) { // Canadian Thanksgiving: second Monday of October
+  const o1 = new Date(y, 9, 1); return new Date(y, 9, 1 + ((8 - o1.getDay()) % 7) + 7);
+}
 function holyFamily(y) { // Sunday after Christmas, or Dec 30 if Christmas is a Sunday
   const x = new Date(y, 11, 25); return x.getDay() === 0 ? new Date(y, 11, 30) : add(x, 7 - x.getDay());
 }
@@ -22,10 +25,10 @@ function holyFamily(y) { // Sunday after Christmas, or Dec 30 if Christmas is a 
 export function moveable(y) {
   const e = easter(y), a1 = advent1(y);
   return {
-    baptismLord: baptismLord(y), ashWednesday: add(e, -46), laetare: add(e, -21), palmSunday: add(e, -7),
+    epiphany: epiphany(y), baptismLord: baptismLord(y), ashWednesday: add(e, -46), laetare: add(e, -21), palmSunday: add(e, -7),
     holyThursday: add(e, -3), goodFriday: add(e, -2), holySaturday: add(e, -1), easter: e, divineMercy: add(e, 7),
-    ascension: add(e, 42), pentecost: add(e, 49), trinity: add(e, 56), corpusChristi: add(e, 63), sacredHeart: add(e, 68),
-    christKing: add(a1, -7), advent1: a1, gaudete: add(a1, 14), holyFamily: holyFamily(y)
+    ascension: add(e, 42) /* Canada: 7th Sunday of Easter */, pentecost: add(e, 49), trinity: add(e, 56), corpusChristi: add(e, 63), sacredHeart: add(e, 68),
+    christKing: add(a1, -7), advent1: a1, gaudete: add(a1, 14), holyFamily: holyFamily(y), thanksgiving: thanksgiving(y)
   };
 }
 
@@ -48,9 +51,9 @@ export function upcoming(cal, saints, from, days) {
   const push = (date, name, kind, extra) => { if (date >= from && date < end) out.push(Object.assign({ date, name, kind }, extra || {})); };
   for (const y of years) {
     const m = moveable(y);
-    for (const k of Object.keys(cal.moveable)) if (m[k]) push(m[k], cal.moveable[k], 'feast', { obligation: k === 'ascension' ? false : false });
+    for (const k of Object.keys(cal.moveable)) if (m[k]) push(m[k], cal.moveable[k], 'feast');
     for (const f of cal.fixed) { const [mm, dd] = f.date.split('-').map(Number); push(new Date(y, mm - 1, dd), f.name, 'feast', { obligation: !!f.obligation }); }
-    for (const s of saints) { const [mm, dd] = s.feast.split('-').map(Number); push(new Date(y, mm - 1, dd), s.name, 'saint', { saintId: s.id }); }
+    for (const s of saints) { if (s.calendar === false) continue; const [mm, dd] = s.feast.split('-').map(Number); push(new Date(y, mm - 1, dd), s.name, 'saint', { saintId: s.id }); }
   }
   const seen = new Set();
   return out.sort((a, b) => a.date - b.date).filter(x => { const k = localISO(x.date) + x.name; if (seen.has(k)) return false; seen.add(k); return true; });
