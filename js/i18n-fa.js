@@ -822,5 +822,9 @@ export const FA = {
   "Reading plans, the Bible text, and a guide": "برنامه‌های خواندن، متن کتاب مقدس و یک راهنما",
   "Start here: how to read the Bible": "از اینجا شروع کنید: چگونه کتاب مقدس را بخوانیم",
   "All 73 books, a little each day": "همهٔ ۷۳ کتاب، هر روز کمی",
-  "Opens the readings from the Canadian Lectionary on Living with Christ (needs internet). They are the readings you hear at Mass in Canada.": "قرائت‌های کتاب قرائت‌های کانادا را در Living with Christ باز می‌کند (به اینترنت نیاز دارد، انگلیسی). این همان قرائت‌هایی است که در مِسا در کانادا می‌شنوید."
+  "Opens the readings from the Canadian Lectionary on Living with Christ (needs internet). They are the readings you hear at Mass in Canada.": "قرائت‌های کتاب قرائت‌های کانادا را در Living with Christ باز می‌کند (به اینترنت نیاز دارد، انگلیسی). این همان قرائت‌هایی است که در مِسا در کانادا می‌شنوید.",
+  "The Persian text is the Old Persian Version (1895), the classic Persian Bible, free for anyone to share. It has 66 books: Tobit, Judith, Wisdom, Sirach, Baruch, 1 and 2 Maccabees and the Greek parts of Esther and Daniel are not in it, so those are shown in English from the Douay-Rheims. Psalms carry the numbers used in Persian Bibles.": "متن فارسی، ترجمهٔ قدیم (۱۸۹۵) است، کتاب مقدس کلاسیک فارسی که همه می‌توانند آزادانه آن را به اشتراک بگذارند. این ترجمه ۶۶ کتاب دارد: طوبیا، یهودیت، حکمت، یشوع بن سیراخ، باروک، اول و دوم مکابیان و بخش‌های یونانی استر و دانیال در آن نیست، پس این‌ها به انگلیسی از ترجمهٔ دوئی‌ریمز نشان داده می‌شوند. شمارهٔ مزمورها همان شماره‌های کتاب مقدس فارسی است.",
+  "Old Persian Version (1895), public domain.": "ترجمهٔ قدیم (۱۸۹۵)، آزاد برای همه.",
+  "This part is not in the Old Persian Version; it is shown in English from the Douay-Rheims.": "این بخش در ترجمهٔ قدیم نیست؛ به انگلیسی از ترجمهٔ دوئی‌ریمز آمده است.",
+  "part": "بخشی"
 };

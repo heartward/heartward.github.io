@@ -106,7 +106,8 @@ export function study(id) {
   const s = findStudy(id);
   if (!s) return { html: back('#/bible', t('Bible study')) + '<p class="empty">' + esc(t('Not found')) + '</p>' };
   const P = B().plans[s.plan], list = planStudies(s.plan), i = list.indexOf(s), prev = list[i - 1], nxt = list[i + 1];
-  const verses = (data.scripture.passages || {})[s.refEn || s.ref] || [], done = !!state.bible[s.id];
+  const faV = faText() && data.passagesFa ? (data.passagesFa.passages || {})[s.refEn || s.ref] : null;
+  const verses = faV || (data.scripture.passages || {})[s.refEn || s.ref] || [], done = !!state.bible[s.id];
   const m = Object.fromEntries(B().method.map(x => [x.id, x]));
   const step = (n, key, body) => '<section class="card study-step"><div class="step-head"><span class="n">' + n + '</span><h2>' + esc(m[key].name) + '</h2></div>' + body + '</section>';
 
@@ -117,7 +118,7 @@ export function study(id) {
 
   html += step(1, 'read', '<p class="small muted" style="margin:0 0 8px">' + esc(m.read.about) + '</p>' +
     '<div class="btn-row" style="margin:0 0 10px">' + listenButton('slisten', t('Listen'), 'soft sm') + ext(nrsvUrl(s.refEn || s.ref), t('Read in the NRSV (as at Mass in Canada)'), 'ghost sm') + '</div>' +
-    (verses.length ? '<div class="scripture" lang="en" dir="ltr">' + verses.map(([n, v]) => '<span class="vn">' + n + '</span>' + esc(v) + ' ').join('') + '</div><p class="small muted" style="margin:8px 0 0">' + esc(t('Douay-Rheims Bible, public domain.')) + '</p>'
+    (verses.length ? '<div class="scripture"' + (faV ? ' lang="fa" dir="rtl"' : ' lang="en" dir="ltr"') + '>' + verses.map(([n, v]) => '<span class="vn">' + n + '</span>' + esc(v) + ' ').join('') + '</div><p class="small muted" style="margin:8px 0 0">' + esc(faV ? t('Old Persian Version (1895), public domain.') : t('Douay-Rheims Bible, public domain.')) + '</p>'
       : '<p>' + esc(t('Open the passage in your Bible or with the button above.')) + '</p>'));
 
   if (s.understand) html += step(2, 'understand', '<p style="margin:0">' + esc(s.understand) + '</p>' +
@@ -210,6 +211,10 @@ export const bookName = name => t(name);
 export function refOf(r, en) {
   const [bi, c1, p1, c2, p2] = r, b = Y().books[bi], name = en ? b.name : bookName(b.name);
   const whole = p1 === 1 && p2 === b.v[c2 - 1];
+  if (!en && b.name === 'Psalms' && hasFa(b)) {
+    const a = psalmLabel(c1), z = psalmParts(c2).slice(-1)[0][0];
+    return name + ' ' + (whole || p1 === 1 ? (c1 === c2 && psalmParts(c1).length === 1 ? a : a + '-' + z) : a + ' (' + t('part') + ')');
+  }
   if (whole) return name + ' ' + (c1 === c2 ? c1 : c1 + '-' + c2);
   const v1 = verseNo(b, c1, p1), v2 = verseNo(b, c2, p2);
   return name + ' ' + c1 + ':' + v1 + '-' + (c1 === c2 ? v2 : c2 + ':' + v2);
@@ -224,6 +229,64 @@ function versesOf(r, bk) {
   });
   return out;
 }
+// ---------- Persian text (Old Persian Version, 1895, public domain) ----------
+// content/bible-fa/<id>.json holds the 66 books of the Old Persian Version, in its own (modern) chapter and verse
+// numbers. The plan and the reader count in Douay-Rheims chapters, so each Douay-Rheims chapter is mapped to its
+// Persian verses here. Books and parts the Old Persian Version does not have (Tobit, Judith, Wisdom, Sirach,
+// Baruch, 1 and 2 Maccabees, and the Greek parts of Esther and Daniel) stay in the Douay-Rheims English.
+export const faText = () => state.settings.lang === 'fa';
+const faCache = {};
+const loadBookFa = id => faCache[id] || (faCache[id] = fetch('content/bible-fa/' + id + '.json').then(r => { if (!r.ok) throw new Error(id); return r.json(); }).catch(e => { delete faCache[id]; throw e; }));
+const NO_FA = ['Tobit', 'Judith', 'Wisdom', 'Sirach', 'Baruch', '1 Maccabees', '2 Maccabees'];
+export const hasFa = b => faText() && !NO_FA.includes(b.name);
+// Douay-Rheims (Vulgate/Greek) psalm number -> modern psalm(s): [psalm, first verse, last verse (0 = to the end)]
+const psalmParts = d => d <= 8 || d >= 148 ? [[d, 1, 0]] : d === 9 ? [[9, 1, 0], [10, 1, 0]] : d <= 112 ? [[d + 1, 1, 0]] : d === 113 ? [[114, 1, 0], [115, 1, 0]]
+  : d === 114 ? [[116, 1, 9]] : d === 115 ? [[116, 10, 0]] : d <= 145 ? [[d + 1, 1, 0]] : d === 146 ? [[147, 1, 11]] : [[147, 12, 0]];
+// The pieces of one Douay-Rheims chapter: { fa: [chapter, from, to] } or { en: [fromPos, toPos] } (positions in the DR chapter).
+function chapterPieces(b, c) {
+  const n = b.name;
+  if (n === 'Psalms') return psalmParts(c).map(p => ({ fa: p }));
+  if (n === 'Esther') return c <= 9 ? [{ fa: [c, 1, 0] }] : c === 10 ? [{ fa: [10, 1, 3] }, { en: [4, 0] }] : [{ en: [1, 0] }];
+  if (n === 'Daniel') return c === 3 ? [{ fa: [3, 1, 23] }, { en: [24, 90] }, { fa: [3, 24, 30] }, { fa: [4, 1, 3] }] : c === 4 ? [{ fa: [4, 4, 0] }] : c >= 13 ? [{ en: [1, 0] }] : [{ fa: [c, 1, 0] }];
+  return [{ fa: [c, 1, 0] }];
+}
+// Every verse of a Douay-Rheims chapter as units { c, n, v, fa } in reading order.
+function chapterUnits(b, c, fb, bk) {
+  const out = [];
+  chapterPieces(b, c).forEach(p => {
+    if (p.fa) {
+      const [h, a, z] = p.fa, ch = fb.c[h - 1] || [];
+      for (let n = a; n <= (z || ch.length); n++) if (ch[n - 1]) out.push({ c: h, n, v: ch[n - 1], fa: true });
+    } else {
+      const ch = bk.c[c - 1] || [], [a, z] = p.en;
+      for (let i = a; i <= (z || ch.length); i++) if (ch[i - 1] != null) out.push({ c, n: verseNo(b, c, i), v: ch[i - 1], fa: false });
+    }
+  });
+  return out;
+}
+// The units for a reading [book, c1, p1, c2, p2]. Douay-Rheims psalms count their titles as verses, so a part of a
+// psalm is shifted by the number of title verses.
+function unitsOf(r, fb, bk) {
+  const [bi, c1, p1, c2, p2] = r, b = Y().books[bi], out = [];
+  for (let c = c1; c <= c2; c++) {
+    const len = b.v[c - 1], from = c === c1 ? p1 : 1, to = c === c2 ? p2 : len, all = chapterUnits(b, c, fb, bk);
+    if (from === 1 && to === len) { out.push(...all); continue; }
+    const shift = b.name === 'Psalms' ? Math.max(0, len - all.length) : 0;
+    out.push(...all.slice(Math.max(0, from - 1 - shift), Math.max(0, to - shift)));
+  }
+  return out;
+}
+const unitsHtml = (us, showChap = true) => {
+  let html = '', lang = null;
+  us.forEach((u, i) => {
+    if (u.fa !== lang) { if (lang !== null) html += '</div>'; lang = u.fa; html += u.fa ? '<div class="scripture" lang="fa" dir="rtl">' : '<div class="scripture" lang="en" dir="ltr"><p class="small muted" style="margin:0 0 4px" dir="rtl" lang="fa">' + esc(t('This part is not in the Old Persian Version; it is shown in English from the Douay-Rheims.')) + '</p>'; }
+    html += (showChap && (i === 0 || us[i - 1].c !== u.c) ? '<span class="chap">' + u.c + '</span>' : '') + '<span class="vn">' + u.n + '</span>' + esc(u.v) + ' ';
+  });
+  return html + (lang !== null ? '</div>' : '');
+};
+// Persian label for a Douay-Rheims psalm: its modern number.
+const psalmLabel = d => { const p = psalmParts(d)[0]; return p[1] > 1 ? p[0] + ':' + p[1] : String(p[0]); };
+
 const scriptureHtml = (vs, showChap = true) => '<div class="scripture" lang="en" dir="ltr">' + vs.map(([c, n, v], i) => (showChap && (i === 0 || vs[i - 1][0] !== c) ? '<span class="chap">' + c + '</span>' : '') + '<span class="vn">' + n + '</span>' + esc(v) + ' ').join('') + '</div>';
 const minutes = parts => Math.max(3, Math.round(parts.reduce((n, r) => { const b = Y().books[r[0]]; let v = 0; for (let c = r[1]; c <= r[3]; c++) v += (c === r[3] ? r[4] : b.v[c - 1]) - (c === r[1] ? r[2] - 1 : 0); return n + v; }, 0) / 6));
 const section = (name, c) => { const o = (BK(name) || {}).outline || []; let cur = null; o.forEach(x => { if (x[0] <= c) cur = x[1]; }); return cur; };
@@ -232,7 +295,7 @@ const section = (name, c) => { const o = (BK(name) || {}).outline || []; let cur
 function bookGuideHtml(name, open, here) {
   const g = BK(name); if (!g) return '';
   const b = Y().books.find(x => x.name === name);
-  const body = '<p class="small muted" style="margin:0 0 6px">' + esc(g.kind) + (b && b.dr !== name ? ' · ' + esc(t('In the Douay-Rheims:')) + ' ' + esc(b.dr) : '') + '</p>' +
+  const body = '<p class="small muted" style="margin:0 0 6px">' + esc(g.kind) + (b && b.dr !== name && !hasFa(b) ? ' · ' + esc(t('In the Douay-Rheims:')) + ' ' + esc(b.dr) : '') + '</p>' +
     '<p>' + esc(g.about) + '</p><p><strong>' + esc(t('Look for')) + ':</strong> ' + esc(g.look) + '</p><p><strong>' + esc(t('Pointing to Christ')) + ':</strong> ' + esc(g.christ) + '</p>' +
     '<div class="eyebrow" style="margin-top:10px">' + esc(t('The shape of the book')) + '</div><ol class="outline">' + g.outline.map(([c, title], i) => {
       const next = g.outline[i + 1], last = next ? next[0] - 1 : (b ? b.chapters || b.v.length : c);
@@ -261,7 +324,7 @@ export function year() {
     '<section class="card"><div class="eyebrow">' + esc(t('Pace')) + '</div><div class="seg" role="radiogroup" aria-label="' + esc(t('Pace')) + '">' +
       [[1, t('One year'), t('15-20 min a day')], [2, t('Two years'), t('8-10 min a day')]].map(([v, l, sub]) => '<button role="radio" aria-checked="' + (pace() === v) + '" data-pace="' + v + '" class="' + (pace() === v ? 'on' : '') + '"><strong>' + esc(l) + '</strong><span class="small">' + esc(sub) + '</span></button>').join('') +
     '</div><p class="small muted" style="margin:8px 0 0">' + esc(t('Switch any time. What you have read stays read.')) + '</p></section>' +
-    '<div class="card flat small"><p style="margin:0 0 8px">' + esc(t('The text is the Douay-Rheims, a Catholic translation free for anyone to share. A few books have older names, and most Psalms are numbered one lower than in a modern Bible. Each reading links to the NRSV, the translation of the Lectionary used at Mass in Canada.')) + '</p>' +
+    '<div class="card flat small"><p style="margin:0 0 8px">' + esc(faText() ? t('The Persian text is the Old Persian Version (1895), the classic Persian Bible, free for anyone to share. It has 66 books: Tobit, Judith, Wisdom, Sirach, Baruch, 1 and 2 Maccabees and the Greek parts of Esther and Daniel are not in it, so those are shown in English from the Douay-Rheims. Psalms carry the numbers used in Persian Bibles.') : t('The text is the Douay-Rheims, a Catholic translation free for anyone to share. A few books have older names, and most Psalms are numbered one lower than in a modern Bible. Each reading links to the NRSV, the translation of the Lectionary used at Mass in Canada.')) + '</p>' +
     '<button class="btn soft sm" id="offline">' + icon('check') + esc(t('Save the whole Bible for offline')) + '</button> <span class="small muted" id="offmsg"></span></div>';
   html += '<div class="section-title"><h2>' + esc(t('Every day')) + '</h2><a class="linkish" href="#/bible-books">' + esc(t('Book guides')) + '</a></div><div class="card tight">';
   const step = 30;
@@ -279,7 +342,7 @@ export function year() {
       btn.onclick = async () => {
         btn.disabled = true; let k = 0; const books = Y().books;
         try {
-          for (const b of books) { await loadBook(b.id); k++; msg.textContent = k + ' / ' + books.length; }
+          for (const b of books) { await loadBook(b.id); if (hasFa(b)) await loadBookFa(b.id); k++; msg.textContent = k + ' / ' + books.length; }
           msg.textContent = t('Saved. The whole Bible now works offline.');
         } catch (e) { msg.textContent = t('Could not finish. Check your internet and try again.'); btn.disabled = false; }
       };
@@ -316,10 +379,17 @@ export function day(e) {
     html, title: entryLabel(e),
     bind(root) {
       const per = parts.map(() => []);
-      Promise.all(parts.map(r => loadBook(Y().books[r[0]].id))).then(bks => parts.forEach((r, i) => {
-        const vs = versesOf(r, bks[i]), el = root.querySelector('#yr' + i);
-        if (el) el.innerHTML = scriptureHtml(vs);
-        per[i].push(refOf(r) + '.', ...vs.flatMap(v => sentences(v[2])));
+      Promise.all(parts.map(r => { const b = Y().books[r[0]]; return Promise.all([loadBook(b.id), hasFa(b) ? loadBookFa(b.id) : null]); })).then(bks => parts.forEach((r, i) => {
+        const [bk, fb] = bks[i], el = root.querySelector('#yr' + i);
+        if (fb) {
+          const us = unitsOf(r, fb, bk);
+          if (el) el.innerHTML = unitsHtml(us);
+          per[i].push(refOf(r) + '.', ...us.flatMap(u => sentences(u.v)));
+        } else {
+          const vs = versesOf(r, bk);
+          if (el) el.innerHTML = scriptureHtml(vs);
+          per[i].push(refOf(r) + '.', ...vs.flatMap(v => sentences(v[2])));
+        }
       })).catch(() => parts.forEach((r, i) => { const el = root.querySelector('#yr' + i); if (el) el.innerHTML = '<p>' + esc(t('This reading needs the internet the first time. Connect once, or use "Save the whole Bible for offline" on the plan page.')) + '</p>'; }));
       bindListen(root, 'ylisten', () => per.flat());
       parts.forEach((_, i) => bindListen(root, 'yl' + i, () => per[i]));
@@ -349,19 +419,26 @@ export function books() {
 export function read(id, cStr) {
   const b = Y().books.find(x => x.id === id);
   if (!b) return { html: back('#/bible-books', t('All 73 books')) + '<p class="empty">' + esc(t('Not found')) + '</p>' };
-  const n = b.v.length, c = Math.min(Math.max(1, parseInt(cStr, 10) || 1), n), ref = bookName(b.name) + ' ' + c, refEn = b.name + ' ' + c;
+  const n = b.v.length, c = Math.min(Math.max(1, parseInt(cStr, 10) || 1), n), ref = bookName(b.name) + ' ' + (b.name === 'Psalms' && hasFa(b) ? psalmLabel(c) : c), refEn = b.name + ' ' + c;
+  const chipLabel = i => b.name === 'Psalms' && hasFa(b) ? psalmLabel(i) : i;
   const html = back('#/bible-books', t('All 73 books')) + head(b.nt ? t('New Testament') : t('Old Testament'), ref, section(b.name, c) || '') +
     '<div class="card tight">' + bookGuideHtml(b.name, c === 1, c) + '</div>' +
     '<div class="btn-row" style="margin:12px 0 10px">' + listenButton('rlisten', t('Listen'), 'soft sm') + (b.name === 'Psalms' ? '' : ext(nrsvUrl(refEn), t('Read in the NRSV'), 'ghost sm')) + '</div>' +
     '<section class="card"><div id="rtext"><p class="muted">' + esc(t('Opening…')) + '</p></div></section>' +
-    '<div class="study-nav">' + (c > 1 ? '<a class="btn ghost sm" href="#/bible-read/' + id + '/' + (c - 1) + '">' + icon('back') + esc(t('Chapter')) + ' ' + (c - 1) + '</a>' : '<span></span>') +
-    (c < n ? '<a class="btn ghost sm" href="#/bible-read/' + id + '/' + (c + 1) + '">' + esc(t('Chapter')) + ' ' + (c + 1) + icon('chevron') + '</a>' : '') + '</div>' +
-    (n > 1 ? '<div class="eyebrow" style="margin:14px 2px 6px">' + esc(t('Chapters')) + '</div><div class="chip-wrap">' + Array.from({ length: n }, (_, i) => '<a class="chip-link' + (i + 1 === c ? ' on' : '') + '" href="#/bible-read/' + id + '/' + (i + 1) + '"' + (i + 1 === c ? ' aria-current="page"' : '') + '>' + (i + 1) + '</a>').join('') + '</div>' : '');
+    '<div class="study-nav">' + (c > 1 ? '<a class="btn ghost sm" href="#/bible-read/' + id + '/' + (c - 1) + '">' + icon('back') + esc(t('Chapter')) + ' ' + chipLabel(c - 1) + '</a>' : '<span></span>') +
+    (c < n ? '<a class="btn ghost sm" href="#/bible-read/' + id + '/' + (c + 1) + '">' + esc(t('Chapter')) + ' ' + chipLabel(c + 1) + icon('chevron') + '</a>' : '') + '</div>' +
+    (n > 1 ? '<div class="eyebrow" style="margin:14px 2px 6px">' + esc(t('Chapters')) + '</div><div class="chip-wrap">' + Array.from({ length: n }, (_, i) => '<a class="chip-link' + (i + 1 === c ? ' on' : '') + '" href="#/bible-read/' + id + '/' + (i + 1) + '"' + (i + 1 === c ? ' aria-current="page"' : '') + '>' + chipLabel(i + 1) + '</a>').join('') + '</div>' : '');
   return {
     html, title: ref,
     bind(root) {
       let pieces = [];
-      loadBook(id).then(bk => {
+      Promise.all([loadBook(id), hasFa(b) ? loadBookFa(id) : null]).then(([bk, fb]) => {
+        if (fb) {
+          const us = chapterUnits(b, c, fb, bk);
+          root.querySelector('#rtext').innerHTML = unitsHtml(us, b.name === 'Psalms' && us.some(u => u.c !== us[0].c));
+          pieces = [ref + '.', ...us.flatMap(u => sentences(u.v))];
+          return;
+        }
         const vs = (bk.c[c - 1] || []).map((v, i) => [c, ((bk.s || {})[c] || 1) + i, v]);
         root.querySelector('#rtext').innerHTML = scriptureHtml(vs, false);
         pieces = [ref + '.', ...vs.flatMap(v => sentences(v[2]))];
