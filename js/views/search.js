@@ -20,7 +20,7 @@ function index() {
   g.mass.parts.forEach(p => add('Guides', 'church', '#/mass', p.name, g.mass.title, p.about));
   g.basics.items.forEach(x => add('Guides', 'sparkle', '#/basics', x.name, g.basics.title, x.about));
   add('Guides', 'heart', '#/confession', t('Confession guide'), t('Steps and examination of conscience'), g.confession.intro + ' ' + g.confession.steps.map(s => s.name + ' ' + s.about).join(' '));
-  add('Guides', 'rosary', '#/rosary', t('Pray the Rosary'), t('Step by step'), Object.values(g.rosary.mysteries).map(m => m.name + ' ' + m.items.join(' ')).join(' '));
+  add('Guides', 'rosary', '#/rosary', t('Pray the Rosary'), t('Step by step'), Object.values(g.rosary.mysteries).map(m => m.name + ' ' + m.items.join(' ') + ' ' + (m.details || []).map(x => x.fruit + ' ' + x.ref).join(' ')).join(' '));
   add('Guides', 'door', '#/welcome-back', t(data.paths.welcomeBack.title), data.paths.welcomeBack.intro, data.paths.welcomeBack.steps.map(s => s.title + ' ' + s.body).join(' '));
   data.paths.firstYear.months.forEach(m => add('Guides', 'sparkle', '#/first-year', m.title, t(data.paths.firstYear.title), m.lesson + ' ' + m.practice));
   return items;
