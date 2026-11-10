@@ -9,7 +9,8 @@ import { riteDates } from './extras.js';
 const rerender = () => document.dispatchEvent(new Event('heartward:render'));
 const M = () => data.more;
 const z = n => String(n).padStart(2, '0');
-export const readingsUrl = d => 'https://universalis.com/canada/' + d.getFullYear() + z(d.getMonth() + 1) + z(d.getDate()) + '/mass.htm';
+// Mass readings from the Canadian Lectionary (Living with Christ, with the Canadian bishops).
+export const readingsUrl = d => 'https://readings.livingwithchrist.ca/daily-texts/reading/' + d.getFullYear() + '-' + z(d.getMonth() + 1) + '-' + z(d.getDate());
 const dayOfYear = d => Math.floor((d - new Date(d.getFullYear(), 0, 0)) / 864e5);
 
 // ---------- People I pray for ----------
@@ -59,7 +60,7 @@ export function readings() {
   const thought = R.thoughts[dayOfYear(d) % R.thoughts.length];
   const html = back('#/', t('Today')) + head(t('Mass readings'), fmtDate(d), R.intro) +
     '<section class="card"><a class="btn block" href="' + esc(safeUrl(readingsUrl(d))) + '" target="_blank" rel="noopener">' + icon('book') + esc(t('Open today\'s readings')) + icon('external') + '</a>' +
-    '<p class="small muted" style="margin:10px 0 0">' + esc(t('Opens the day\'s Mass readings for the Canadian calendar on Universalis (needs internet). At Mass in Canada the readings are proclaimed from the Canadian Lectionary (NRSV), so the wording will differ a little.')) + '</p></section>' +
+    '<p class="small muted" style="margin:10px 0 0">' + esc(t('Opens the readings from the Canadian Lectionary on Living with Christ (needs internet). They are the readings you hear at Mass in Canada.')) + '</p></section>' +
     '<section class="card reflection-card"><div class="eyebrow">' + esc(t('A thought for today')) + '</div><p style="margin:6px 0 0;font-family:var(--serif);font-size:1.1rem">' + esc(thought) + '</p></section>' +
     '<a class="card row" href="#/examen"><span class="lead">' + icon('moon') + '</span><span class="grow"><span class="title">' + esc(t('Evening Examen')) + '</span><span class="sub">' + esc(t('Look back on the day with God tonight')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
   return { html, title: t('Today\'s readings') };

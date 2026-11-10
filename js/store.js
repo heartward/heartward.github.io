@@ -16,7 +16,8 @@ const defaults = () => ({
   saint: '',         // chosen patron saint id
   friends: [],       // { name, role, phone, email }
   parish: { name: '', meets: '' },
-  study: {},         // sessionId -> { notes } for Bible study
+  study: {},         // study id (session id, or a plan day like 'mark-01') -> { notes } for Bible study
+  bible: {},         // study id -> 'YYYY-MM-DD' when marked as studied
   quiz: {},          // sessionId -> best score
   verses: {},        // sessionId -> true when the memory verse is known
   challenges: {},    // weekKey -> true when the weekly challenge is done

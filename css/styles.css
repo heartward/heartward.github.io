@@ -579,3 +579,22 @@ blockquote.verse.small-verse { font-size: 1.02rem; margin: 0 0 8px; }
 .decade-dots span.now { background: var(--accent); }
 .resume { text-align: center; margin: 4px 0 0; color: var(--muted); }
 button.link { background: none; border: 0; padding: 0; color: var(--accent-ink); font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }
+
+/* ---------- Bible study ---------- */
+.plan-card { position: relative; display: block; text-decoration: none; color: var(--text); padding-right: 40px; margin-bottom: 10px; }
+.plan-card h3 { margin: 2px 0 2px; font-size: 1.08rem; }
+.plan-card .chev { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+.plan-bar { display: block; height: 6px; border-radius: 6px; background: var(--surface-2); margin: 10px 0 4px; overflow: hidden; }
+.plan-bar span { display: block; height: 100%; background: var(--glow); border-radius: 6px; }
+ol.steps4 { list-style: none; margin: 0 0 6px; padding: 0; display: grid; gap: 8px; }
+ol.steps4 li { display: flex; gap: 12px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-sm); padding: 10px 12px; }
+ol.steps4 .n, .study-step .n { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; font-size: .9rem; }
+.study-step .step-head { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+.study-step h2 { margin: 0; font-size: 1.1rem; }
+.scripture { font-family: var(--serif); font-size: 1.08rem; line-height: 1.7; }
+.scripture .vn { font-family: var(--sans); font-size: .68rem; font-weight: 700; color: var(--accent-ink); vertical-align: super; margin-right: 3px; }
+.prayer-line { display: flex; gap: 8px; align-items: flex-start; font-style: italic; }
+.prayer-line svg { flex: 0 0 auto; width: 16px; height: 16px; margin-top: 3px; }
+.study-nav { display: flex; justify-content: space-between; gap: 8px; margin: 16px 0 8px; flex-wrap: wrap; }
+.note-card { display: block; text-decoration: none; color: var(--text); margin-bottom: 10px; }
+.note-card .note-text { display: block; white-space: pre-wrap; margin-top: 4px; font-family: var(--serif); }

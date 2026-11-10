@@ -18,7 +18,8 @@ export const currentSession = () => nextSession() || data.sessionList[data.sessi
 export const saintOfWeek = () => data.saints.saints[((weekNo() % data.saints.saints.length) + data.saints.saints.length) % data.saints.saints.length];
 export const challengeOfWeek = () => { const c = data.study.challenges; return c[((weekNo() % c.length) + c.length) % c.length]; };
 export function nextSunday(d = new Date()) { const x = new Date(d.getFullYear(), d.getMonth(), d.getDate()); x.setDate(x.getDate() + ((7 - x.getDay()) % 7)); return x; }
-const readingsUrl = d => { const z = n => String(n).padStart(2, '0'); return 'https://universalis.com/canada/' + d.getFullYear() + z(d.getMonth() + 1) + z(d.getDate()) + '/mass.htm'; };
+// Mass readings from the Canadian Lectionary (Living with Christ, with the Canadian bishops).
+export const readingsUrl = d => { const z = n => String(n).padStart(2, '0'); return 'https://readings.livingwithchrist.ca/daily-texts/reading/' + d.getFullYear() + '-' + z(d.getMonth() + 1) + '-' + z(d.getDate()); };
 
 // ---------- This week (hub) ----------
 export function week(id) {
@@ -34,11 +35,10 @@ export function week(id) {
     '<div class="btn-row" style="margin:12px 0 0">' + listenButton('vlisten', t('Listen'), 'soft sm') + '<a class="btn ghost sm" href="#/verse/' + s.id + '">' + icon('sparkle') + esc(t('Practice with flashcards')) + '</a></div></section>';
 
   if (st.bible) {
-    const notes = (state.study[s.id] || {}).notes || '';
-    html += '<div class="section-title"><h2>' + esc(t('Bible study')) + '</h2></div><section class="card">' +
-      '<div class="eyebrow">' + esc(st.bible.ref) + '</div><p style="margin:4px 0 12px">' + esc(st.bible.intro) + '</p>' + ext(st.bible.url, t('Read the passage')) +
-      '<ol class="qs">' + st.bible.questions.map(q => '<li>' + esc(q) + '</li>').join('') + '</ol>' +
-      '<label class="field" style="margin:0"><span>' + esc(t('My notes')) + ' <span class="saved-hint" id="bsaved"></span></span><textarea id="bnotes" placeholder="' + esc(t('What is God saying to you in this passage?')) + '">' + esc(notes) + '</textarea></label></section>';
+    const studied = !!state.bible[s.id];
+    html += '<div class="section-title"><h2>' + esc(t('Bible study')) + '</h2><a class="linkish" href="#/bible">' + esc(t('All plans')) + '</a></div>' +
+      '<a class="card row" href="#/bible/' + s.id + '"><span class="lead">' + (studied ? icon('check') : icon('book')) + '</span><span class="grow"><span class="title">' + esc(st.bible.ref) + '</span>' +
+      '<span class="sub">' + esc(st.bible.intro) + ' ' + esc(t('Read, understand, pray, live.')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
   }
 
   html += '<div class="section-title"><h2>' + esc(t('Review')) + '</h2></div><div class="tiles">' +
@@ -65,8 +65,6 @@ export function week(id) {
     html, title: t('This week'),
     bind(root) {
       if (st.verse) bindListen(root, 'vlisten', () => [st.verse.ref + '.', ...sentences(st.verse.text)]);
-      const ta = root.querySelector('#bnotes');
-      if (ta) { let timer; ta.oninput = () => { clearTimeout(timer); timer = setTimeout(() => { state.study[s.id] = { notes: ta.value }; save(); root.querySelector('#bsaved').textContent = t('Saved'); }, 400); }; }
       root.querySelector('#chdone').onclick = () => { if (state.challenges[wk]) delete state.challenges[wk]; else { state.challenges[wk] = true; toast(t('Well done')); } save(); rerender(); };
       const ds = root.querySelector('#dshare');
       if (ds) ds.onclick = () => {

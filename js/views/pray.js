@@ -26,6 +26,7 @@ export function view() {
     row('#/first-confession', 'check', t('First Confession'), t('Prepare step by step'))
   ]);
   html += group(t('More ways to pray'), [
+    row('#/bible', 'book', t('Bible study'), t('Reading plans with the Bible text, offline')),
     row('#/lectio', 'book', t('Sunday Gospel'), t('Pray it with Lectio Divina')),
     row('#/verse', 'sparkle', t('Memory verses'), t('Flashcards with audio'))
   ].concat(lent ? [] : [row('#/stations', 'candle', t('Stations of the Cross'), t('Walk with Jesus to the cross'))]));

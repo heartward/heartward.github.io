@@ -12,6 +12,7 @@ import * as search from './views/search.js';
 import * as week from './views/week.js';
 import * as extras from './views/extras.js';
 import * as more from './views/more.js';
+import * as bible from './views/bible.js';
 
 const routes = {
   '': [today.view, 'today'],
@@ -25,6 +26,7 @@ const routes = {
   week: [week.week, 'journey'], verse: [week.verse, 'journey'], quiz: [week.quiz, 'journey'], lectio: [week.lectio, 'pray'], 'first-confession': [week.firstConfession, 'pray'],
   rites: [extras.rites, 'journey'], sponsor: [extras.sponsor, 'me'], 'saint-quiz': [extras.saintQuiz, 'learn'],
   intentions: [more.intentions, 'pray'], readings: [more.readings, 'today'], examen: [more.examen, 'pray'], stations: [more.stations, 'pray'], keepsake: [more.keepsake, 'me'],
+  bible: [id => id ? bible.study(id) : bible.hub(), 'learn'], 'bible-guide': [bible.guide, 'learn'], 'bible-plan': [bible.plan, 'learn'], 'bible-notes': [bible.notes, 'learn'],
   search: [search.view, 'search']
 };
 
