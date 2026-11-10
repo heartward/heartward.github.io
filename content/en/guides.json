@@ -3,22 +3,102 @@
     "title": "A guide to the Mass",
     "intro": "The Mass has two main parts: the Liturgy of the Word, where God speaks to us in Scripture, and the Liturgy of the Eucharist, where bread and wine become the Body and Blood of Christ. Don't worry about getting every gesture right; follow the people around you.",
     "parts": [
-      { "group": "Introductory Rites", "name": "Entrance", "posture": "stand", "about": "Everyone stands as the priest and ministers process in, usually with a song. When you enter the church, you can dip your fingers in holy water and make the Sign of the Cross, then genuflect (bend your right knee to the floor) toward the tabernacle before entering your pew." },
-      { "group": "Introductory Rites", "name": "Greeting and Penitential Act", "posture": "stand", "about": "The priest greets us with the Sign of the Cross. We then pause to remember our sins and ask God's mercy: \"Lord, have mercy. Christ, have mercy. Lord, have mercy.\"" },
-      { "group": "Introductory Rites", "name": "Gloria", "posture": "stand", "about": "A hymn of praise beginning with the angels' song at Christmas: \"Glory to God in the highest.\" It is left out during Advent and Lent." },
-      { "group": "Introductory Rites", "name": "Collect (Opening Prayer)", "posture": "stand", "about": "The priest says \"Let us pray\" and gathers everyone's silent prayers into one. We answer \"Amen.\"" },
-      { "group": "Liturgy of the Word", "name": "First Reading and Psalm", "posture": "sit", "about": "Usually from the Old Testament. Then a psalm is sung or read, and we repeat a short response." },
-      { "group": "Liturgy of the Word", "name": "Second Reading", "posture": "sit", "about": "On Sundays, a reading from the New Testament letters, often from St. Paul." },
-      { "group": "Liturgy of the Word", "name": "Gospel", "posture": "stand", "about": "We stand to honor the words of Jesus. Before it we sing \"Alleluia\" (except in Lent). When the deacon or priest announces the Gospel, people trace a small cross on their forehead, lips and heart, asking that God's word be in our mind, on our lips and in our heart." },
-      { "group": "Liturgy of the Word", "name": "Homily", "posture": "sit", "about": "The priest or deacon explains the readings and how to live them." },
-      { "group": "Liturgy of the Word", "name": "Creed", "posture": "stand", "about": "We profess our faith together, usually with the Nicene Creed. Everyone bows at the words about Jesus becoming man." },
-      { "group": "Liturgy of the Word", "name": "Prayer of the Faithful", "posture": "stand", "about": "Prayers for the Church, the world, people in need and the local community. We usually answer \"Lord, hear our prayer.\" In many parishes, people in RCIA are sent out with their catechists after the homily to reflect on the readings together." },
-      { "group": "Liturgy of the Eucharist", "name": "Preparation of the Gifts", "posture": "sit", "about": "Bread and wine are brought to the altar, and the collection is taken. We stand when the priest says \"Pray, brethren...\"" },
-      { "group": "Liturgy of the Eucharist", "name": "Eucharistic Prayer", "posture": "kneel", "about": "The heart of the Mass. After the \"Holy, Holy, Holy,\" we kneel. The priest repeats Jesus' words from the Last Supper, and the bread and wine become the Body and Blood of Christ. Bells may ring as the priest lifts the Host and the chalice. It ends with a great \"Amen.\"" },
-      { "group": "Communion Rite", "name": "Our Father and Sign of Peace", "posture": "stand", "about": "We pray the Lord's Prayer together, then offer each other a sign of peace, usually a handshake or a nod with \"Peace be with you.\"" },
-      { "group": "Communion Rite", "name": "Lamb of God", "posture": "kneel", "about": "We sing \"Lamb of God, you take away the sins of the world.\" Then we kneel and say: \"Lord, I am not worthy that you should enter under my roof, but only say the word and my soul shall be healed.\"" },
-      { "group": "Communion Rite", "name": "Communion", "posture": "line", "about": "Catholics who are ready go forward to receive. Before you can receive, you can stay in your pew and pray, or go up with arms crossed over your chest to receive a blessing. Afterward, people kneel or sit in quiet prayer." },
-      { "group": "Concluding Rites", "name": "Blessing and Dismissal", "posture": "stand", "about": "The priest blesses us and sends us out: \"Go in peace.\" We answer \"Thanks be to God.\" It is good to stay for the closing song." }
+      {
+        "group": "Introductory Rites",
+        "name": "Entrance",
+        "posture": "stand",
+        "about": "Everyone stands as the priest and ministers process in, usually with a song. When you enter the church, you can dip your fingers in holy water and make the Sign of the Cross, then genuflect (bend your right knee to the floor) toward the tabernacle before entering your pew."
+      },
+      {
+        "group": "Introductory Rites",
+        "name": "Greeting and Penitential Act",
+        "posture": "stand",
+        "about": "The priest greets us with the Sign of the Cross. We then pause to remember our sins and ask God's mercy: \"Lord, have mercy. Christ, have mercy. Lord, have mercy.\""
+      },
+      {
+        "group": "Introductory Rites",
+        "name": "Gloria",
+        "posture": "stand",
+        "about": "A hymn of praise beginning with the angels' song at Christmas: \"Glory to God in the highest.\" It is left out during Advent and Lent."
+      },
+      {
+        "group": "Introductory Rites",
+        "name": "Collect (Opening Prayer)",
+        "posture": "stand",
+        "about": "The priest says \"Let us pray\" and gathers everyone's silent prayers into one. We answer \"Amen.\""
+      },
+      {
+        "group": "Liturgy of the Word",
+        "name": "First Reading and Psalm",
+        "posture": "sit",
+        "about": "Usually from the Old Testament. Then a psalm is sung or read, and we repeat a short response."
+      },
+      {
+        "group": "Liturgy of the Word",
+        "name": "Second Reading",
+        "posture": "sit",
+        "about": "On Sundays, a reading from the New Testament letters, often from St. Paul."
+      },
+      {
+        "group": "Liturgy of the Word",
+        "name": "Gospel",
+        "posture": "stand",
+        "about": "We stand to honor the words of Jesus. Before it we sing \"Alleluia\" (except in Lent). When the deacon or priest announces the Gospel, people trace a small cross on their forehead, lips and heart, asking that God's word be in our mind, on our lips and in our heart."
+      },
+      {
+        "group": "Liturgy of the Word",
+        "name": "Homily",
+        "posture": "sit",
+        "about": "The priest or deacon explains the readings and how to live them."
+      },
+      {
+        "group": "Liturgy of the Word",
+        "name": "Creed",
+        "posture": "stand",
+        "about": "We profess our faith together, usually with the Nicene Creed. Everyone bows at the words about Jesus becoming man."
+      },
+      {
+        "group": "Liturgy of the Word",
+        "name": "Prayer of the Faithful",
+        "posture": "stand",
+        "about": "Prayers for the Church, the world, people in need and the local community. We usually answer \"Lord, hear our prayer.\" In many parishes, people in RCIA are sent out with their catechists after the homily to reflect on the readings together."
+      },
+      {
+        "group": "Liturgy of the Eucharist",
+        "name": "Preparation of the Gifts",
+        "posture": "sit",
+        "about": "Bread and wine are brought to the altar, and the collection is taken. We stand when the priest says \"Pray, brethren...\""
+      },
+      {
+        "group": "Liturgy of the Eucharist",
+        "name": "Eucharistic Prayer",
+        "posture": "kneel",
+        "about": "The heart of the Mass. After the \"Holy, Holy, Holy,\" we kneel. The priest repeats Jesus' words from the Last Supper, and the bread and wine become the Body and Blood of Christ. Bells may ring as the priest lifts the Host and the chalice. It ends with a great \"Amen.\""
+      },
+      {
+        "group": "Communion Rite",
+        "name": "Our Father and Sign of Peace",
+        "posture": "stand",
+        "about": "We pray the Lord's Prayer together, then offer each other a sign of peace, usually a handshake or a nod with \"Peace be with you.\""
+      },
+      {
+        "group": "Communion Rite",
+        "name": "Lamb of God",
+        "posture": "kneel",
+        "about": "We sing \"Lamb of God, you take away the sins of the world.\" Then we kneel and say: \"Lord, I am not worthy that you should enter under my roof, but only say the word and my soul shall be healed.\""
+      },
+      {
+        "group": "Communion Rite",
+        "name": "Communion",
+        "posture": "line",
+        "about": "Catholics who are ready go forward to receive. Before you can receive, you can stay in your pew and pray, or go up with arms crossed over your chest to receive a blessing. Afterward, people kneel or sit in quiet prayer."
+      },
+      {
+        "group": "Concluding Rites",
+        "name": "Blessing and Dismissal",
+        "posture": "stand",
+        "about": "The priest blesses us and sends us out: \"Go in peace.\" We answer \"Thanks be to God.\" It is good to stay for the closing song."
+      }
     ],
     "note": "Postures can differ a little from country to country. These follow common practice in the United States."
   },
@@ -26,62 +106,345 @@
     "title": "First-week basics",
     "intro": "Small things that can feel confusing at first. Nobody expects you to know them yet.",
     "items": [
-      { "name": "Holy water", "about": "At the church door there is a font of blessed water. Dip your fingers and make the Sign of the Cross. It reminds us of our baptism. If you are not baptized yet, you are still welcome to do this." },
-      { "name": "Genuflecting", "about": "Before entering your pew, bend your right knee to the floor toward the tabernacle, the box where the consecrated Hosts are kept, usually marked by a lit candle. It is a sign of reverence to Jesus present there. If you can't kneel, a bow is fine." },
-      { "name": "The tabernacle and its candle", "about": "The red or white candle near the tabernacle is always lit when Jesus is present in the Eucharist inside. That is why Catholics keep quiet and reverent in church even before Mass." },
-      { "name": "Sign of the Cross", "about": "Touch your forehead (Father), chest (Son), left shoulder and right shoulder (Holy Spirit). Catholics in the West go left to right." },
-      { "name": "At Communion before you can receive", "about": "Stay in your pew and pray, or go up with arms crossed over your chest to receive a blessing. Both are completely normal." },
-      { "name": "Fasting before Communion", "about": "Once you can receive, Catholics fast from food and drink (except water and medicine) for one hour before Communion." },
-      { "name": "Sunday obligation", "about": "Catholics go to Mass every Sunday (or Saturday evening) and on certain holy days. Starting this habit now is one of the best ways to prepare." },
-      { "name": "What to call people", "about": "A priest is usually \"Father,\" a deacon \"Deacon,\" a religious sister \"Sister,\" and the bishop \"Bishop\" or \"Your Excellency.\"" },
-      { "name": "What to bring and wear", "about": "Nothing is required. Dress respectfully, as you would for something important. Many parishes have the readings in a missal in the pew." },
-      { "name": "Silence", "about": "Before and after Mass, people pray quietly. Save conversations for outside the church or the gathering space." }
+      {
+        "name": "Holy water",
+        "about": "At the church door there is a font of blessed water. Dip your fingers and make the Sign of the Cross. It reminds us of our baptism. If you are not baptized yet, you are still welcome to do this."
+      },
+      {
+        "name": "Genuflecting",
+        "about": "Before entering your pew, bend your right knee to the floor toward the tabernacle, the box where the consecrated Hosts are kept, usually marked by a lit candle. It is a sign of reverence to Jesus present there. If you can't kneel, a bow is fine."
+      },
+      {
+        "name": "The tabernacle and its candle",
+        "about": "The red or white candle near the tabernacle is always lit when Jesus is present in the Eucharist inside. That is why Catholics keep quiet and reverent in church even before Mass."
+      },
+      {
+        "name": "Sign of the Cross",
+        "about": "Touch your forehead (Father), chest (Son), left shoulder and right shoulder (Holy Spirit). Catholics in the West go left to right."
+      },
+      {
+        "name": "At Communion before you can receive",
+        "about": "Stay in your pew and pray, or go up with arms crossed over your chest to receive a blessing. Both are completely normal."
+      },
+      {
+        "name": "Fasting before Communion",
+        "about": "Once you can receive, Catholics fast from food and drink (except water and medicine) for one hour before Communion."
+      },
+      {
+        "name": "Sunday obligation",
+        "about": "Catholics go to Mass every Sunday (or Saturday evening) and on certain holy days. Starting this habit now is one of the best ways to prepare."
+      },
+      {
+        "name": "What to call people",
+        "about": "A priest is usually \"Father,\" a deacon \"Deacon,\" a religious sister \"Sister,\" and the bishop \"Bishop\" or \"Your Excellency.\""
+      },
+      {
+        "name": "What to bring and wear",
+        "about": "Nothing is required. Dress respectfully, as you would for something important. Many parishes have the readings in a missal in the pew."
+      },
+      {
+        "name": "Silence",
+        "about": "Before and after Mass, people pray quietly. Save conversations for outside the church or the gathering space."
+      }
     ]
   },
   "confession": {
     "title": "A guide to confession",
     "intro": "In the sacrament of Reconciliation, also called confession, God forgives our sins through the priest. Nothing you say can ever be repeated by the priest. People often feel nervous the first time, and priests are used to helping. You will usually make your first confession before Easter, or after baptism if you are being baptized (baptism itself washes away all sins).",
     "steps": [
-      { "name": "Prepare", "about": "Spend some quiet time with an examination of conscience (below). Ask the Holy Spirit to help you see honestly and without fear." },
-      { "name": "Go in", "about": "You can kneel behind a screen or sit face to face. Make the Sign of the Cross and say: \"Bless me, Father, for I have sinned. This is my first confession\" (or \"It has been ... since my last confession\")." },
-      { "name": "Confess", "about": "Tell your sins simply, especially serious ones, and roughly how often. If you're unsure what to say, tell the priest; he will help you." },
-      { "name": "Listen", "about": "The priest may give some advice and a penance: a prayer or an action to do afterward." },
-      { "name": "Say you're sorry", "about": "Pray an Act of Contrition, from the prayer library or in your own words." },
-      { "name": "Absolution", "about": "The priest says the words of absolution, ending \"I absolve you from your sins, in the name of the Father, and of the Son, and of the Holy Spirit.\" Make the Sign of the Cross and answer \"Amen.\"" },
-      { "name": "Go in peace", "about": "Thank God and do your penance soon. You are forgiven." }
+      {
+        "name": "Prepare",
+        "about": "Spend some quiet time with an examination of conscience (below). Ask the Holy Spirit to help you see honestly and without fear."
+      },
+      {
+        "name": "Go in",
+        "about": "You can kneel behind a screen or sit face to face. Make the Sign of the Cross and say: \"Bless me, Father, for I have sinned. This is my first confession\" (or \"It has been ... since my last confession\")."
+      },
+      {
+        "name": "Confess",
+        "about": "Tell your sins simply, especially serious ones, and roughly how often. If you're unsure what to say, tell the priest; he will help you."
+      },
+      {
+        "name": "Listen",
+        "about": "The priest may give some advice and a penance: a prayer or an action to do afterward."
+      },
+      {
+        "name": "Say you're sorry",
+        "about": "Pray an Act of Contrition, from the prayer library or in your own words."
+      },
+      {
+        "name": "Absolution",
+        "about": "The priest says the words of absolution, ending \"I absolve you from your sins, in the name of the Father, and of the Son, and of the Holy Spirit.\" Make the Sign of the Cross and answer \"Amen.\""
+      },
+      {
+        "name": "Go in peace",
+        "about": "Thank God and do your penance soon. You are forgiven."
+      }
     ],
     "examination": [
-      { "heading": "Loving God", "questions": [
-        "Have I made time for God in prayer?",
-        "Have I put anything (money, work, pleasure, approval) above God?",
-        "Have I used God's name carelessly or in anger?",
-        "Have I missed Mass on Sundays without a serious reason?"
-      ]},
-      { "heading": "Loving others", "questions": [
-        "Have I honored and cared for my parents and family?",
-        "Have I hurt anyone by violence, anger or harsh words? Have I held on to hatred?",
-        "Have I been faithful and pure in my thoughts, words and relationships?",
-        "Have I stolen, cheated, or been careless with what belongs to others?",
-        "Have I lied, gossiped, or damaged someone's reputation?",
-        "Have I been jealous or envious of others?"
-      ]},
-      { "heading": "Myself", "questions": [
-        "Have I cared for my body and my health, and avoided abuse of alcohol or drugs?",
-        "Have I been lazy in my duties at home, school or work?",
-        "Have I ignored people in need when I could have helped?"
-      ]}
+      {
+        "heading": "Loving God",
+        "questions": [
+          "Have I made time for God in prayer?",
+          "Have I put anything (money, work, pleasure, approval) above God?",
+          "Have I used God's name carelessly or in anger?",
+          "Have I missed Mass on Sundays without a serious reason?"
+        ]
+      },
+      {
+        "heading": "Loving others",
+        "questions": [
+          "Have I honored and cared for my parents and family?",
+          "Have I hurt anyone by violence, anger or harsh words? Have I held on to hatred?",
+          "Have I been faithful and pure in my thoughts, words and relationships?",
+          "Have I stolen, cheated, or been careless with what belongs to others?",
+          "Have I lied, gossiped, or damaged someone's reputation?",
+          "Have I been jealous or envious of others?"
+        ]
+      },
+      {
+        "heading": "Myself",
+        "questions": [
+          "Have I cared for my body and my health, and avoided abuse of alcohol or drugs?",
+          "Have I been lazy in my duties at home, school or work?",
+          "Have I ignored people in need when I could have helped?"
+        ]
+      }
     ],
     "privacy": "Nothing you tick here is saved. It disappears when you leave the page."
   },
   "rosary": {
     "title": "Pray the Rosary",
     "intro": "The Rosary is a meditation on the life of Jesus, prayed with Mary. While praying the Hail Marys, you think about one event (a \"mystery\") from the Gospels. A full Rosary takes about 20 minutes. You don't need beads; this guide counts for you.",
+    "howto": [
+      "Make the Sign of the Cross and pray the Apostles' Creed on the crucifix.",
+      "Pray an Our Father, three Hail Marys (for faith, hope and love) and a Glory Be.",
+      "For each of the five mysteries: read the scene, then pray an Our Father, ten Hail Marys while picturing it, a Glory Be and the Fatima Prayer.",
+      "Close with the Hail, Holy Queen and the Prayer After the Rosary.",
+      "Short on time? Pray just one decade. Open \"The five mysteries\" and choose one."
+    ],
     "mysteries": {
-      "joyful": { "name": "Joyful Mysteries", "days": "Monday and Saturday", "items": ["The Annunciation", "The Visitation", "The Nativity", "The Presentation in the Temple", "The Finding of Jesus in the Temple"] },
-      "sorrowful": { "name": "Sorrowful Mysteries", "days": "Tuesday and Friday", "items": ["The Agony in the Garden", "The Scourging at the Pillar", "The Crowning with Thorns", "The Carrying of the Cross", "The Crucifixion"] },
-      "glorious": { "name": "Glorious Mysteries", "days": "Wednesday and Sunday", "items": ["The Resurrection", "The Ascension", "The Descent of the Holy Spirit", "The Assumption of Mary", "The Coronation of Mary"] },
-      "luminous": { "name": "Luminous Mysteries", "days": "Thursday", "items": ["The Baptism of Jesus", "The Wedding at Cana", "The Proclamation of the Kingdom", "The Transfiguration", "The Institution of the Eucharist"] }
+      "joyful": {
+        "name": "Joyful Mysteries",
+        "days": "Monday and Saturday",
+        "items": [
+          "The Annunciation",
+          "The Visitation",
+          "The Nativity",
+          "The Presentation in the Temple",
+          "The Finding of Jesus in the Temple"
+        ],
+        "details": [
+          {
+            "ref": "Luke 1:26-38",
+            "verse": "And Mary said: Behold the handmaid of the Lord; be it done to me according to thy word.",
+            "verseRef": "Luke 1:38",
+            "reflect": "The angel Gabriel asks Mary to become the mother of God's Son. She is young and does not understand everything, but she trusts God and says yes. In that yes, God becomes one of us.",
+            "fruit": "Humility",
+            "scene": "Mary saying yes to God's plan."
+          },
+          {
+            "ref": "Luke 1:39-56",
+            "verse": "Blessed art thou among women, and blessed is the fruit of thy womb.",
+            "verseRef": "Luke 1:42",
+            "reflect": "Mary hurries to help her older cousin Elizabeth, who is also expecting a child. Elizabeth and the baby in her womb, John, leap for joy, because Jesus is near. Mary answers with a song of praise, the Magnificat.",
+            "fruit": "Love of neighbour",
+            "scene": "Mary going to serve Elizabeth, carrying Jesus with her."
+          },
+          {
+            "ref": "Luke 2:1-20",
+            "verse": "And she brought forth her firstborn son, and wrapped him up in swaddling clothes, and laid him in a manger; because there was no room for them in the inn.",
+            "verseRef": "Luke 2:7",
+            "reflect": "The Son of God is born in a stable in Bethlehem, poor and small. The first to come and worship him are shepherds, simple workers. God comes close to us not in power but as a baby we can hold.",
+            "fruit": "Poverty of spirit",
+            "scene": "The baby Jesus in the manger, with Mary and Joseph."
+          },
+          {
+            "ref": "Luke 2:22-38",
+            "verse": "Because my eyes have seen thy salvation, which thou hast prepared before the face of all peoples: a light to the revelation of the Gentiles, and the glory of thy people Israel.",
+            "verseRef": "Luke 2:30-32",
+            "reflect": "Mary and Joseph bring baby Jesus to the Temple, as the Law asks, to offer him to God. Old Simeon and Anna, who had waited all their lives, recognize him as the Saviour. Simeon also tells Mary that a sword will pierce her heart.",
+            "fruit": "Obedience",
+            "scene": "Simeon holding Jesus in his arms in the Temple."
+          },
+          {
+            "ref": "Luke 2:41-52",
+            "verse": "And he said to them: How is it that you sought me? did you not know, that I must be about my father's business?",
+            "verseRef": "Luke 2:49",
+            "reflect": "When Jesus is twelve, he stays behind in Jerusalem. Mary and Joseph search for him for three days, worried, and find him in the Temple, listening and asking questions. Even when we feel we have lost Jesus, we can always find him again.",
+            "fruit": "Joy in seeking Jesus",
+            "scene": "Mary and Joseph finding Jesus in the Temple."
+          }
+        ]
+      },
+      "sorrowful": {
+        "name": "Sorrowful Mysteries",
+        "days": "Tuesday and Friday",
+        "items": [
+          "The Agony in the Garden",
+          "The Scourging at the Pillar",
+          "The Crowning with Thorns",
+          "The Carrying of the Cross",
+          "The Crucifixion"
+        ],
+        "details": [
+          {
+            "ref": "Luke 22:39-46",
+            "verse": "Father, if thou wilt, remove this chalice from me: but yet not my will, but thine be done.",
+            "verseRef": "Luke 22:42",
+            "reflect": "In the Garden of Gethsemane, Jesus prays alone while his friends fall asleep. He is afraid and in anguish, yet he gives himself to the Father's will. When we are afraid, we can pray as he did.",
+            "fruit": "Trust in God's will",
+            "scene": "Jesus praying alone in the garden at night."
+          },
+          {
+            "ref": "Isaiah 53:5; John 19:1",
+            "verse": "But he was wounded for our iniquities, he was bruised for our sins: the chastisement of our peace was upon him, and by his bruises we are healed.",
+            "verseRef": "Isaiah 53:5",
+            "reflect": "Pilate has Jesus whipped by the soldiers. Jesus suffers this in silence, for us. His wounds become the place where our own wounds can be healed.",
+            "fruit": "Purity and self-control",
+            "scene": "Jesus tied to the pillar, suffering in silence."
+          },
+          {
+            "ref": "Matthew 27:27-31",
+            "verse": "And platting a crown of thorns, they put it upon his head, and a reed in his right hand. And bowing the knee before him, they mocked him, saying: Hail, king of the Jews.",
+            "verseRef": "Matthew 27:29",
+            "reflect": "The soldiers mock Jesus with a crown of thorns and a purple cloak. He is truly a King, but his kingdom is love, not force. He bears insults patiently and does not strike back.",
+            "fruit": "Courage",
+            "scene": "Jesus crowned with thorns and mocked."
+          },
+          {
+            "ref": "John 19:16-17; Luke 23:26-31",
+            "verse": "And bearing his own cross, he went forth to that place which is called Calvary, but in Hebrew Golgotha.",
+            "verseRef": "John 19:17",
+            "reflect": "Weak and wounded, Jesus carries his cross through the streets. He falls, and Simon of Cyrene is made to help him. When our own burdens are heavy, Jesus walks with us, and we can help carry the burdens of others.",
+            "fruit": "Patience",
+            "scene": "Jesus carrying the cross, with Simon helping."
+          },
+          {
+            "ref": "Luke 23:33-46; John 19:25-30",
+            "verse": "And Jesus said: Father, forgive them, for they know not what they do.",
+            "verseRef": "Luke 23:34",
+            "reflect": "Jesus is nailed to the cross and dies for the sins of the world. Even then he forgives his executioners and gives his mother to us. This is the greatest act of love there has ever been.",
+            "fruit": "Forgiveness and perseverance",
+            "scene": "Jesus on the cross, with Mary and John below."
+          }
+        ]
+      },
+      "glorious": {
+        "name": "Glorious Mysteries",
+        "days": "Wednesday and Sunday",
+        "items": [
+          "The Resurrection",
+          "The Ascension",
+          "The Descent of the Holy Spirit",
+          "The Assumption of Mary",
+          "The Coronation of Mary"
+        ],
+        "details": [
+          {
+            "ref": "Matthew 28:1-10",
+            "verse": "He is not here, for he is risen, as he said. Come, and see the place where the Lord was laid.",
+            "verseRef": "Matthew 28:6",
+            "reflect": "On the third day the women find the tomb empty. Jesus is alive, risen in his body, and death has lost its power. This is the heart of our faith and the joy of every Easter.",
+            "fruit": "Faith",
+            "scene": "The empty tomb on Easter morning."
+          },
+          {
+            "ref": "Acts 1:6-11",
+            "verse": "This Jesus who is taken up from you into heaven, shall so come, as you have seen him going into heaven.",
+            "verseRef": "Acts 1:11",
+            "reflect": "Forty days after Easter, Jesus blesses his disciples and returns to the Father. He goes ahead of us to prepare a place for us, and he sends his friends out to tell the whole world.",
+            "fruit": "Hope",
+            "scene": "Jesus rising into heaven, blessing his friends."
+          },
+          {
+            "ref": "Acts 2:1-13",
+            "verse": "And they were all filled with the Holy Ghost, and they began to speak with divers tongues, according as the Holy Ghost gave them to speak.",
+            "verseRef": "Acts 2:4",
+            "reflect": "Mary and the apostles are praying together when the Holy Spirit comes like wind and tongues of fire. The frightened disciples become bold witnesses. You will receive this same Spirit in Confirmation.",
+            "fruit": "Love of God and the gifts of the Spirit",
+            "scene": "The Holy Spirit as tongues of fire over Mary and the apostles."
+          },
+          {
+            "ref": "Luke 1:48-49; Catechism 966",
+            "verse": "For behold from henceforth all generations shall call me blessed. Because he that is mighty, hath done great things to me; and holy is his name.",
+            "verseRef": "Luke 1:48-49",
+            "reflect": "At the end of her life on earth, Mary was taken up body and soul into heaven. The Bible does not describe this; it is the faith the Church has held from early times (Catechism 966). What God did for Mary is what he promises to all who love him.",
+            "fruit": "Hope of heaven",
+            "scene": "Mary taken up into heaven."
+          },
+          {
+            "ref": "Revelation 12:1",
+            "verse": "And a great sign appeared in heaven: A woman clothed with the sun, and the moon under her feet, and on her head a crown of twelve stars.",
+            "verseRef": "Revelation 12:1",
+            "reflect": "In heaven, Mary is honoured as Queen, because her Son is King. She is not far away: as a mother she prays for each of us. We ask her to help us stay close to Jesus all our lives.",
+            "fruit": "Trust in Mary's prayers",
+            "scene": "Mary crowned as Queen of heaven and earth."
+          }
+        ]
+      },
+      "luminous": {
+        "name": "Luminous Mysteries",
+        "days": "Thursday",
+        "items": [
+          "The Baptism of Jesus",
+          "The Wedding at Cana",
+          "The Proclamation of the Kingdom",
+          "The Transfiguration",
+          "The Institution of the Eucharist"
+        ],
+        "details": [
+          {
+            "ref": "Matthew 3:13-17",
+            "verse": "And behold a voice from heaven, saying: This is my beloved Son, in whom I am well pleased.",
+            "verseRef": "Matthew 3:17",
+            "reflect": "Jesus, who has no sin, goes down into the Jordan River to be baptized by John. The heavens open, the Spirit comes down like a dove, and the Father speaks. At your own Baptism, God will say this to you too: you are my beloved child.",
+            "fruit": "Openness to the Holy Spirit",
+            "scene": "The Spirit coming down on Jesus in the Jordan River."
+          },
+          {
+            "ref": "John 2:1-11",
+            "verse": "His mother saith to the waiters: Whatsoever he shall say to you, do ye.",
+            "verseRef": "John 2:5",
+            "reflect": "At a wedding in Cana the wine runs out. Mary notices and tells Jesus, then tells the servants to do whatever he says. Jesus turns water into wine, his first sign. Mary still brings our needs to her Son.",
+            "fruit": "To Jesus through Mary",
+            "scene": "Mary telling the servants: do whatever he tells you."
+          },
+          {
+            "ref": "Mark 1:14-15",
+            "verse": "The time is accomplished, and the kingdom of God is at hand: repent, and believe the gospel.",
+            "verseRef": "Mark 1:15",
+            "reflect": "Jesus travels through Galilee announcing good news: God's kingdom is near. He heals the sick, forgives sinners and welcomes the poor. He invites each of us to turn back to God and trust him.",
+            "fruit": "Conversion and trust in God",
+            "scene": "Jesus preaching, healing and forgiving."
+          },
+          {
+            "ref": "Matthew 17:1-8",
+            "verse": "And lo, a voice out of the cloud, saying: This is my beloved Son, in whom I am well pleased: hear ye him.",
+            "verseRef": "Matthew 17:5",
+            "reflect": "On a high mountain, Jesus' face shines like the sun before Peter, James and John. Moses and Elijah appear with him. The Father tells the disciples to listen to his Son, preparing them for the hard days of the cross.",
+            "fruit": "Desire for holiness",
+            "scene": "Jesus shining with light on the mountain."
+          },
+          {
+            "ref": "Luke 22:14-20",
+            "verse": "This is my body, which is given for you. Do this for a commemoration of me.",
+            "verseRef": "Luke 22:19",
+            "reflect": "At the Last Supper, the night before he dies, Jesus takes bread and wine and gives them to his friends as his own Body and Blood. He gives himself to us at every Mass. At the end of RCIA you will receive him for the first time.",
+            "fruit": "Love for the Eucharist",
+            "scene": "Jesus giving the bread and the cup at the Last Supper."
+          }
+        ]
+      }
     },
-    "byWeekday": ["glorious", "joyful", "sorrowful", "glorious", "luminous", "sorrowful", "joyful"]
+    "byWeekday": [
+      "glorious",
+      "joyful",
+      "sorrowful",
+      "glorious",
+      "luminous",
+      "sorrowful",
+      "joyful"
+    ]
   }
 }

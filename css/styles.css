@@ -556,3 +556,26 @@ label.opt input { accent-color: var(--accent); width: 20px; height: 20px; flex: 
 .prayer-groups { padding: 0 16px; }
 .prayer-groups details.acc .body { padding: 0 0 8px; }
 .prayer-groups .list.tight .row { padding-left: 0; padding-right: 0; }
+
+/* Rosary: mystery details */
+details.acc .myst-item { border-top: 1px solid var(--line); }
+details.acc .myst-item summary { justify-content: flex-start; padding: 12px 0; font-weight: 400; }
+details.acc .myst-item summary .plus { margin-left: auto; }
+details.acc .myst-item:not([open]) summary .plus { transform: none; }
+details.acc .myst-item[open] summary .plus { transform: rotate(45deg); }
+.myst-n { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; font-size: .9rem; }
+.myst-t { display: flex; flex-direction: column; gap: 2px; text-align: left; }
+.myst-item .body { padding: 0 0 12px 40px; }
+.myst-item .btn-row { margin: 8px 0 0; }
+blockquote.verse.small-verse { font-size: 1.02rem; margin: 0 0 8px; }
+.rosary-stage .myst-verse { max-width: 30em; margin: 10px auto 12px; font-size: 1.12rem; }
+.rosary-stage .myst-reflect { max-width: 32em; margin: 0 auto 12px; text-align: left; }
+.rosary-stage .fruit { display: flex; gap: 8px; align-items: flex-start; max-width: 32em; margin: 0 auto; text-align: left; padding: 10px 12px; border-radius: 12px; background: var(--accent-soft); color: var(--accent-ink); font-size: .95rem; }
+.rosary-stage .fruit svg { flex: none; width: 18px; height: 18px; margin-top: 2px; }
+.rosary-stage .scene { font-size: .92rem; color: var(--muted); font-style: italic; margin: 0 auto 6px; max-width: 30em; }
+.decade-dots { display: flex; justify-content: center; gap: 6px; margin: 6px 0 4px; }
+.decade-dots span { width: 9px; height: 9px; border-radius: 50%; background: var(--unlit); }
+.decade-dots span.done { background: var(--glow); }
+.decade-dots span.now { background: var(--accent); }
+.resume { text-align: center; margin: 4px 0 0; color: var(--muted); }
+button.link { background: none; border: 0; padding: 0; color: var(--accent-ink); font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }

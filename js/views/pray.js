@@ -99,36 +99,62 @@ export function prayer(id) {
 }
 
 // ---------- Rosary ----------
-function rosarySteps(key) {
+const ORD = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
+// only = a decade index (0-4) to pray just that one decade, or null for the full Rosary.
+function rosarySteps(key, only) {
   const m = data.guides.rosary.mysteries[key];
   const P = id => byId(data.prayers, id);
-  const steps = [
+  const det = m.details || [];
+  const full = only == null;
+  const steps = full ? [
     { p: 'sign-of-the-cross', bead: null }, { p: 'apostles-creed', bead: 'cross' }, { p: 'our-father', bead: 'big' },
     { p: 'hail-mary', bead: 'small', note: t('For an increase of faith') }, { p: 'hail-mary', bead: 'small', note: t('For an increase of hope') },
     { p: 'hail-mary', bead: 'small', note: t('For an increase of love') }, { p: 'glory-be', bead: null }
-  ];
+  ] : [{ p: 'sign-of-the-cross', bead: null }];
   m.items.forEach((name, d) => {
-    steps.push({ announce: true, decade: d, name });
-    steps.push({ p: 'our-father', bead: 'big', decade: d, name });
-    for (let i = 0; i < 10; i++) steps.push({ p: 'hail-mary', bead: 'small', decade: d, name, count: i + 1 });
-    steps.push({ p: 'glory-be', bead: null, decade: d, name }, { p: 'fatima-prayer', bead: null, decade: d, name });
+    if (!full && d !== only) return;
+    const x = det[d] || {};
+    steps.push({ announce: true, decade: d, name, x });
+    steps.push({ p: 'our-father', bead: 'big', decade: d, name, x });
+    for (let i = 0; i < 10; i++) steps.push({ p: 'hail-mary', bead: 'small', decade: d, name, x, count: i + 1 });
+    steps.push({ p: 'glory-be', bead: null, decade: d, name, x }, { p: 'fatima-prayer', bead: null, decade: d, name, x });
   });
-  steps.push({ p: 'hail-holy-queen', bead: null }, { p: 'prayer-after-rosary', bead: null }, { p: 'sign-of-the-cross', bead: null, end: true });
+  if (full) steps.push({ p: 'hail-holy-queen', bead: null }, { p: 'prayer-after-rosary', bead: null });
+  steps.push({ p: 'sign-of-the-cross', bead: null, end: true });
   steps.forEach(s => { if (s.p) s.prayer = P(s.p); });
   return { steps, m };
+}
+
+function mysteryCard(x, d, name, open) {
+  return '<details class="myst-item"' + (open ? ' open' : '') + '><summary><span class="myst-n">' + (d + 1) + '</span><span class="myst-t"><strong>' + esc(name) + '</strong><span class="small muted">' + esc(x.ref || '') + (x.fruit ? ' · ' + esc(t('Fruit')) + ': ' + esc(x.fruit) : '') + '</span></span><span class="plus">' + icon('plus') + '</span></summary>' +
+    '<div class="body">' + (x.verse ? '<blockquote class="verse small-verse">' + esc(x.verse) + '<cite>' + esc(x.verseRef) + '</cite></blockquote>' : '') +
+    (x.reflect ? '<p>' + esc(x.reflect) + '</p>' : '') +
+    '<div class="btn-row"><button class="btn soft sm" data-jump="' + d + '">' + esc(t('Start at this mystery')) + '</button><button class="btn ghost sm" data-one="' + d + '">' + esc(t('Pray just this decade')) + '</button></div></div></details>';
 }
 
 export function rosary(key) {
   const def = rosaryForDay(data.guides, new Date());
   key = data.guides.rosary.mysteries[key] ? key : def;
-  const { steps, m } = rosarySteps(key);
-  const beadIdx = steps.map((s, i) => s.bead ? i : -1).filter(i => i >= 0);
-  let i = 0, showWords = true, aloud = canSpeak && !!state.settings.rosaryAloud;
   const r = data.guides.rosary;
+  let only = null, steps, m, beadIdx;
+  const build = () => { ({ steps, m } = rosarySteps(key, only)); beadIdx = steps.map((s, i) => s.bead ? i : -1).filter(i => i >= 0); };
+  build();
+  // Pick up where you left off today (a phone call or a busy bus shouldn't mean starting over).
+  const today = new Date().toDateString();
+  const saved = state.settings.rosaryAt;
+  let i = 0, resumed = false;
+  if (saved && saved.key === key && saved.day === today && saved.only == null && saved.i > 0 && saved.i < steps.length - 1) { i = saved.i; resumed = true; }
+  let showWords = true, aloud = canSpeak && !!state.settings.rosaryAloud;
+  const det = m.details || [];
   const html = back('#/pray', t('Pray')) +
     '<header class="page-head"><div class="kicker">' + esc(t(m.name)) + ' · ' + esc(t(m.days)) + '</div><h1>' + esc(t(r.title)) + '</h1></header>' +
-    '<div class="chips" style="margin-bottom:12px">' + Object.entries(r.mysteries).map(([k, v]) => '<a class="chip' + (k === key ? ' on' : '') + '" href="#/rosary/' + k + '">' + esc(t(v.name.replace(' Mysteries', ''))) + '</a>').join('') + '</div>' +
-    '<details class="card flat acc" style="padding:0 16px"><summary><span>' + esc(t('How to pray the Rosary')) + '</span><span class="plus">' + icon('plus') + '</span></summary><div class="body"><p>' + esc(r.intro) + '</p></div></details>' +
+    '<div class="chips" style="margin-bottom:12px">' + Object.entries(r.mysteries).map(([k, v]) => '<a class="chip' + (k === key ? ' on' : '') + '" href="#/rosary/' + k + '">' + esc(t(v.name.replace(' Mysteries', ''))) + (k === def ? ' · ' + esc(t('today')) : '') + '</a>').join('') + '</div>' +
+    '<details class="card flat acc" style="padding:0 16px"><summary><span>' + esc(t('How to pray the Rosary')) + '</span><span class="plus">' + icon('plus') + '</span></summary><div class="body"><p>' + esc(r.intro) + '</p>' +
+    (r.howto ? '<ol class="small">' + r.howto.map(s => '<li>' + esc(s) + '</li>').join('') + '</ol>' : '') + '</div></details>' +
+    (det.length ? '<details class="card flat acc myst-list" style="padding:0 16px"><summary><span>' + esc(t('The five mysteries')) + '</span><span class="plus">' + icon('plus') + '</span></summary><div class="body">' +
+      '<p class="small muted">' + esc(t('Read about each scene before you pray, or jump straight to one.')) + '</p>' +
+      m.items.map((n, d) => mysteryCard(det[d] || {}, d, n, false)).join('') + '</div></details>' : '') +
+    '<div class="resume small" id="resume" hidden></div>' +
     '<div class="beads" id="beads" aria-hidden="true"></div><div class="rosary-stage" id="stage" aria-live="polite"></div>' +
     '<label class="check small"><input type="checkbox" id="words" checked> ' + esc(t('Show the words of each prayer')) + '</label>' +
     (canSpeak ? '<label class="check small"><input type="checkbox" id="aloud"' + (state.settings.rosaryAloud ? ' checked' : '') + '> ' + esc(t('Read each prayer aloud')) + '</label>' : '') +
@@ -137,29 +163,54 @@ export function rosary(key) {
   return {
     html, title: t('Rosary'),
     bind(root) {
-      const stage = root.querySelector('#stage'), beads = root.querySelector('#beads');
+      const stage = root.querySelector('#stage'), beads = root.querySelector('#beads'), res = root.querySelector('#resume');
+      const remember = () => { state.settings.rosaryAt = { key, i, only, day: today }; save(); };
+      const showResume = () => {
+        if (only != null) { res.hidden = false; res.innerHTML = esc(t('Praying one decade')) + ': ' + esc(m.items[only]) + ' · <button class="link" id="full">' + esc(t('Pray the whole Rosary')) + '</button>'; }
+        else if (resumed) { res.hidden = false; res.innerHTML = esc(t('Picked up where you left off.')) + ' <button class="link" id="restart">' + esc(t('Start over')) + '</button>'; }
+        else { res.hidden = true; res.innerHTML = ''; }
+        const f = res.querySelector('#full'); if (f) f.onclick = () => { only = null; build(); i = 0; showResume(); draw(); };
+        const rs = res.querySelector('#restart'); if (rs) rs.onclick = () => { resumed = false; i = 0; showResume(); draw(); };
+      };
       const draw = () => {
         const s = steps[i];
+        // Beads: small gaps between decades so you can see where you are in the five.
         beads.innerHTML = beadIdx.map(bi => '<span class="bead' + (steps[bi].bead === 'big' || steps[bi].bead === 'cross' ? ' big' : '') + (bi < i ? ' done' : bi === i ? ' now' : '') + '"></span>').join('');
         let h = '';
-        if (s.name != null) h += '<div class="mystery">' + esc(t(['First', 'Second', 'Third', 'Fourth', 'Fifth'][s.decade])) + ' ' + esc(t('Mystery')) + ': ' + esc(s.name) + '</div>';
-        if (s.announce) h += '<h2>' + esc(s.name) + '</h2><p class="muted">' + esc(t('Take a moment to picture this scene from the life of Jesus. Then begin the decade.')) + '</p>';
-        else {
+        if (s.name != null) h += '<div class="mystery">' + esc(t(ORD[s.decade])) + ' ' + esc(t('Mystery')) + ': ' + esc(s.name) + '</div>';
+        if (s.announce) {
+          const x = s.x;
+          h += '<h2>' + esc(s.name) + '</h2>';
+          if (x.verse) h += '<blockquote class="verse myst-verse">' + esc(x.verse) + '<cite>' + esc(x.verseRef) + (x.ref && x.ref !== x.verseRef ? ' · ' + esc(t('read')) + ' ' + esc(x.ref) : '') + '</cite></blockquote>';
+          if (x.reflect) h += '<p class="myst-reflect">' + esc(x.reflect) + '</p>';
+          if (x.fruit) h += '<p class="fruit">' + icon('sparkle') + '<span>' + esc(t('Fruit of the mystery')) + ': <strong>' + esc(x.fruit) + '</strong>. ' + esc(t('Ask God for this grace as you pray.')) + '</span></p>';
+          if (!x.verse) h += '<p class="muted">' + esc(t('Take a moment to picture this scene from the life of Jesus. Then begin the decade.')) + '</p>';
+        } else {
+          if (s.x && s.x.scene) h += '<p class="scene">' + esc(s.x.scene) + (s.x.fruit ? ' · ' + esc(s.x.fruit) : '') + '</p>';
           h += '<h2>' + esc(s.prayer.title) + (s.count ? ' <span class="muted" style="font-size:.7em">' + s.count + '/10</span>' : '') + '</h2>';
+          if (s.count) h += '<div class="decade-dots" aria-hidden="true">' + Array.from({ length: 10 }, (_, k) => '<span class="' + (k < s.count - 1 ? 'done' : k === s.count - 1 ? 'now' : '') + '"></span>').join('') + '</div>';
           if (s.note) h += '<p class="muted">' + esc(s.note) + '</p>';
           if (showWords) h += '<div class="prayer-text">' + esc(s.prayer.text) + '</div>';
         }
-        if (s.end) h += '<p class="muted" style="margin-top:14px">' + esc(t('You have finished the Rosary. Well done.')) + '</p>';
+        if (s.end) h += '<p class="muted" style="margin-top:14px">' + esc(only != null ? t('You have finished this decade. Well done.') : t('You have finished the Rosary. Well done.')) + '</p>';
         stage.innerHTML = h;
-        if (aloud) speak(s.announce ? [t(['First', 'Second', 'Third', 'Fourth', 'Fifth'][s.decade]) + ' ' + t('Mystery') + ': ' + s.name + '.'] : [s.prayer.title + '.'].concat(s.prayer.text.split('\n')), { gap: () => 120 });
+        if (aloud) speak(s.announce ? [t(ORD[s.decade]) + ' ' + t('Mystery') + ': ' + s.name + '.'].concat(s.x.verse ? [s.x.verse, s.x.reflect || ''] : []).filter(Boolean) : [s.prayer.title + '.'].concat(s.prayer.text.split('\n')), { gap: () => 120 });
         root.querySelector('#prev').disabled = i === 0;
         root.querySelector('#next').innerHTML = s.end ? icon('check') + esc(t('Finish')) : esc(t('Next')) + icon('chevron');
+        remember();
       };
+      const goTo = n => { i = n; resumed = false; showResume(); draw(); stage.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+      root.querySelectorAll('[data-jump]').forEach(b => b.onclick = () => { only = null; build(); goTo(steps.findIndex(s => s.announce && s.decade === +b.dataset.jump)); });
+      root.querySelectorAll('[data-one]').forEach(b => b.onclick = () => { only = +b.dataset.one; build(); goTo(0); });
       root.querySelector('#prev').onclick = () => { if (i > 0) { i--; draw(); } };
-      root.querySelector('#next').onclick = () => { if (i < steps.length - 1) { i++; draw(); } else { toast(t('Rosary complete')); location.hash = '#/pray'; } };
+      root.querySelector('#next').onclick = () => {
+        if (i < steps.length - 1) { i++; draw(); }
+        else { state.settings.rosaryAt = null; save(); toast(only != null ? t('Decade complete') : t('Rosary complete')); location.hash = '#/pray'; }
+      };
       root.querySelector('#words').onchange = e => { showWords = e.target.checked; draw(); };
       const al = root.querySelector('#aloud');
       if (al) al.onchange = e => { aloud = e.target.checked; state.settings.rosaryAloud = aloud; save(); if (aloud) draw(); else stopSpeech(); };
+      showResume();
       draw();
     }
   };
