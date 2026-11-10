@@ -9,6 +9,7 @@ const rerender = () => document.dispatchEvent(new Event('heartward:render'));
 export function view() {
   const html = head(t('Learn'), t('Learn the faith'), t('Guides for everything that can feel new: Mass, prayers, words, saints and the Church year.')) +
     '<div class="tiles">' +
+    tile('#/bible', 'book', t('Bible study'), t('Read, understand, pray and live God\'s Word, with reading plans'), 'dark wide') +
     tile('#/mass', 'church', t('Mass guide'), t('Each part, and when to sit, stand or kneel')) +
     tile('#/basics', 'sparkle', t('First-week basics'), t('Holy water, genuflecting and more')) +
     tile('#/questions', 'question', t('Questions'), data.faq.length + ' ' + t('answers')) +

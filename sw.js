@@ -28,6 +28,7 @@ var SHELL = [
   'js/views/week.js',
   'js/views/extras.js',
   'js/views/more.js',
+  'js/views/bible.js',
   'js/speech.js',
   'content/en/calendar.json',
   'content/en/faq.json',
@@ -41,6 +42,8 @@ var SHELL = [
   'content/en/extras.json',
   'content/en/feasts.json',
   'content/en/more.json',
+  'content/en/bible.json',
+  'content/en/scripture.json',
   'content/es/prayers.json',
   'content/parish.json'
 ];

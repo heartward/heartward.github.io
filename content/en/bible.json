@@ -1,0 +1,650 @@
+{
+  "intro": "Bible study means reading a passage slowly, understanding it with the Church, praying with it, and letting it change one thing in your week. Start with the short guide, then follow a plan.",
+  "prayer": "Come, Holy Spirit. Open my heart to your Word. Help me hear what you want to say to me today, and give me the grace to live it. Amen.",
+  "method": [
+    {
+      "id": "read",
+      "name": "Read",
+      "about": "Read the passage slowly, twice if you can. Reading it aloud helps. Notice a word or line that stands out."
+    },
+    {
+      "id": "understand",
+      "name": "Understand",
+      "about": "Ask what it meant when it was written. A short note helps you, with a Catechism paragraph to go further."
+    },
+    {
+      "id": "pray",
+      "name": "Pray",
+      "about": "Use the questions to talk with God about what struck you. Write a line or two if you like."
+    },
+    {
+      "id": "live",
+      "name": "Live",
+      "about": "Choose one small step for this week. God's Word is meant to be lived, not only read."
+    }
+  ],
+  "guide": [
+    {
+      "title": "The Bible is a library",
+      "figure": "canon",
+      "body": [
+        "The Bible is not one book but a library of 73 books, written over more than a thousand years by many writers. The Church teaches that God is its true author: he inspired the human writers, who wrote in their own words and styles (Catechism 105-106).",
+        "The Old Testament has 46 books: the story of God and his people Israel, the prophets, and prayers like the Psalms. The New Testament has 27 books: the four Gospels about Jesus, the Acts of the Apostles, letters to the first Christians, and Revelation.",
+        "Catholic Bibles have seven books that most Protestant Bibles leave out, such as Tobit, Wisdom and 1 and 2 Maccabees. That is why a Catholic Bible is a little thicker."
+      ]
+    },
+    {
+      "title": "How to find a passage",
+      "body": [
+        "A reference like Luke 24:13-35 means: the book of Luke, chapter 24, verses 13 to 35. The big number is the chapter, the small numbers after the colon are the verses.",
+        "Use the table of contents at the front. The four Gospels (Matthew, Mark, Luke, John) open the New Testament, about three quarters of the way through.",
+        "You will see short names too: Mt, Mk, Lk and Jn for the Gospels, Gn for Genesis, Ps for Psalms, 1 Cor for the First Letter to the Corinthians.",
+        "One small surprise: older Catholic Bibles, like the Douay-Rheims used in this app, number most Psalms one lower. The Psalm \"The Lord is my shepherd\" is Psalm 23 in a modern Bible and Psalm 22 in the Douay-Rheims."
+      ]
+    },
+    {
+      "title": "Which Bible to use in Canada",
+      "body": [
+        "At Mass in Canada, the readings come from the Lectionary approved by the Canadian Conference of Catholic Bishops. It is based on the New Revised Standard Version (NRSV).",
+        "For your own Bible, choose a Catholic edition with all 73 books. The NRSV Catholic Edition matches the wording you hear at Mass in Canada. The Revised Standard Version, Second Catholic Edition, is another good choice. Look for \"Catholic Edition\" on the cover.",
+        "Inside Heartward, the passages are from the Douay-Rheims, an older Catholic translation that anyone may share freely. That lets the app keep the text on your phone, so it works offline. Its English is old fashioned: \"thee\" means you, and \"charity\" means love. Each study also links to the passage in the NRSV."
+      ]
+    },
+    {
+      "title": "How Catholics read the Bible",
+      "body": [
+        "Catholics read the Bible with the Church, not alone. Scripture and Tradition come from the same source, God, and they belong together (Catechism 80-82).",
+        "The Catechism gives three simple rules: read each passage as part of the whole Bible, read it within the living Tradition of the Church, and read it in harmony with the faith as a whole (Catechism 112-114).",
+        "A passage has a literal sense, what the writer meant to say, and a spiritual sense, how it points to Christ, to how we should live, and to heaven (Catechism 115-117).",
+        "If a passage is hard or troubling, that is normal. Write your question down and bring it to your catechist, your sponsor or a priest."
+      ]
+    },
+    {
+      "title": "Where to start",
+      "body": [
+        "Start with the Gospels, because they are about Jesus himself. Mark is the shortest and moves quickly. Luke shows God's mercy again and again.",
+        "Read this Sunday's Gospel before Mass. You will hear it with new ears.",
+        "The Psalms are prayers you can borrow when you do not have your own words."
+      ]
+    },
+    {
+      "title": "Making it a habit",
+      "body": [
+        "Ten or fifteen minutes is enough. Keep the same time and place each day if you can, like morning coffee or before bed.",
+        "Begin with a short prayer to the Holy Spirit. Read slowly. Write one line about what struck you. End with an Our Father.",
+        "Missing a day is fine. Just pick up where you left off."
+      ]
+    }
+  ],
+  "studies": {
+    "s01": {
+      "understand": "Two disciples leave Jerusalem on Easter Sunday, sad and confused. Jesus joins them, explains the Scriptures, and they recognize him when he breaks bread. The Church sees the shape of the Mass here: first the Word, then the Eucharist.",
+      "ccc": "1347",
+      "live": "Take a slow walk this week and talk to Jesus as if he were walking beside you."
+    },
+    "s03": {
+      "understand": "Jesus warns against praying to be seen and gives his disciples the Our Father. The Church calls it the summary of the whole Gospel: it teaches us what to ask for and in what order.",
+      "ccc": "2759-2765",
+      "live": "Pray the Our Father slowly once a day, stopping after each line."
+    },
+    "sym1-01": {
+      "understand": "Before he returns to the Father, Jesus sends the apostles to all nations. He tells them to baptize in one name, of the Father, the Son and the Holy Spirit: one God in three Persons. He promises to stay with us always.",
+      "ccc": "232-233",
+      "live": "Make the Sign of the Cross slowly each morning, remembering that it names the Trinity."
+    },
+    "sym1-02": {
+      "understand": "The religious leaders complain that Jesus eats with sinners. He answers with two stories about searching. God is the one who goes looking, and heaven rejoices over one person who comes home.",
+      "ccc": "545",
+      "live": "Thank God for one way he came looking for you on your journey to the Church."
+    },
+    "sym1-03": {
+      "understand": "Paul, near the end of his life, reminds Timothy that Scripture is inspired by God and useful for teaching and for growing in holiness. The Church teaches that God speaks to us through human words.",
+      "ccc": "105-107",
+      "live": "Choose a regular time this week to read the Bible for ten minutes."
+    },
+    "sym1-04": {
+      "understand": "The serpent plants doubt, and the first humans stop trusting God. Their sin wounds everything. But in the same chapter, God promises that the woman's offspring will crush the serpent. The Church calls this the first announcement of the Gospel.",
+      "ccc": "397, 410-411",
+      "live": "Notice one moment this week when you are tempted to doubt God's goodness, and say a short prayer of trust."
+    },
+    "sym1-05": {
+      "understand": "Jesus asks his friends who they say he is. Peter answers that he is the Christ, the Son of the living God. Jesus gives Peter the keys of the kingdom, and the Church sees here the beginning of Peter's role among the apostles.",
+      "ccc": "424, 553",
+      "live": "Answer Jesus' question in your own words, and write it down."
+    },
+    "sym1-06": {
+      "understand": "John tells the crucifixion simply. Jesus carries his cross, gives his mother to the beloved disciple, and says \"It is consummated\" (in modern Bibles, \"It is finished\"): his work of love is complete. He gives his life freely for us.",
+      "ccc": "613-616",
+      "live": "Look at a crucifix for one quiet minute each day and say thank you."
+    },
+    "sym1-07": {
+      "understand": "Fifty days after Easter, the Holy Spirit comes on the disciples gathered in prayer, like wind and fire. They speak so that people of every nation understand. This is the birthday of the Church.",
+      "ccc": "731-732",
+      "live": "Before each meal or task this week, pray: \"Come, Holy Spirit.\""
+    },
+    "sym1-08": {
+      "understand": "The first Christians held to four things: the apostles' teaching, the community, the breaking of bread, and the prayers. The Church still lives these today, especially at Sunday Mass.",
+      "ccc": "1342, 2624",
+      "live": "Introduce yourself to one person at your parish this week."
+    },
+    "sym1-09": {
+      "understand": "The angel Gabriel greets Mary as full of grace and asks her to become the mother of the Son of God. She asks how, then gives her free yes: \"be it done to me according to thy word.\"",
+      "ccc": "484-494",
+      "live": "Pray the Hail Mary each day, thinking of Mary's yes."
+    },
+    "sym1-10": {
+      "understand": "Jesus weeps at the tomb of his friend, then calls Lazarus out alive. He tells Martha, \"I am the resurrection and the life.\" Our hope in eternal life rests on Jesus himself.",
+      "ccc": "994",
+      "live": "Pray for someone you love who has died, and for those who mourn them."
+    },
+    "sym2-01": {
+      "understand": "Nicodemus, a teacher, comes to Jesus at night. Jesus tells him he must be \"born again of water and the Holy Ghost\" (the Holy Spirit). The Church understands this as Baptism, the door to new life.",
+      "ccc": "1215, 1257",
+      "live": "Bless yourself with holy water when you enter church, remembering Baptism."
+    },
+    "sym2-02": {
+      "understand": "Jesus says he is the bread of life and that his flesh is real food. Many disciples find this too hard and leave. Peter stays: \"Lord, to whom shall we go?\" The Church sees here Jesus' promise of the Eucharist.",
+      "ccc": "1336, 1384",
+      "live": "At Mass this week, watch the moment the priest lifts the Host, and say quietly, \"My Lord and my God.\""
+    },
+    "sym2-03": {
+      "understand": "At the Passover meal, Jesus takes bread and says, \"This is my body.\" Over the cup he speaks of \"the new testament in my blood\" (testament means covenant). He tells the apostles to do this in memory of him. Every Mass makes this gift present.",
+      "ccc": "1339-1340",
+      "live": "Listen closely for these words of Jesus at the next Mass you attend."
+    },
+    "sym2-04": {
+      "understand": "A son wastes everything and comes home ashamed. His father runs to meet him before he can finish his apology. This is the picture of God's mercy in the sacrament of Confession.",
+      "ccc": "1439",
+      "live": "Say an Act of Contrition each night, trusting the Father runs to meet you."
+    },
+    "sym2-05": {
+      "understand": "At a wedding, the wine runs out. Mary tells the servants, \"Whatsoever he shall say to you, do ye.\" Jesus' first sign is at a marriage, and the Church sees in it his blessing on marriage.",
+      "ccc": "1613",
+      "live": "Pray for a married couple you know, and for anyone you know preparing for marriage or priesthood."
+    },
+    "sym2-06": {
+      "understand": "Jesus begins his Sermon on the Mount with the Beatitudes. They describe what the happiness of God's kingdom looks like, and they paint a portrait of Jesus himself.",
+      "ccc": "1716-1717",
+      "live": "Pick one Beatitude and look for a chance to live it this week."
+    },
+    "sym2-07": {
+      "understand": "Paul writes to a quarrelsome church that gifts and knowledge mean nothing without love. Love, which the Douay-Rheims calls charity, is patient and kind and never ends. It is the greatest of the virtues.",
+      "ccc": "1822-1827",
+      "live": "Read verses 4 to 7 again and put your name in place of \"charity.\" Where is God inviting you to grow?"
+    },
+    "sym2-08": {
+      "understand": "God sees that it is not good for the man to be alone and creates the woman. They are equal, made for each other, and become \"one flesh.\" Jesus points back to this passage when he speaks of marriage.",
+      "ccc": "371-372, 1605",
+      "live": "Thank God for the people he has given you so that you are not alone."
+    },
+    "sym2-09": {
+      "understand": "Jesus describes the last judgment. What we do for the hungry, the stranger, the sick and the prisoner, we do for him. The Church lists these as the works of mercy.",
+      "ccc": "2447",
+      "live": "Do one work of mercy this week: a meal, a visit, a donation or a kind call."
+    },
+    "sym2-10": {
+      "understand": "God creates man and woman in his own image and blesses them, and he sees everything he made as very good. Every person, without exception, carries this dignity.",
+      "ccc": "355-357",
+      "live": "When someone annoys you this week, remind yourself silently: \"made in God's image.\""
+    },
+    "s26": {
+      "understand": "Jesus speaks about three practices: giving to the poor, praying, and fasting. Do them for God, not to be seen. The Church makes these the three pillars of Lent.",
+      "ccc": "1434, 1969",
+      "live": "Choose one small act of prayer, fasting and almsgiving for this week."
+    },
+    "s27": {
+      "understand": "Jesus gives sight to a man born blind. The man's faith grows step by step, while others refuse to see. Early Christians called Baptism \"enlightenment,\" and this Gospel is read at the scrutinies during Lent.",
+      "ccc": "1216",
+      "live": "Ask Jesus to show you one thing in your life you have not wanted to see."
+    },
+    "s28": {
+      "understand": "Paul hands on what he received: Christ died for our sins, was buried, rose on the third day, and appeared to many witnesses. This is the heart of the Creed you will soon profess.",
+      "ccc": "186, 639-642",
+      "live": "Pray the Creed slowly once this week, and stop at the line that moves you most."
+    },
+    "s29": {
+      "understand": "The disciples ask Jesus to teach them to pray, and he gives them the Our Father. Then he tells of a friend who knocks at midnight: keep asking, because the Father loves to give the Holy Spirit.",
+      "ccc": "2613, 2759",
+      "live": "Bring one need to God every day this week, and don't give up."
+    },
+    "s30": {
+      "understand": "Mary Magdalene finds the tomb empty and weeps. Jesus calls her by name, and she knows him. He sends her to tell the apostles. She is the first witness of the Resurrection.",
+      "ccc": "640-641",
+      "live": "Tell one person this week why Easter matters to you."
+    },
+    "s31": {
+      "understand": "This passage returns to the first Christians: teaching, community, the breaking of bread and prayer. Now that you have received the sacraments, this is the life you share with them.",
+      "ccc": "1342, 2624",
+      "live": "Choose one way to keep growing after Easter: a parish group, a ministry, or daily prayer."
+    },
+    "s32": {
+      "understand": "The road began here and ends here. After the two disciples recognize Jesus, they get up at once and run back to tell the others. Every Mass ends the same way: go and announce the Gospel.",
+      "ccc": "1329, 1347",
+      "live": "Share your story of coming to the Church with one person this week."
+    }
+  },
+  "plans": {
+    "rcia": {
+      "title": "My RCIA road",
+      "sub": "One passage for each session, in order",
+      "about": "Each week of RCIA has a Bible passage that goes with the lesson. Study it before or after class. The one for your next session is marked."
+    },
+    "mark": {
+      "title": "Meet Jesus in Mark",
+      "sub": "The whole Gospel in 16 days",
+      "about": "Mark is the shortest Gospel and the best place to start. One chapter a day takes you through the whole life of Jesus in about two weeks. Mark writes quickly: watch for the word \"immediately.\"",
+      "days": [
+        {
+          "id": "mark-01",
+          "ref": "Mark 1:1-45",
+          "title": "The beginning",
+          "intro": "John the Baptist prepares the way, Jesus is baptized, calls the first disciples and heals many.",
+          "understand": "Mark starts with no Christmas story: he jumps straight to Jesus' public life. At his baptism the Father speaks and the Spirit descends, so the whole Trinity is present. Jesus then calls ordinary fishermen to follow him.",
+          "ccc": "535-536",
+          "questions": [
+            "Simon and Andrew left their nets \"immediately.\" What is one net you find hard to leave?",
+            "Jesus gets up early to pray alone (verse 35). When could you do the same?"
+          ],
+          "live": "Find a quiet five minutes early in the day to pray, as Jesus did."
+        },
+        {
+          "id": "mark-02",
+          "ref": "Mark 2:1-28",
+          "title": "Who can forgive sins?",
+          "intro": "Friends lower a paralyzed man through a roof, Jesus forgives his sins, calls a tax collector and eats with sinners.",
+          "understand": "Jesus first says \"thy sins are forgiven,\" and the scribes are shocked, because only God can forgive sins. Healing the man shows he has that power. Jesus gave this power to his apostles, and it lives on in Confession.",
+          "ccc": "1441-1442",
+          "questions": [
+            "The friends carried the man to Jesus. Who carried you toward Jesus?",
+            "Who could you carry to Jesus in prayer this week?"
+          ],
+          "live": "Pray by name for one friend who needs Jesus."
+        },
+        {
+          "id": "mark-03",
+          "ref": "Mark 3:1-35",
+          "title": "Jesus chooses the Twelve",
+          "intro": "Crowds come from everywhere. Jesus chooses twelve apostles and says who his true family is.",
+          "understand": "Jesus goes up a mountain and chooses twelve, like the twelve tribes of Israel: he is gathering a new People of God. The Church is built on these apostles, and the bishops are their successors.",
+          "ccc": "551, 765",
+          "questions": [
+            "Jesus called \"whom he would himself\" (verse 13). How does it feel to know you are chosen?",
+            "Jesus says whoever does God's will is his brother, sister and mother. What does that mean for you?"
+          ],
+          "live": "Learn the name of your bishop and pray for him."
+        },
+        {
+          "id": "mark-04",
+          "ref": "Mark 4:1-41",
+          "title": "Seeds and storms",
+          "intro": "The parable of the sower, the mustard seed, and Jesus calming the storm.",
+          "understand": "Parables are short stories that invite us to think. The seed is God's Word, and we are the soil. In the storm, the disciples learn that Jesus is Lord even of wind and sea.",
+          "ccc": "546",
+          "questions": [
+            "Which kind of soil are you most like right now?",
+            "What storm in your life do you need to bring to Jesus?"
+          ],
+          "live": "When you feel worried this week, pray the words of Jesus: \"Peace, be still.\""
+        },
+        {
+          "id": "mark-05",
+          "ref": "Mark 5:1-43",
+          "title": "Power over evil, sickness and death",
+          "intro": "Jesus frees a man from many demons, heals a woman who touches his cloak, and raises a little girl.",
+          "understand": "Three stories show Jesus' power over everything that harms us. The woman had suffered twelve years and the girl was twelve years old. To both, Jesus says that faith is what opens the door.",
+          "ccc": "547-549",
+          "questions": [
+            "The woman only touched his cloak. What does it mean to reach out to Jesus in faith?",
+            "Jesus tells Jairus, \"Fear not, only believe.\" Where do you need to hear that?"
+          ],
+          "live": "Bring one fear to Jesus each day this week and leave it with him."
+        },
+        {
+          "id": "mark-06",
+          "ref": "Mark 6:1-56",
+          "title": "Bread in the desert",
+          "intro": "Jesus is rejected at home, sends out the Twelve, feeds five thousand and walks on the water.",
+          "understand": "Jesus takes bread, blesses it, breaks it and gives it: the same four actions as at the Last Supper and at every Mass. The miracle points ahead to the Eucharist.",
+          "ccc": "1335",
+          "questions": [
+            "The disciples had only five loaves and two fish. What small thing could you offer Jesus?",
+            "Even at home, people doubted Jesus. Have you faced doubt from people close to you?"
+          ],
+          "live": "At Mass, watch for the four actions: take, bless, break, give."
+        },
+        {
+          "id": "mark-07",
+          "ref": "Mark 7:1-37",
+          "title": "A clean heart",
+          "intro": "What truly makes a person unclean, a mother's faith, and the healing of a deaf man.",
+          "understand": "Jesus teaches that evil comes from the heart, not from food. He heals a deaf man by touching him and saying \"Ephpheta\": be thou opened. The priest uses this gesture at some Baptisms, praying that we hear God's Word.",
+          "ccc": "1151, 1504",
+          "questions": [
+            "The mother kept asking even when it was hard. What do you keep asking God for?",
+            "What would you like Jesus to \"open\" in you?"
+          ],
+          "live": "Before reading the Bible, touch your ears and pray, \"Lord, open my ears to your Word.\""
+        },
+        {
+          "id": "mark-08",
+          "ref": "Mark 8:1-38",
+          "title": "Who do you say I am?",
+          "intro": "Another feeding, Peter's answer, and the first time Jesus speaks of the cross.",
+          "understand": "This is the turning point of Mark. Peter says Jesus is the Christ, but cannot accept a suffering Messiah. Jesus says that to follow him means to take up our own cross.",
+          "ccc": "618",
+          "questions": [
+            "Who do you say Jesus is today?",
+            "What cross is in front of you right now?"
+          ],
+          "live": "Offer one difficult moment this week to Jesus, joined to his cross."
+        },
+        {
+          "id": "mark-09",
+          "ref": "Mark 9:1-49",
+          "title": "On the mountain",
+          "intro": "The Transfiguration, the healing of a boy, and an argument about who is the greatest.",
+          "understand": "On the mountain the apostles see Jesus' glory, to strengthen them for the cross ahead. Then a father cries, \"I do believe, Lord: help my unbelief.\" It is a prayer anyone can pray.",
+          "ccc": "554-556",
+          "questions": [
+            "Have you had a \"mountain\" moment when God felt close?",
+            "Is \"help my unbelief\" a prayer you need?"
+          ],
+          "live": "Pray \"Lord, I believe; help my unbelief\" whenever doubts come this week."
+        },
+        {
+          "id": "mark-10",
+          "ref": "Mark 10:1-52",
+          "title": "The way of the servant",
+          "intro": "Marriage, little children, a rich man who walks away, and blind Bartimaeus who follows.",
+          "understand": "Jesus teaches that marriage is for life, welcomes children, and invites a rich man to leave everything. He says he came \"not to be ministered unto, but to minister.\" Bartimaeus, healed, follows Jesus on the road.",
+          "ccc": "1614-1615, 2053",
+          "questions": [
+            "Jesus looked at the rich man and loved him. What might Jesus ask you to let go of?",
+            "Bartimaeus kept calling out. What would you shout to Jesus?"
+          ],
+          "live": "Do one quiet act of service this week that nobody will notice."
+        },
+        {
+          "id": "mark-11",
+          "ref": "Mark 11:1-33",
+          "title": "The King arrives",
+          "intro": "Jesus enters Jerusalem on a colt, clears the Temple, and teaches about faith and forgiveness.",
+          "understand": "The crowd cries \"Hosanna,\" the words we sing at every Mass before the Eucharistic Prayer. Jesus is a humble king who comes on a colt, not a war horse. On Palm Sunday the Church walks this road with him.",
+          "ccc": "559-560",
+          "questions": [
+            "How do you welcome Jesus into your life?",
+            "Jesus links prayer and forgiveness (verse 25). Who do you need to forgive?"
+          ],
+          "live": "Sing or say the Holy, Holy (\"Hosanna in the highest\") with attention at your next Mass."
+        },
+        {
+          "id": "mark-12",
+          "ref": "Mark 12:1-44",
+          "title": "The greatest commandment",
+          "intro": "Questions in the Temple, the two great commandments, and a poor widow's gift.",
+          "understand": "Asked for the first commandment, Jesus joins two: love God with all you are, and love your neighbour as yourself. The poor widow gives only two small coins, but she gives everything.",
+          "ccc": "2083, 2055",
+          "questions": [
+            "Which is harder for you: loving God with all your heart, or loving your neighbour?",
+            "What would it mean to give God \"all\" like the widow?"
+          ],
+          "live": "Give something this week that costs you a little: time, money or patience."
+        },
+        {
+          "id": "mark-13",
+          "ref": "Mark 13:1-37",
+          "title": "Stay awake",
+          "intro": "Jesus speaks of the end of the age and tells his friends to watch.",
+          "understand": "Jesus warns of hard times but tells his disciples not to be afraid. No one knows the day or hour of his return, so the point is not to guess but to be ready, living each day faithfully.",
+          "ccc": "673-674",
+          "questions": [
+            "Jesus says \"Watch\" three times. What does being watchful look like in daily life?",
+            "What would you want to be doing when Jesus comes?"
+          ],
+          "live": "End each day this week by asking: did I live today ready to meet Jesus?"
+        },
+        {
+          "id": "mark-14",
+          "ref": "Mark 14:1-72",
+          "title": "The night before",
+          "intro": "A woman anoints Jesus, the Last Supper, the prayer in Gethsemane, his arrest, and Peter's denial.",
+          "understand": "At supper Jesus gives his Body and Blood. In the garden he prays \"Abba, Father\" and accepts the Father's will. Peter, who promised never to leave, denies him three times, then weeps.",
+          "ccc": "612, 1337",
+          "questions": [
+            "Jesus asks his friends to stay awake with him. How can you keep him company?",
+            "Peter failed and wept. How does his story give you hope?"
+          ],
+          "live": "Spend a few minutes with Jesus in a church or chapel this week, keeping him company."
+        },
+        {
+          "id": "mark-15",
+          "ref": "Mark 15:1-47",
+          "title": "The cross",
+          "intro": "Jesus before Pilate, the crucifixion, his death and burial.",
+          "understand": "Jesus cries out the first line of Psalm 22, a prayer that begins in anguish and ends in trust. When he dies, a Roman soldier says, \"Indeed this man was the son of God.\" The first to confess this is a stranger.",
+          "ccc": "603, 624",
+          "questions": [
+            "Simon of Cyrene helped carry the cross. Whose cross could you help carry?",
+            "What does the centurion's words mean to you?"
+          ],
+          "live": "Help someone with a burden this week, like Simon of Cyrene."
+        },
+        {
+          "id": "mark-16",
+          "ref": "Mark 16:1-20",
+          "title": "He is risen",
+          "intro": "The women find the tomb empty. The risen Jesus appears and sends the disciples into the whole world.",
+          "understand": "The women come to anoint a body and find an angel instead: \"He is risen, he is not here.\" Jesus sends the disciples to preach to every creature. The story continues in us.",
+          "ccc": "640, 659",
+          "questions": [
+            "The women were afraid at first. What makes the Resurrection hard or wonderful to believe?",
+            "Who in your life needs good news?"
+          ],
+          "live": "Thank God for walking you through the whole Gospel, and choose the next Gospel to read."
+        }
+      ]
+    },
+    "story": {
+      "title": "The big story",
+      "sub": "15 moments from Creation to the new creation",
+      "about": "The Bible tells one story: God makes us, we turn away, and God never stops coming after us until he sends his Son. These fifteen moments give you the whole map, so every passage you hear at Mass has a place.",
+      "days": [
+        {
+          "id": "story-01",
+          "ref": "Genesis 1:1-31",
+          "title": "Creation",
+          "intro": "God makes everything, and makes man and woman in his image.",
+          "understand": "Genesis tells the truth that God made everything out of love, and that it is good. It is not a science textbook; it answers who made the world and why. Human beings are the crown of creation.",
+          "ccc": "290, 299",
+          "questions": [
+            "God sees that it is \"very good.\" What in creation fills you with wonder?",
+            "What does it mean to you to be made in God's image?"
+          ],
+          "live": "Step outside once this week just to look at creation and thank God."
+        },
+        {
+          "id": "story-02",
+          "ref": "Genesis 3:1-24",
+          "title": "The fall",
+          "intro": "The first sin, and the first promise of a Savior.",
+          "understand": "Adam and Eve stop trusting God and choose their own way. Sin brings shame, blame and death. But God goes looking: \"Where art thou?\" and promises that evil will be crushed.",
+          "ccc": "397-399, 410",
+          "questions": [
+            "God asks Adam, \"Where art thou?\" How would you answer today?",
+            "Why do you think they hid from God?"
+          ],
+          "live": "When you notice yourself hiding from God this week, turn back with a short prayer."
+        },
+        {
+          "id": "story-03",
+          "ref": "Genesis 9:8-17",
+          "title": "Noah and the rainbow",
+          "intro": "After the flood, God makes a covenant with all living things.",
+          "understand": "A covenant is a sacred family bond, stronger than a contract. God promises Noah he will never destroy the earth by flood, and gives the rainbow as a sign. The Church sees the flood as a picture of Baptism.",
+          "ccc": "56-58, 1219",
+          "questions": [
+            "What promises of God do you hold on to?",
+            "What does a rainbow remind you of now?"
+          ],
+          "live": "Each time you see water this week, remember your Baptism (or the one you are preparing for)."
+        },
+        {
+          "id": "story-04",
+          "ref": "Genesis 12:1-9",
+          "title": "Abraham's journey",
+          "intro": "God calls Abram to leave home and promises to bless all nations through him.",
+          "understand": "Abraham trusts God and sets out without knowing where he is going. He is our father in faith. God's promise to bless all nations through him comes true in Jesus.",
+          "ccc": "59-61, 145",
+          "questions": [
+            "Like Abraham, you are on a journey. What have you had to leave behind?",
+            "What makes it hard to trust God with the unknown?"
+          ],
+          "live": "Hand one uncertain thing to God each morning this week."
+        },
+        {
+          "id": "story-05",
+          "ref": "Exodus 3:1-15",
+          "title": "The burning bush",
+          "intro": "God calls Moses and tells him his name.",
+          "understand": "God hears his people's cry in slavery and comes to save them. He tells Moses his name, \"I am who am\": God simply is, and is always with us. Jews do not say this name out of reverence.",
+          "ccc": "203-205",
+          "questions": [
+            "God says, \"I have seen the affliction of my people.\" Do you believe God sees what you carry?",
+            "Moses took off his shoes. Where is your holy ground?"
+          ],
+          "live": "Make a small sign of reverence when you enter church: a bow or a genuflection, done slowly."
+        },
+        {
+          "id": "story-06",
+          "ref": "Exodus 12:1-14",
+          "title": "The Passover",
+          "intro": "The lamb's blood on the doors, and the night of freedom.",
+          "understand": "Each family sacrifices a lamb and eats it, and its blood saves them. The Jewish people still remember this every year. Jesus is the new Passover Lamb, and the Mass is the new Passover meal.",
+          "ccc": "1340, 1364",
+          "questions": [
+            "At Mass the priest says \"Behold the Lamb of God.\" What does that mean to you now?",
+            "What has God freed you from?"
+          ],
+          "live": "Listen for \"Lamb of God\" at Mass this week and remember the Passover."
+        },
+        {
+          "id": "story-07",
+          "ref": "Exodus 20:1-17",
+          "title": "The Ten Commandments",
+          "intro": "God gives his people the ten words of the covenant.",
+          "understand": "God first frees his people, then gives them the commandments. They are a way to stay free, not a burden. The first three are about loving God, the other seven about loving our neighbour.",
+          "ccc": "2056-2062",
+          "questions": [
+            "Which commandment do you find most freeing? Which is hardest?",
+            "Why do you think God gave the commandments after freeing his people, not before?"
+          ],
+          "live": "Use the commandments as a short examination of conscience one night this week."
+        },
+        {
+          "id": "story-08",
+          "ref": "2 Samuel 7:8-16",
+          "title": "A king forever",
+          "intro": "God promises King David a son whose kingdom will last forever.",
+          "understand": "David wants to build God a house, but God promises to build David a \"house,\" a royal family. His throne will be firm forever. The angel tells Mary that Jesus will receive the throne of David.",
+          "ccc": "709, 439",
+          "questions": [
+            "God says, \"I took thee out of the pastures.\" Where did God find you?",
+            "How is Jesus a king unlike any other?"
+          ],
+          "live": "Pray \"Thy kingdom come\" slowly each day this week."
+        },
+        {
+          "id": "story-09",
+          "ref": "Jeremiah 31:31-34",
+          "title": "A new covenant",
+          "intro": "In a time of exile, God promises to write his law on our hearts.",
+          "understand": "The people broke the covenant and lost their land. Yet through the prophets God promises something new: a covenant written on hearts, with sins forgiven. At the Last Supper Jesus speaks of \"the new testament in my blood\": the new covenant has come.",
+          "ccc": "64, 715",
+          "questions": [
+            "What would it mean to have God's law written on your heart?",
+            "God says \"I will remember their sin no more.\" How does that feel?"
+          ],
+          "live": "Ask God each morning to write his love on your heart."
+        },
+        {
+          "id": "story-10",
+          "ref": "Isaiah 53:1-12",
+          "title": "The suffering servant",
+          "intro": "A servant who carries the sins of many.",
+          "understand": "Hundreds of years before Jesus, Isaiah describes a servant despised, wounded for our sins, and silent like a lamb. The first Christians saw Jesus in these words, and the Church reads them on Good Friday.",
+          "ccc": "601, 713",
+          "questions": [
+            "\"By his bruises we are healed.\" What needs healing in you?",
+            "Which line describes Jesus most clearly to you?"
+          ],
+          "live": "Pray for someone who is suffering unjustly."
+        },
+        {
+          "id": "story-11",
+          "ref": "Luke 2:1-20",
+          "title": "God is born",
+          "intro": "Jesus is born in Bethlehem, and shepherds come to see.",
+          "understand": "The promised King is born in a stable, laid in a manger, and announced first to poor shepherds. God became one of us. This is the Incarnation.",
+          "ccc": "525-526",
+          "questions": [
+            "Why do you think God chose such a humble beginning?",
+            "Mary kept these things in her heart. What do you keep in yours?"
+          ],
+          "live": "Place a nativity or a picture of the Holy Family where you will see it, whatever the season."
+        },
+        {
+          "id": "story-12",
+          "ref": "Luke 23:33-49",
+          "title": "The cross",
+          "intro": "Jesus is crucified between two thieves and forgives.",
+          "understand": "On the cross Jesus forgives those who crucify him and promises paradise to a thief who asks. His death is the sacrifice of the new covenant, the Lamb given for the world.",
+          "ccc": "613-614",
+          "questions": [
+            "\"Lord, remember me.\" Can you pray the thief's prayer?",
+            "Jesus forgives even here. Who is hardest for you to forgive?"
+          ],
+          "live": "Pray \"Jesus, remember me\" each night this week."
+        },
+        {
+          "id": "story-13",
+          "ref": "Luke 24:1-12",
+          "title": "He is risen",
+          "intro": "The women find the tomb empty on the first day of the week.",
+          "understand": "\"Why seek you the living with the dead?\" The Resurrection is the centre of our faith. Sunday is the Lord's Day because Jesus rose on the first day of the week.",
+          "ccc": "638, 2174",
+          "questions": [
+            "The apostles first thought the women's words were nonsense. What helps you believe?",
+            "How can you make Sunday different from the other days?"
+          ],
+          "live": "Make this Sunday a true Lord's Day: Mass, rest and time with people you love."
+        },
+        {
+          "id": "story-14",
+          "ref": "Acts 2:14-41",
+          "title": "The Church is born",
+          "intro": "At Pentecost Peter preaches and three thousand are baptized.",
+          "understand": "Filled with the Spirit, Peter announces Jesus. The people ask, \"What shall we do?\" He answers: repent and be baptized. The story of God's people continues in the Church.",
+          "ccc": "1226-1227, 1287",
+          "questions": [
+            "The crowd \"had compunction in their heart\": they were deeply moved. Have you felt that?",
+            "Peter's answer is for you too. What is your next step?"
+          ],
+          "live": "Talk with your sponsor or catechist about your next step toward the sacraments."
+        },
+        {
+          "id": "story-15",
+          "ref": "Revelation 21:1-7",
+          "title": "All things new",
+          "intro": "A new heaven and a new earth, where God wipes away every tear.",
+          "understand": "The Bible ends where it began, with God making something new. God will live with his people, and there will be no more death or mourning. This is the hope that carries us.",
+          "ccc": "1042-1044",
+          "questions": [
+            "Which tear would you most like God to wipe away?",
+            "How does this hope change the way you live today?"
+          ],
+          "live": "Tell someone who is grieving that you are praying for them."
+        }
+      ]
+    }
+  }
+}

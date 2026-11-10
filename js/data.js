@@ -1,7 +1,7 @@
 import { state } from './store.js';
 // Loads bundled content. Content files live in content/<lang>/; English is the base and other languages overlay it.
 export const data = {};
-const FILES = ['sessions', 'prayers', 'faq', 'guides', 'glossary', 'saints', 'calendar', 'paths', 'study', 'extras', 'feasts', 'more'];
+const FILES = ['sessions', 'prayers', 'faq', 'guides', 'glossary', 'saints', 'calendar', 'paths', 'study', 'extras', 'feasts', 'more', 'bible', 'scripture'];
 const get = p => fetch(p).then(r => { if (!r.ok) throw new Error(p); return r.json(); });
 
 export async function loadData() {
