@@ -1,8 +1,10 @@
 // All personal data lives in this browser only (localStorage). Nothing is ever sent anywhere.
 const KEY = 'heartward:v1';
-// Spanish is switched off for now (the app is English only). Set to true to bring the language option back;
-// the translations stay in js/i18n-es.js and content/es/.
+// Languages offered in Settings. Persian (fa) is right to left and covers the whole app.
+// Spanish is switched off for now; set SPANISH to true to bring it back (js/i18n-es.js, content/es/).
 export const SPANISH = false;
+export const LANGS = SPANISH ? ['en', 'fa', 'es'] : ['en', 'fa'];
+export const RTL = ['fa'];
 
 const defaults = () => ({
   done: {},          // sessionId -> 'YYYY-MM-DD'
@@ -40,7 +42,7 @@ function merge(base, obj) {
   out.sponsor = Object.assign(defaults().sponsor, obj && obj.sponsor);
   out.bibleYear = Object.assign(defaults().bibleYear, obj && obj.bibleYear);
   out.keepsake = Object.assign(defaults().keepsake, obj && obj.keepsake);
-  if (!SPANISH) out.settings.lang = 'en';
+  if (!LANGS.includes(out.settings.lang)) out.settings.lang = 'en';
   return out;
 }
 

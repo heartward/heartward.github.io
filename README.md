@@ -39,7 +39,16 @@ Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 | `content/en/guides.json` | Mass, basics, confession and Rosary guides |
 | `content/en/faq.json`, `glossary.json`, `saints.json`, `calendar.json`, `paths.json` | Questions, words, saints, feasts, and the first-year, welcome-back and get-involved paths |
 | `content/es/prayers.json` | Spanish prayer texts |
+| `js/i18n-fa.js` | Persian (فارسی) menu text, Bible book names and chart labels |
+| `content/fa/*.json` | Persian translations of the content, keyed by the English text. Any text not in the map (for example a lesson edited later in English) shows in English until it is translated |
+| `fonts/` | Vazirmatn, the Persian font, bundled so it works offline (SIL Open Font License) |
 | `content/parish.json` | Settings for one parish (see below) |
+
+## Persian
+
+Settings has a language switch: English or فارسی. Persian turns the whole app right to left, uses Persian digits and the Vazirmatn font, and shows dates on the Gregorian calendar with Persian month names (the Church year follows it). Prayers have a فارسی / English toggle. Read-aloud speaks Persian only when the phone has a Persian voice.
+
+When English content changes, add the new English text and its Persian to the matching `content/fa/*.json` file. Bible references keep their English form in the data (it finds the passage and builds the NRSV link); the Persian is only for display.
 
 ## Setting it up for a parish
 

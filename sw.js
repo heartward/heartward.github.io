@@ -1,6 +1,6 @@
 /* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit.
    Every download skips the browser's own HTTP cache, so a new version never mixes in files from an older one. */
-var CACHE = 'heartward-v27';
+var CACHE = 'heartward-v28';
 var BIBLE = 'heartward-bible'; // the 73 book texts, loaded one at a time and kept across app updates
 var ART = 'heartward-art'; // paintings from Wikimedia Commons, kept across app updates
 var SHELL = [
@@ -15,6 +15,10 @@ var SHELL = [
   'js/data.js',
   'js/figures.js',
   'js/i18n-es.js',
+  'js/i18n-fa.js',
+  'fonts/vazirmatn-400.woff2',
+  'fonts/vazirmatn-600.woff2',
+  'fonts/vazirmatn-700.woff2',
   'js/icons.js',
   'js/liturgy.js',
   'js/main.js',
@@ -48,6 +52,22 @@ var SHELL = [
   'content/en/year.json',
   'content/en/books.json',
   'content/es/prayers.json',
+  'content/fa/sessions.json',
+  'content/fa/prayers.json',
+  'content/fa/faq.json',
+  'content/fa/guides.json',
+  'content/fa/glossary.json',
+  'content/fa/saints.json',
+  'content/fa/calendar.json',
+  'content/fa/paths.json',
+  'content/fa/study.json',
+  'content/fa/extras.json',
+  'content/fa/feasts.json',
+  'content/fa/more.json',
+  'content/fa/bible.json',
+  'content/fa/scripture.json',
+  'content/fa/year.json',
+  'content/fa/books.json',
   'content/parish.json'
 ];
 

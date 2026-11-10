@@ -2,16 +2,20 @@ import { data } from '../data.js';
 import { icon } from '../icons.js';
 import { esc, t, head } from '../ui.js';
 import { lessonText } from '../figures.js';
-import { SPANISH } from '../store.js';
+import { SPANISH, state } from '../store.js';
 import { allStudies } from './bible.js';
+
+// Lower case, and for Persian: one form of ye and kaf, no short vowels or half-spaces, Persian digits as ASCII.
+const norm = s => String(s).toLowerCase().replace(/[يى]/g, 'ی').replace(/ك/g, 'ک').replace(/[ة]/g, 'ه').replace(/[\u064B-\u065F\u0670\u200c\u200f\u200e]/g, '').replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
 
 // One search across everything bundled with the app. All local, so it works offline.
 function index() {
   const items = [];
-  const add = (group, ic, href, title, sub, body) => items.push({ group, ic, href, title, sub, hay: (title + ' ' + (sub || '') + ' ' + (body || '')).toLowerCase() });
+  const add = (group, ic, href, title, sub, body) => items.push({ group, ic, href, title, sub, hay: norm(title + ' ' + (sub || '') + ' ' + (body || '')) });
   data.sessionList.forEach(s => add('Sessions', 'road', '#/session/' + s.id, s.title, s.summary, lessonText(s.lesson) + ' ' + (s.deeper || []).map(d => d.title + ' ' + lessonText(d.text.split('\n\n'))).join(' ') + ' ' + (s.reflection || '') + ' ' + (s.ref || '')));
   data.prayers.forEach(p => {
-    const es = SPANISH ? (data.prayersEs || {})[p.id] : null;
+    // The English text is searchable too when the app is in Persian, and the Spanish when Spanish is on.
+    const es = SPANISH ? (data.prayersEs || {})[p.id] : (state.settings.lang === 'fa' ? (data.prayersEn || {})[p.id] : null);
     add('Prayers', 'candle', '#/prayer/' + p.id, p.title, p.when, p.text + (es ? ' ' + es.title + ' ' + es.text : ''));
   });
   data.faq.forEach(f => add('Questions', 'question', '#/questions', f.q, f.a, ''));
@@ -27,7 +31,7 @@ function index() {
   add('Bible study', 'sparkle', '#/bible-guide', t('Start here: how to read the Bible'), t('Bible study'), data.bible.guide.map(g => g.title + ' ' + g.body.join(' ')).join(' '));
   data.year.books.forEach(b => { const g = data.books[b.name]; if (g) add('Bible study', 'book', '#/bible-read/' + b.id + '/1', b.name + (b.dr !== b.name ? ' (' + b.dr + ')' : ''), g.kind, [g.about, g.look, g.christ, g.outline.map(o => o[1]).join(' ')].join(' ')); });
   add('Bible study', 'book', '#/bible-year', t('The whole Bible in a year'), t('All 73 books, a little each day'), '');
-  allStudies().forEach(st => add('Bible study', 'book', '#/bible/' + st.id, st.ref, st.title + ' · ' + data.bible.plans[st.plan].title, [st.intro, st.understand, st.live, (st.questions || []).join(' '), ((data.scripture.passages || {})[st.ref] || []).map(v => v[1]).join(' ')].join(' ')));
+  allStudies().forEach(st => add('Bible study', 'book', '#/bible/' + st.id, st.ref, st.title + ' · ' + data.bible.plans[st.plan].title, [st.intro, st.understand, st.live, (st.questions || []).join(' '), ((data.scripture.passages || {})[st.refEn || st.ref] || []).map(v => v[1]).join(' ')].join(' ')));
   data.paths.firstYear.months.forEach(m => add('Guides', 'sparkle', '#/first-year', m.title, t(data.paths.firstYear.title), m.lesson + ' ' + m.practice));
   return items;
 }
@@ -36,11 +40,11 @@ const GROUPS = ['Sessions', 'Bible study', 'Prayers', 'Questions', 'Words', 'Sai
 let cache = null;
 
 function results(q) {
-  const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+  const words = norm(q).split(/\s+/).filter(Boolean);
   if (q.trim().length < 2) return '<p class="empty">' + esc(t('Type at least two letters.')) + '</p>';
   cache = cache || index();
   const hits = cache.filter(x => words.every(w => x.hay.includes(w)))
-    .map(x => ({ ...x, score: words.reduce((n, w) => n + (x.title.toLowerCase().includes(w) ? 2 : 0), 0) }))
+    .map(x => ({ ...x, score: words.reduce((n, w) => n + (norm(x.title).includes(w) ? 2 : 0), 0) }))
     .sort((a, b) => b.score - a.score);
   if (!hits.length) return '<p class="empty">' + esc(t('Nothing found. Try a shorter or different word.')) + '</p>';
   let html = '<p class="small muted" style="margin:0 2px 8px">' + hits.length + ' ' + esc(t('results')) + '</p>';

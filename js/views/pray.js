@@ -59,13 +59,20 @@ export function practiceHtml(text, level) {
 export function prayer(id) {
   const p = byId(data.prayers, id);
   if (!p) return { html: back('#/pray', t('Pray')) + '<p class="empty">' + esc(t('Not found')) + '</p>' };
-  const es = SPANISH ? data.prayersEs[id] : null;
-  let lang = state.settings.lang === 'es' && es ? 'es' : 'en';
+  // A second language to show the same prayer in: English when the app is in Persian, Spanish when it is in Spanish.
+  const app = state.settings.lang;
+  const alt = app === 'fa' ? data.prayersEn[id] : (SPANISH ? data.prayersEs[id] : null);
+  const altLang = app === 'fa' ? 'en' : 'es';
+  const LN = { en: 'English', es: 'Español', fa: 'فارسی' };
+  const mainLang = app === 'fa' ? 'fa' : 'en';
+  let lang = app === 'es' && alt ? 'es' : mainLang;
   const l = !!state.learned[p.id];
-  const textFor = () => lang === 'es' && es ? es.text : p.text;
-  let html = back('#/pray', t('Pray')) + head(t(p.category), lang === 'es' && es ? es.title : p.title, p.when);
-  if (es) html += '<div class="seg-control lang-toggle" role="group" aria-label="' + esc(t('Language')) + '"><button data-lang="en" aria-pressed="' + (lang === 'en') + '">English</button><button data-lang="es" aria-pressed="' + (lang === 'es') + '">Español</button></div>';
-  html += '<div class="card"><div class="prayer-text" id="ptext">' + esc(textFor()) + '</div></div>' +
+  const cur = () => lang === altLang && alt ? alt : p;
+  const textFor = () => cur().text;
+  const dirFor = () => lang === 'fa' ? 'rtl' : 'ltr';
+  let html = back('#/pray', t('Pray')) + head(t(p.category), cur().title, p.when);
+  if (alt && alt.text !== p.text) html += '<div class="seg-control lang-toggle" role="group" aria-label="' + esc(t('Language')) + '"><button data-lang="' + mainLang + '" lang="' + mainLang + '" aria-pressed="' + (lang === mainLang) + '">' + LN[mainLang] + '</button><button data-lang="' + altLang + '" lang="' + altLang + '" aria-pressed="' + (lang === altLang) + '">' + LN[altLang] + '</button></div>';
+  html += '<div class="card"><div class="prayer-text" id="ptext" lang="' + lang + '" dir="' + dirFor() + '">' + esc(textFor()) + '</div></div>' +
     (canSpeak ? '<div class="listen-row">' + listenButton('say', t('Listen')) + listenButton('rep', t('Say it after me'), 'ghost') + '</div>' +
       '<p class="small muted" style="margin:-4px 2px 14px">' + esc(t('"Say it after me" reads one line, then pauses so you can repeat it out loud.')) + '</p>' : '') +
     '<div class="card flat"><label class="field" style="margin:0"><span>' + esc(t('Practice mode: hide words')) + ' <span id="lvl-name">(' + esc(t('off')) + ')</span></span>' +
@@ -82,14 +89,14 @@ export function prayer(id) {
       const draw = () => { out.innerHTML = practiceHtml(textFor(), +lvl.value); root.querySelector('#lvl-name').textContent = '(' + t(names[+lvl.value]) + ')'; };
       lvl.oninput = draw;
       const lines = () => textFor().split('\n');
-      bindListen(root, 'say', lines, { gap: () => 120 });
+      bindListen(root, 'say', lines, { gap: () => 120, get lang() { return lang; } });
       // Pause after each line for about as long as it takes to say it again.
-      bindListen(root, 'rep', lines, { gap: l => 900 + l.split(/\s+/).length * 480 * ({ slow: 1.3, fast: .85 }[state.settings.rate] || 1) });
+      bindListen(root, 'rep', lines, { get lang() { return lang; }, gap: l => 900 + l.split(/\s+/).length * 480 * ({ slow: 1.3, fast: .85 }[state.settings.rate] || 1) });
       out.onclick = e => { if (e.target.classList.contains('hid')) e.target.classList.toggle('peek'); };
       out.onkeydown = e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('hid')) { e.preventDefault(); e.target.classList.toggle('peek'); } };
       root.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => {
         lang = b.dataset.lang; root.querySelectorAll('[data-lang]').forEach(x => x.setAttribute('aria-pressed', x === b));
-        root.querySelector('h1').textContent = lang === 'es' && es ? es.title : p.title; draw();
+        root.querySelector('h1').textContent = cur().title; out.lang = lang; out.dir = dirFor(); draw();
       });
       root.querySelector('#learned').onclick = () => {
         if (state.learned[p.id]) delete state.learned[p.id]; else { state.learned[p.id] = true; toast(t('Learned by heart')); }

@@ -1,12 +1,30 @@
 import { icon } from './icons.js';
 import { state } from './store.js';
 import { ES } from './i18n-es.js';
+import { FA } from './i18n-fa.js';
 
 export const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const safeUrl = u => /^(https:\/\/|mailto:|tel:)/.test(u || '') ? u : '#';
 // UI strings: English is the key; other languages map from it.
-export function t(s) { return state.settings.lang === 'es' && ES[s] ? ES[s] : s; }
-export function locale() { return state.settings.lang === 'es' ? 'es' : 'en-CA'; }
+const DICT = { es: ES, fa: FA };
+export function t(s) { const d = DICT[state.settings.lang]; return d && d[s] ? d[s] : s; }
+// Persian keeps the Gregorian calendar (the Church year follows it) with Persian month names and digits.
+export function locale() { return { es: 'es', fa: 'fa-IR-u-ca-gregory-nu-arabext' }[state.settings.lang] || 'en-CA'; }
+export const isRTL = () => state.settings.lang === 'fa';
+// Persian digits for text shown on screen. Inputs and links keep ASCII digits.
+const FA_DIGITS = '۰۱۲۳۴۵۶۷۸۹';
+export const faDigits = s => String(s).replace(/[0-9]/g, d => FA_DIGITS[d]);
+export function localizeDigits(root) {
+  if (state.settings.lang !== 'fa' || !root) return;
+  const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode: n => n.parentNode.closest('[dir="ltr"],script,style,code,.keep-digits') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+  for (let n; (n = w.nextNode());) {
+    const v = n.nodeValue;
+    if (!/[0-9]|[۰-۹][:\-–]/.test(v)) continue;
+    // Keep references like ۶:۹-۱۳ reading left to right inside Persian text.
+    const nv = faDigits(v).replace(/(?<![\u2066۰-۹])[۰-۹]+(?:[:\-–][۰-۹]+)+(?![\u2069۰-۹])/g, m => '\u2066' + m + '\u2069');
+    if (nv !== v) n.nodeValue = nv;
+  }
+}
 export function fmtDate(d, opts) { return d.toLocaleDateString(locale(), opts || { weekday: 'long', month: 'long', day: 'numeric' }); }
 export function parseISO(s) { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); }
 

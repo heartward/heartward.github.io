@@ -31,7 +31,7 @@ export function week(id) {
     head(t('This week') + ' · ' + t('Session') + ' ' + sessionNo(s), s.title, t('Everything to live this week\'s class: a verse to learn, a passage to study, questions to talk about, and small ways to practice.'));
 
   if (st.verse) html += '<section class="card verse-card"><div class="eyebrow">' + esc(t('Memory verse')) + '</div>' +
-    '<blockquote class="verse">' + esc(st.verse.text) + '<cite>' + esc(st.verse.ref) + ' (Douay-Rheims)</cite></blockquote>' +
+    '<blockquote class="verse">' + esc(st.verse.text) + '<cite>' + esc(st.verse.ref) + ' (' + esc(t('Douay-Rheims')) + ')</cite></blockquote>' +
     '<div class="btn-row" style="margin:12px 0 0">' + listenButton('vlisten', t('Listen'), 'soft sm') + '<a class="btn ghost sm" href="#/verse/' + s.id + '">' + icon('sparkle') + esc(t('Practice with flashcards')) + '</a></div></section>';
 
   if (st.bible) {

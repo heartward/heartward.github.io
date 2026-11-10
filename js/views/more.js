@@ -140,7 +140,7 @@ export function keepsake() {
     KEEP_DATES.map(([k, l]) => line(l, state.dates[k] ? fmtDate(parseISO(state.dates[k]), { year: 'numeric', month: 'long', day: 'numeric' }) : '')).join('') +
     line('Patron saint', saint ? saint.name : '') + line('Sponsor', sponsor ? sponsor.name : '') + line('Parish', parish) +
     (verse ? '<blockquote class="verse">' + esc(verse.text) + '<cite>' + esc(verse.ref) + '</cite></blockquote>' : '') +
-    '<p class="ks-foot">“Was not our heart burning within us, whilst he spoke in the way?” Luke 24:32</p></article>' +
+    '<p class="ks-foot">' + esc(t('“Was not our heart burning within us, whilst he spoke in the way?”')) + ' ' + esc(t('Luke 24:32')) + '</p></article>' +
     '<button class="btn block no-print" id="kprint">' + icon('download') + esc(t('Save as PDF or print')) + '</button>';
   return {
     html, title: t('My keepsake'),

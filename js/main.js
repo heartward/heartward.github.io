@@ -1,7 +1,7 @@
 import { loadData } from './data.js';
 import { state } from './store.js';
 import { icon } from './icons.js';
-import { t } from './ui.js';
+import { t, isRTL, localizeDigits } from './ui.js';
 import { stop as stopSpeech } from './speech.js';
 import * as today from './views/today.js';
 import * as journey from './views/journey.js';
@@ -35,13 +35,17 @@ export function applySettings() {
   const r = document.documentElement, s = state.settings;
   if (s.theme === 'system') r.removeAttribute('data-theme'); else r.setAttribute('data-theme', s.theme);
   if (s.size === 'normal') r.removeAttribute('data-size'); else r.setAttribute('data-size', s.size);
-  r.lang = s.lang === 'es' ? 'es' : 'en';
+  r.lang = s.lang || 'en';
+  r.dir = isRTL() ? 'rtl' : 'ltr';
   renderChrome();
 }
 
 function renderChrome() {
   const tabs = [['#/', 'home', 'Today', 'today'], ['#/journey', 'road', 'Journey', 'journey'], ['#/pray', 'candle', 'Pray', 'pray'], ['#/learn', 'book', 'Learn', 'learn'], ['#/me', 'user', 'Me', 'me']];
+  document.getElementById('tabbar').setAttribute('aria-label', t('Main'));
   document.getElementById('tabbar').innerHTML = tabs.map(([h, ic, label, id]) => '<a href="' + h + '" data-tab="' + id + '">' + icon(ic) + '<span>' + t(label) + '</span></a>').join('');
+  const b = document.querySelector('.brand'); if (b) { b.setAttribute('aria-label', t('Heartward home')); b.querySelector('small').textContent = t('Your RCIA companion'); b.querySelector('.brand-text > span').textContent = t('Heartward'); }
+  document.querySelector('.skip').textContent = t('Skip to content');
   const s = document.getElementById('search-btn');
   s.innerHTML = icon('search'); s.setAttribute('aria-label', t('Search'));
 }
@@ -60,10 +64,18 @@ export function render() {
     // Move keyboard and screen-reader focus to the new page (not on first load).
     if (lastPath !== null) view.focus({ preventScroll: true });
     window.scrollTo(0, 0); lastPath = hash;
-    document.title = (out.title ? out.title + ' · ' : '') + 'Heartward';
+    document.title = (out.title ? out.title + ' · ' : '') + t('Heartward');
   }
   document.querySelectorAll('#tabbar a').forEach(a => a.dataset.tab === tab ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
   if (out.bind) out.bind(view);
+  localizeDigits(view);
+}
+
+// Pages also change after they are drawn (quiz answers, Rosary steps, search results), so keep digits Persian.
+if (isRTL() && window.MutationObserver) {
+  let queued = false;
+  new MutationObserver(() => { if (queued) return; queued = true; requestAnimationFrame(() => { queued = false; localizeDigits(document.getElementById('view')); }); })
+    .observe(document.getElementById('view'), { childList: true, subtree: true, characterData: true });
 }
 
 // Render only after the content has loaded; a hash change before that would find no data.

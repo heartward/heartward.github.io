@@ -1,5 +1,5 @@
 import { data, byId, mySaint } from '../data.js';
-import { state, save, weekKey, replaceState, localISO, SPANISH } from '../store.js';
+import { state, save, weekKey, replaceState, localISO, LANGS } from '../store.js';
 import { icon } from '../icons.js';
 import { esc, t, toast, back, head, row, download, ics, parseISO, fmtDate, safeUrl } from '../ui.js';
 import { progress } from './journey.js';
@@ -152,26 +152,34 @@ export function parish() {
   };
 }
 
+const LANG_NAMES = { en: 'English', fa: 'فارسی', es: 'Español' };
+
 export function settings() {
   const s = state.settings;
   const seg = (key, opts) => '<div class="seg-control" role="group">' + opts.map(([v, l]) => '<button data-k="' + key + '" data-v="' + v + '" aria-pressed="' + (s[key] === v) + '">' + l + '</button>').join('') + '</div>';
   const html = back('#/me', t('Me')) + head(t('App'), t('Settings'), '') +
-    '<div class="card"><div class="eyebrow">' + esc(t('Text size')) + '</div>' + seg('size', [['small', 'A−'], ['normal', 'A'], ['large', 'A+'], ['xlarge', 'A++']]) +
+    '<div class="card"><div class="eyebrow">' + esc(t('Text size')) + '</div>' + seg('size', [['small', 'A−'], ['normal', 'A'], ['large', 'A+'], ['xlarge', 'A++']].map(([v, l]) => [v, '<span dir="ltr">' + l + '</span>'])) +
     '<div class="eyebrow" style="margin-top:18px">' + esc(t('Appearance')) + '</div>' + seg('theme', [['system', esc(t('Auto'))], ['light', esc(t('Light'))], ['dark', esc(t('Dark'))]]) +
     (canSpeak ? '<div class="eyebrow" style="margin-top:18px">' + esc(t('Voice speed')) + '</div>' + seg('rate', [['slow', esc(t('Slow'))], ['normal', esc(t('Normal'))], ['fast', esc(t('Fast'))]]) +
       '<button class="btn ghost" id="vtest" style="margin-top:10px">' + icon('volume') + esc(t('Test the voice')) + '</button>' +
       '<p class="small muted" style="margin:8px 0 0">' + esc(t('Read-aloud uses your phone\'s own voice. To get a nicer one, look in your phone\'s settings under Accessibility, Spoken Content (iPhone) or Text-to-speech (Android).')) + '</p>' : '') +
-    (SPANISH ? '<div class="eyebrow" style="margin-top:18px">' + esc(t('Language')) + '</div>' + seg('lang', [['en', 'English'], ['es', 'Español']]) +
-    '<p class="small muted" style="margin:10px 0 0">' + esc(t('Spanish covers the app\'s menus and the prayers. Lessons are in English for now.')) + '</p>' : '') + '</div>' +
+    '<div class="eyebrow" style="margin-top:18px">' + esc(t('Language')) + (state.settings.lang === 'en' ? '' : ' · Language') + '</div>' + seg('lang', LANGS.map(l => [l, LANG_NAMES[l]])) +
+    '<p class="small muted" style="margin:10px 0 0">' + esc(t('Persian shows the whole app right to left. Each prayer can also be shown in English, to pray along at Mass.')) + '</p>' + '</div>' +
     '<div class="section-title"><h2>' + esc(t('Backup')) + '</h2></div><div class="card"><p class="small muted">' + esc(t('Your progress, journal and dates are saved only on this device. Save a backup file before changing phones or clearing your browser.')) + '</p>' +
     '<div class="btn-row" style="margin:0"><button class="btn soft" id="bk">' + icon('download') + esc(t('Save backup')) + '</button><button class="btn ghost" id="rs">' + icon('upload') + esc(t('Restore')) + '</button><input type="file" id="rf" accept="application/json,.json"></div></div>' +
     '<div class="section-title"><h2>' + esc(t('About')) + '</h2></div><div class="card flat small muted"><p>' + esc(t('Heartward is free, has no ads and no accounts, and works offline. Named for the disciples on the road to Emmaus, whose hearts burned within them as they walked with Jesus (Luke 24:32).')) + '</p><p style="margin:0">' + esc(t('Content is a draft for review by a catechist or priest. Always follow what your parish teaches.')) + '</p></div>';
   return {
     html, title: t('Settings'),
     bind(root) {
-      root.querySelectorAll('[data-k]').forEach(b => b.onclick = () => { state.settings[b.dataset.k] = b.dataset.v; save(); applySettings(); rerender(); });
+      root.querySelectorAll('[data-k]').forEach(b => b.onclick = () => {
+        const langChange = b.dataset.k === 'lang' && state.settings.lang !== b.dataset.v;
+        state.settings[b.dataset.k] = b.dataset.v; save();
+        // A new language loads its own content, so start the app again on this page.
+        if (langChange) { location.reload(); return; }
+        applySettings(); rerender();
+      });
       const vt = root.querySelector('#vtest');
-      if (vt) vt.onclick = () => speak(['Our Father, who art in heaven, hallowed be thy name.']);
+      if (vt) vt.onclick = () => speak([t('Our Father, who art in heaven, hallowed be thy name.')]);
       root.querySelector('#bk').onclick = () => download('heartward-backup-' + localISO(new Date()) + '.json', JSON.stringify({ app: 'heartward', version: 2, state }, null, 2), 'application/json');
       const rf = root.querySelector('#rf');
       root.querySelector('#rs').onclick = () => rf.click();
@@ -217,7 +225,7 @@ export function welcome() {
     '<section class="welcome-hero"><img src="icon.svg" alt="" width="64" height="64"><div class="kicker">' + esc(pname ? t('For') + ' ' + pname : t('Welcome')) + '</div>' +
     '<h1>' + esc(t('Welcome to Heartward')) + '</h1>' +
     '<p>' + esc(t('A free companion for anyone walking toward the Catholic faith in RCIA, for sponsors walking beside them, and for Catholics coming home.')) + '</p>' +
-    '<blockquote>' + esc(t('"Were not our hearts burning within us while he spoke to us on the way?"')) + '<cite>Luke 24:32</cite></blockquote></section>' +
+    '<blockquote>' + esc(t('"Were not our hearts burning within us while he spoke to us on the way?"')) + '<cite>' + esc(t('Luke 24:32')) + '</cite></blockquote></section>' +
     '<div class="section-title"><h2>' + esc(t('What is inside')) + '</h2></div><ul class="list card tight">' +
     feat('road', t('The journey, week by week'), t('Lessons that follow the class, with pictures, charts and a private journal.')) +
     feat('candle', t('Prayers to learn by heart'), t('Listen to each prayer, repeat it line by line, and practice from memory.')) +

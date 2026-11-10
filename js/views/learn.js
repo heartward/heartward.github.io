@@ -1,7 +1,7 @@
 import { data, byId, mySaint } from '../data.js';
 import { state, save, localISO } from '../store.js';
 import { icon } from '../icons.js';
-import { esc, t, toast, back, head, tile, acc, fmtDate } from '../ui.js';
+import { esc, t, toast, back, head, tile, acc, fmtDate, locale } from '../ui.js';
 import { season, seasonColor, upcoming } from '../liturgy.js';
 
 const rerender = () => document.dispatchEvent(new Event('heartward:render'));
@@ -76,7 +76,7 @@ export function glossary() {
   };
 }
 
-const feastLabel = s => { const [m, d] = s.feast.split('-').map(Number); return new Date(2024, m - 1, d).toLocaleDateString(state.settings.lang === 'es' ? 'es' : 'en-CA', { month: 'long', day: 'numeric' }); };
+const feastLabel = s => { const [m, d] = s.feast.split('-').map(Number); return new Date(2024, m - 1, d).toLocaleDateString(locale(), { month: 'long', day: 'numeric' }); };
 
 export function saints() {
   const S = data.saints;
@@ -128,12 +128,12 @@ export function calendar() {
   const cur = data.calendar.seasons[season(now)];
   const ups = upcoming(data.calendar, data.saints.saints, d0, 75);
   let html = back('#/learn', t('Learn')) + head(t('Church year'), t('Church calendar'), data.calendar.note) +
-    '<div class="card" style="border-left:6px solid ' + seasonColor[cur.color] + '"><div class="eyebrow">' + esc(t('Current season')) + '</div><h2 style="margin:0 0 4px">' + esc(t(cur.name)) + '</h2><p class="muted" style="margin:0">' + esc(cur.about) + '</p></div>' +
+    '<div class="card" style="border-inline-start:6px solid ' + seasonColor[cur.color] + '"><div class="eyebrow">' + esc(t('Current season')) + '</div><h2 style="margin:0 0 4px">' + esc(t(cur.name)) + '</h2><p class="muted" style="margin:0">' + esc(cur.about) + '</p></div>' +
     '<div class="section-title"><h2>' + esc(t('Coming up')) + '</h2></div><div class="card tight">';
   ups.forEach(u => {
     const isToday = localISO(u.date) === localISO(d0);
-    const inner = '<div class="cal-date"' + (isToday ? ' style="background:var(--accent-soft)"' : '') + '><div class="m">' + esc(u.date.toLocaleDateString(state.settings.lang === 'es' ? 'es' : 'en-CA', { month: 'short' })) + '</div><div class="d">' + u.date.getDate() + '</div></div>' +
-      '<div style="flex:1"><strong>' + esc(u.name) + '</strong><div class="small muted">' + esc(u.date.toLocaleDateString(state.settings.lang === 'es' ? 'es' : 'en-CA', { weekday: 'long' })) +
+    const inner = '<div class="cal-date"' + (isToday ? ' style="background:var(--accent-soft)"' : '') + '><div class="m">' + esc(u.date.toLocaleDateString(locale(), { month: 'short' })) + '</div><div class="d">' + u.date.getDate() + '</div></div>' +
+      '<div style="flex:1"><strong>' + esc(u.name) + '</strong><div class="small muted">' + esc(u.date.toLocaleDateString(locale(), { weekday: 'long' })) +
       (u.obligation ? ' · <span class="tag gold">' + esc(t('Holy day of obligation')) + '</span>' : '') + (u.kind === 'saint' ? ' · ' + esc(t('Saint')) : '') + '</div></div>';
     html += u.saintId ? '<a class="cal-item" style="text-decoration:none;color:inherit" href="#/saint/' + u.saintId + '">' + inner + '</a>' : '<div class="cal-item">' + inner + '</div>';
   });
