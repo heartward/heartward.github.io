@@ -59,6 +59,34 @@
       "status": "draft"
     },
     {
+      "id": "s02",
+      "stage": "inquiry",
+      "title": "Who is God?",
+      "summary": "God made us for himself, and has shown us who he is.",
+      "lesson": [
+        "Every person carries a longing for something more: for meaning, for love that lasts, for truth. The Church teaches that this desire is written in our hearts because we were made by God and for God. Saint Augustine put it this way: \"Our heart is restless until it rests in you.\"",
+        "We can know something about God by looking at creation and by listening to our conscience. But God did not leave us guessing. He revealed himself step by step: to Abraham, to Moses, through the prophets, and fully in Jesus Christ.",
+        "Christians believe in one God who is a communion of love: Father, Son, and Holy Spirit. That is why we begin our prayers \"in the name of the Father, and of the Son, and of the Holy Spirit.\"",
+        "Most importantly, God is not distant. \"God is love\" (1 John 4:8). He knows your name and wants a relationship with you."
+      ],
+      "reflection": "When have you felt a longing for God, or sensed that there must be something more?",
+      "prayers": [
+        "sign-of-the-cross",
+        "glory-be"
+      ],
+      "sources": [
+        {
+          "title": "1 John 4:7-16, God is love",
+          "url": "https://bible.usccb.org/bible/1john/4"
+        },
+        {
+          "title": "Catechism, paragraphs 27-49: our desire for God",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft"
+    },
+    {
       "id": "s03",
       "stage": "inquiry",
       "title": "Prayer: talking with God",
@@ -202,6 +230,7 @@
         "- The Magisterium: the deposit of faith has been entrusted to the Church's teaching office as the authoritative interpreter of Scripture and Tradition.",
         "- All three together: we need Sacred Scripture, Tradition and the Magisterium. One cannot stand without the other two.",
         "## God shows himself",
+        "[[art:Rembrandt Harmensz van Rijn - Return of the Prodigal Son - Google Art Project.jpg|Rembrandt, The Return of the Prodigal Son (about 1668): the Father who comes looking for us]]",
         "\"Divine Revelation\" means God making himself known. We could never reach God by our own effort alone, so he chose to reveal himself and his loving plan to save us, so that we could know him and love him (Catechism 50-52).",
         "He did this step by step, through deeds and words, across a long story: creation, Abraham, Moses, the kings and prophets of Israel. This story of God gradually saving his people is called salvation history (Catechism 53-64).",
         "That story reaches its high point in Jesus Christ, the Son of God made man. He is not just one more messenger. He is the fullness of Revelation: in him God has said everything he wanted to say (Catechism 65). That is why the Church teaches that no new public revelation is coming before Jesus returns.",
@@ -533,6 +562,7 @@
         "- Suffering can be offered: our pain becomes a chance to unite ourselves with the suffering of Jesus, and to offer it for others (Colossians 1:24). Catholics sometimes call this \"offering it up.\"",
         "## A prayer to Christ Crucified",
         "Your handout ends with this prayer by St. Thérèse of Lisieux. You can find it in Pray, and in the prayers listed with this session, so you can read it, listen to it and learn it.",
+        "> In the evening of this life, I shall appear before you with empty hands, for I do not ask you, Lord, to count my works. — St. Thérèse of Lisieux",
         "St. Thérèse loved this image of empty hands. We come to the cross with nothing of our own to boast of, and there the empty are filled: Christ's hands, emptied for us, pour out mercy, and our hands, emptied for him and for others, are filled with his love."
       ],
       "deeper": [
@@ -547,222 +577,848 @@
       "id": "sym1-07",
       "stage": "catechumenate",
       "title": "The Holy Spirit and the life of grace",
-      "summary": "God's own life within us.",
+      "summary": "The Holy Spirit is God's own life poured into our hearts. Grace is that life at work in us, making us God's children.",
       "prayers": [],
       "sources": [
         {
           "title": "Acts 2, Pentecost",
           "url": "https://www.biblegateway.com/passage/?search=Acts+2&version=NRSVCE"
+        },
+        {
+          "title": "Galatians 5:16-26, the fruit of the Spirit",
+          "url": "https://www.biblegateway.com/passage/?search=Galatians+5&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 683-747 (the Holy Spirit) and 1996-2005 (grace)",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
         }
       ],
-      "status": "outline",
-      "ref": "Symbolon Part 1: Knowing the Faith · Session 7"
+      "status": "draft",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 7",
+      "lesson": [
+        "Jesus promised his friends that he would not leave them orphans. Fifty days after Easter, at Pentecost, the Holy Spirit came upon the apostles like wind and tongues of fire, and the frightened disciples became bold witnesses (Acts 2).",
+        "## Who the Holy Spirit is",
+        "The Holy Spirit is not a force or a feeling. He is the third Person of the Holy Trinity, truly God with the Father and the Son. In the Creed we call him \"the Lord, the giver of life\" (Catechism 683-686).",
+        "Scripture uses images to help us picture him: water that cleanses and refreshes, fire that warms and purifies, wind and breath that give life, a dove of peace, and the anointing oil that marks someone as chosen (Catechism 694-701).",
+        "## What grace is",
+        "Grace is a free gift: God's own life shared with us. It is not something we earn. It heals us from sin and makes us sons and daughters of God, able to share his life (Catechism 1996-1999).",
+        "- Sanctifying grace: the lasting gift that makes our soul holy and pleasing to God. We first receive it in Baptism.",
+        "- Actual grace: God's help in a particular moment, nudging us to choose the good, to pray or to forgive.",
+        "Mortal sin drives sanctifying grace out of the soul. God restores it through the sacrament of Penance (Catechism 1861).",
+        "## The gifts and fruits of the Spirit",
+        "The Holy Spirit gives seven gifts that make us ready to follow his lead: wisdom, understanding, counsel, fortitude, knowledge, piety and fear of the Lord (Isaiah 11:2-3; Catechism 1831).",
+        "When we let him work in us, his fruits show in our lives: charity, joy, peace, patience, kindness, goodness, generosity, gentleness, faithfulness, modesty, self-control and chastity (Galatians 5:22-23; Catechism 1832).",
+        "## Living by the Spirit",
+        "> The charity of God is poured forth in our hearts, by the Holy Ghost, who is given to us. — Romans 5:5, Douay-Rheims",
+        "The Spirit prays in us when we do not know how to pray (Romans 8:26). A simple way to begin each day is to say: \"Come, Holy Spirit.\""
+      ],
+      "reflection": "Which fruit of the Spirit would you most like to grow in your life this week? Ask the Holy Spirit for it each morning."
     },
     {
       "id": "sym1-08",
       "stage": "catechumenate",
       "title": "Why do I need the Church?",
-      "summary": "The mystery of the Church Jesus founded.",
+      "summary": "Jesus founded the Church as his Body and his family. Through her he gives us his word, his sacraments and each other.",
       "prayers": [],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 1: Knowing the Faith · Session 8"
+      "sources": [
+        {
+          "title": "Matthew 16:13-20, you are Peter",
+          "url": "https://www.biblegateway.com/passage/?search=Matthew+16&version=NRSVCE"
+        },
+        {
+          "title": "1 Corinthians 12:12-27, one body, many parts",
+          "url": "https://www.biblegateway.com/passage/?search=1+Corinthians+12&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 748-870: the Church",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 8",
+      "lesson": [
+        "Many people say, \"I believe in Jesus, but I don't need the Church.\" The Catholic answer is that Jesus himself founded the Church, and that we meet him in her.",
+        "## Jesus founded the Church",
+        "Jesus chose twelve apostles, put Peter at their head, and gave him the keys of the kingdom (Matthew 16:18-19). He gave them his authority to teach, to forgive sins and to celebrate the Eucharist, and he sent them to all nations (Catechism 763-766).",
+        "The Church was born from the pierced side of Christ on the Cross, and she was shown to the world at Pentecost (Catechism 766-767).",
+        "## Images of the Church",
+        "- The Body of Christ: Christ is the head and we are the members. Each member has a part to play (1 Corinthians 12; Catechism 787-795).",
+        "- The Bride of Christ: Jesus loves the Church as a husband loves his wife, and gave himself up for her (Ephesians 5:25-27; Catechism 796).",
+        "- The People of God and the family of God: we become God's children together, not alone (Catechism 781-786).",
+        "- The Temple of the Holy Spirit: the Spirit lives in the Church and gives her life (Catechism 797-798).",
+        "## Four marks",
+        "In the Creed we say the Church is one, holy, catholic and apostolic (Catechism 811).",
+        "- One: one Lord, one faith, one Baptism, gathered around the Eucharist and the successor of Peter.",
+        "- Holy: not because her members never sin, but because Christ makes her holy and gives her every means of holiness.",
+        "- Catholic: universal. She has the fullness of the faith and is sent to every people in every age.",
+        "- Apostolic: built on the apostles, and still led by their successors, the bishops in communion with the pope.",
+        "## Why I need her",
+        "The Church gives us the Scriptures, the sacraments, the teaching that keeps the faith safe, and brothers and sisters to walk with. Faith is personal, but it is never private: we believe together (Catechism 166-169).",
+        "> He cannot have God for his father, who has not the Church for his mother. — St. Cyprian of Carthage"
+      ],
+      "reflection": "Who in your parish has helped you on your journey so far? Thank God for them, and think of one way you could help someone else there."
     },
     {
       "id": "sym1-09",
       "stage": "catechumenate",
       "title": "Mary and the saints",
-      "summary": "Our spiritual mother and the communion of saints.",
+      "summary": "Mary is the Mother of God and our mother. The saints are our family in heaven, praying for us.",
       "prayers": [
-        "hail-mary"
+        "hail-mary",
+        "memorare",
+        "hail-holy-queen"
       ],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 1: Knowing the Faith · Session 9"
+      "sources": [
+        {
+          "title": "Luke 1:26-56, the Annunciation and the Magnificat",
+          "url": "https://www.biblegateway.com/passage/?search=Luke+1&version=NRSVCE"
+        },
+        {
+          "title": "John 19:25-27, behold your mother",
+          "url": "https://www.biblegateway.com/passage/?search=John+19&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 484-511, 946-975: Mary and the communion of saints",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 9",
+      "lesson": [
+        "Catholics love Mary and the saints because they lead us to Jesus. We worship God alone; we honour Mary and the saints as his greatest works and as our family.",
+        "## Mary, Mother of God",
+        "Because her Son Jesus is one divine Person, Mary is truly the Mother of God, Theotokos (Catechism 495). This title is really a statement about who Jesus is.",
+        "At the Annunciation she said yes to God: \"Behold the handmaid of the Lord; be it done to me according to thy word\" (Luke 1:38, Douay-Rheims). She is the model of faith for every Christian (Catechism 148, 967).",
+        "## What the Church believes about Mary",
+        "- Immaculate Conception: from the first moment of her life, Mary was kept free from original sin, by the grace of her Son (Catechism 490-493).",
+        "- Ever-virgin: Mary remained a virgin before, during and after the birth of Jesus (Catechism 496-507).",
+        "- Assumption: at the end of her life, Mary was taken body and soul into heavenly glory (Catechism 966).",
+        "- Mother of the Church: from the Cross, Jesus gave her to the beloved disciple, and to all of us, as our mother (John 19:26-27; Catechism 963-970).",
+        "## The communion of saints",
+        "The Church is one family in three places: those of us on earth, those being purified in purgatory, and the saints in heaven. Death does not break this family (Catechism 946-962).",
+        "Just as you can ask a friend to pray for you, you can ask the saints. They are alive in God and close to him, and their prayer is powerful (James 5:16; Catechism 956).",
+        "Each of us is called to be a saint. Canonized saints are those the Church declares are surely in heaven, and they show us that holiness is possible in every kind of life.",
+        "## Praying with Mary",
+        "The Hail Mary is made almost entirely of words from Scripture: the angel's greeting and Elizabeth's blessing (Luke 1:28, 42). The Rosary walks through the life of Jesus with Mary at our side."
+      ],
+      "reflection": "Choose a saint to get to know this week, perhaps the one you picked in the app. Ask them to pray for you."
     },
     {
       "id": "sym1-10",
       "stage": "catechumenate",
       "title": "The last things",
-      "summary": "What happens after we die: judgment, heaven, hell, and purgatory.",
-      "prayers": [],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 1: Knowing the Faith · Session 10"
+      "summary": "Death, judgment, heaven, hell and purgatory: what the Church teaches about the end, and why it gives us hope.",
+      "prayers": [
+        "eternal-rest"
+      ],
+      "sources": [
+        {
+          "title": "Matthew 25:31-46, the Last Judgment",
+          "url": "https://www.biblegateway.com/passage/?search=Matthew+25&version=NRSVCE"
+        },
+        {
+          "title": "1 Corinthians 15:35-58, the resurrection of the body",
+          "url": "https://www.biblegateway.com/passage/?search=1+Corinthians+15&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 988-1060: the resurrection of the body and life everlasting",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 1: Knowing the Faith · Session 10",
+      "lesson": [
+        "Everyone will die. The Christian faith does not avoid this fact; it faces it with hope, because Jesus has risen and opened the way to eternal life. These truths are called the last things.",
+        "## Death",
+        "Death is the end of our life on earth and of our time to choose for or against God. For a Christian it is not the end of life: \"life is changed, not ended\" (Preface for the Dead; Catechism 1005-1014).",
+        "## Judgment",
+        "- The particular judgment: right after death, each person's life is seen in the light of Christ, and our eternal destiny is decided (Catechism 1021-1022).",
+        "- The Last Judgment: at the end of time Christ will come again in glory, the dead will rise, and the whole truth of history will be revealed (Catechism 1038-1041).",
+        "Jesus told us what he will look for: \"As long as you did it to one of these my least brethren, you did it to me\" (Matthew 25:40, Douay-Rheims).",
+        "## Heaven",
+        "Heaven is perfect, endless happiness with God, the Blessed Virgin, the angels and all the saints. We will see God face to face. It is the fulfilment of every longing of the human heart (Catechism 1023-1029).",
+        "## Purgatory",
+        "Some die in God's friendship but are not yet fully purified. Purgatory is God's merciful cleansing before entering heaven. We can help them with our prayers, especially the Mass (Catechism 1030-1032).",
+        "## Hell",
+        "Hell is the state of definitive self-exclusion from God. God sends no one there against their will; it is the result of freely and finally refusing his love. The Church teaches this so that we will take our freedom seriously and turn to God now (Catechism 1033-1037).",
+        "## Living with the end in mind",
+        "These truths are not meant to frighten us but to wake us up. Every day is a chance to love God and our neighbour. And God's mercy is always open to anyone who turns to him."
+      ],
+      "reflection": "If today were your last day, what would you want to put right? Pray for someone you love who has died."
     },
     {
       "id": "sym2-01",
       "stage": "catechumenate",
       "title": "Baptism and Confirmation",
-      "summary": "New life in Christ, sealed with the Holy Spirit.",
-      "prayers": [],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 2: Living the Faith · Session 1"
+      "summary": "Baptism makes us new creations and children of God. Confirmation seals us with the Holy Spirit and sends us out.",
+      "prayers": [
+        "apostles-creed"
+      ],
+      "sources": [
+        {
+          "title": "Matthew 28:16-20, baptize all nations",
+          "url": "https://www.biblegateway.com/passage/?search=Matthew+28&version=NRSVCE"
+        },
+        {
+          "title": "Acts 8:14-17, the apostles lay hands on the baptized",
+          "url": "https://www.biblegateway.com/passage/?search=Acts+8&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 1210-1321: Baptism and Confirmation",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 2: Living the Faith · Session 1",
+      "lesson": [
+        "The sacraments are signs Jesus gave us that really do what they show. Through them he touches our lives with his grace (Catechism 1131). Baptism, Confirmation and the Eucharist are the three sacraments of initiation. They make us full members of the Church (Catechism 1212).",
+        "## Baptism",
+        "Baptism is the doorway to the Christian life. Water is poured, or we are immersed, with the words \"I baptize you in the name of the Father, and of the Son, and of the Holy Spirit\" (Catechism 1239-1240).",
+        "- It washes away original sin and all personal sins (Catechism 1263).",
+        "- It makes us adopted children of God and members of the Body of Christ, the Church (Catechism 1265-1267).",
+        "- It marks the soul with a seal that can never be erased, so it is given only once (Catechism 1272).",
+        "The baptismal signs each have a meaning: the water of new life, the white garment of a new creation, and the candle lit from the Easter candle, because Christ is now our light (Catechism 1241-1243).",
+        "## Confirmation",
+        "Confirmation completes Baptism. The bishop or priest lays hands on us and anoints our forehead with sacred chrism, saying, \"Be sealed with the Gift of the Holy Spirit\" (Catechism 1300).",
+        "- It pours out the Holy Spirit as at Pentecost (Catechism 1302).",
+        "- It roots us more deeply as God's children, unites us more firmly to Christ and strengthens us to witness to him (Catechism 1303).",
+        "- Like Baptism, it marks us with a permanent seal and is received only once (Catechism 1304).",
+        "## For you at Easter",
+        "Adults who join the Church at the Easter Vigil receive all three sacraments of initiation in one night: Baptism (or, for those already baptized, reception into full communion), Confirmation, and First Communion. You will choose a Confirmation name, often a saint you want to imitate."
+      ],
+      "reflection": "Think about the saint whose name you might take at Confirmation. What about their life draws you?"
     },
     {
       "id": "sym2-02",
       "stage": "catechumenate",
       "title": "The Eucharist: source and summit",
-      "summary": "Jesus truly present in the bread and wine.",
-      "prayers": [],
+      "summary": "In the Eucharist Jesus gives us himself: his Body and Blood, soul and divinity, under the appearance of bread and wine.",
+      "prayers": [
+        "o-sacrament",
+        "anima-christi"
+      ],
       "sources": [
         {
           "title": "John 6, the Bread of Life",
           "url": "https://www.biblegateway.com/passage/?search=John+6&version=NRSVCE"
+        },
+        {
+          "title": "1 Corinthians 11:23-29, the Lord's Supper",
+          "url": "https://www.biblegateway.com/passage/?search=1+Corinthians+11&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 1322-1419: the Eucharist",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
         }
       ],
-      "status": "outline",
-      "ref": "Symbolon Part 2: Living the Faith · Session 2"
+      "status": "draft",
+      "ref": "Symbolon Part 2: Living the Faith · Session 2",
+      "lesson": [
+        "The Church calls the Eucharist \"the source and summit of the Christian life\" (Catechism 1324). Every other sacrament and all the Church's work lead to it and flow from it, because the Eucharist is Jesus himself.",
+        "## Jesus promised it",
+        "After feeding five thousand people, Jesus said: \"I am the living bread which came down from heaven. If any man eat of this bread, he shall live for ever\" (John 6:51, Douay-Rheims). Many followers left because the teaching was hard, but Jesus did not soften it (John 6:60-69).",
+        "## Jesus gave it",
+        "At the Last Supper he took bread and said, \"This is my body,\" and took the cup and said, \"This is my blood of the new testament\" (Matthew 26:26-28). He told the apostles, \"Do this in commemoration of me\" (Luke 22:19).",
+        "## Truly present",
+        "At Mass, by the words of Christ spoken by the priest and the power of the Holy Spirit, the bread and wine become the Body and Blood of Christ. They still look and taste like bread and wine, but their reality has changed. The Church calls this transubstantiation (Catechism 1373-1377).",
+        "Jesus is present whole and entire, Body, Blood, soul and divinity, in each part of the consecrated host and in the cup (Catechism 1374, 1377). That is why we kneel, genuflect to the tabernacle, and keep silence in church.",
+        "## A sacrifice and a meal",
+        "- A sacrifice: the Mass makes present the one sacrifice of Christ on the Cross. It is not repeated, but offered again in an unbloody way (Catechism 1366-1367).",
+        "- A meal: Jesus feeds us with himself, uniting us to him and to each other (Catechism 1391-1396).",
+        "## Receiving well",
+        "Catholics prepare to receive Communion by being in a state of grace (going to Confession first after a serious sin) and fasting for one hour beforehand (Catechism 1385-1387). Until your First Communion at Easter you can come forward for a blessing or make a spiritual communion from your seat."
+      ],
+      "reflection": "Spend a few quiet minutes before the tabernacle this week. Tell Jesus what you are looking forward to about your First Communion."
     },
     {
       "id": "sym2-03",
       "stage": "catechumenate",
       "title": "A walk through the Mass",
-      "summary": "What happens at each part of the Mass, and why.",
+      "summary": "The Mass has two main parts: the Liturgy of the Word, where God speaks to us, and the Liturgy of the Eucharist, where Jesus gives himself.",
       "prayers": [],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 2: Living the Faith · Session 3"
+      "sources": [
+        {
+          "title": "Luke 24:13-35, the road to Emmaus",
+          "url": "https://www.biblegateway.com/passage/?search=Luke+24&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 1345-1355: the celebration of the Eucharist",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 2: Living the Faith · Session 3",
+      "lesson": [
+        "The Mass follows the same pattern as the road to Emmaus: Jesus explained the Scriptures to the two disciples, and then they recognized him in the breaking of the bread (Luke 24:13-35; Catechism 1346-1347). The app's Mass guide under Learn walks through every step.",
+        "## Introductory Rites",
+        "We make the Sign of the Cross, the priest greets us, and we ask God's mercy in the Penitential Act (\"Lord, have mercy\"). On Sundays outside Advent and Lent we sing the Gloria, and the priest says the Opening Prayer (Collect).",
+        "## Liturgy of the Word",
+        "- First Reading: usually from the Old Testament.",
+        "- Responsorial Psalm: a sung or spoken prayer from the Psalms.",
+        "- Second Reading: on Sundays, from the letters of the New Testament.",
+        "- Gospel: we stand, because Christ himself speaks. The Alleluia greets it (except in Lent).",
+        "- Homily, Creed and Prayer of the Faithful: the priest explains the readings, we profess our faith, and we pray for the Church and the world.",
+        "## Liturgy of the Eucharist",
+        "- Preparation of the gifts: bread and wine are brought to the altar.",
+        "- Eucharistic Prayer: the heart of the Mass. It includes the Holy, Holy, Holy, the words of consecration, and the Great Amen. Most people kneel.",
+        "- Communion Rite: the Our Father, the sign of peace, the Lamb of God, and Holy Communion.",
+        "## Concluding Rites",
+        "The priest blesses us and sends us out: \"Go forth, the Mass is ended,\" or \"Go in peace.\" The word Mass comes from this sending: we carry Christ into the week (Catechism 1332).",
+        "## Taking part",
+        "Taking part does not mean doing everything perfectly. Listen, sing, say the responses, and offer your own week to God with the bread and wine at the altar."
+      ],
+      "reflection": "Next Sunday, pay attention to one part of the Mass you usually rush past. What did you notice?"
     },
     {
       "id": "sym2-04",
       "stage": "catechumenate",
       "title": "Penance and Anointing of the Sick",
-      "summary": "God's mercy in confession, and his care for the sick.",
+      "summary": "Jesus heals us through two sacraments: Penance (Confession) forgives our sins, and the Anointing of the Sick strengthens the seriously ill.",
       "prayers": [
-        "act-of-contrition"
+        "act-of-contrition",
+        "confiteor"
       ],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 2: Living the Faith · Session 4"
+      "sources": [
+        {
+          "title": "Luke 15:11-32, the prodigal son",
+          "url": "https://www.biblegateway.com/passage/?search=Luke+15&version=NRSVCE"
+        },
+        {
+          "title": "John 20:19-23, whose sins you forgive",
+          "url": "https://www.biblegateway.com/passage/?search=John+20&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 1420-1532: the sacraments of healing",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 2: Living the Faith · Session 4",
+      "lesson": [
+        "Even after Baptism we still sin. Jesus knew this, so he gave us two sacraments of healing (Catechism 1420-1421).",
+        "## Jesus forgives through the Church",
+        "On Easter evening Jesus breathed on the apostles and said: \"Receive ye the Holy Ghost. Whose sins you shall forgive, they are forgiven them\" (John 20:22-23, Douay-Rheims). Priests share this power from the apostles (Catechism 1441-1445).",
+        "## The parts of Confession",
+        "- Contrition: being truly sorry for our sins, out of love for God or fear of losing him, and resolving not to sin again (Catechism 1451-1454).",
+        "- Confession: telling our sins to the priest, especially every serious (mortal) sin we remember (Catechism 1455-1458).",
+        "- Absolution: the priest, acting in the person of Christ, forgives our sins (Catechism 1449).",
+        "- Penance: a prayer or action to help repair the harm and heal our hearts (Catechism 1459-1460).",
+        "The priest can never reveal what he hears. This is called the seal of confession, and it has no exceptions (Catechism 1467).",
+        "There is a step-by-step Confession guide and an Act of Contrition in the Pray tab. People already baptized in another church usually make their first Confession before Easter.",
+        "## Anointing of the Sick",
+        "This sacrament is for anyone seriously ill, facing major surgery, or weakened by old age, not only for the dying (Catechism 1514-1515). The priest lays hands on the sick person and anoints their forehead and hands with blessed oil (James 5:14-15).",
+        "It gives strength, peace and courage, unites the sick person's suffering with Christ's, forgives sins, and sometimes brings bodily healing if that is good for the soul (Catechism 1520-1523)."
+      ],
+      "reflection": "Look at the examination of conscience in the app. What is one thing you would like Jesus to heal in you?"
     },
     {
       "id": "sym2-05",
       "stage": "catechumenate",
       "title": "Matrimony and Holy Orders",
-      "summary": "The sacraments of service and communion.",
+      "summary": "Matrimony and Holy Orders are sacraments of service: they give grace to build up the Church through a life given for others.",
       "prayers": [],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 2: Living the Faith · Session 5"
+      "sources": [
+        {
+          "title": "Genesis 2:18-24, the two become one flesh",
+          "url": "https://www.biblegateway.com/passage/?search=Genesis+2&version=NRSVCE"
+        },
+        {
+          "title": "Ephesians 5:21-33, a great mystery",
+          "url": "https://www.biblegateway.com/passage/?search=Ephesians+5&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 1533-1666: Holy Orders and Matrimony",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 2: Living the Faith · Session 5",
+      "lesson": [
+        "Two sacraments are directed to the salvation of others: Holy Orders and Matrimony. They give a special mission in the Church and the grace to live it (Catechism 1534-1535).",
+        "## Matrimony",
+        "In marriage a man and a woman give themselves to each other for their whole lives, open to children. Between baptized people this covenant is a sacrament: a sign of Christ's love for his Church (Ephesians 5:31-32; Catechism 1601).",
+        "- The couple themselves are the ministers: they give the sacrament to each other by their free consent, with the priest or deacon as the Church's witness (Catechism 1623, 1630).",
+        "- Marriage is one (faithful), lasting until death, and open to life (Catechism 1643-1654).",
+        "- The family is a \"domestic church,\" the first place where children learn to pray and believe (Catechism 1655-1658).",
+        "If you are already married, or were married before, talk with your RCIA leader or priest. The parish helps each couple check their situation before Easter.",
+        "## Holy Orders",
+        "Holy Orders is the sacrament through which the mission Christ gave the apostles continues in the Church. It has three degrees (Catechism 1536, 1554):",
+        "- Bishops: successors of the apostles, with the fullness of the sacrament.",
+        "- Priests: co-workers of the bishops, who celebrate the sacraments, preach and lead parishes.",
+        "- Deacons: ordained for service, who baptize, preach, witness marriages and serve the poor.",
+        "A priest acts \"in the person of Christ the Head\" when he celebrates the sacraments (Catechism 1548). Like Baptism and Confirmation, Holy Orders leaves a permanent mark.",
+        "## Every vocation",
+        "Every Christian has a vocation, a call from God. Whether married, ordained, in religious life or single, each of us is called to give our life in love."
+      ],
+      "reflection": "Pray this week for a married couple you admire, and for your parish priest."
     },
     {
       "id": "sym2-06",
       "stage": "catechumenate",
       "title": "A Catholic moral vision",
-      "summary": "Virtue, grace, and the path to happiness.",
-      "prayers": [],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 2: Living the Faith · Session 6"
+      "summary": "God's commandments are not a cage but a path to happiness. Virtue and grace make that path possible.",
+      "prayers": [
+        "act-of-charity"
+      ],
+      "sources": [
+        {
+          "title": "Matthew 5-7, the Sermon on the Mount",
+          "url": "https://www.biblegateway.com/passage/?search=Matthew+5&version=NRSVCE"
+        },
+        {
+          "title": "Exodus 20:1-17, the Ten Commandments",
+          "url": "https://www.biblegateway.com/passage/?search=Exodus+20&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 1691-1876 (life in Christ) and 2052-2082 (the commandments)",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 2: Living the Faith · Session 6",
+      "lesson": [
+        "Every person wants to be happy. The Catholic moral life starts there: God made us for happiness, and he shows us the way to it (Catechism 1718-1719).",
+        "## The Beatitudes",
+        "Jesus began his Sermon on the Mount with the Beatitudes: \"Blessed are the poor in spirit… blessed are the meek… blessed are the merciful…\" (Matthew 5:3-12). They describe the face of Jesus himself and the true happiness he offers (Catechism 1716-1717).",
+        "## Freedom and conscience",
+        "- Freedom: real freedom is not doing whatever we feel like, but being able to choose the good. The more we do good, the freer we become (Catechism 1731-1733).",
+        "- Conscience: the inner voice that tells us to do good and avoid evil. It must be formed by God's word and the Church's teaching, and then we must follow it (Catechism 1776-1785).",
+        "## The Ten Commandments",
+        "The first three are about loving God; the other seven are about loving our neighbour (Catechism 2067). Jesus summed them up in two great commandments: love God with all your heart, and love your neighbour as yourself (Matthew 22:37-40).",
+        "- I am the Lord your God: you shall not have strange gods before me.",
+        "- You shall not take the name of the Lord your God in vain.",
+        "- Remember to keep holy the Lord's Day.",
+        "- Honour your father and your mother.",
+        "- You shall not kill.",
+        "- You shall not commit adultery.",
+        "- You shall not steal.",
+        "- You shall not bear false witness against your neighbour.",
+        "- You shall not covet your neighbour's wife.",
+        "- You shall not covet your neighbour's goods.",
+        "## Virtues",
+        "A virtue is a firm habit of doing good (Catechism 1803).",
+        "- The cardinal virtues, which we grow in by practice: prudence, justice, fortitude and temperance (Catechism 1805-1809).",
+        "- The theological virtues, gifts God pours into us: faith, hope and charity. The greatest of these is charity (1 Corinthians 13:13; Catechism 1812-1829).",
+        "## Sin and mercy",
+        "Sin is a failure to love God and neighbour. Mortal sin is a grave matter done with full knowledge and deliberate consent; it cuts us off from God's grace until we repent. Venial sin weakens our love but does not break it (Catechism 1854-1863). God's mercy is always greater than our sin."
+      ],
+      "reflection": "Which of the Beatitudes speaks to you most right now? Which virtue would you like to grow in?"
     },
     {
       "id": "sym2-07",
       "stage": "catechumenate",
       "title": "A love that lasts: discovering authentic love",
-      "summary": "What real love is, and where it comes from.",
+      "summary": "Real love is not just a feeling. It is a gift of self, willing the good of the other, and it comes from God who is love.",
       "prayers": [],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 2: Living the Faith · Session 7"
+      "sources": [
+        {
+          "title": "1 Corinthians 13, love is patient",
+          "url": "https://www.biblegateway.com/passage/?search=1+Corinthians+13&version=NRSVCE"
+        },
+        {
+          "title": "1 John 4:7-21, God is love",
+          "url": "https://www.biblegateway.com/passage/?search=1+John+4&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 2331-2359: chastity and love",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 2: Living the Faith · Session 7",
+      "lesson": [
+        "The word love is used for everything from pizza to marriage. The Church helps us see what real love is, because we were made in the image of God, and \"God is love\" (1 John 4:8).",
+        "## Love is a gift of self",
+        "Love is more than a feeling, though feelings are good. To love is to will the good of another and to give ourselves for them (Catechism 1766). Jesus showed what that means: \"Greater love than this no man hath, that a man lay down his life for his friends\" (John 15:13, Douay-Rheims).",
+        "## Using versus loving",
+        "The opposite of love is not only hate; it is also using. Using someone means treating them as a means to get something for ourselves. Love sees each person as someone willed by God for their own sake, never as an object (Catechism 2284, 2357-2359).",
+        "## What love looks like",
+        "St. Paul describes it: love is patient and kind; it is not jealous, proud or rude; it does not seek its own interests; it bears all things, believes all things, hopes all things, endures all things (1 Corinthians 13:4-7).",
+        "## Made for communion",
+        "God created us male and female, equal in dignity and made for each other (Genesis 1:27; Catechism 369-372). Our whole person, body and soul, is made for communion with God and with others. That is why love involves the body as well as the heart.",
+        "## Chastity is for everyone",
+        "Chastity is the virtue that brings our desires into harmony with real love, so that we can give ourselves freely and not be ruled by our urges. Every Christian is called to it, in a way that fits their state of life: married, single, or consecrated (Catechism 2337-2349).",
+        "## Where love comes from",
+        "We can only love this way with God's help. \"We love, because he first loved us\" (1 John 4:19). Prayer and the sacraments are where we receive the love we are meant to give away."
+      ],
+      "reflection": "Think of someone who has loved you with a self-giving love. How can you love one person like that this week?"
     },
     {
       "id": "sym2-08",
       "stage": "catechumenate",
       "title": "A love that lasts: God's plan for sexuality",
-      "summary": "The Church's vision of the body, love, and family.",
+      "summary": "Sexuality is a gift from God, meant to express the total, faithful and fruitful love of husband and wife.",
       "prayers": [],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 2: Living the Faith · Session 8"
+      "sources": [
+        {
+          "title": "Genesis 1:26-31 and 2:18-25, male and female he created them",
+          "url": "https://www.biblegateway.com/passage/?search=Genesis+1&version=NRSVCE"
+        },
+        {
+          "title": "1 Corinthians 6:12-20, your body is a temple",
+          "url": "https://www.biblegateway.com/passage/?search=1+Corinthians+6&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 2331-2400: the sixth commandment",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 2: Living the Faith · Session 8",
+      "lesson": [
+        "The Church's teaching on sexuality is often heard only as a list of rules. It is really a big yes: a yes to the dignity of the body, to faithful love, and to the gift of children.",
+        "## The body speaks",
+        "We do not just have bodies; we are bodies and souls together. The body is good, created by God and redeemed by Christ, and it is a temple of the Holy Spirit (1 Corinthians 6:19-20; Catechism 364).",
+        "Pope St. John Paul II taught that the body has a language. Sexual union says, with the body, \"I give myself to you completely, for always.\" It speaks the truth only within marriage, where that promise has actually been made (Catechism 2360-2363).",
+        "## God's plan for married love",
+        "In marriage, sexual love has two inseparable purposes (Catechism 2366-2369):",
+        "- Unitive: it unites husband and wife ever more deeply in love.",
+        "- Procreative: it is open to new life, so that husband and wife share in God's work of creation.",
+        "Married couples may use natural methods to space births for serious reasons, respecting both purposes; the Church teaches that contraception separates them (Catechism 2370). Parishes offer courses in natural family planning.",
+        "## Mercy for everyone",
+        "Many people have experiences or choices in their past that do not match this vision. The Church does not reject anyone. Christ's mercy in the sacrament of Penance is a new beginning, and every person is called to chastity with the help of grace (Catechism 2348-2350). Every person, whatever their situation, is to be treated with respect and love (Catechism 2358).",
+        "## A vision worth living",
+        "This teaching protects love from being used and cheapened. It points to the greatest love of all: Christ's love for his Church, total, faithful and life-giving (Ephesians 5:25)."
+      ],
+      "reflection": "What part of this teaching do you find beautiful? What part do you have questions about? Bring your questions to your RCIA leader."
     },
     {
       "id": "sym2-09",
       "stage": "catechumenate",
       "title": "Catholic social teaching: a civilization of love",
-      "summary": "Caring for the poor and building a just society.",
+      "summary": "Catholic social teaching shows how to build a society of justice and love, with special care for the poor.",
       "prayers": [],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 2: Living the Faith · Session 9"
+      "sources": [
+        {
+          "title": "Matthew 25:31-46, I was hungry and you gave me food",
+          "url": "https://www.biblegateway.com/passage/?search=Matthew+25&version=NRSVCE"
+        },
+        {
+          "title": "Compendium of the Social Doctrine of the Church",
+          "url": "https://www.vatican.va/roman_curia/pontifical_councils/justpeace/documents/rc_pc_justpeace_doc_20060526_compendio-dott-soc_en.html"
+        },
+        {
+          "title": "Catechism 1877-1948 and 2401-2463",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 2: Living the Faith · Session 9",
+      "lesson": [
+        "Faith is never only between me and God. Jesus identified himself with the hungry, the stranger, the sick and the prisoner (Matthew 25:35-40). The Church's social teaching applies the Gospel to life in society.",
+        "## Key principles",
+        "- The common good: the conditions that let every person and group flourish. Everyone shares responsibility for it (Catechism 1905-1912).",
+        "- Solidarity: we are one human family. We are responsible for each other, especially across borders and between rich and poor (Catechism 1939-1942).",
+        "- Subsidiarity: problems should be handled at the closest level that can handle them well, starting with the family and local community, with larger bodies helping rather than taking over (Catechism 1883-1885).",
+        "- The preferential option for the poor: in every decision, ask how it affects the poorest and most vulnerable (Catechism 2443-2449).",
+        "- The dignity of work: work is a way to share in God's creation. Workers have a right to fair wages and safe conditions (Catechism 2427-2436).",
+        "- Care for creation: the earth is a gift entrusted to us for all generations (Catechism 2415-2418).",
+        "## Works of mercy",
+        "The Church lists concrete ways to love (Catechism 2447):",
+        "- Corporal: feed the hungry, give drink to the thirsty, clothe the naked, shelter the homeless, visit the sick, visit the imprisoned, bury the dead.",
+        "- Spiritual: instruct the ignorant, counsel the doubtful, admonish sinners, bear wrongs patiently, forgive offences willingly, comfort the afflicted, pray for the living and the dead.",
+        "## A civilization of love",
+        "Popes have called Christians to build \"a civilization of love.\" It starts small: in families, in the parish, at work. Many parishes in Canada have a St. Vincent de Paul Society or a food bank where new Catholics can serve."
+      ],
+      "reflection": "Choose one work of mercy to do this week, and do it quietly, for Jesus."
     },
     {
       "id": "sym2-10",
       "stage": "catechumenate",
       "title": "Catholic social teaching: the dignity of every person",
-      "summary": "Why every human life is sacred.",
+      "summary": "Every human life is sacred, from conception to natural death, because each person is made in the image of God.",
       "prayers": [],
-      "sources": [],
-      "status": "outline",
-      "ref": "Symbolon Part 2: Living the Faith · Session 10"
+      "sources": [
+        {
+          "title": "Genesis 1:26-31, in the image of God",
+          "url": "https://www.biblegateway.com/passage/?search=Genesis+1&version=NRSVCE"
+        },
+        {
+          "title": "Psalm 139, you knit me together",
+          "url": "https://www.biblegateway.com/passage/?search=Psalm+139&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 1700-1715 and 2258-2330",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "ref": "Symbolon Part 2: Living the Faith · Session 10",
+      "lesson": [
+        "The foundation of all Catholic social teaching is the dignity of the human person. Every human being is made in the image and likeness of God (Genesis 1:27) and is loved by him for their own sake (Catechism 356-357, 1700).",
+        "## Life is sacred",
+        "Human life is sacred from the moment of conception until natural death, because God alone is its Lord (Catechism 2258). That is why the Church defends life at every stage:",
+        "- The unborn: the Church teaches that direct abortion is gravely wrong, and she surrounds women in difficult pregnancies with practical help and mercy (Catechism 2270-2275).",
+        "- The sick, disabled and elderly: their lives have the same worth. Euthanasia and assisted suicide are contrary to the dignity of the person; good palliative care is a work of love (Catechism 2276-2283).",
+        "- Every person: the Church also works against violence, poverty, racism, human trafficking and the abuse of migrants and refugees, all of which wound human dignity (Catechism 2284-2317).",
+        "## Rights and duties",
+        "Because every person has dignity, every person has rights: to life, to food and shelter, to religious freedom, to work, to education. With rights come duties to respect the rights of others (Catechism 1929-1933).",
+        "## Healing and hope",
+        "Many people carry wounds connected to these questions, such as a past abortion. God's mercy is greater than any sin. In Canada, Rachel's Vineyard and parish priests offer confidential help and healing.",
+        "## Seeing as God sees",
+        "> As long as you did it to one of these my least brethren, you did it to me. — Matthew 25:40, Douay-Rheims",
+        "Mother Teresa saw Jesus in the poorest of the poor. The challenge for each of us is to see every person, especially the one who is easy to overlook, as someone God has willed and loves."
+      ],
+      "reflection": "Who is someone easy to overlook in your daily life? How could you show them their dignity this week?"
     },
     {
       "id": "s26",
       "stage": "enlightenment",
       "title": "Lent: prayer, fasting, almsgiving",
-      "summary": "Forty days of preparation.",
-      "prayers": [],
-      "sources": [],
-      "status": "outline"
+      "summary": "Lent is forty days of preparing for Easter through prayer, fasting and almsgiving. For you it is the final retreat before the sacraments.",
+      "prayers": [
+        "act-of-contrition"
+      ],
+      "sources": [
+        {
+          "title": "Matthew 6:1-18, almsgiving, prayer and fasting",
+          "url": "https://www.biblegateway.com/passage/?search=Matthew+6&version=NRSVCE"
+        },
+        {
+          "title": "Matthew 4:1-11, Jesus in the desert",
+          "url": "https://www.biblegateway.com/passage/?search=Matthew+4&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 538-540 and 1434-1439",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "lesson": [
+        "Lent begins on Ash Wednesday and lasts forty days, recalling Jesus' forty days of fasting in the desert (Matthew 4:1-11). For the whole Church it is a time of conversion; for the elect, those preparing for Baptism, it is the final and most intense stage of preparation (Catechism 540, 1438).",
+        "## Ash Wednesday",
+        "Ashes are placed on our foreheads with the words \"Repent, and believe in the Gospel\" or \"Remember that you are dust, and to dust you shall return.\" Anyone may receive ashes, including those not yet baptized.",
+        "## Three practices",
+        "Jesus speaks of all three in the Sermon on the Mount (Matthew 6:1-18):",
+        "- Prayer: turning back to God. Add something: a daily Gospel reading, the Stations of the Cross on Fridays, or a few quiet minutes in church.",
+        "- Fasting: letting go of food or comforts so that we hunger for God. Catholics aged 18 to 59 fast on Ash Wednesday and Good Friday (one full meal and two small ones), and those 14 and older abstain from meat on those days and on Fridays of Lent.",
+        "- Almsgiving: giving to those in need, with money, time or attention. What we save by fasting can go to the poor; in Canada many parishes support Development and Peace's Share Lent.",
+        "## Why give things up?",
+        "Lent is not about proving how strong we are. Small sacrifices make room in our hearts, help us notice our attachments, and unite us with Jesus who gave everything for us.",
+        "## For the elect",
+        "On the first Sunday of Lent the elect usually celebrate the Rite of Election with the bishop. Then come the scrutinies and the presentations of the Creed and the Lord's Prayer. Let your whole parish pray for you, and pray for each other."
+      ],
+      "reflection": "Choose one practice of prayer, one of fasting and one of almsgiving for this Lent. Write them in your journal so you can look back at Easter."
     },
     {
       "id": "s27",
       "stage": "enlightenment",
       "title": "The scrutinies: turning toward Christ",
-      "summary": "Prayers for healing and strength on the Sundays of Lent.",
+      "summary": "On the third, fourth and fifth Sundays of Lent the parish prays over the elect, asking God to heal what is weak and strengthen what is good.",
       "prayers": [],
-      "sources": [],
-      "status": "outline"
+      "sources": [
+        {
+          "title": "John 4:5-42, the woman at the well",
+          "url": "https://www.biblegateway.com/passage/?search=John+4&version=NRSVCE"
+        },
+        {
+          "title": "John 9:1-41, the man born blind",
+          "url": "https://www.biblegateway.com/passage/?search=John+9&version=NRSVCE"
+        },
+        {
+          "title": "John 11:1-45, the raising of Lazarus",
+          "url": "https://www.biblegateway.com/passage/?search=John+11&version=NRSVCE"
+        }
+      ],
+      "status": "draft",
+      "lesson": [
+        "The scrutinies are prayers of healing and strength for the elect, celebrated at Mass on the third, fourth and fifth Sundays of Lent. \"Scrutiny\" sounds like an exam, but it is not a test of you. It is God looking into the heart with love, to uncover and heal whatever is weak or sinful, and to strengthen all that is good.",
+        "## Three Gospels, three encounters",
+        "The readings come from Year A, the oldest Gospels the Church has used with those preparing for Baptism:",
+        "- First scrutiny, the woman at the well (John 4:5-42): Jesus offers living water to someone thirsty for more. He knows everything about her and still offers her life.",
+        "- Second scrutiny, the man born blind (John 9:1-41): Jesus is the light of the world. He opens eyes, and the man comes to faith step by step.",
+        "- Third scrutiny, the raising of Lazarus (John 11:1-45): Jesus is the resurrection and the life. He calls us out of every tomb.",
+        "## What happens",
+        "After the homily the elect come forward, often with their godparents or sponsors, who place a hand on their shoulder. The parish prays for them. The priest prays a prayer of exorcism, asking God to free them from the power of evil, and lays hands on them in silence.",
+        "An exorcism here is not a dramatic movie scene. It is a quiet prayer of the whole Church, asking Christ to set someone free (Catechism 1237).",
+        "## Preparing your heart",
+        "Before each scrutiny, read the Gospel and ask: What thirst do I bring to Jesus? Where am I still blind? What tomb do I need him to call me out of?"
+      ],
+      "reflection": "Which of the three Gospel stories speaks most to where you are now? Write a short prayer to Jesus about it."
     },
     {
       "id": "s28",
       "stage": "enlightenment",
       "title": "The Creed is handed on to you",
-      "summary": "Receiving the Church's profession of faith.",
+      "summary": "The Church hands on to you her profession of faith, the Creed, so that you can make it your own at Baptism.",
       "prayers": [
-        "apostles-creed"
+        "apostles-creed",
+        "nicene-creed"
       ],
-      "sources": [],
-      "status": "outline"
+      "sources": [
+        {
+          "title": "Catechism 185-197: the creeds",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "lesson": [
+        "During Lent the Church gives the elect two treasures: the Creed and the Lord's Prayer. These are called the Presentations. In the early Church, the elect learned the Creed by heart and \"gave it back\" by reciting it before their Baptism.",
+        "## What a creed is",
+        "A creed is a summary of the faith. The word comes from the Latin credo, \"I believe.\" Creeds are also called symbols, from a Greek word for a token that proves you belong. That is where the name Symbolon comes from (Catechism 185-188).",
+        "## Two creeds",
+        "- The Apostles' Creed: the ancient baptismal creed of the Church in Rome (Catechism 194).",
+        "- The Nicene Creed: from the Councils of Nicaea (325) and Constantinople (381), said at Sunday Mass (Catechism 195).",
+        "## Its shape",
+        "The Creed has three parts, one for each Person of the Trinity (Catechism 190):",
+        "- God the Father and creation.",
+        "- God the Son and our redemption: his birth, death, resurrection and return.",
+        "- God the Holy Spirit and our sanctification: the Church, the forgiveness of sins, the resurrection and eternal life.",
+        "Look back over your lessons: almost every one has explained a line of the Creed.",
+        "## Making it your own",
+        "At the Easter Vigil, before you are baptized, you will be asked: \"Do you believe in God, the Father almighty…?\" and you will answer, \"I do.\" Learn the Apostles' Creed by heart this week. The app's Pray tab can read it aloud with you."
+      ],
+      "reflection": "Which line of the Creed means the most to you right now? Which one do you still have questions about?"
     },
     {
       "id": "s29",
       "stage": "enlightenment",
       "title": "The Lord's Prayer is handed on to you",
-      "summary": "Receiving the prayer Jesus taught.",
+      "summary": "The Church hands on to you the prayer Jesus himself taught, the Our Father, the summary of the whole Gospel.",
       "prayers": [
         "our-father"
       ],
-      "sources": [],
-      "status": "outline"
+      "sources": [
+        {
+          "title": "Matthew 6:9-13, the Lord's Prayer",
+          "url": "https://www.biblegateway.com/passage/?search=Matthew+6&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 2759-2865: the Lord's Prayer",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "lesson": [
+        "When the disciples asked Jesus, \"Lord, teach us to pray,\" he gave them the Our Father (Luke 11:1-4). The Church presents this prayer to the elect during Lent. After Baptism you will pray it as a child of God, calling him Father in a new way. Tertullian called it \"the summary of the whole Gospel\" (Catechism 2761).",
+        "## Our Father, who art in heaven",
+        "We call God Father because Jesus lets us share his own relationship with the Father. \"Our\" reminds us we never pray alone (Catechism 2779-2796).",
+        "## Seven petitions",
+        "The first three are about God, the last four about our needs (Catechism 2803-2806):",
+        "- Hallowed be thy name: may God's name be honoured as holy, in us and in the world.",
+        "- Thy kingdom come: may God's reign of love grow now and come in fullness when Christ returns.",
+        "- Thy will be done on earth as it is in heaven: may we want what God wants.",
+        "- Give us this day our daily bread: everything we need, and also the Bread of Life, the Eucharist.",
+        "- Forgive us our trespasses as we forgive those who trespass against us: God's mercy flows into a heart that also forgives.",
+        "- Lead us not into temptation: give us strength not to give in when we are tested.",
+        "- Deliver us from evil: free us from the evil one and all his works.",
+        "## Praying it slowly",
+        "Try praying the Our Father very slowly, one phrase per breath, stopping on the line that catches your heart. St. Teresa of Avila said a person could spend a whole hour on it."
+      ],
+      "reflection": "Which line of the Our Father is hardest for you to pray honestly? Bring that to God this week."
     },
     {
       "id": "s30",
       "stage": "enlightenment",
       "title": "Holy Week and the Easter Vigil",
-      "summary": "What to expect on the most important night of the year.",
+      "summary": "Holy Week leads to the Easter Vigil, the night you receive the sacraments. Here is what to expect.",
       "prayers": [],
-      "sources": [],
-      "status": "outline"
+      "sources": [
+        {
+          "title": "John 13-20, from the Last Supper to the empty tomb",
+          "url": "https://www.biblegateway.com/passage/?search=John+13&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 1163-1171 and 1212-1233",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "lesson": [
+        "Holy Week is the most important week of the Church year. It walks with Jesus through his last days, his death and his resurrection (Catechism 1168-1169).",
+        "## Palm Sunday",
+        "We carry palms and remember Jesus entering Jerusalem as king, then hear the whole Passion read aloud.",
+        "## The Easter Triduum",
+        "The three days from Holy Thursday evening to Easter Sunday evening are one great celebration.",
+        "- Holy Thursday: the Mass of the Lord's Supper. Jesus gives us the Eucharist and the priesthood and washes his disciples' feet. Afterwards the Blessed Sacrament is carried to an altar of repose for quiet prayer.",
+        "- Good Friday: no Mass is celebrated. We hear the Passion, pray for the whole world, and come forward to venerate the Cross. It is a day of fasting.",
+        "- Holy Saturday: the Church waits in silence at the tomb. In many parishes the elect gather in the morning for prayer and the \"Ephphatha\" rite, opening their ears and mouths to the Gospel.",
+        "## The Easter Vigil",
+        "After dark, the Church celebrates the greatest night of the year (Catechism 1217):",
+        "- The Service of Light: a new fire is blessed and the Easter candle lit. Its light passes from candle to candle, and the Exsultet, the great Easter proclamation, is sung.",
+        "- The Liturgy of the Word: several readings tell the whole story of salvation, from creation to the Resurrection. The Gloria and the Alleluia return.",
+        "- Baptism and Confirmation: the elect renounce sin, profess faith, and are baptized and confirmed. Candidates already baptized make their profession of faith and are confirmed.",
+        "- The Eucharist: you receive Holy Communion for the first time.",
+        "## Practical tips",
+        "The Vigil can last two to three hours. Wear clothes that can get a little wet if you are being baptized by immersion, and ask your parish what to bring. Eat lightly before, rest during the day, and invite the people who love you."
+      ],
+      "reflection": "Write a short letter to yourself to open on the night of the Easter Vigil. What do you hope for?"
     },
     {
       "id": "s31",
       "stage": "mystagogy",
       "title": "Living the sacraments",
-      "summary": "What changed at Easter, and how to keep growing.",
+      "summary": "Easter changed you. Mystagogy is the time to unpack what the sacraments did and to grow in your new life.",
       "prayers": [],
-      "sources": [],
-      "status": "outline"
+      "sources": [
+        {
+          "title": "Acts 2:42-47, the life of the first believers",
+          "url": "https://www.biblegateway.com/passage/?search=Acts+2&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 1229-1233 and 2041-2043",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "lesson": [
+        "The weeks after Easter are called mystagogy, from a Greek word meaning \"being led into the mysteries.\" The early Church saved some explanations until after Baptism, because the sacraments are best understood once you have lived them.",
+        "## What changed",
+        "- In Baptism you became a new creation, a child of God, and a member of Christ's Body (2 Corinthians 5:17; Catechism 1265).",
+        "- In Confirmation the Holy Spirit sealed you and gave you his gifts for your mission (Catechism 1303).",
+        "- In the Eucharist you were united to Jesus, and you can now receive him every Sunday, even every day (Catechism 1391).",
+        "## Keeping the new life strong",
+        "- Sunday Mass: the heart of Catholic life, and an obligation every Sunday and holy day (Catechism 2180-2183).",
+        "- Confession: go regularly, not only when you have committed a serious sin. Many Catholics go once a month (Catechism 1458).",
+        "- Daily prayer: keep the habits you started in RCIA: morning offering, Scripture, evening examen.",
+        "- Community: stay connected with your sponsor and your RCIA group.",
+        "## The precepts of the Church",
+        "The Church gives five basic duties as a minimum: attend Mass on Sundays and holy days; confess serious sins at least once a year; receive Communion at least during the Easter season; observe the days of fasting and abstinence; and help provide for the needs of the Church (Catechism 2041-2043).",
+        "## Neophytes",
+        "For this first year you are called a neophyte, a \"new plant.\" Expect ups and downs. Feelings fade, but grace remains. Keep showing up."
+      ],
+      "reflection": "What surprised you about your first weeks as a Catholic? Which habit do you most want to keep?"
     },
     {
       "id": "s32",
       "stage": "mystagogy",
       "title": "Called and sent",
-      "summary": "Pentecost, mission, and your place in the parish.",
-      "prayers": [],
-      "sources": [],
-      "status": "outline"
+      "summary": "At Pentecost the Spirit sends the Church out on mission. Every Catholic has a part to play, starting in the parish.",
+      "prayers": [
+        "morning-offering"
+      ],
+      "sources": [
+        {
+          "title": "Acts 2:1-41, Pentecost",
+          "url": "https://www.biblegateway.com/passage/?search=Acts+2&version=NRSVCE"
+        },
+        {
+          "title": "Luke 24:13-35, the road to Emmaus",
+          "url": "https://www.biblegateway.com/passage/?search=Luke+24&version=NRSVCE"
+        },
+        {
+          "title": "Catechism 849-856 and 897-913: mission and the laity",
+          "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+        }
+      ],
+      "status": "draft",
+      "lesson": [
+        "Fifty days after Easter, the Church celebrates Pentecost. The Holy Spirit came down on the apostles, and they went out to proclaim Jesus to every nation (Acts 2). Pentecost closes the Easter season and the RCIA journey, but it is really a beginning.",
+        "## Sent, not just saved",
+        "Jesus' last words to his disciples were a mission: \"Going therefore, teach ye all nations; baptizing them in the name of the Father, and of the Son, and of the Holy Ghost\" (Matthew 28:19, Douay-Rheims). Every baptized person shares in that mission (Catechism 849, 900).",
+        "## Your gifts",
+        "The Spirit gives each of us gifts for the good of others (1 Corinthians 12:4-7). Think about what you are good at and what you love: music, hospitality, teaching children, visiting the sick, practical help.",
+        "## Places to start in your parish",
+        "- Liturgy: reader (lector), greeter, choir, server.",
+        "- Faith formation: helping with children's catechism or with next year's RCIA group.",
+        "- Service: the St. Vincent de Paul Society, food bank, visiting seniors.",
+        "- Prayer: Eucharistic adoration, a Bible study, a prayer group.",
+        "## Witness",
+        "Most evangelization is simple: living with joy and telling people, when they ask, why you became Catholic. Your story of the road you walked is one of the most powerful things you can share.",
+        "## Like the Emmaus disciples",
+        "You began this journey with the two disciples on the road to Emmaus. After they recognized Jesus in the breaking of the bread, they got up that very hour and ran back to share the news (Luke 24:33-35). That is your story now too."
+      ],
+      "reflection": "Look back at where you were when you started RCIA. How has Jesus walked with you? Who could you tell about it?"
     }
   ]
 }
