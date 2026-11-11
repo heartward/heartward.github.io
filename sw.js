@@ -1,6 +1,6 @@
 /* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit.
    Every download skips the browser's own HTTP cache, so a new version never mixes in files from an older one. */
-var CACHE = 'heartward-v30';
+var CACHE = 'heartward-v31';
 var BIBLE = 'heartward-bible'; // the 73 book texts, loaded one at a time and kept across app updates
 var ART = 'heartward-art'; // paintings from Wikimedia Commons, kept across app updates
 var SHELL = [
