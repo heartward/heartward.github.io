@@ -5,7 +5,7 @@
 import { data, byId } from '../data.js';
 import { state, save, localISO } from '../store.js';
 import { icon } from '../icons.js';
-import { esc, t, toast, back, head, fmtDate, parseISO, safeUrl } from '../ui.js';
+import { esc, t, toast, back, head, fmtDate, parseISO, safeUrl, isRTL } from '../ui.js';
 import { sessionNo } from './journey.js';
 import { currentSession, readingsUrl } from './week.js';
 import { passage, nrsvUrl } from './bible.js';
@@ -203,7 +203,7 @@ export function day(id, nStr) {
       let said = [];
       passage(d.refEn || d.ref, d.dr).then(p => {
         const el = root.querySelector('#dread'); if (!el) return;
-        el.innerHTML = p.html + '<p class="small muted" style="margin:6px 0 0">' + esc(p.fa ? t('Old Persian Version (1895), public domain.') : t('Douay-Rheims Bible, public domain.')) + '</p>';
+        el.innerHTML = (!p.fa && isRTL() ? '<p class="small muted" style="margin:0 0 4px">' + esc(t('This book is not in the Old Persian Version, so it is shown in English from the Douay-Rheims.')) + '</p><div dir="ltr" lang="en">' + p.html + '</div>' : p.html) + '<p class="small muted" style="margin:6px 0 0">' + esc(p.fa ? t('Old Persian Version (1895), public domain.') : t('Douay-Rheims Bible, public domain.')) + '</p>';
         said = [refShow(d.ref) + '.', ...p.said];
       }).catch(() => { const el = root.querySelector('#dread'); if (el) el.innerHTML = '<p>' + esc(t('This reading needs the internet the first time. Open it in your Bible, or connect once.')) + '</p>'; });
       bindListen(root, 'dlisten', () => said);

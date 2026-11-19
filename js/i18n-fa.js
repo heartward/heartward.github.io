@@ -922,5 +922,6 @@ export const FA = {
   "This reading needs the internet the first time. Open it in your Bible, or connect once.": "این قرائت بار اول به اینترنت نیاز دارد. آن را در کتاب‌مقدس خود باز کنید، یا یک بار وصل شوید.",
   "All seven days! Your week was full of God.": "هر هفت روز! هفته‌تان پر از خدا بود.",
   "From my week": "از هفتهٔ من",
-  "Seven short days to live this session: read, think, pray and do": "هفت روز کوتاه برای زندگی کردن این جلسه: بخوانید، بیندیشید، دعا کنید و انجام دهید"
+  "Seven short days to live this session: read, think, pray and do": "هفت روز کوتاه برای زندگی کردن این جلسه: بخوانید، بیندیشید، دعا کنید و انجام دهید",
+  "This book is not in the Old Persian Version, so it is shown in English from the Douay-Rheims.": "این کتاب در ترجمهٔ قدیم نیست، برای همین به انگلیسی از ترجمهٔ دوئی‌ریمز آمده است."
 };
