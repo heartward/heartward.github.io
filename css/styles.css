@@ -637,3 +637,23 @@ ol.outline .oc { flex: 0 0 4.2em; color: var(--muted); font-variant-numeric: tab
 [dir="rtl"] .week-card .chev svg { transform: scaleX(-1); }
 /* Charts keep their drawn layout; only the words inside are Persian. */
 [dir="rtl"] .diagram svg { direction: ltr; }
+
+/* Faith and reason */
+.argument { counter-reset: arg; list-style: none; margin: 0; padding: 14px 16px; }
+.argument li { counter-increment: arg; position: relative; padding-inline-start: 38px; margin: 0 0 12px; line-height: 1.6; }
+.argument li:last-child { margin-bottom: 0; }
+.argument li::before { content: counter(arg); position: absolute; inset-inline-start: 0; top: 1px; width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; font-size: .85rem; display: grid; place-items: center; }
+:root[dir="rtl"] .argument li::before { content: counter(arg, persian); }
+.r-short { border-inline-start: 5px solid var(--accent); }
+.r-short p { margin: 4px 0 0; font-family: var(--serif); font-size: 1.1rem; line-height: 1.65; }
+details.method { margin-top: 16px; }
+details.method summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; align-items: center; }
+details.method summary::-webkit-details-marker { display: none; }
+details.method summary .eyebrow { grid-column: 1; }
+details.method summary strong { grid-column: 1; }
+details.method summary .plus { grid-column: 2; grid-row: 1 / span 2; }
+details.method[open] summary .plus { transform: rotate(45deg); }
+details.method .argument { padding: 14px 0 4px; }
+.r-quote { margin: 12px 0 0; padding-inline-start: 14px; border-inline-start: 3px solid var(--accent); font-family: var(--serif); font-style: italic; }
+.r-quote cite { display: block; font-style: normal; font-size: .85rem; color: var(--muted); margin-top: 4px; }
+.reason-road { margin-bottom: 0; }
