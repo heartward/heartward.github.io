@@ -5,6 +5,7 @@ import { esc, t, fmtDate, parseISO, tile } from '../ui.js';
 import { season, seasonColor, upcoming, rosaryForDay } from '../liturgy.js';
 import { progress, nextSession, sessionNo } from './journey.js';
 import { daysToVigil } from './extras.js';
+import { todayCard } from './daily.js';
 
 export function view() {
   const now = new Date();
@@ -46,6 +47,7 @@ export function view() {
     html += '<a class="card next-card" href="#/session/' + next.id + '" style="text-decoration:none;color:inherit">' +
       '<span class="num-badge">' + sessionNo(next) + '</span><span><span class="eyebrow">' + esc(t('Up next')) + ' · ' + esc(t(st.title)) + '</span>' +
       '<h2 class="h3">' + esc(next.title) + '</h2><span class="muted small">' + esc(next.summary) + '</span></span></a>';
+    html += todayCard();
     const sv = (data.study.sessions[next.id] || {}).verse;
     html += '<a class="card week-card" href="#/week"><span class="eyebrow">' + esc(t('This week')) + '</span>' +
       (sv ? '<span class="wk-verse">“' + esc(sv.text.length > 110 ? sv.text.slice(0, sv.text.lastIndexOf(' ', 105)) + '…' : sv.text) + '” <span class="muted small">' + esc(sv.ref) + '</span></span>' : '') +

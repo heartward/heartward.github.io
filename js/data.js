@@ -1,7 +1,7 @@
 import { state } from './store.js';
 // Loads bundled content. Content files live in content/<lang>/; English is the base and other languages overlay it.
 export const data = {};
-const FILES = ['sessions', 'prayers', 'faq', 'guides', 'glossary', 'saints', 'calendar', 'paths', 'study', 'extras', 'feasts', 'more', 'bible', 'scripture', 'year', 'books', 'reason'];
+const FILES = ['sessions', 'prayers', 'faq', 'guides', 'glossary', 'saints', 'calendar', 'paths', 'study', 'extras', 'feasts', 'more', 'bible', 'scripture', 'year', 'books', 'reason', 'daily'];
 const get = p => fetch(p).then(r => { if (!r.ok) throw new Error(p); return r.json(); });
 
 // Translations (content/fa/<file>.json) map each English text to its translation. Any text without one
@@ -31,6 +31,7 @@ export async function loadData() {
     Promise.all(tr),
     lang === 'fa' ? get('content/fa/passages.json').catch(() => null) : null
   ]);
+  data.glossaryEn = base[FILES.indexOf('glossary')];
   data.prayersEn = Object.fromEntries(base[FILES.indexOf('prayers')].map(p => [p.id, p]));
   FILES.forEach((f, i) => { data[f] = maps[i] ? overlay(base[i], maps[i], null) : base[i]; });
   data.stages = data.sessions.stages;

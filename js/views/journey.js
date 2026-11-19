@@ -5,6 +5,7 @@ import { esc, t, toast, back, head, sources } from '../ui.js';
 import { lessonHtml } from '../figures.js';
 import { listenButton, bindListen, sentences } from '../speech.js';
 import { daysToVigil } from './extras.js';
+import { weekNotesHtml } from './daily.js';
 import { sessionStudies, studyRow } from './bible.js';
 import { sessionBlock } from './reason.js';
 
@@ -78,6 +79,7 @@ export function session(id) {
     '<div class="card"><label class="field"><span>' + esc(t('Notes from class and my thoughts')) + '</span><textarea id="j-notes" placeholder="' + esc(t('What stood out to you this week?')) + '">' + esc(j.notes || '') + '</textarea></label>' +
     '<label class="field" style="margin:0"><span>' + esc(t('Questions to ask my catechist or sponsor')) + '</span><textarea id="j-questions" style="min-height:80px" placeholder="' + esc(t('Anything you are wondering about')) + '">' + esc(j.questions || '') + '</textarea></label>' +
     '<p class="small muted" style="margin:10px 0 0">' + esc(t('Saved only on this device.')) + '</p></div>';
+  html += weekNotesHtml(s.id);
   html += '<div class="btn-row" style="margin-top:22px"><button class="btn block ' + (done ? 'ok' : '') + '" id="toggle-done">' + (done ? icon('check') + esc(t('Completed')) : icon('flame') + esc(t('Mark as completed'))) + '</button></div>';
   const i = data.sessionList.indexOf(s), nxt = data.sessionList[i + 1];
   if (nxt) html += '<a class="card row" style="margin-top:6px" href="#/session/' + nxt.id + '"><span class="grow"><span class="eyebrow">' + esc(t('Next')) + '</span><span class="title">' + esc(nxt.title) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
