@@ -147,7 +147,7 @@ function road(p) {
     '<defs><mask id="road-lit" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="96">' +
     '<path d="' + ROAD_D + '" pathLength="100" fill="none" stroke="#fff" stroke-width="14" stroke-dasharray="' + lit + ' 101"/></mask></defs>' +
     '<path class="trail" d="' + ROAD_D + '" fill="none"/>' +
-    '<path class="trail lit-trail" d="' + ROAD_D + '" fill="none" mask="url(#road-lit)"/>' +
+    '<g class="lit-trail"><path class="trail" d="' + ROAD_D + '" fill="none" mask="url(#road-lit)"/></g>' +
     '<path class="road-line" d="' + ROAD_D + '" fill="none" stroke="none"/></svg>' +
     '<ol class="road-stops" aria-label="' + esc(t('The four stages')) + '">' +
     p.stages.map((st, i) => '<li class="' + (i === pos.stage ? 'here' : i < pos.stage ? 'reached' : '') + '"' + (i === pos.stage ? ' aria-current="step"' : '') + '>' + esc(t(st.title)) + '</li>').join('') + '</ol>';
@@ -156,12 +156,11 @@ function road(p) {
 function placeRoadDots(root) {
   const svg = root.querySelector('svg.road'), line = svg && svg.querySelector('.road-line');
   if (!line || !line.getTotalLength) return;
-  const L = line.getTotalLength(), at = +svg.dataset.at, stage = +svg.dataset.stage;
+  const L = line.getTotalLength(), stage = +svg.dataset.stage;
   const dot = (k, r, cls) => {
     const pt = line.getPointAtLength(L * k), c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     c.setAttribute('cx', pt.x.toFixed(1)); c.setAttribute('cy', pt.y.toFixed(1)); c.setAttribute('r', r); c.setAttribute('class', cls);
     svg.appendChild(c);
   };
   STOPS.forEach((k, i) => dot(k, 6, i <= stage ? 'lit' : 'dim'));
-  dot(Math.max(at, STOPS[0]), 8, 'here');
 }
