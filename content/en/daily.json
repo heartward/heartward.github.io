@@ -1,0 +1,3315 @@
+{
+ "intro": "Each week has seven short days between classes. Day 1 is the day after class; Day 7 is class day. Every day has something to read, to think about, to pray and to do, about ten or fifteen minutes in all. Miss a day? Just pick up where you are.",
+ "kinds": {
+  "remember": {
+   "name": "Look back",
+   "icon": "pen",
+   "about": "The day after class: hold on to what you heard before it fades."
+  },
+  "scripture": {
+   "name": "Scripture",
+   "icon": "book",
+   "about": "A day to sit with the word of God and let it speak."
+  },
+  "watch": {
+   "name": "Watch or listen",
+   "icon": "volume",
+   "about": "A short video or podcast from a trusted Catholic teacher, with a summary for offline days."
+  },
+  "reason": {
+   "name": "Think it through",
+   "icon": "question",
+   "about": "Faith and reason: a real question people ask, answered step by step."
+  },
+  "story": {
+   "name": "A story",
+   "icon": "star",
+   "about": "Someone who walked this road before you, and found Christ."
+  },
+  "live": {
+   "name": "Live it",
+   "icon": "heart",
+   "about": "Faith you can do today, at home, at work, at the table."
+  },
+  "class": {
+   "name": "Get ready for class",
+   "icon": "people",
+   "about": "Class day: gather your questions and bring your week with you."
+  }
+ },
+ "sessions": {
+  "s01": [
+   {
+    "kind": "remember",
+    "title": "Someone walks beside you",
+    "ref": "Luke 24:13-17",
+    "think": "In class you met two disciples walking away from Jerusalem, sad and confused. Jesus came and walked with them, but they did not know him. Faith often starts like this: God is already close before we can name him.",
+    "journal": "What first made you start walking toward the Church? Write it as a short story.",
+    "pray": "Lord Jesus, you walked with the two disciples before they knew it was you. Walk with me this week, and open my eyes a little more each day. Amen.",
+    "prayer": "sign-of-the-cross",
+    "do": "Make the Sign of the Cross slowly three times today: when you wake, before a meal and before sleep. Say each word with attention.",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "Did not our hearts burn?",
+    "ref": "Luke 24:25-32",
+    "think": "Jesus explained the Scriptures to them, \"beginning at Moses and all the prophets.\" The whole Bible points to him. Their hearts burned while he spoke, long before they understood.",
+    "journal": "Has something about Jesus ever made your heart \"burn\"? What was it?",
+    "pray": "Jesus, speak to me through your word. Let my heart burn, and give me patience when I do not yet understand.",
+    "do": "Do this week's Bible study on the whole Emmaus story. It takes about fifteen minutes.",
+    "go": [
+     "bible"
+    ]
+   },
+   {
+    "kind": "watch",
+    "title": "Known in the breaking of the bread",
+    "ref": "Luke 24:33-35",
+    "media": {
+     "kind": "search",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "Bishop Barron on the road to Emmaus",
+     "url": "https://www.youtube.com/@BishopBarron/search?query=Emmaus",
+     "mins": 12,
+     "about": "Bishop Barron has preached many times on Emmaus. He shows its pattern: Jesus finds us when we walk the wrong way, opens the Scriptures, and makes himself known in the breaking of the bread, which is the Mass. Choose one of his short Sunday sermons.",
+     "listen": "the same pattern at every Mass: Jesus speaks in the readings, then gives himself in the Eucharist."
+    },
+    "think": "The two ran back seven miles in the dark to tell the others. Meeting Jesus does not stay private. It sends us back to the community.",
+    "journal": "Who would you tell first if you became sure that Jesus is alive?",
+    "pray": "Jesus, you are alive. Make me a person who carries good news, not only one who hears it.",
+    "do": "Tell one person, gently, that you have started RCIA, or share one thing you learned in class."
+   },
+   {
+    "kind": "reason",
+    "title": "Doubts are welcome here",
+    "ref": "John 20:24-29",
+    "reasonId": "doubts",
+    "reason": {
+     "q": "Is it wrong to have doubts?",
+     "steps": [
+      "The disciples on the road were full of doubt. Jesus did not send them away; he walked with them and gave them reasons from Scripture.",
+      "A question you cannot answer yet is not the same as refusing to believe. The Church calls honest searching \"faith seeking understanding.\"",
+      "Faith is not believing without reasons. It is trusting someone worthy of trust, after looking at the evidence: the witnesses, history and changed lives.",
+      "So bring your doubts into the open. Truth has nothing to fear from an honest question."
+     ]
+    },
+    "think": "Thomas wanted proof, and Jesus gave it to him. Then he blessed those who would believe through the witness of others, which includes you.",
+    "journal": "Write your biggest question about faith, honestly, in one sentence.",
+    "pray": "Lord, I believe; help my unbelief. (Mark 9:24)",
+    "do": "Copy your question into \"My questions for class\" so you can ask it on Day 7.",
+    "ccc": "156-159"
+   },
+   {
+    "kind": "story",
+    "title": "Take and read",
+    "ref": "Romans 13:11-14",
+    "story": {
+     "name": "St. Augustine of Hippo",
+     "saint": "augustine",
+     "text": "Augustine was born in North Africa in 354. He was brilliant and restless. He tried one philosophy after another and chased success and pleasure, while his mother Monica prayed for him for years.\n\nIn a garden in Milan, in 386, he wept because he could not change. Then he heard a child's voice singing, \"Take and read.\" He opened Paul's letter and read: \"Put ye on the Lord Jesus Christ.\" Peace filled his heart. He was baptized at the Easter Vigil the next spring, and became one of the greatest teachers of the Church."
+    },
+    "think": "Augustine searched with his mind for years. His questions were not wasted: they brought him to the door.",
+    "journal": "Like Augustine, what is your heart restless for?",
+    "pray": "You have made us for yourself, O Lord, and our heart is restless until it rests in you. (St. Augustine)",
+    "do": "Find ten quiet minutes today with your phone in another room. Sit and tell God, \"I am here.\"",
+    "saint": "monica"
+   },
+   {
+    "kind": "live",
+    "title": "Stay with us, Lord",
+    "ref": "Luke 24:28-31",
+    "think": "The disciples begged the stranger, \"Stay with us, because it is towards evening.\" Jesus let himself be invited in. At every Mass he is known again in the breaking of the bread.",
+    "journal": "When this week did the day feel like \"evening,\" lonely or heavy?",
+    "pray": "Stay with us, Lord, for it is evening and the day is almost over. Stay in my home, my work and my heart.",
+    "do": "Go to Sunday Mass this week. Watch the moment the priest breaks the Host, and remember Emmaus.",
+    "go": [
+     "mass",
+     "lectio"
+    ],
+    "word": "Mass"
+   },
+   {
+    "kind": "class",
+    "title": "Bring your road to class",
+    "ref": "Psalm 23",
+    "dr": "Psalms 22",
+    "class": "Look back over the week. Write down anything you did not understand, or want to talk about. In RCIA there are no silly questions.",
+    "think": "The Good Shepherd walks with his sheep, even through the dark valley. Today you walk on with your class, your catechist and your sponsor.",
+    "journal": "What was your best moment with God this week?",
+    "pray": "The Lord is my shepherd; I shall not want. Lead me, Lord, to the next step.",
+    "do": "Take the short review quiz, then read your questions once more before class.",
+    "go": [
+     "quiz",
+     "sponsor"
+    ]
+   }
+  ],
+  "s02": [
+   {
+    "kind": "remember",
+    "title": "Made for God",
+    "ref": "Acts 17:24-28",
+    "think": "Paul told the thinkers of Athens that God made every nation \"that they should seek God, if happily they may feel after him,\" for he is not far from any of us. The longing you feel is itself a clue.",
+    "journal": "Before RCIA, who did you think God was? Has that changed?",
+    "pray": "God, you are not far from me. In you I live and move and have my being. Let me know you as you really are.",
+    "prayer": "glory-be",
+    "do": "Pray the Glory Be three times today, slowly, once for the Father, once for the Son, once for the Holy Spirit.",
+    "go": [
+     "lesson"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "I AM WHO AM",
+    "ref": "Exodus 3:1-14",
+    "think": "At the burning bush God gives Moses his name: \"I AM WHO AM.\" God is not one thing among others in the world. He is being itself, the source of everything that exists, and yet he calls Moses by name.",
+    "journal": "God calls Moses by name. What would it mean for you that God knows your name?",
+    "pray": "Holy God, you are the one who simply is. Here I am, Lord. Speak, and teach me to listen.",
+    "do": "Take off your shoes for one minute of prayer, like Moses on holy ground, and simply say, \"Here I am.\"",
+    "ccc": "206-213"
+   },
+   {
+    "kind": "watch",
+    "title": "Where is the evidence for God?",
+    "ref": "Romans 1:19-20",
+    "media": {
+     "kind": "video",
+     "by": "Bishop Robert Barron",
+     "title": "Where is the evidence for God?",
+     "url": "https://www.youtube.com/watch?v=shwMd1x-g1g",
+     "mins": 5,
+     "about": "A short, clear answer. Bishop Barron explains why God cannot be found like an object under a microscope: God is not one more thing in the universe but the reason anything exists at all. We come to know him through reason, beauty, conscience and his own revelation.",
+     "listen": "why \"Why is there something rather than nothing?\" is a real question."
+    },
+    "think": "Paul says God's \"invisible things\" are \"clearly seen, being understood by the things that are made.\" Creation is like a signature. Reason can know that God exists; Jesus shows us who he is.",
+    "journal": "Where in nature or in people have you sensed something bigger than us?",
+    "pray": "Creator of all things, thank you for the world you made. Let everything beautiful I see today lead me to you.",
+    "do": "Go outside for ten minutes. Look closely at one thing (a tree, the sky, your hand) and thank God for it.",
+    "ccc": "31-36"
+   },
+   {
+    "kind": "reason",
+    "title": "Does God really exist?",
+    "ref": "Psalm 19",
+    "dr": "Psalms 18",
+    "reasonId": "god-exists",
+    "reason": {
+     "q": "Can a thinking person believe in God?",
+     "steps": [
+      "Everything we see depends on something else to exist: you on your parents, the earth on the sun, the sun on older stars.",
+      "A chain of things that all depend on something else cannot explain itself, however long it is. Something must exist that does not depend on anything.",
+      "That reality, existing by its own nature and giving existence to all else, is what people mean by God. Science studies how things work inside the universe; this question asks why there is a universe at all.",
+      "Add the order of nature, the moral law in your conscience and your longing for meaning, and belief in God is not a leap in the dark but the most reasonable answer."
+     ]
+    },
+    "think": "\"The heavens shew forth the glory of God.\" The psalm says creation speaks without words. Reason and wonder work together.",
+    "journal": "Which reason for God makes the most sense to you? Which question still bothers you?",
+    "pray": "God, you gave me a mind to think. Let me use it honestly, and lead my thinking to you.",
+    "do": "Explain one of these steps in your own words to yourself, or to a friend who asks.",
+    "ccc": "31-35"
+   },
+   {
+    "kind": "story",
+    "title": "A philosopher finds the truth",
+    "ref": "Jeremiah 29:11-14",
+    "story": {
+     "name": "St. Teresa Benedicta of the Cross (Edith Stein)",
+     "saint": "edith-stein",
+     "text": "Edith Stein grew up in a Jewish family in Germany, and as a teenager she stopped believing in God. She became one of the first women in Germany to earn a doctorate in philosophy, and she cared above all about truth.\n\nIn 1921, staying with friends, she picked up the life of St. Teresa of Avila and read it through the night. When she closed it she said, \"This is the truth.\" She was baptized on New Year's Day 1922, later became a Carmelite nun, and died at Auschwitz in 1942, offering her life for her people."
+    },
+    "think": "Edith searched for truth with all her intelligence, and when she found it she gave everything for it. Truth is not an idea; it is a Person.",
+    "journal": "What would you give up if you became sure something was true?",
+    "pray": "Lord, you promise, \"You shall seek me, and shall find me, when you shall seek me with all your heart.\" Here is my heart.",
+    "do": "Read the page about St. Teresa Benedicta in the saints section, and ask her to pray for your search."
+   },
+   {
+    "kind": "live",
+    "title": "God is love",
+    "ref": "1 John 4:7-12",
+    "think": "John does not say God has love, but that God is love. If God is love, then you were made out of love and for love, and every act of real love brings you closer to him.",
+    "journal": "Who has shown you what love looks like? Write a line of thanks for them.",
+    "pray": "God of love, you loved me first. Teach me to love the people you put in front of me today.",
+    "do": "Do one hidden kindness today that no one will thank you for.",
+    "word": "Trinity"
+   },
+   {
+    "kind": "class",
+    "title": "Questions about God",
+    "ref": "Isaiah 55:6-11",
+    "class": "What about God is still unclear or hard for you? Suffering, prayer, the Trinity, other religions? Write it down to ask.",
+    "think": "\"My thoughts are not your thoughts.\" God is bigger than our minds, but his word does not return empty. Every honest question is a door.",
+    "journal": "In one sentence: who is God for you today?",
+    "pray": "Seek the Lord while he may be found; call upon him while he is near. Lord, I am seeking you.",
+    "do": "Read your notes from this week, and choose the one question you most want answered.",
+    "go": [
+     "sponsor"
+    ]
+   }
+  ],
+  "s03": [
+   {
+    "kind": "remember",
+    "title": "Prayer is a conversation",
+    "ref": "Matthew 6:5-8",
+    "think": "Jesus says: go into your room, close the door, and pray to your Father in secret. Prayer is not a performance or many words. It is talking with someone who already knows you and loves you.",
+    "journal": "What did you learn in class about prayer that surprised you?",
+    "pray": "Father, here I am, in secret, with you. I don't know how to pray well, but I want to be with you.",
+    "prayer": "our-father",
+    "do": "Choose your \"inner room\" for this week: one chair, one corner, one time each day for prayer.",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "Ask, seek, knock",
+    "ref": "Matthew 7:7-11",
+    "think": "Jesus uses three verbs, each stronger than the last. And he gives the reason: if human parents give good things to their children, how much more will your Father in heaven.",
+    "journal": "What are you asking God for right now? Write it plainly.",
+    "pray": "Father, I ask, I seek, I knock. Give me what is good for me, even when it is not what I expected.",
+    "do": "Do this week's Bible study on the Our Father (Matthew 6:5-15).",
+    "go": [
+     "bible"
+    ]
+   },
+   {
+    "kind": "watch",
+    "title": "Praying with your imagination",
+    "ref": "Mark 10:46-52",
+    "media": {
+     "kind": "video",
+     "by": "Fr. Mike Schmitz, Ascension Presents",
+     "title": "Praying Like This Changed My Life",
+     "url": "https://www.youtube.com/watch?v=dpE-qDnp1L8",
+     "mins": 8,
+     "about": "Fr. Mike explains a way of praying taught by St. Ignatius: read a Gospel scene, then step into it with your imagination. Where are you standing? What do you hear? What does Jesus say to you?",
+     "listen": "the simple steps, so you can try them with today's reading."
+    },
+    "think": "Bartimaeus is blind, poor and loud. People tell him to be quiet. Jesus stops and asks, \"What wilt thou that I should do to thee?\" He asks you the same.",
+    "journal": "If Jesus asked you, \"What do you want me to do for you?\", what would you say?",
+    "pray": "Jesus, Son of David, have mercy on me. Lord, that I may see.",
+    "do": "Pray with today's Gospel the way the video shows: read it twice, then imagine yourself on the roadside."
+   },
+   {
+    "kind": "reason",
+    "title": "When God seems silent",
+    "ref": "Luke 18:1-8",
+    "reasonId": "hiddenness",
+    "reason": {
+     "q": "Why pray if God already knows everything, or if he seems not to answer?",
+     "steps": [
+      "Prayer is not giving God information. It is a relationship, and relationships need time together, even when little is said.",
+      "Good parents do not give a child everything immediately. \"Not yet\" and \"I have something better\" are also answers.",
+      "Prayer changes the one who prays. Over time it shapes what we desire, so we start to want what is truly good.",
+      "Jesus himself prayed and felt God's silence on the cross, and the Father answered with the Resurrection. Silence is not absence."
+     ]
+    },
+    "think": "Jesus told this parable \"that we ought always to pray, and not to faint.\" Keep coming back, like the widow at the judge's door.",
+    "journal": "Has a prayer of yours been answered in a way you did not expect?",
+    "pray": "Lord, when you seem silent, help me to stay. I would rather sit with you in silence than talk without you.",
+    "do": "Pray for five minutes today without asking for anything: just thank God and stay quiet with him.",
+    "ccc": "2734-2737"
+   },
+   {
+    "kind": "story",
+    "title": "The porter of Mount Royal",
+    "ref": "Matthew 11:25-30",
+    "story": {
+     "name": "St. André Bessette",
+     "saint": "andre-bessette",
+     "text": "Alfred Bessette was born in Quebec in 1845, sickly and barely able to read. The Holy Cross brothers almost refused him. They made him the doorkeeper of their school in Montreal, and he stayed at that door for forty years.\n\nBrother André spent his nights in prayer and his days listening to the sick and the poor. He told them to pray to St. Joseph, and many were healed. \"I am only a little dog of St. Joseph,\" he said. From his small chapel grew Saint Joseph's Oratory on Mount Royal, where people from all over the world still come to pray."
+    },
+    "think": "Jesus thanks the Father for revealing himself \"to the little ones.\" You do not need to be clever or important to pray. Brother André just kept the door and kept praying.",
+    "journal": "Where is your \"door\", the ordinary place where you could pray every day?",
+    "pray": "St. Joseph, you cared for Jesus and Mary. Care for me too, and teach me to pray with a simple heart.",
+    "do": "Say a short prayer each time you open a door today: \"Jesus, I trust in you.\""
+   },
+   {
+    "kind": "live",
+    "title": "Pray at the table",
+    "ref": "Psalm 145",
+    "dr": "Psalms 144",
+    "think": "\"The eyes of all hope in thee, O Lord: and thou givest them meat in due season.\" Thanking God before meals is one of the easiest ways to pray every day.",
+    "journal": "What are three things you are grateful for today?",
+    "pray": "Bless us, O Lord, and these thy gifts, which we are about to receive from thy bounty, through Christ our Lord. Amen.",
+    "prayer": "grace-before-meals",
+    "do": "Say grace before every meal today, even in a restaurant or at work. A quiet Sign of the Cross is enough.",
+    "go": [
+     "habits"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "Bring your prayer to class",
+    "ref": "Luke 11:1-4",
+    "class": "What is hard for you about prayer: finding time, distractions, not feeling anything, not knowing what to say? Write it down to ask.",
+    "think": "The disciples asked, \"Lord, teach us to pray.\" That is still the best prayer for a beginner, and for a saint.",
+    "journal": "How did your prayer change this week, even a little?",
+    "pray": "Lord, teach me to pray. Our Father, who art in heaven, hallowed be thy name.",
+    "do": "Take the review quiz and practise the Our Father by heart.",
+    "go": [
+     "quiz"
+    ]
+   }
+  ],
+  "sym1-01": [
+   {
+    "kind": "remember",
+    "title": "One God, three Persons",
+    "ref": "Matthew 28:16-20",
+    "think": "Jesus sends his friends to baptize \"in the name of the Father, and of the Son, and of the Holy Ghost.\" One name, three Persons. Christians did not invent the Trinity; they met it in Jesus.",
+    "journal": "What helped you most in class to understand the Trinity a little?",
+    "pray": "Glory be to the Father, and to the Son, and to the Holy Spirit, as it was in the beginning, is now, and ever shall be. Amen.",
+    "prayer": "glory-be",
+    "do": "Each time you make the Sign of the Cross today, notice the three names and the one cross.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Trinity"
+   },
+   {
+    "kind": "scripture",
+    "title": "The Father, the Son and the Spirit at the Jordan",
+    "ref": "Matthew 3:13-17",
+    "think": "At Jesus' baptism all three appear: the Son in the water, the Spirit like a dove, the Father's voice: \"This is my beloved Son.\" At your baptism the Father will say the same to you.",
+    "journal": "How does it feel to imagine God saying to you, \"You are my beloved\"?",
+    "pray": "Father, let me hear your voice. Jesus, let me follow you into the water. Holy Spirit, come upon me.",
+    "do": "Do this week's Bible study on Matthew 28:16-20.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "232-237"
+   },
+   {
+    "kind": "watch",
+    "title": "A God who is relationship",
+    "ref": "John 17:20-26",
+    "media": {
+     "kind": "search",
+     "by": "Fr. Mike Schmitz, Ascension Presents",
+     "title": "Fr. Mike on the Trinity",
+     "url": "https://www.youtube.com/c/AscensionPresents/search?query=Trinity",
+     "mins": 10,
+     "about": "Ascension Presents has several short videos where Fr. Mike explains the Trinity and why it matters for everyday life: God is not lonely. From all eternity he is a communion of love, and he invites us into it.",
+     "listen": "why \"God is love\" only makes full sense if God is three Persons."
+    },
+    "think": "Jesus prays that we may be one \"as thou, Father, in me, and I in thee.\" The Trinity is not a math problem; it is the family of love we are invited to join.",
+    "journal": "Where do you see a small picture of the Trinity's love in your life (a family, a friendship)?",
+    "pray": "Holy Trinity, one God, make your home in me. Let me share the love you have among yourselves.",
+    "do": "Call or message someone you love today, just to tell them you are glad they exist."
+   },
+   {
+    "kind": "reason",
+    "title": "Is one plus one plus one three?",
+    "ref": "John 1:1-5",
+    "reasonId": "trinity",
+    "reason": {
+     "q": "Do Christians believe in three gods?",
+     "steps": [
+      "No. Christians believe in one God, as strongly as Jews and Muslims do. \"Hear, O Israel: the Lord our God is one Lord.\"",
+      "The Trinity does not say one god equals three gods. It says one divine nature (what God is) is shared fully by three Persons (who God is): Father, Son and Holy Spirit.",
+      "Think of how you know yourself and love yourself while staying one person. In God, his perfect Word and his perfect Love are so full that they are Persons, yet not separate beings.",
+      "We did not reason our way to this; God revealed it in Jesus. But it is not a contradiction: it would be one only if we said one and three in the same sense."
+     ]
+    },
+    "think": "\"In the beginning was the Word, and the Word was with God, and the Word was God.\" With God, and God: John holds both together.",
+    "journal": "How would you explain to a friend that Christians worship one God?",
+    "pray": "O God, you are one and you are love. I adore you, Father, Son and Holy Spirit.",
+    "do": "Read the Apostles' Creed slowly and notice its three parts: the Father, the Son and the Holy Spirit.",
+    "ccc": "253-256",
+    "prayer": "apostles-creed"
+   },
+   {
+    "kind": "story",
+    "title": "A seeker meets an old man by the sea",
+    "ref": "Acts 17:22-23",
+    "story": {
+     "name": "St. Justin Martyr",
+     "text": "Justin was born around the year 100 in Samaria, to a pagan family. He wanted to know the truth about God, so he went from teacher to teacher: a Stoic, a follower of Aristotle, a Pythagorean, a Platonist. Each left him hungry.\n\nOne day, walking alone by the sea, he met an old man who told him about the prophets and about Christ. \"A fire was kindled in my soul,\" Justin wrote. He became a Christian and kept wearing his philosopher's cloak, because he had found \"the only sure and useful philosophy.\" He taught in Rome and was martyred there around 165."
+    },
+    "think": "Justin did not stop thinking when he believed. Faith gave his reason a home.",
+    "journal": "Which \"teachers\" (ideas, books, people) have you tried in your search for meaning?",
+    "pray": "Lord, kindle a fire in my soul. Let my mind and my heart both find their rest in you.",
+    "do": "Write down one thing you still want to understand about God, and one thing you already trust."
+   },
+   {
+    "kind": "live",
+    "title": "Faith is a gift and a choice",
+    "ref": "Hebrews 11:1-8",
+    "think": "Abraham \"went out, not knowing whither he went.\" Faith is God's gift, and also our free yes. It is like Abraham packing his bags: trust that moves your feet.",
+    "journal": "What small step of trust is God asking of you right now?",
+    "pray": "O my God, I firmly believe that you are one God in three divine Persons. Increase my faith.",
+    "prayer": "act-of-faith",
+    "do": "Learn the Act of Faith this week. Today, just read it once aloud.",
+    "ccc": "153-155"
+   },
+   {
+    "kind": "class",
+    "title": "Bring your questions about faith",
+    "ref": "2 Corinthians 13:11-13",
+    "class": "What about the Trinity, or about faith itself, is still confusing? Write it down. Your catechist has heard every question before.",
+    "think": "Paul ends a letter with a blessing the priest still uses at Mass: the grace of the Lord Jesus Christ, the love of God and the communion of the Holy Spirit.",
+    "journal": "In your own words: why does it matter that God is a Trinity of love?",
+    "pray": "The grace of the Lord Jesus Christ, the love of God and the communion of the Holy Spirit be with me, and with all my class.",
+    "do": "Take the review quiz, then listen for this blessing at the start of Sunday Mass.",
+    "go": [
+     "quiz",
+     "sponsor"
+    ]
+   }
+  ],
+  "sym1-02": [
+   {
+    "kind": "remember",
+    "title": "God comes looking for us",
+    "ref": "Luke 15:1-7",
+    "think": "In every other story people search for God. In the Bible, God searches for us, like a shepherd who leaves ninety-nine sheep to find one. That is what revelation means: God showing himself.",
+    "journal": "Looking back, how has God come looking for you?",
+    "pray": "Good Shepherd, you came looking for me. Thank you for not giving up. Carry me home on your shoulders.",
+    "do": "Tell God three ways you see now that he has been leading you.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Divine Revelation"
+   },
+   {
+    "kind": "scripture",
+    "title": "God has spoken by his Son",
+    "ref": "Hebrews 1:1-4",
+    "think": "God spoke \"at sundry times and in divers manners\" through the prophets, and \"last of all\" in his Son. Jesus is God's final, complete Word. Everything else points to him.",
+    "journal": "If Jesus is God's clearest Word, what is he saying to you this week?",
+    "pray": "Jesus, Word of the Father, I want to hear you. Speak, Lord, your servant is listening.",
+    "do": "Do this week's Bible study (Luke 15:1-10).",
+    "go": [
+     "bible"
+    ],
+    "ccc": "65-67"
+   },
+   {
+    "kind": "watch",
+    "title": "To know and love God",
+    "ref": "Psalm 139",
+    "dr": "Psalms 138",
+    "media": {
+     "kind": "podcast",
+     "by": "Fr. Mike Schmitz, The Catechism in a Year",
+     "title": "Day 1: To Know and Love God",
+     "url": "https://www.youtube.com/watch?v=tI-pOSv7tvg",
+     "mins": 20,
+     "about": "The first episode of a free podcast that reads the whole Catechism in 365 short episodes. Fr. Mike explains why God made us: to share his own blessed life. A good way to start the habit of learning a little every day.",
+     "listen": "the idea that God \"calls\" every person, at every time and place."
+    },
+    "think": "\"Lord, thou hast proved me, and known me.\" God knows us completely, and he still wants to be known by us.",
+    "journal": "Which line of Psalm 139 speaks to you most today?",
+    "pray": "Search me, O God, and know my heart. Lead me in the way everlasting.",
+    "do": "Listen to the episode on a walk or while cooking.",
+    "ccc": "1-3"
+   },
+   {
+    "kind": "reason",
+    "title": "Can we trust the Bible?",
+    "ref": "Luke 1:1-4",
+    "reasonId": "trust-bible",
+    "reason": {
+     "q": "How do we know the Gospels are reliable?",
+     "steps": [
+      "Luke says he wrote after carefully checking what \"eyewitnesses\" handed on. The Gospels were written within the lifetime of people who knew Jesus.",
+      "We have far more ancient copies of the New Testament (over 5,000 in Greek) than of any other ancient book, so we can be confident about what was first written.",
+      "The witnesses had nothing to gain: most of the apostles were killed for what they said they saw. People do not die for what they know is a lie.",
+      "And the Bible did not fall from the sky alone: the living Church that wrote it down also handed it on and still explains it. Scripture and Tradition belong together."
+     ]
+    },
+    "think": "Luke wrote \"that thou mayest know the verity of those words in which thou hast been instructed.\" The Gospel is meant to give you certainty, not just good feelings.",
+    "journal": "What makes it hard, or easy, for you to trust what the Bible says?",
+    "pray": "Lord, give me a mind that asks good questions and a heart that welcomes the truth.",
+    "do": "Read the opening of Luke's Gospel (Luke 1:1-4) and his last chapter (24). Notice how he names real places and people.",
+    "ccc": "76-83",
+    "word": "Sacred Tradition"
+   },
+   {
+    "kind": "story",
+    "title": "Wise men from Persia",
+    "ref": "Matthew 2:1-12",
+    "story": {
+     "name": "The Magi",
+     "text": "Matthew tells of \"wise men from the east\" who followed a star to Bethlehem. Early Christian art in Rome and Ravenna shows them in Persian dress, with soft caps and trousers, and an old tradition says the church of the Nativity in Bethlehem was spared by Persian soldiers in 614 because they saw their own ancestors pictured over the door.\n\nThey were scholars who watched the sky. God spoke to them in the language they knew, a star, and then led them further by the Scriptures that pointed to Bethlehem. They knelt before a child and gave him gold, frankincense and myrrh, then went home another way."
+    },
+    "think": "God reached the Magi through what they already loved, then completed it with his revealed word. He meets each of us where we are, and leads us further.",
+    "journal": "What was your \"star\", the first sign that drew you toward Christ?",
+    "pray": "Lord, you led the Magi by a star. Lead me too, and let me kneel before you with all I have.",
+    "do": "Look at the night sky tonight, if you can, and pray for everyone still searching for God."
+   },
+   {
+    "kind": "live",
+    "title": "Treasure the word in your heart",
+    "ref": "Luke 2:15-19",
+    "think": "\"Mary kept all these words, pondering them in her heart.\" Revelation is not only information. It is something to keep and turn over, the way Mary did, until it shapes your life.",
+    "journal": "Write down one word or line from this week that you want to keep.",
+    "pray": "Mary, you kept God's word in your heart. Help me to keep it too, and to live it.",
+    "do": "Write this week's memory verse on a card and keep it in your pocket or on your phone's lock screen.",
+    "go": [
+     "verse"
+    ],
+    "prayer": "hail-mary"
+   },
+   {
+    "kind": "class",
+    "title": "Questions about the Bible and the Church",
+    "ref": "2 Thessalonians 2:14-16",
+    "dr": "2 Thessalonians 2:13-15",
+    "class": "What do you want to understand about Scripture, Tradition and the Church's teaching? Why both, and not the Bible alone? Write it down.",
+    "think": "Paul tells the Christians to hold the traditions they learned \"whether by word, or by our epistle.\" Spoken and written, together.",
+    "journal": "What did you learn this week about how God speaks?",
+    "pray": "Lord, thank you for speaking to us through your word, your Church and your Spirit. Make me faithful to what I receive.",
+    "do": "Take the review quiz, and bring your Bible to class if you have one.",
+    "go": [
+     "quiz"
+    ],
+    "word": "Magisterium"
+   }
+  ],
+  "sym1-03": [
+   {
+    "kind": "remember",
+    "title": "A love letter, not a rulebook",
+    "ref": "2 Timothy 3:14-17",
+    "think": "Paul says all Scripture is \"inspired of God\": breathed out by him. The Bible is many books written over a thousand years by human authors, yet one Author speaks through all of them.",
+    "journal": "What surprised you in class about how the Bible was written?",
+    "pray": "Holy Spirit, you inspired the Scriptures. Open my mind to understand them and my heart to love them.",
+    "do": "Find a Bible at home or in the app, and learn where the Gospels are: Matthew, Mark, Luke and John.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Inspiration"
+   },
+   {
+    "kind": "scripture",
+    "title": "A lamp to my feet",
+    "ref": "Psalm 119:105-112",
+    "dr": "Psalms 118:105-112",
+    "think": "\"Thy word is a lamp to my feet, and a light to my paths.\" A lamp does not show the whole road, only the next step. That is enough to walk.",
+    "journal": "What is the next step you need light for?",
+    "pray": "Lord, your word is a lamp to my feet. Show me my next step, and give me courage to take it.",
+    "do": "Do this week's Bible study on 2 Timothy 3:14-17.",
+    "go": [
+     "bible"
+    ]
+   },
+   {
+    "kind": "watch",
+    "title": "The whole story in ten minutes",
+    "ref": "Luke 24:44-48",
+    "media": {
+     "kind": "video",
+     "by": "Fr. Mike Schmitz, The Bible in a Year",
+     "title": "The Bible in 10 Minutes",
+     "url": "https://www.youtube.com/watch?v=Jm3b4Q98Vx8",
+     "mins": 10,
+     "about": "Fr. Mike walks through the big story of the Bible from creation to Jesus, so the 73 books stop feeling like a pile and start feeling like one story: God making a family, losing it to sin, and gathering it back.",
+     "listen": "where you are in that story today."
+    },
+    "think": "Jesus opened their minds to understand that everything in \"the law of Moses, and in the prophets, and in the psalms\" was about him. Read the Old Testament with Jesus in mind.",
+    "journal": "Which part of the Bible's big story are you most curious about?",
+    "pray": "Jesus, open my mind as you opened theirs, so I can see you on every page.",
+    "do": "Look at the Bible study section's \"Start here\" guide, five minutes on how Catholics read the Bible."
+   },
+   {
+    "kind": "reason",
+    "title": "The hard parts of the Bible",
+    "ref": "Hebrews 4:12-13",
+    "reasonId": "bible-hard-parts",
+    "reason": {
+     "q": "What about violent or strange passages in the Bible?",
+     "steps": [
+      "The Bible is a library, not one book. It holds history, poetry, law, prophecy and letters, and each must be read as what it is.",
+      "God taught his people step by step, like a teacher with children. Early stages were not the final word; Jesus is.",
+      "So Catholics read every passage in light of Christ and of the whole Bible, and with the Church, not alone. A hard verse is never read as permission to hate.",
+      "The Bible is honest about human sin, even the sins of its heroes. That honesty is a reason to trust it."
+     ]
+    },
+    "think": "\"The word of God is living and effectual.\" Some passages will puzzle you. Keep them as questions; they are part of the conversation.",
+    "journal": "Is there a Bible passage that troubles you? Write it down to ask about.",
+    "pray": "Lord, when I do not understand your word, keep me humble and keep me asking.",
+    "do": "Write your question about a hard passage in \"My questions for class.\"",
+    "ccc": "109-114",
+    "word": "Senses of Scripture"
+   },
+   {
+    "kind": "story",
+    "title": "Ignorance of Scripture is ignorance of Christ",
+    "ref": "Nehemiah 8:1-10",
+    "story": {
+     "name": "St. Jerome",
+     "text": "Jerome was born around 347 in what is now Croatia. As a young student in Rome he loved Latin literature and found the Bible clumsy. Later, sick and feverish, he dreamed he stood before Christ the Judge, who told him, \"You are a follower of Cicero, not of Christ.\"\n\nHe changed his life. He learned Hebrew from a Jewish teacher and moved to Bethlehem, where for decades he translated the Bible into the everyday Latin of his time. That translation, the Vulgate, was read in the Church for 1,500 years. His famous line: \"Ignorance of Scripture is ignorance of Christ.\""
+    },
+    "think": "When Ezra read the law aloud, the people wept, then rejoiced \"for the joy of the Lord is our strength.\" God's word, understood, brings joy.",
+    "journal": "What would help you read the Bible more: a time, a place, a plan, a friend?",
+    "pray": "St. Jerome, pray for me, that I may come to know Christ through his word.",
+    "do": "Choose a Bible reading plan in the app and read Day 1 today.",
+    "go": [
+     "bible-year"
+    ]
+   },
+   {
+    "kind": "live",
+    "title": "Pray with a Gospel",
+    "ref": "John 1:35-39",
+    "think": "Two disciples follow Jesus, and he turns and asks, \"What seek you?\" They answer with a question, and he says, \"Come and see.\" Reading the Gospel is coming to see where he lives.",
+    "journal": "What are you seeking? Answer Jesus' question in one line.",
+    "pray": "Jesus, I want to come and see. Show me where you live, and let me stay with you today.",
+    "do": "Pray with this Sunday's Gospel using Lectio Divina: read, reflect, respond, rest.",
+    "go": [
+     "lectio"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "Bring your Bible questions",
+    "ref": "Isaiah 40:6-8",
+    "class": "What do you want to ask about the Bible: how to start reading it, which translation to use, why Catholic Bibles have 73 books?",
+    "think": "\"The grass is withered, and the flower is fallen: but the word of our Lord endureth for ever.\" Everything else changes; God's word stays.",
+    "journal": "Which verse from this week will you remember?",
+    "pray": "Lord, your word lasts for ever. Plant it deep in me.",
+    "do": "Take the review quiz and practise the memory verse with the flashcards.",
+    "go": [
+     "quiz",
+     "verse"
+    ],
+    "word": "Canon of Scripture"
+   }
+  ],
+  "sym1-04": [
+   {
+    "kind": "remember",
+    "title": "Very good",
+    "ref": "Genesis 1:26-31",
+    "think": "The story begins with goodness, not sin. God makes everything and calls it good, and the human being \"very good,\" made in his image. Whatever has gone wrong, this is who you are first.",
+    "journal": "Creation, Fall, Redemption: which of the three words speaks to you most right now? Why?",
+    "pray": "Creator God, you made me in your image and called me very good. Help me to see myself and others the way you see us.",
+    "do": "Look in the mirror today and say, \"I am made in the image of God.\" Then say it about someone who annoys you.",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "Where art thou?",
+    "ref": "Genesis 3:1-15",
+    "think": "After the first sin, Adam and Eve hide. But God comes walking in the garden and calls, \"Where art thou?\" Even here, God is the one who searches. And he promises that the woman's offspring will crush the serpent.",
+    "journal": "Where are you hiding from God? Be honest; he already knows.",
+    "pray": "Lord, you call me even when I hide. Here I am. I do not want to hide from you any more.",
+    "do": "Do this week's Bible study on Genesis 3.",
+    "go": [
+     "bible"
+    ],
+    "word": "Original sin",
+    "ccc": "397-401"
+   },
+   {
+    "kind": "watch",
+    "title": "What went wrong with us?",
+    "ref": "Romans 5:12-19",
+    "media": {
+     "kind": "search",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "Bishop Barron on original sin",
+     "url": "https://www.youtube.com/@BishopBarron/search?query=original+sin",
+     "mins": 10,
+     "about": "Bishop Barron explains original sin not as a stain we inherit by bad luck but as a broken relationship that spreads, like a crack in a family. Everyone can see it in the world; the Gospel says it is not the last word.",
+     "listen": "why grasping at being \"like God\" on our own terms is the root of sin."
+    },
+    "think": "Paul compares two men: through Adam, sin and death came in; through Jesus, grace overflows even more. The story of the Fall is told so that we long for the Redeemer.",
+    "journal": "Where do you see brokenness in the world, or in yourself, that you cannot fix alone?",
+    "pray": "Jesus, new Adam, where sin grew, let your grace overflow in me.",
+    "do": "Watch one video, or read the summary, and then read Romans 5:20 again: \"where sin abounded, grace did more abound.\"",
+    "word": "Concupiscence"
+   },
+   {
+    "kind": "reason",
+    "title": "If God is good, why is there evil?",
+    "ref": "Romans 8:18-25",
+    "reasonId": "problem-of-evil",
+    "reason": {
+     "q": "How can a good and powerful God allow suffering?",
+     "steps": [
+      "God made us able to love, and love needs freedom. Freedom means we can also refuse, and much suffering comes from human choices.",
+      "Our sense that evil is wrong is itself a clue. If there were no God and no real good, suffering would just be how things are, not something unjust.",
+      "A God beyond us can have reasons we cannot see, as a parent allows a child a painful vaccine. Not seeing a reason is not proof that there is none.",
+      "Christianity does not explain suffering away. God entered it in Jesus, suffered with us on the cross, and promised that it ends in resurrection."
+     ]
+    },
+    "think": "Paul says creation \"groaneth and travaileth in pain,\" like a woman giving birth: suffering is real, but it is labour toward something new.",
+    "journal": "What suffering in your life or in the world makes it hardest to believe?",
+    "pray": "Lord, I bring you the suffering I do not understand. Stay with me in it, and give me hope.",
+    "do": "Pray today for one person you know who is suffering, by name.",
+    "go": [
+     "intentions"
+    ],
+    "ccc": "309-314"
+   },
+   {
+    "kind": "story",
+    "title": "Sold as a slave, set free by Christ",
+    "ref": "Isaiah 43:1-4",
+    "story": {
+     "name": "St. Josephine Bakhita",
+     "saint": "bakhita",
+     "text": "Bakhita was born in Darfur, Sudan, around 1869. When she was about seven, slave traders kidnapped her. The shock was so great that she forgot her own name; \"Bakhita,\" meaning \"lucky,\" was the name they gave her. She was sold several times and beaten often.\n\nIn Italy, with the Canossian Sisters, she learned of a God who had known her and loved her all along. \"I am definitively loved, and whatever happens to me, I am awaited by this Love,\" she later said. She was baptized in 1890, became a sister, and was known for her gentleness and her forgiveness of those who hurt her."
+    },
+    "think": "\"I have called thee by thy name: thou art mine.\" Bakhita lost her name, but God never forgot it. Redemption means being bought back and brought home.",
+    "journal": "What would change if you truly believed, \"I am definitively loved\"?",
+    "pray": "St. Josephine Bakhita, pray for all who are enslaved or abused today, and for me, that I may know I am loved.",
+    "do": "Learn one fact about human trafficking in Canada, and pray for its victims."
+   },
+   {
+    "kind": "live",
+    "title": "Say sorry, to God and to someone",
+    "ref": "Luke 15:17-24",
+    "think": "The younger son \"came to himself,\" got up and went home. The father ran to meet him before he finished his speech. Turning back is always possible, and always welcomed.",
+    "journal": "Is there someone you need to forgive, or ask forgiveness from?",
+    "pray": "O my God, I am heartily sorry for having offended you. I firmly resolve, with the help of your grace, to sin no more.",
+    "prayer": "act-of-contrition",
+    "do": "Say sorry to one person today for something real, without excuses.",
+    "go": [
+     "examen"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "Questions about sin and salvation",
+    "ref": "John 3:16-17",
+    "class": "What do you want to ask about creation, evolution, Adam and Eve, sin or salvation? Write it down.",
+    "think": "\"God so loved the world, as to give his only begotten Son.\" The whole story of salvation fits in this one verse.",
+    "journal": "Write John 3:16 in your own words, with your own name in it.",
+    "pray": "O my God, relying on your infinite goodness and promises, I hope to obtain pardon of my sins, the help of your grace, and life everlasting.",
+    "prayer": "act-of-hope",
+    "do": "Take the review quiz, and say this week's memory verse from memory.",
+    "go": [
+     "quiz",
+     "verse"
+    ],
+    "word": "Redemption"
+   }
+  ],
+  "sym1-05": [
+   {
+    "kind": "remember",
+    "title": "Who do you say that I am?",
+    "ref": "Matthew 16:13-17",
+    "think": "Jesus asks what people say about him, then makes it personal: \"But whom do you say that I am?\" Everyone has an opinion about Jesus. RCIA asks for your own answer.",
+    "journal": "Who did you think Jesus was before? Who do you say he is today?",
+    "pray": "Jesus, you are the Christ, the Son of the living God. Let this be my answer, not only Peter's.",
+    "do": "Say the name of Jesus slowly and lovingly three times today, as a prayer.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Incarnation"
+   },
+   {
+    "kind": "scripture",
+    "title": "The Word was made flesh",
+    "ref": "John 1:1-14",
+    "think": "The Word who \"was God\" became flesh and \"dwelt among us.\" God did not send a message from far away; he came himself, with a body, a mother, a hometown and a trade.",
+    "journal": "What does it mean to you that God became a human being?",
+    "pray": "Jesus, true God and true man, you came close to me. Help me to come close to you.",
+    "do": "Do this week's Bible study on Matthew 16:13-20.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "456-460"
+   },
+   {
+    "kind": "watch",
+    "title": "The identity of Jesus",
+    "ref": "Mark 2:1-12",
+    "media": {
+     "kind": "video",
+     "by": "Bishop Robert Barron",
+     "title": "The Identity of Jesus (SEEK 2021)",
+     "url": "https://www.youtube.com/watch?v=d8B9un_NyOU",
+     "mins": 40,
+     "about": "A talk to young adults. Bishop Barron shows that Jesus spoke and acted as only God could: he forgave sins, claimed authority over the Law and the Temple, and said, \"Before Abraham was, I am.\" Either he was who he said, or he was not good at all.",
+     "listen": "the claims of Jesus that no prophet ever made."
+    },
+    "think": "Jesus says to a paralysed man, \"Thy sins are forgiven,\" and the scribes think: \"Who can forgive sins, but God only?\" They were right about that. Then he heals the man to show his authority.",
+    "journal": "Which thing Jesus said or did makes you think he must be more than a prophet?",
+    "pray": "Lord Jesus, you have authority to forgive and to heal. I bring you what needs forgiving and healing in me.",
+    "do": "Watch the first fifteen minutes today and the rest another day, or read the summary."
+   },
+   {
+    "kind": "reason",
+    "title": "Only a prophet?",
+    "ref": "John 8:54-59",
+    "reasonId": "who-is-jesus",
+    "reason": {
+     "q": "Was Jesus only a great prophet or teacher?",
+     "steps": [
+      "Many respect Jesus as a prophet. But prophets said, \"Thus says the Lord.\" Jesus said, \"I say to you,\" forgave sins himself, and accepted worship.",
+      "He said, \"Before Abraham was made, I am,\" using God's own name, and his hearers picked up stones because they understood exactly what he claimed.",
+      "A man who claims to be God is either lying, deluded, or telling the truth. A liar or a madman is not a great moral teacher. So \"just a good teacher\" is the one option the evidence does not leave open.",
+      "His life, his wisdom, his death and his Resurrection, witnessed by many, point to the third: he is who he said he is."
+     ]
+    },
+    "think": "This is the heart of the Christian faith, and the hardest step for many. Take your time; Jesus is patient with honest seekers.",
+    "journal": "What would it mean for your life if Jesus really is God?",
+    "pray": "Jesus, if you are who you say, show me, and give me the courage to follow you.",
+    "do": "Read one whole Gospel chapter today and notice what Jesus says about himself.",
+    "ccc": "422-424"
+   },
+   {
+    "kind": "story",
+    "title": "Knocked off his horse",
+    "ref": "Acts 9:1-19",
+    "story": {
+     "name": "St. Paul",
+     "saint": "paul",
+     "text": "Saul was a brilliant, devout Jew who thought the followers of Jesus were dangerous. He watched Stephen being stoned and then set out for Damascus with letters to arrest Christians.\n\nOn the road a light from heaven threw him to the ground, and a voice said, \"Saul, Saul, why persecutest thou me?\" \"Who art thou, Lord?\" \"I am Jesus whom thou persecutest.\" Blind for three days, he was baptized by Ananias, a Christian he had come to arrest. Saul became Paul, the apostle who carried the Gospel across the Roman world, and was martyred in Rome."
+    },
+    "think": "Jesus said, \"why persecutest thou me?\" not \"my followers.\" Jesus and his Church are one. And no one is too far away for him to reach.",
+    "journal": "Is there someone you think could never come to faith? Pray for them by name.",
+    "pray": "Lord, what wilt thou have me to do? Open my eyes as you opened Paul's.",
+    "do": "Add one person who seems far from God to your prayer list.",
+    "go": [
+     "intentions"
+    ]
+   },
+   {
+    "kind": "live",
+    "title": "The way, the truth and the life",
+    "ref": "John 14:1-7",
+    "think": "Thomas says, \"we know not whither thou goest; and how can we know the way?\" Jesus does not hand him a map. He says, \"I am the way.\" Following Jesus is a friendship, not a set of directions.",
+    "journal": "Where do you need Jesus to be \"the way\" for you this week?",
+    "pray": "Most Sacred Heart of Jesus, I place all my trust in you.",
+    "prayer": "sacred-heart",
+    "do": "Before one decision today, small or big, pause and ask, \"Jesus, what would you do?\""
+   },
+   {
+    "kind": "class",
+    "title": "Bring your questions about Jesus",
+    "ref": "Philippians 2:5-11",
+    "class": "What still puzzles you about Jesus: how he can be God and man, what Christians believe compared with other religions, the history? Write it down.",
+    "think": "He \"emptied himself, taking the form of a servant.\" The God who made the stars knelt to wash feet and died on a cross. That is who Jesus is.",
+    "journal": "Write one sentence to Jesus, telling him who he is for you right now.",
+    "pray": "Every knee shall bow and every tongue confess that Jesus Christ is Lord, to the glory of God the Father.",
+    "do": "Take the review quiz, and pray the Nicene Creed slowly, noticing everything it says about Jesus.",
+    "prayer": "nicene-creed",
+    "go": [
+     "quiz"
+    ],
+    "word": "Hypostatic union"
+   }
+  ],
+  "sym1-06": [
+   {
+    "kind": "remember",
+    "title": "Greater love than this",
+    "ref": "John 15:9-17",
+    "think": "\"Greater love than this no man hath, that a man lay down his life for his friends.\" The Paschal Mystery is Jesus' passing over through death to life, and he calls you his friend.",
+    "journal": "What struck you most in class about the cross and Resurrection?",
+    "pray": "Jesus, you call me your friend. Thank you for laying down your life for me.",
+    "do": "Look at a crucifix today for one full minute in silence.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Paschal Mystery"
+   },
+   {
+    "kind": "scripture",
+    "title": "It is consummated",
+    "ref": "John 19:25-30",
+    "think": "At the foot of the cross stand his mother and the beloved disciple. Jesus gives them to each other, and then says, \"It is consummated.\" The work of love is finished, completely.",
+    "journal": "If you stood at the foot of the cross, what would you want to say to Jesus?",
+    "pray": "We adore you, O Christ, and we bless you, because by your holy cross you have redeemed the world.",
+    "do": "Do this week's Bible study on John 19:16-30.",
+    "go": [
+     "bible"
+    ],
+    "prayer": "christ-crucified"
+   },
+   {
+    "kind": "watch",
+    "title": "Why did Jesus die the way he did?",
+    "ref": "Isaiah 53:3-7",
+    "media": {
+     "kind": "video",
+     "by": "Bishop Robert Barron",
+     "title": "Why Did Jesus Have to Die the Way He Did?",
+     "url": "https://www.youtube.com/watch?v=CtcKV65-9uY",
+     "mins": 8,
+     "about": "A short clip. Bishop Barron explains that on the cross Jesus took all the world's sin, violence and hatred into himself, and answered it not with more violence but with forgiveness. The cross shows what sin does and what God's love does.",
+     "listen": "\"Father, forgive them\" as the answer to the world's violence."
+    },
+    "think": "Isaiah wrote seven centuries before Jesus: \"he was wounded for our iniquities... and by his bruises we are healed.\" The early Christians read this and saw Good Friday.",
+    "journal": "What wound in you do you want Jesus to heal?",
+    "pray": "Lord Jesus, by your wounds I am healed. I give you my hurts and my sins.",
+    "do": "Pray the Stations of the Cross in the app, or just the first three stations today.",
+    "go": [
+     "stations"
+    ]
+   },
+   {
+    "kind": "reason",
+    "title": "Did the Resurrection really happen?",
+    "ref": "1 Corinthians 15:3-8",
+    "reasonId": "resurrection",
+    "reason": {
+     "q": "Is there good reason to believe Jesus rose from the dead?",
+     "steps": [
+      "Even sceptical historians agree on a few facts: Jesus died by crucifixion, his tomb was found empty, and many people said they saw him alive afterwards.",
+      "Paul lists witnesses, including \"more than five hundred brethren at once,\" most still alive when he wrote, as if to say: go and ask them.",
+      "The disciples went from hiding in fear to facing prison and death. Something changed them; they said it was meeting the risen Jesus.",
+      "Other explanations (a stolen body, hallucinations, a legend) each fail to fit all the facts. The Resurrection does."
+     ]
+    },
+    "think": "Paul hands on what he \"received\": Christ died, was buried, rose, and appeared. This is one of the oldest Christian creeds, written within a few years of the events.",
+    "journal": "Which of these reasons is strongest for you? What would you still ask?",
+    "pray": "Risen Jesus, if you are alive, let me meet you, as Mary Magdalene and the disciples did.",
+    "do": "Explain to yourself, in three sentences, why the empty tomb matters.",
+    "ccc": "639-644"
+   },
+   {
+    "kind": "story",
+    "title": "A life for a life",
+    "ref": "John 12:23-26",
+    "story": {
+     "name": "St. Maximilian Kolbe",
+     "saint": "kolbe",
+     "text": "Maximilian Kolbe was a Polish Franciscan priest who ran a large Catholic printing house. In 1941 the Nazis sent him to Auschwitz. When a prisoner escaped, the guards chose ten men to starve to death in a bunker.\n\nOne of them, Franciszek Gajowniczek, cried out, \"My wife, my children!\" Father Kolbe stepped forward and said, \"I am a Catholic priest. I want to take his place.\" In the bunker he led the others in prayer and hymns until the end. Gajowniczek survived the war and lived to see Kolbe declared a saint in 1982."
+    },
+    "think": "\"Unless the grain of wheat falling into the ground die, itself remaineth alone.\" Kolbe's death bore fruit, because Jesus' death had first.",
+    "journal": "What small \"dying to self\" could you offer for someone else this week?",
+    "pray": "St. Maximilian Kolbe, pray for me, that I may love as generously as you did.",
+    "do": "Give up your place, your choice or your comfort for someone today, quietly."
+   },
+   {
+    "kind": "live",
+    "title": "Offer it up",
+    "ref": "Colossians 1:24-29",
+    "think": "Paul says he rejoices in his sufferings, filling up in his flesh \"those things that are wanting of the sufferings of Christ.\" Joined to Jesus, even our small pains can become love for others.",
+    "journal": "What is hard in your life right now that you could offer to God?",
+    "pray": "O Jesus, it is for love of you, for the conversion of sinners, and in reparation for sin, that I offer this.",
+    "prayer": "sacrifice-prayer",
+    "do": "The next time something annoys or hurts today, say this short prayer instead of complaining.",
+    "word": "Offering it up"
+   },
+   {
+    "kind": "class",
+    "title": "Bring your questions about the cross",
+    "ref": "Luke 24:1-8",
+    "class": "What do you still want to understand: why the cross was necessary, what the Resurrection means for us, what \"saved\" means? Write it down.",
+    "think": "\"Why seek you the living with the dead? He is not here, but is risen.\" The story does not end at the tomb.",
+    "journal": "How does the Resurrection change the way you look at death?",
+    "pray": "Soul of Christ, sanctify me. Body of Christ, save me. Within your wounds hide me.",
+    "prayer": "anima-christi",
+    "do": "Take the review quiz.",
+    "go": [
+     "quiz",
+     "sponsor"
+    ],
+    "word": "Triduum"
+   }
+  ],
+  "sym1-07": [
+   {
+    "kind": "remember",
+    "title": "God's life poured into you",
+    "ref": "Romans 5:1-5",
+    "think": "\"The charity of God is poured forth in our hearts, by the Holy Ghost, who is given to us.\" Grace is not a thing; it is God's own life, given freely, making us his children.",
+    "journal": "What did you learn in class about the Holy Spirit that was new to you?",
+    "pray": "Come, Holy Spirit, fill my heart and kindle in me the fire of your love.",
+    "do": "Pray \"Come, Holy Spirit\" before you start work or study today.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Grace"
+   },
+   {
+    "kind": "scripture",
+    "title": "Tongues of fire",
+    "ref": "Acts 2:1-13",
+    "think": "At Pentecost the Spirit comes like wind and fire, and frightened disciples speak boldly in many languages. Among the crowd were \"Parthians, and Medes, and Elamites\": people from Persia heard the Gospel on the Church's first day.",
+    "journal": "Where do you need courage that only the Holy Spirit can give?",
+    "pray": "Holy Spirit, come upon me as you came on the apostles. Make me brave and joyful.",
+    "do": "Do this week's Bible study on Acts 2:1-13.",
+    "go": [
+     "bible"
+    ],
+    "word": "Holy Spirit"
+   },
+   {
+    "kind": "watch",
+    "title": "Who is the Holy Spirit?",
+    "ref": "John 14:15-21",
+    "media": {
+     "kind": "search",
+     "by": "Fr. Mike Schmitz, Ascension Presents",
+     "title": "Fr. Mike on the Holy Spirit",
+     "url": "https://www.youtube.com/c/AscensionPresents/search?query=Holy+Spirit",
+     "mins": 10,
+     "about": "Short videos where Fr. Mike explains that the Holy Spirit is not a force or a feeling but a Person, God himself, who lives in us after Baptism and Confirmation and gives us the strength to live like Jesus.",
+     "listen": "how the Spirit works even when we feel nothing."
+    },
+    "think": "Jesus promises \"another Paraclete,\" a helper, \"that he may abide with you for ever.\" You are not left alone to be good by your own effort.",
+    "journal": "Where in your life do you most need a helper right now?",
+    "pray": "Spirit of truth, live in me. Help me where I am weak.",
+    "do": "Write down the seven gifts of the Holy Spirit: wisdom, understanding, counsel, fortitude, knowledge, piety and fear of the Lord. Circle the one you most need.",
+    "ccc": "1830-1831"
+   },
+   {
+    "kind": "reason",
+    "title": "Do miracles still happen?",
+    "ref": "Acts 3:1-10",
+    "reasonId": "miracles",
+    "reason": {
+     "q": "Isn't belief in miracles unscientific?",
+     "steps": [
+      "Science studies how nature normally behaves. It cannot prove that nothing outside nature exists; that is a philosophical claim, not a scientific result.",
+      "If God made nature, he is free to act in it, the way an author can write a surprising chapter in his own book.",
+      "The Church is careful: before a healing is called a miracle (for example at Lourdes, or for a saint's canonization), doctors must confirm it has no natural explanation.",
+      "The greatest miracle is quieter: grace changing a human heart. Many people can tell you about that one."
+     ]
+    },
+    "think": "Peter has no money, but says, \"what I have, I give thee: In the name of Jesus Christ of Nazareth, arise, and walk.\" The Spirit works through ordinary people.",
+    "journal": "Have you seen God change someone's heart, or your own?",
+    "pray": "Lord, I believe you can do all things. Do in me whatever you want.",
+    "do": "Ask someone in your parish or class how they came to faith. Listen for the Spirit's work."
+   },
+   {
+    "kind": "story",
+    "title": "From denial to Pentecost",
+    "ref": "Acts 2:14-24",
+    "story": {
+     "name": "St. Peter",
+     "saint": "peter",
+     "text": "Peter was a fisherman, loyal and impulsive. He promised Jesus, \"I will lay down my life for thee.\" That same night, by a fire in the high priest's courtyard, a servant girl asked if he knew Jesus, and three times he swore he did not. Then the cock crowed, and Peter went out and wept bitterly.\n\nFifty days later, filled with the Holy Spirit, the same man stood up before thousands in Jerusalem and proclaimed that Jesus is Lord and Christ. About three thousand were baptized that day. Peter led the Church, and at the end gave his life in Rome."
+    },
+    "think": "The difference between Peter at the fire and Peter at Pentecost was not willpower. It was the Holy Spirit.",
+    "journal": "Where have you failed, and where might the Spirit want to make you strong?",
+    "pray": "St. Peter, you knew weakness and grace. Pray for me, that the Spirit may make me faithful.",
+    "do": "Do one thing today that takes a little courage for your faith: make the Sign of the Cross in public, or say you go to church."
+   },
+   {
+    "kind": "live",
+    "title": "The fruit of the Spirit",
+    "ref": "Galatians 5:16-25",
+    "think": "Paul lists twelve fruits of the Spirit: charity, joy, peace, patience, benignity, goodness, longanimity, mildness, faith, modesty, continency and chastity. Fruit grows slowly, from a living root.",
+    "journal": "Which fruit of the Spirit do you most want to grow in you?",
+    "pray": "Holy Spirit, let your fruit grow in me today, especially patience and kindness.",
+    "do": "Choose one fruit and practise it on purpose today with one person.",
+    "go": [
+     "habits"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "Bring your questions about grace",
+    "ref": "Romans 8:14-17",
+    "class": "What do you want to ask about the Holy Spirit, grace, or how God works in us? Write it down.",
+    "think": "\"You have received the spirit of adoption of sons, whereby we cry: Abba (Father).\" Grace makes you not a servant but a child of God.",
+    "journal": "How would you live differently today if you truly felt like God's child?",
+    "pray": "Abba, Father, I am your child. Let your Spirit pray in me.",
+    "do": "Practise the memory verse with the flashcards, and read your questions once more.",
+    "go": [
+     "verse",
+     "sponsor"
+    ]
+   }
+  ],
+  "sym1-08": [
+   {
+    "kind": "remember",
+    "title": "Upon this rock",
+    "ref": "Matthew 16:18-19",
+    "think": "Jesus did not leave a book and walk away. He gathered people, chose twelve, made Peter the rock, and promised that the gates of hell would not prevail. The Church is his idea.",
+    "journal": "What did you think about \"the Church\" before RCIA? What do you think now?",
+    "pray": "Lord Jesus, you built your Church on the rock. Thank you for bringing me to her. Make me a living stone.",
+    "do": "Look up who the current Pope is and who your bishop is, and pray for them both by name.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Catholic"
+   },
+   {
+    "kind": "scripture",
+    "title": "The first Christian community",
+    "ref": "Acts 2:42-47",
+    "think": "The first Christians \"were persevering in the doctrine of the apostles, and in the communication of the breaking of bread, and in prayers.\" Teaching, Eucharist, community, prayer: the Church still lives on these four.",
+    "journal": "Which of the four do you need most right now?",
+    "pray": "Lord, make my parish a family like the first Christians, and help me to belong.",
+    "do": "Do this week's Bible study on Acts 2:42-47.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "748-752"
+   },
+   {
+    "kind": "watch",
+    "title": "Why be Catholic?",
+    "ref": "Ephesians 4:1-7",
+    "media": {
+     "kind": "search",
+     "by": "Fr. Mike Schmitz, Ascension Presents",
+     "title": "Fr. Mike: Why be Catholic?",
+     "url": "https://www.youtube.com/c/AscensionPresents/search?query=Why+be+Catholic",
+     "mins": 10,
+     "about": "Fr. Mike answers a common question: why not just love Jesus on my own? He explains that Jesus gave us the Church to give us himself, in the sacraments and in the teaching handed down from the apostles, and that faith is meant to be lived together.",
+     "listen": "the difference between a club of believers and the Body of Christ."
+    },
+    "think": "\"One body and one Spirit... one Lord, one faith, one baptism.\" Unity is not sameness; it is many members sharing one life.",
+    "journal": "What gift do you bring to the Body of Christ?",
+    "pray": "Lord, keep your Church one. Heal what divides Christians, and make me a peacemaker.",
+    "do": "Learn the four marks of the Church from the Creed: one, holy, catholic and apostolic."
+   },
+   {
+    "kind": "reason",
+    "title": "Jesus yes, Church no?",
+    "ref": "1 Corinthians 12:12-27",
+    "reasonId": "why-church",
+    "reason": {
+     "q": "Can't I just have Jesus without the Church?",
+     "steps": [
+      "Jesus himself founded a community with leaders, rituals and a mission. Choosing Jesus means accepting what he chose.",
+      "We only know Jesus because the Church remembered him, wrote the New Testament, chose which books belong in it and handed it on to us.",
+      "Paul calls the Church the Body of Christ. A head without a body, or a hand cut off from the body, does not make sense.",
+      "Alone, our faith easily bends to our moods. Together, with the sacraments and the apostles' teaching, it is corrected, fed and carried when we are weak."
+     ]
+    },
+    "think": "\"If one member suffer any thing, all the members suffer with it.\" You need the Church, and the Church needs you.",
+    "journal": "What has the Church community already given you this year?",
+    "pray": "Lord, I am one part of your Body. Use me, and let me receive what others give.",
+    "do": "Introduce yourself to one new person at Mass this Sunday.",
+    "ccc": "787-796"
+   },
+   {
+    "kind": "story",
+    "title": "He followed the evidence to Rome",
+    "ref": "John 17:20-23",
+    "story": {
+     "name": "St. John Henry Newman",
+     "text": "John Henry Newman was a famous Anglican priest and scholar at Oxford in the 1800s. He set out to prove that the Church of England was the true heir of the early Church, and he spent years reading the Church Fathers.\n\nThe more he studied, the more he saw the early Church in the Catholic Church. \"To be deep in history is to cease to be Protestant,\" he wrote. In 1845, at the cost of his career and many friendships, he was received into the Catholic Church. He became a cardinal, and was declared a saint in 2019. His motto: \"Heart speaks to heart.\""
+    },
+    "think": "Newman used his mind honestly and followed it where it led, even when it cost him. Reason and faith walked together.",
+    "journal": "What is your journey into the Church costing you? What is it giving you?",
+    "pray": "Lead, kindly Light, amid the encircling gloom, lead thou me on. I do not ask to see the distant scene; one step enough for me. (St. John Henry Newman)",
+    "do": "Read about one Church Father (Ignatius of Antioch, Justin, Irenaeus) and notice what the early Christians believed about the Eucharist and bishops."
+   },
+   {
+    "kind": "live",
+    "title": "Belong to a parish",
+    "ref": "Hebrews 10:23-25",
+    "think": "\"Not forsaking our assembly, as some are accustomed.\" Sunday Mass is not just a duty; it is where the family gathers and is fed.",
+    "journal": "What would help you feel more at home in your parish?",
+    "pray": "Lord, bless my parish, our priest, our catechists and everyone in RCIA with me.",
+    "do": "Pick up the parish bulletin this Sunday and find one group or event you could join.",
+    "go": [
+     "mass"
+    ],
+    "word": "Parish"
+   },
+   {
+    "kind": "class",
+    "title": "Questions about the Church",
+    "ref": "Matthew 28:18-20",
+    "class": "What do you want to ask about the Church: the Pope, bishops, other Christians, the scandals, what \"catholic\" means? Write it down. Hard questions are welcome.",
+    "think": "\"I am with you all days, even to the consummation of the world.\" Jesus promised to stay with his Church, through every century and every scandal.",
+    "journal": "In one sentence: why do you want to become Catholic?",
+    "pray": "Lord, you are with us always. Thank you for your Church, holy and full of sinners like me.",
+    "do": "Read your journal from this week and add any question to your list.",
+    "go": [
+     "sponsor"
+    ],
+    "word": "Apostles"
+   }
+  ],
+  "sym1-09": [
+   {
+    "kind": "remember",
+    "title": "Behold thy mother",
+    "ref": "John 19:25-27",
+    "think": "From the cross Jesus gives his mother to the beloved disciple, and the disciple to her. The Church has always heard this as a gift to every disciple: Mary is our mother too.",
+    "journal": "What do you feel about Mary right now: closeness, confusion, questions?",
+    "pray": "Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus.",
+    "prayer": "hail-mary",
+    "do": "Pray one Hail Mary slowly today, thinking about each phrase.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Theotokos"
+   },
+   {
+    "kind": "scripture",
+    "title": "Be it done to me",
+    "ref": "Luke 1:26-38",
+    "think": "Mary is young, poor, and confused (\"How shall this be done?\"), and she says yes. Her yes made room for God to become man. Every Christian life is a smaller yes like hers.",
+    "journal": "What is God asking you to say yes to, even without understanding everything?",
+    "pray": "Behold the handmaid of the Lord; be it done to me according to thy word. Mary, teach me your yes.",
+    "do": "Do this week's Bible study on the Annunciation (Luke 1:26-38).",
+    "go": [
+     "bible"
+    ],
+    "prayer": "angelus"
+   },
+   {
+    "kind": "watch",
+    "title": "Why Catholics love Mary",
+    "ref": "Luke 1:39-49",
+    "media": {
+     "kind": "search",
+     "by": "Fr. Mike Schmitz, Ascension Presents",
+     "title": "Fr. Mike on Mary",
+     "url": "https://www.youtube.com/c/AscensionPresents/search?query=Mary",
+     "mins": 10,
+     "about": "Fr. Mike explains why Catholics honour Mary without worshipping her: everything about her points to Jesus. She is the Mother of God because her son is God, and she prays for us as a mother.",
+     "listen": "the difference between worship (only God) and honour (Mary and the saints)."
+    },
+    "think": "Mary says, \"all generations shall call me blessed,\" and gives the reason: \"he that is mighty hath done great things to me.\" Honouring Mary is praising what God did.",
+    "journal": "What great things has God done for you? List three.",
+    "pray": "My soul doth magnify the Lord, and my spirit hath rejoiced in God my Saviour.",
+    "do": "Read the whole Magnificat (Luke 1:46-55), Mary's song, once aloud."
+   },
+   {
+    "kind": "reason",
+    "title": "Do Catholics worship Mary?",
+    "ref": "John 2:1-11",
+    "reasonId": "mary",
+    "reason": {
+     "q": "Isn't praying to Mary and the saints taking something from God?",
+     "steps": [
+      "Catholics worship God alone. Worship means giving someone the honour due to God, and the Church has always condemned giving that to any creature.",
+      "Asking Mary to pray for us is like asking a friend to pray for us. Death does not end the family of God; the saints are alive in Christ.",
+      "At Cana, Mary notices the need and says to Jesus, \"They have no wine,\" and to the servants, \"Whatsoever he shall say to you, do ye.\" That is all she ever does: brings us to him.",
+      "Honouring a mother honours her son. Calling Mary \"Mother of God\" protects the truth that Jesus is God."
+     ]
+    },
+    "think": "The first miracle happens because Mary asks. Jesus loves to answer his mother.",
+    "journal": "What would you like Mary to bring to Jesus for you, like at Cana?",
+    "pray": "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection was left unaided.",
+    "prayer": "memorare",
+    "do": "Ask Mary to pray for one specific need today, then leave it with Jesus.",
+    "ccc": "971",
+    "word": "Saint"
+   },
+   {
+    "kind": "story",
+    "title": "A sceptic in a church in Rome",
+    "ref": "Luke 1:46-55",
+    "story": {
+     "name": "Alphonse Ratisbonne",
+     "text": "Alphonse Ratisbonne was a wealthy young banker from Strasbourg, from a Jewish family, and he openly mocked Christianity. In Rome in January 1842 a friend dared him to wear a Miraculous Medal of Mary and say the Memorare each day. He agreed, as a joke.\n\nOn January 20, waiting for that friend inside the church of Sant'Andrea delle Fratte, he suddenly saw Mary, full of light, who made a sign for him to kneel. \"She did not say a word, but I understood everything,\" he wrote. Eleven days later he was baptized. He became a priest and spent his life in the Holy Land."
+    },
+    "think": "Alphonse did not go looking for God. A small prayer, said almost as a joke, opened a door. Never underestimate a little prayer.",
+    "journal": "Is there someone you could quietly pray the Memorare for every day?",
+    "pray": "Mary, Mother of Jesus, pray for all who do not yet know your Son, and for me.",
+    "do": "Pray the Memorare today for someone far from faith.",
+    "prayer": "memorare"
+   },
+   {
+    "kind": "live",
+    "title": "A family in heaven",
+    "ref": "Hebrews 12:1-2",
+    "think": "\"We also having so great a cloud of witnesses over our head.\" The saints are like a stadium cheering us on. You will choose one of them as your patron for Confirmation.",
+    "journal": "Which saint have you felt drawn to so far, and why?",
+    "pray": "All you holy men and women, saints of God, pray for us.",
+    "do": "Take the \"Find my saint\" quiz in the app, or read about two saints.",
+    "go": [
+     "saint-quiz"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "Questions about Mary and the saints",
+    "ref": "Revelation 12:1-6",
+    "dr": "Apocalypse 12:1-6",
+    "class": "What do you want to ask about Mary, the saints, statues, relics or the Rosary? Write it down.",
+    "think": "John sees \"a woman clothed with the sun... and on her head a crown of twelve stars,\" who gives birth to a son. The Church sees Mary, and also the people of God.",
+    "journal": "How has your view of Mary changed this week?",
+    "pray": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.",
+    "prayer": "hail-holy-queen",
+    "do": "Pray one decade of the Rosary in the app before class.",
+    "go": [
+     "rosary",
+     "sponsor"
+    ],
+    "word": "Rosary"
+   }
+  ],
+  "sym1-10": [
+   {
+    "kind": "remember",
+    "title": "I am the resurrection",
+    "ref": "John 11:20-27",
+    "think": "Martha has just buried her brother, and Jesus tells her: \"I am the resurrection and the life.\" Then he asks, \"Believest thou this?\" The last things are not a scary topic; they are the question of hope.",
+    "journal": "What do you feel when you think about your own death?",
+    "pray": "Jesus, you are the resurrection and the life. I believe; help me to believe more.",
+    "do": "Pray for someone you love who has died, by name.",
+    "prayer": "eternal-rest",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "Lazarus, come forth",
+    "ref": "John 11:32-44",
+    "think": "\"Jesus wept.\" He knows he will raise Lazarus, and still he weeps with his friends. God does not stand far from our grief.",
+    "journal": "What grief do you want to bring to Jesus?",
+    "pray": "Lord, you wept at your friend's grave. Weep with me, and call me out of every tomb.",
+    "do": "Do this week's Bible study on John 11.",
+    "go": [
+     "bible"
+    ]
+   },
+   {
+    "kind": "watch",
+    "title": "What the Church really teaches about purgatory",
+    "ref": "1 Corinthians 3:11-15",
+    "media": {
+     "kind": "search",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "Bishop Barron on purgatory and heaven",
+     "url": "https://www.youtube.com/@BishopBarron/search?query=purgatory",
+     "mins": 10,
+     "about": "Bishop Barron explains purgatory not as a punishment but as God's love finishing its work in us: a final purification so we can bear the full joy of heaven. It is good news for everyone who dies loving God but not yet perfect.",
+     "listen": "the image of fire as love, not torture."
+    },
+    "think": "Paul says some will be saved \"yet so as by fire.\" The Church sees here a hint of purification after death, and so we pray for the dead.",
+    "journal": "What would you want God to purify in you?",
+    "pray": "Eternal rest grant unto them, O Lord, and let perpetual light shine upon them. May they rest in peace.",
+    "do": "Add the names of your dead to \"People I pray for\" in the app.",
+    "go": [
+     "intentions"
+    ],
+    "word": "Sheol"
+   },
+   {
+    "kind": "reason",
+    "title": "Would a loving God send anyone to hell?",
+    "ref": "Matthew 25:31-40",
+    "reasonId": "hell",
+    "reason": {
+     "q": "How can a loving God allow hell?",
+     "steps": [
+      "God made us free so we could love. Love cannot be forced. If we can say yes to God, we can also say a final no.",
+      "The Church teaches that hell is \"self-exclusion\" from God: not God's wish, but his respect for a person's final choice (Catechism 1033).",
+      "God \"will have all men to be saved\" and does everything to bring us home. No one ends up in hell by accident or by a mistake they did not choose.",
+      "The Church declares many people saints in heaven, but has never declared that any particular person is in hell. We hope and pray for everyone."
+     ]
+    },
+    "think": "At the last judgment Jesus asks about simple things: food, water, a visit. Heaven grows from small acts of love now.",
+    "journal": "What does this teaching make you feel, and what does it make you want to do?",
+    "pray": "O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those most in need of thy mercy.",
+    "prayer": "fatima-prayer",
+    "do": "Visit, call or help one person who is sick, lonely or in need this week.",
+    "ccc": "1033-1037"
+   },
+   {
+    "kind": "story",
+    "title": "Lay this body anywhere",
+    "ref": "Wisdom 3:1-6",
+    "story": {
+     "name": "St. Monica",
+     "saint": "monica",
+     "text": "Monica lived in North Africa in the 300s. Her husband had a hard temper, and her son Augustine lived far from God. For seventeen years she prayed and wept for him. A bishop told her, \"The son of so many tears cannot perish.\"\n\nShe lived to see Augustine baptized. On the way home from Italy, at the port of Ostia, she fell ill. Her sons wanted to bury her in Africa beside her husband. She said, \"Lay this body anywhere; do not let care for it trouble you. This only I ask: that you remember me at the altar of the Lord, wherever you are.\""
+    },
+    "think": "Monica was not afraid of where she died, because she knew where she was going. She asked only to be prayed for at Mass.",
+    "journal": "Whom do you want to remember at the altar? Write their names.",
+    "pray": "St. Monica, pray for all mothers and fathers waiting for their children to come home to God.",
+    "do": "At Mass this Sunday, silently offer the Mass for someone who has died."
+   },
+   {
+    "kind": "live",
+    "title": "Live today for heaven",
+    "ref": "Philippians 3:12-21",
+    "think": "Paul forgets what is behind and stretches toward what is ahead, because \"our conversation is in heaven.\" Thinking about heaven does not take us out of the world; it shows what matters in it.",
+    "journal": "If you had one month to live, what would you change?",
+    "pray": "Lord, teach me to number my days, that I may gain a wise heart.",
+    "do": "Pray the Evening Examen tonight: look back over the day with God.",
+    "go": [
+     "examen"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "Questions about the end",
+    "ref": "Revelation 21:1-5",
+    "dr": "Apocalypse 21:1-5",
+    "class": "What do you want to ask about death, judgment, heaven, hell, purgatory or the end of the world? Write it down.",
+    "think": "\"God shall wipe away all tears from their eyes: and death shall be no more.\" The Bible ends not with destruction but with a wedding and a new creation.",
+    "journal": "What are you most looking forward to in heaven?",
+    "pray": "Behold, I make all things new. Lord, make me new, and bring us all home.",
+    "do": "Read your questions once more. This is the end of the first part of Symbolon.",
+    "go": [
+     "sponsor",
+     "rites"
+    ]
+   }
+  ],
+  "sym2-01": [
+   {
+    "kind": "remember",
+    "title": "Born of water and the Spirit",
+    "ref": "John 3:1-8",
+    "think": "Nicodemus comes at night with questions, and Jesus says one must be \"born again of water and the Holy Ghost.\" Baptism is not a symbol only; it is a new birth into God's family.",
+    "journal": "If you are not yet baptized: what do you hope Baptism will change? If you are: what do you know about your own baptism?",
+    "pray": "Lord, like Nicodemus I come with questions. Give me new birth by water and the Spirit.",
+    "do": "Use holy water when you enter church this Sunday and make the Sign of the Cross, remembering Baptism.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Baptism"
+   },
+   {
+    "kind": "scripture",
+    "title": "Buried and risen with Christ",
+    "ref": "Romans 6:3-11",
+    "think": "\"We are buried together with him by baptism into death,\" so that we may walk in newness of life. Going down into the water is dying with Christ; coming up is rising with him.",
+    "journal": "What in your old life do you want to leave in the water?",
+    "pray": "Jesus, I want to die with you to sin and rise with you to new life.",
+    "do": "Do this week's Bible study on John 3:1-17.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "1213-1216"
+   },
+   {
+    "kind": "watch",
+    "title": "Sealed with the Spirit",
+    "ref": "Acts 8:14-17",
+    "media": {
+     "kind": "video",
+     "by": "Bishop Robert Barron",
+     "title": "Bishop Barron on the Sacrament of Confirmation",
+     "url": "https://www.youtube.com/watch?v=f-UuMAU7qT0",
+     "mins": 10,
+     "about": "A ten-minute sermon. Bishop Barron explains that Confirmation completes Baptism: it seals us with the Holy Spirit and sends us out on mission, like soldiers or athletes who are strengthened for a task, not just blessed.",
+     "listen": "what the Spirit gives you for, not only what he gives you."
+    },
+    "think": "Peter and John lay hands on the new Christians in Samaria, \"and they received the Holy Ghost.\" The bishop still does this at Confirmation, and in RCIA the priest does it at the Easter Vigil.",
+    "journal": "For what mission might God be strengthening you?",
+    "pray": "Be sealed with the gift of the Holy Spirit. Come, Holy Spirit, and make me ready.",
+    "do": "Start thinking about your Confirmation name: a saint you would like as a friend for life.",
+    "go": [
+     "saint-quiz"
+    ],
+    "word": "Confirmation"
+   },
+   {
+    "kind": "reason",
+    "title": "Why be baptized if I already believe?",
+    "ref": "Acts 2:36-41",
+    "reasonId": "why-church",
+    "reason": {
+     "q": "Isn't faith in my heart enough?",
+     "steps": [
+      "Jesus himself commanded Baptism: \"Teach ye all nations, baptizing them.\" Wanting Jesus includes wanting what he asked.",
+      "We are body and soul. God gives grace through things we can see and touch (water, oil, bread) because that is how human beings receive gifts.",
+      "Baptism is not a reward for believing; it is God's action. It forgives all sin, makes us children of God, and joins us to the Church.",
+      "Love wants to be public, like a wedding. Baptism is your yes to God said aloud, in front of his family."
+     ]
+    },
+    "think": "When the crowd asked, \"What shall we do?\", Peter answered: \"Do penance, and be baptized every one of you.\" About three thousand did, that same day.",
+    "journal": "What makes you want to be baptized or confirmed, in your own words?",
+    "pray": "Lord, I want to belong to you completely, in body and soul, in front of your Church.",
+    "do": "Write a short letter to God about why you want the sacraments. Keep it for the Easter Vigil.",
+    "ccc": "1257"
+   },
+   {
+    "kind": "story",
+    "title": "The Lily of the Mohawks",
+    "ref": "Isaiah 61:10-11",
+    "story": {
+     "name": "St. Kateri Tekakwitha",
+     "saint": "kateri",
+     "text": "Kateri was born in 1656 in a Mohawk village in what is now New York State. Smallpox killed her parents and left her face scarred and her eyes weak. She heard about Jesus from Jesuit missionaries and longed to be baptized, though her family opposed it.\n\nShe was baptized at 20, on Easter Sunday 1676, and was mocked and threatened for her faith. She walked some 300 kilometres to the Christian mission at Kahnawake, near Montreal, where she lived a life of prayer and care for others. She died at 24, and her scars are said to have faded. She was the first Indigenous saint of North America."
+    },
+    "think": "Kateri's baptism cost her a lot, and she never regretted it. She is buried in Kahnawake, in Quebec, where pilgrims still visit her.",
+    "journal": "What has your journey to the sacraments already cost you, and has it been worth it?",
+    "pray": "St. Kateri, you longed for Baptism. Pray for me and for all the catechumens in Canada.",
+    "do": "Pray for the others in your RCIA group by name today."
+   },
+   {
+    "kind": "live",
+    "title": "Clothed in Christ",
+    "ref": "Galatians 3:26-28",
+    "think": "\"As many of you as have been baptized in Christ, have put on Christ.\" At Baptism you receive a white garment. Every day after, you put him on again: in how you speak, choose and love.",
+    "journal": "How would you like people to see Christ in you?",
+    "pray": "Lord, as I get dressed today, clothe me with your kindness, patience and joy.",
+    "do": "Each time you get dressed today, say: \"Jesus, I put you on.\""
+   },
+   {
+    "kind": "class",
+    "title": "Questions about Baptism and Confirmation",
+    "ref": "Ezekiel 36:25-28",
+    "class": "What do you want to know about the Easter Vigil, your baptism, a sponsor, your Confirmation name or being received if already baptized? Write it down.",
+    "think": "\"I will pour upon you clean water... and I will give you a new heart.\" Ezekiel's promise is fulfilled in Baptism.",
+    "journal": "Which promise of God from this week do you want to hold on to?",
+    "pray": "I believe in God, the Father almighty, Creator of heaven and earth, and in Jesus Christ, his only Son, our Lord.",
+    "prayer": "apostles-creed",
+    "do": "Look at the rites ahead in the app: when will you receive the sacraments?",
+    "go": [
+     "rites",
+     "sponsor"
+    ],
+    "word": "Catechumen"
+   }
+  ],
+  "sym2-02": [
+   {
+    "kind": "remember",
+    "title": "The bread of life",
+    "ref": "John 6:35-40",
+    "think": "\"I am the bread of life: he that cometh to me shall not hunger.\" In class you heard that in the Eucharist Jesus gives us himself, really, under the appearance of bread and wine.",
+    "journal": "What are you hungry for, deep down?",
+    "pray": "Jesus, bread of life, I hunger for you. Feed me with yourself.",
+    "do": "At Mass this Sunday, watch closely when the priest lifts the Host and says, \"This is my Body.\"",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Eucharist"
+   },
+   {
+    "kind": "scripture",
+    "title": "My flesh is meat indeed",
+    "ref": "John 6:53-58",
+    "dr": "John 6:54-59",
+    "think": "Jesus does not soften his words when people object. He repeats them more strongly: \"my flesh is meat indeed, and my blood is drink indeed.\" Many walk away. He lets them go rather than say it is only a symbol.",
+    "journal": "If Jesus is truly present in the Eucharist, what does that change for you?",
+    "pray": "O Sacrament most holy, O Sacrament divine, all praise and all thanksgiving be every moment thine.",
+    "prayer": "o-sacrament",
+    "do": "Do this week's Bible study on John 6:35-69.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "1373-1377",
+    "word": "Real Presence"
+   },
+   {
+    "kind": "watch",
+    "title": "The Real Presence",
+    "ref": "1 Corinthians 11:23-29",
+    "media": {
+     "kind": "video",
+     "by": "Bishop Robert Barron",
+     "title": "The Real Presence of Jesus in the Eucharist",
+     "url": "https://www.youtube.com/watch?v=UzCPu_lEhe8",
+     "mins": 45,
+     "about": "A full talk. Bishop Barron explains from John 6, the Last Supper and the early Church why Catholics believe the Eucharist is not a symbol of Jesus but Jesus himself, and why it matters that many Catholics rediscover this.",
+     "listen": "what Paul means by \"not discerning the body of the Lord.\""
+    },
+    "think": "Paul wrote this only about twenty-five years after the Last Supper. Already the Church believed that eating unworthily is sinning \"against the body and blood of the Lord.\"",
+    "journal": "How do you want to prepare for your First Communion?",
+    "pray": "Lord, I am not worthy that you should enter under my roof, but only say the word and my soul shall be healed.",
+    "do": "Watch the first part of the talk, or read the summary, then read 1 Corinthians 11 again."
+   },
+   {
+    "kind": "reason",
+    "title": "How can bread become God?",
+    "ref": "Luke 22:14-20",
+    "reasonId": "eucharist",
+    "reason": {
+     "q": "Isn't it irrational to believe bread becomes Jesus?",
+     "steps": [
+      "The Church distinguishes what a thing is (its substance) from how it appears (its colour, taste, shape). After the consecration, the appearances of bread remain, but what it is has changed.",
+      "This is not magic or a chemical change you could test. It is God, who made bread from nothing, acting on what bread is.",
+      "Jesus said \"This is my body,\" not \"This represents.\" The earliest Christians, like St. Ignatius of Antioch around 107, wrote plainly that the Eucharist is the flesh of Jesus.",
+      "If God could become a man in Mary's womb, he can give himself to us under the form of bread. The question is not \"can he?\" but \"did he say so?\" He did."
+     ]
+    },
+    "think": "At the Last Supper, Jesus took bread and said, \"This is my body, which is given for you.\" The next day he gave that body on the cross.",
+    "journal": "What part of this teaching is hardest for you to accept, and why?",
+    "pray": "Lord, I believe; help my unbelief. Let me see you in the breaking of the bread.",
+    "do": "Find out when your parish has Eucharistic Adoration and plan to go for fifteen minutes.",
+    "ccc": "1374-1376",
+    "word": "Consecration"
+   },
+   {
+    "kind": "story",
+    "title": "The highway to heaven",
+    "ref": "Psalm 34",
+    "dr": "Psalms 33",
+    "story": {
+     "name": "St. Carlo Acutis",
+     "saint": "carlo-acutis",
+     "text": "Carlo Acutis was an ordinary Italian teenager who loved video games, football and computers. He also went to Mass every day after his First Communion at seven, and spent time before the Blessed Sacrament. \"The Eucharist is my highway to heaven,\" he said.\n\nHe taught himself to code and built a website documenting Eucharistic miracles around the world, which is still used today. In 2006, at fifteen, he died of leukaemia, offering his suffering for the Pope and the Church. He was declared a saint in 2025, the first saint of the internet generation."
+    },
+    "think": "\"O taste, and see that the Lord is sweet.\" Carlo was not unusual in his interests. He was unusual in letting Jesus be the centre of them.",
+    "journal": "How could your phone, your work or your hobby point to Jesus?",
+    "pray": "St. Carlo Acutis, pray for me, that the Eucharist may become my highway to heaven too.",
+    "do": "Spend fifteen minutes in a church, near the tabernacle, if you can this week.",
+    "word": "Tabernacle"
+   },
+   {
+    "kind": "live",
+    "title": "Spiritual communion",
+    "ref": "Luke 19:1-10",
+    "think": "Zacchaeus could not get close to Jesus, so he climbed a tree. Jesus saw him and said, \"this day I must abide in thy house.\" Until you can receive Communion, you can still invite him in your heart.",
+    "journal": "What does it feel like to wait for Communion?",
+    "pray": "My Jesus, I believe that you are present in the Most Holy Sacrament. Since I cannot now receive you sacramentally, come at least spiritually into my heart.",
+    "do": "At Communion time this Sunday, if you are not yet receiving, pray this spiritual communion in your seat, or come forward for a blessing with arms crossed.",
+    "go": [
+     "mass"
+    ],
+    "word": "Communion"
+   },
+   {
+    "kind": "class",
+    "title": "Questions about the Eucharist",
+    "ref": "John 6:66-69",
+    "dr": "John 6:67-70",
+    "class": "What do you want to ask about the Eucharist, Communion, Adoration, or why non-Catholics do not receive? Write it down.",
+    "think": "When many leave, Jesus asks the twelve, \"Will you also go away?\" Peter answers: \"Lord, to whom shall we go? thou hast the words of eternal life.\"",
+    "journal": "Write Peter's answer as your own prayer.",
+    "pray": "Lord, to whom shall I go? You have the words of eternal life.",
+    "do": "Practise the memory verse and read your questions once more.",
+    "go": [
+     "verse",
+     "sponsor"
+    ],
+    "word": "Host"
+   }
+  ],
+  "sym2-03": [
+   {
+    "kind": "remember",
+    "title": "Do this in memory of me",
+    "ref": "Luke 22:14-20",
+    "think": "The Mass has two great parts: the Liturgy of the Word, where God speaks, and the Liturgy of the Eucharist, where Jesus gives himself. It is the same pattern as Emmaus: Scripture, then the breaking of bread.",
+    "journal": "Which part of the Mass do you understand better now, after class?",
+    "pray": "Lord Jesus, you gave us the Mass so we would never forget you. Help me to take part with my whole heart.",
+    "do": "Open the Mass guide in the app and read the parts you still find confusing.",
+    "go": [
+     "lesson",
+     "mass"
+    ],
+    "word": "Liturgy"
+   },
+   {
+    "kind": "scripture",
+    "title": "The Mass in the Bible",
+    "ref": "Isaiah 6:1-8",
+    "think": "Isaiah sees the Lord on a throne and angels crying \"Holy, holy, holy.\" At every Mass, just before the Eucharistic Prayer, we sing the same words, joining the angels.",
+    "journal": "Have you ever felt something holy at Mass? What was it like?",
+    "pray": "Holy, holy, holy Lord God of hosts. Heaven and earth are full of your glory. Hosanna in the highest.",
+    "do": "Do this week's Bible study on Luke 22:14-20.",
+    "go": [
+     "bible"
+    ]
+   },
+   {
+    "kind": "watch",
+    "title": "What happens at Mass",
+    "ref": "Hebrews 12:22-24",
+    "media": {
+     "kind": "search",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "Bishop Barron on the Mass",
+     "url": "https://www.youtube.com/@BishopBarron/search?query=the+Mass",
+     "mins": 10,
+     "about": "Bishop Barron walks through the Mass as a journey: we gather, confess, listen, offer, are fed and are sent. He shows how each part has roots in the Bible and why the Mass is the most important thing Catholics do.",
+     "listen": "why the end of Mass, \"Go forth,\" matters as much as the beginning."
+    },
+    "think": "At Mass \"you are come to mount Sion... and to the company of many thousands of angels.\" Your small parish church on a Sunday morning touches heaven.",
+    "journal": "What would help you pay attention at Mass?",
+    "pray": "Lord, open my eyes at Mass to see heaven touching earth.",
+    "do": "Read this Sunday's readings before Mass on Living with Christ, so you arrive ready to listen.",
+    "word": "Lectionary"
+   },
+   {
+    "kind": "reason",
+    "title": "Why every Sunday?",
+    "ref": "Exodus 20:8-11",
+    "reasonId": "eucharist",
+    "reason": {
+     "q": "Can't I pray at home instead of going to Mass?",
+     "steps": [
+      "Prayer at home is good, but the Mass is something else: it is Jesus' own sacrifice made present, which no private prayer can replace.",
+      "God commanded a day of rest and worship from the beginning. Christians moved it to Sunday, the day Jesus rose.",
+      "A friendship that never meets in person fades. Weekly Mass keeps us close to Jesus and to his family, even when we do not feel like it.",
+      "The Church asks us to go every Sunday not to burden us, but because she knows we need it, the way a mother insists you eat."
+     ]
+    },
+    "think": "\"Remember that thou keep holy the sabbath day.\" A day set apart says: my time belongs to God first.",
+    "journal": "What usually gets in the way of Sunday Mass for you? How could you make it easier?",
+    "pray": "Lord, this is the day you have made. Let me rejoice and be glad in it.",
+    "do": "Plan your Sunday now: which Mass time, how you will get there, and something restful for the afternoon.",
+    "ccc": "2180-2183"
+   },
+   {
+    "kind": "story",
+    "title": "Mass in the forests of Huronia",
+    "ref": "Malachi 1:11",
+    "story": {
+     "name": "St. John de Brébeuf and the Canadian Martyrs",
+     "saint": "brebeuf",
+     "text": "John de Brébeuf was a French Jesuit who came to New France in 1625. He lived among the Wendat (Huron) people near Georgian Bay, in what is now Ontario, learned their language, wrote a dictionary, and composed the \"Huron Carol\" so they could sing of Jesus' birth in their own words.\n\nAt the mission of Sainte-Marie he and his companions celebrated Mass in a chapel of bark and wood. In 1649, during war, he was captured and tortured to death. He and seven companions are honoured as the patrons of Canada. You can visit the Martyrs' Shrine in Midland, Ontario."
+    },
+    "think": "Malachi foresaw that \"in every place there is sacrifice, and there is offered to my name a clean oblation.\" The Mass was offered in Canada's forests long before its cathedrals.",
+    "journal": "What does it mean to you that the same Mass is celebrated all over the world, every day?",
+    "pray": "Holy Canadian Martyrs, pray for Canada, and for all who bring the Gospel in a new language.",
+    "do": "Listen to the Huron Carol (\"'Twas in the moon of wintertime\"), and pray for the Indigenous peoples of Canada."
+   },
+   {
+    "kind": "live",
+    "title": "Prepare for Sunday",
+    "ref": "Psalm 122",
+    "dr": "Psalms 121",
+    "think": "\"I rejoiced at the things that were said to me: We shall go into the house of the Lord.\" A little preparation makes Mass much richer.",
+    "journal": "What will you offer to God at Mass this Sunday (a worry, a person, a thanks)?",
+    "pray": "Lord, I am coming to your house. Prepare my heart to listen and to give.",
+    "do": "Pray with Sunday's Gospel using Lectio Divina, and arrive ten minutes early to sit in silence.",
+    "go": [
+     "lectio"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "Questions about the Mass",
+    "ref": "Acts 20:7-12",
+    "class": "What do you still find confusing at Mass: when to stand or kneel, the words, the gestures, the colours, why the priest does something? Write it down.",
+    "think": "\"On the first day of the week, when we were assembled to break bread...\" From the very beginning Christians gathered on Sunday for the Eucharist, even late into the night.",
+    "journal": "What will you look for at Mass this Sunday that you never noticed before?",
+    "pray": "Lord, thank you for the Mass, the greatest prayer of all. Teach me to love it.",
+    "do": "Read your questions once more and bring them to class.",
+    "go": [
+     "mass",
+     "verse"
+    ],
+    "word": "Homily"
+   }
+  ],
+  "sym2-04": [
+   {
+    "kind": "remember",
+    "title": "Peace be to you",
+    "ref": "John 20:19-23",
+    "think": "On Easter night the risen Jesus breathes on the apostles and says, \"Whose sins you shall forgive, they are forgiven them.\" The first gift of the Resurrection is forgiveness, given through people.",
+    "journal": "What did you feel in class when you heard about Confession?",
+    "pray": "Jesus, you came through locked doors to give peace. Come through the locked doors of my heart.",
+    "do": "Read the first Confession preparation page in the app, just the first section.",
+    "go": [
+     "lesson",
+     "first-confession"
+    ],
+    "word": "Reconciliation"
+   },
+   {
+    "kind": "scripture",
+    "title": "The father ran",
+    "ref": "Luke 15:11-24",
+    "think": "The son rehearses his speech of shame, but the father \"running to him fell upon his neck, and kissed him.\" He does not let him finish. This is what Confession is like.",
+    "journal": "What would you want to hear from the Father if you came home?",
+    "pray": "Father, I have sinned against heaven and before you. Run to me, and bring me home.",
+    "do": "Do this week's Bible study on the Prodigal Son (Luke 15:11-32).",
+    "go": [
+     "bible"
+    ],
+    "ccc": "1439"
+   },
+   {
+    "kind": "watch",
+    "title": "Why go to Confession?",
+    "ref": "Psalm 32",
+    "dr": "Psalms 31",
+    "media": {
+     "kind": "search",
+     "by": "Fr. Mike Schmitz, Ascension Presents",
+     "title": "Fr. Mike on Confession",
+     "url": "https://www.youtube.com/c/AscensionPresents/search?query=confession",
+     "mins": 10,
+     "about": "Fr. Mike has many short videos on Confession: why we confess to a priest, what to do if you are nervous, what to say, and why it is \"the sacrament of freedom.\" Pick the one that answers your biggest worry.",
+     "listen": "what the priest is really thinking when he hears a confession."
+    },
+    "think": "\"Because I was silent my bones grew old... I said: I will confess against myself my injustice to the Lord: and thou hast forgiven.\" Hidden sin weighs; spoken sin is lifted.",
+    "journal": "What is your biggest fear or question about Confession?",
+    "pray": "Lord, I confess to you. Take the weight from my bones and give me joy again.",
+    "do": "Write your fear about Confession in \"My questions for class.\""
+   },
+   {
+    "kind": "reason",
+    "title": "Why tell my sins to a priest?",
+    "ref": "James 5:13-16",
+    "reasonId": "confession",
+    "reason": {
+     "q": "Why not confess directly to God?",
+     "steps": [
+      "You can and should tell God you are sorry every day. But Jesus chose to give the power to forgive sins to his apostles, and he knew human nature.",
+      "We need to hear forgiveness, not only hope for it. In Confession you hear the words \"I absolve you\" with your own ears.",
+      "Sin hurts the whole Body of Christ, so reconciliation includes the Church. The priest stands in for Christ and for the community.",
+      "The priest can never reveal what he hears, under any circumstances (the \"seal of confession\"). Priests have gone to prison and even died rather than break it."
+     ]
+    },
+    "think": "\"Confess therefore your sins one to another... the continual prayer of a just man availeth much.\" Confessing aloud was part of Christian life from the start.",
+    "journal": "How does it feel to know you will hear \"you are forgiven\" out loud?",
+    "pray": "Lord Jesus, thank you for the gift of Confession. Give me courage to use it.",
+    "do": "Find out when your parish offers Confession, and note it in your calendar for when you are ready.",
+    "ccc": "1440-1445"
+   },
+   {
+    "kind": "story",
+    "title": "He knelt, and his life changed",
+    "ref": "Ezekiel 36:26-27",
+    "story": {
+     "name": "St. Charles de Foucauld",
+     "text": "Charles de Foucauld was a rich French officer who lost his faith as a teenager and lived for pleasure. As an explorer in Morocco he was moved by the prayer of Muslims, and he began to ask, \"My God, if you exist, let me know you.\"\n\nIn 1886, in a Paris church, he went to ask a priest, Abbé Huvelin, questions about faith. The priest told him, \"Kneel down and make your confession.\" He did, then received Communion, and later wrote: \"As soon as I believed there was a God, I knew I could do nothing else but live for him.\" He became a priest and lived as a hermit and brother to all among the Tuareg in the Sahara, where he was killed in 1916."
+    },
+    "think": "Charles came with intellectual questions and was invited to kneel first. Sometimes the answer to our questions begins with being forgiven.",
+    "journal": "\"My God, if you exist, let me know you.\" Write your own version of this prayer.",
+    "pray": "Father, I abandon myself into your hands; do with me what you will. Whatever you may do, I thank you. (St. Charles de Foucauld)",
+    "do": "Pray Charles's prayer of abandonment slowly, once in the morning and once at night."
+   },
+   {
+    "kind": "live",
+    "title": "Examine your day",
+    "ref": "Psalm 51",
+    "dr": "Psalms 50",
+    "think": "\"Create a clean heart in me, O God: and renew a right spirit within my bowels.\" A short daily look at your conscience keeps the heart soft and ready for Confession.",
+    "journal": "Tonight: where did I love well today, and where did I fall short?",
+    "pray": "I confess to almighty God and to you, my brothers and sisters, that I have greatly sinned.",
+    "prayer": "confiteor",
+    "do": "Pray the Evening Examen tonight, five minutes before sleep.",
+    "go": [
+     "examen",
+     "confession"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "Questions about healing",
+    "ref": "Mark 2:15-17",
+    "class": "What do you want to ask about Confession or the Anointing of the Sick: how often, what counts as a sin, what to say, what if I forget something?",
+    "think": "\"They that are well have no need of a physician, but they that are sick.\" Jesus came for sinners, so there is a place for you.",
+    "journal": "What would you like Jesus the physician to heal in you before Easter?",
+    "pray": "O my God, I am heartily sorry for having offended you, and I detest all my sins.",
+    "prayer": "act-of-contrition",
+    "do": "Learn the Act of Contrition by heart this week, using practice mode.",
+    "go": [
+     "first-confession",
+     "quiz"
+    ],
+    "word": "Penance"
+   }
+  ],
+  "sym2-05": [
+   {
+    "kind": "remember",
+    "title": "Sacraments for others",
+    "ref": "Mark 10:6-9",
+    "think": "Matrimony and Holy Orders are \"sacraments at the service of communion\": they are given mainly for the good of others. A husband and wife, and a priest, are signs of how Christ loves his Church.",
+    "journal": "Whose marriage or priesthood has inspired you, and why?",
+    "pray": "Lord, bless every marriage I know, and every priest who serves your people.",
+    "do": "Pray today for one married couple and for your parish priest, by name.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Sacrament"
+   },
+   {
+    "kind": "scripture",
+    "title": "The wedding at Cana",
+    "ref": "John 2:1-11",
+    "think": "Jesus' first sign is at a wedding. He turns water into the best wine, more than anyone needed. He blesses marriage and promises that with him, the best is yet to come.",
+    "journal": "Where has the \"wine\" run out in your life, or in a relationship?",
+    "pray": "Mary, tell Jesus where the wine has run out. Jesus, I will do whatever you tell me.",
+    "do": "Do this week's Bible study on Cana (John 2:1-11).",
+    "go": [
+     "bible"
+    ],
+    "ccc": "1613-1617"
+   },
+   {
+    "kind": "watch",
+    "title": "Marriage and vocation",
+    "ref": "Ephesians 5:25-33",
+    "media": {
+     "kind": "search",
+     "by": "Fr. Mike Schmitz, Ascension Presents",
+     "title": "Fr. Mike on marriage and vocation",
+     "url": "https://www.youtube.com/c/AscensionPresents/search?query=marriage+vocation",
+     "mins": 10,
+     "about": "Fr. Mike talks about vocation, God's call for each life, and about marriage as a covenant, not a contract: a promise to love \"for better, for worse,\" which only makes sense with God's grace.",
+     "listen": "the difference between a contract and a covenant."
+    },
+    "think": "\"Husbands, love your wives, as Christ also loved the church, and delivered himself up for it.\" The model for married love is the cross: a gift of self.",
+    "journal": "What do you think God is calling you to in this season of life?",
+    "pray": "Lord, show me my vocation, and give me a generous heart to follow it.",
+    "do": "If you are married, do one small act of service for your spouse today. If not, for a family member."
+   },
+   {
+    "kind": "reason",
+    "title": "Why marriage for life?",
+    "ref": "Matthew 19:3-9",
+    "reasonId": "why-rules",
+    "reason": {
+     "q": "Isn't a lifelong promise unrealistic today?",
+     "steps": [
+      "Jesus raised the bar: what God has joined, let no man put asunder. He knew it was hard; that is why he made marriage a sacrament, with grace to live it.",
+      "Love that is only \"for now\" is not yet a full gift. Children, spouses and societies all flourish on promises that can be trusted.",
+      "The Church does not abandon people whose marriages failed. An annulment looks at whether a true marriage existed from the start, and divorced people are welcome at Mass.",
+      "If marriage is a picture of God's faithful love, then its permanence is not a cage but good news: God's love does not walk away."
+     ]
+    },
+    "think": "When the disciples said this was hard, Jesus did not lower the ideal. He promised help to reach it.",
+    "journal": "If you have questions about your own marriage situation for RCIA, write them privately here to ask your priest.",
+    "pray": "Lord, heal every broken marriage and every wounded family, including mine.",
+    "do": "If your marriage situation needs looking at before Easter, ask your RCIA coordinator this week. It is common and they can help.",
+    "ccc": "1644-1651"
+   },
+   {
+    "kind": "story",
+    "title": "A married couple, both saints",
+    "ref": "Tobit 8:4-8",
+    "dr": "Tobit 8:4-10",
+    "story": {
+     "name": "Sts. Louis and Zélie Martin",
+     "text": "Louis was a watchmaker and Zélie made fine Alençon lace in France in the 1800s. Both had wanted to enter religious life and were turned away. They met on a bridge, married in 1858, and had nine children; four died young, a deep grief they carried with faith.\n\nThey went to early Mass together each day, cared for the poor, and ran their businesses honestly. Zélie died of cancer at 45. Their youngest daughter became St. Thérèse of Lisieux, who said, \"God gave me a father and mother more worthy of heaven than of earth.\" In 2015 they became the first married couple canonized together."
+    },
+    "think": "Holiness is not only for priests and nuns. Louis and Zélie became saints through work, children, grief and ordinary love.",
+    "journal": "Where in your ordinary life could you become holy?",
+    "pray": "Sts. Louis and Zélie, pray for families, for parents who grieve, and for my home.",
+    "do": "Do your work today as a prayer: offer it to God before you start.",
+    "saint": "therese"
+   },
+   {
+    "kind": "live",
+    "title": "Pray for priests",
+    "ref": "Hebrews 5:1-6",
+    "think": "A priest is \"taken from among men\" and \"can have compassion on them that are ignorant and that err, because he himself also is compassed with infirmity.\" Priests are human, and need our prayer.",
+    "journal": "What would you like to thank your parish priest for?",
+    "pray": "Lord Jesus, High Priest, keep our priests close to your heart. Give them joy, courage and holiness.",
+    "do": "Write a short thank-you note to your priest or catechist and give it to them this week.",
+    "word": "Priest"
+   },
+   {
+    "kind": "class",
+    "title": "Questions about vocations",
+    "ref": "1 Samuel 3:1-10",
+    "class": "What do you want to ask about marriage, priests, deacons, religious sisters and brothers, or your own situation? Write it down.",
+    "think": "Young Samuel hears God call three times and doesn't recognize the voice. Eli teaches him to say, \"Speak, Lord, for thy servant heareth.\"",
+    "journal": "Who is your \"Eli\", someone who helps you recognize God's voice?",
+    "pray": "Speak, Lord, for your servant is listening.",
+    "do": "Read your questions once more, and thank your sponsor for walking with you.",
+    "go": [
+     "sponsor"
+    ],
+    "word": "Deacon"
+   }
+  ],
+  "sym2-06": [
+   {
+    "kind": "remember",
+    "title": "The way to happiness",
+    "ref": "Matthew 5:1-12",
+    "think": "Jesus begins his great sermon with \"Blessed\", meaning happy. Catholic morality is not first about rules; it is about the happiness God made us for, and the way that leads there.",
+    "journal": "Which of the Beatitudes surprises you most? Why?",
+    "pray": "Jesus, teach me the way of the Beatitudes. Make me poor in spirit, meek and merciful.",
+    "do": "Choose one Beatitude and live it on purpose today.",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "The Ten Commandments",
+    "ref": "Exodus 20:1-17",
+    "think": "God gave the commandments after he freed Israel from slavery: \"I am the Lord thy God, who brought thee out.\" They are the rules of freedom, so that we never become slaves again, to sin, to things or to ourselves.",
+    "journal": "Which commandment do you find hardest to live?",
+    "pray": "Lord, your law is perfect, reviving the soul. Write it on my heart.",
+    "do": "Do this week's Bible study on the Beatitudes (Matthew 5:1-12).",
+    "go": [
+     "bible"
+    ],
+    "ccc": "2052-2074"
+   },
+   {
+    "kind": "watch",
+    "title": "Freedom for excellence",
+    "ref": "Galatians 5:13-14",
+    "media": {
+     "kind": "search",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "Bishop Barron on freedom",
+     "url": "https://www.youtube.com/@BishopBarron/search?query=freedom",
+     "mins": 10,
+     "about": "Bishop Barron often contrasts two ideas of freedom: \"freedom of indifference\" (doing whatever I want) and \"freedom for excellence\" (being able to do what is truly good, like a pianist free to play Chopin after years of practice). God's law trains us for the second.",
+     "listen": "the example of learning a language or an instrument."
+    },
+    "think": "\"You, brethren, have been called unto liberty: only make not liberty an occasion to the flesh, but by charity of the spirit serve one another.\" Freedom is for love.",
+    "journal": "Where do you feel unfree, stuck in a habit you wish you could change?",
+    "pray": "Lord, set me free, not to do whatever I want, but to become who you made me to be.",
+    "do": "Pick one small habit to practise this week (prayer, patience, honesty) and track it in My weekly habits.",
+    "go": [
+     "habits"
+    ]
+   },
+   {
+    "kind": "reason",
+    "title": "Who decides what is right?",
+    "ref": "Romans 2:14-16",
+    "reasonId": "why-rules",
+    "reason": {
+     "q": "Isn't morality just personal opinion?",
+     "steps": [
+      "If right and wrong were only opinion, then \"cruelty to children is wrong\" would be no truer than \"I prefer tea.\" Almost no one really believes that.",
+      "Every culture shares a core moral law: honour parents, do not murder, do not steal, keep promises. Paul says it is \"written in their hearts.\"",
+      "A real moral law points to a real Lawgiver. Our conscience is like a voice that comes from beyond us.",
+      "The Church's moral teaching is not a list of arbitrary bans. It explains what helps human beings flourish, and offers mercy when we fail."
+     ]
+    },
+    "think": "Even people who never read the Bible know, deep down, that some things are truly good and others truly evil. That knowledge is a gift from God.",
+    "journal": "When has your conscience told you clearly what was right?",
+    "pray": "Holy Spirit, form my conscience in truth. Give me the courage to follow it.",
+    "do": "Read the Catechism paragraphs on conscience (1776-1782), or the summary in your lesson.",
+    "ccc": "1776-1782"
+   },
+   {
+    "kind": "story",
+    "title": "Verso l'alto: to the heights",
+    "ref": "Micah 6:8",
+    "story": {
+     "name": "St. Pier Giorgio Frassati",
+     "saint": "frassati",
+     "text": "Pier Giorgio was born in 1901 to a rich and powerful family in Turin, Italy. He loved mountain climbing, jokes and his friends. He also went to Mass daily, gave away his bus fare and walked home so he could give money to the poor, and spent hours in the slums caring for the sick.\n\nAt 24 he caught polio, probably from someone he was helping, and died within a week. His family was astonished when thousands of poor people filled the streets for his funeral; they had no idea what he had been doing. He used to write \"Verso l'alto\", \"to the heights\", on his mountain photos."
+    },
+    "think": "Micah sums up the moral life: \"to do judgment, and to love mercy, and to walk solicitous with thy God.\" Pier Giorgio did all three, with joy.",
+    "journal": "What is one hidden good you could do this week that nobody will know about?",
+    "pray": "St. Pier Giorgio, pray for me, that I may climb toward the heights with joy.",
+    "do": "Do one secret act of generosity today, and tell no one."
+   },
+   {
+    "kind": "live",
+    "title": "If you love me, keep my commandments",
+    "ref": "John 14:15-24",
+    "think": "Jesus links love and obedience: \"If you love me, keep my commandments.\" It is like keeping a promise to someone you love: not a burden, but a way of saying \"you matter to me.\"",
+    "journal": "Which commandment could you keep today as an act of love for Jesus?",
+    "pray": "O my God, I love you above all things, with my whole heart and soul, because you are all good and worthy of all love.",
+    "prayer": "act-of-charity",
+    "do": "Keep one commandment today with special care: honesty in every word, or patience at home.",
+    "go": [
+     "examen"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "Questions about the moral life",
+    "ref": "Deuteronomy 30:15-20",
+    "class": "What moral questions do you have: about conscience, specific sins, how strict the Church is, or a hard situation? Write them down.",
+    "think": "\"I have set before you life and death, blessing and cursing. Choose therefore life.\" God does not force us; he invites us to choose life.",
+    "journal": "What would choosing life look like for you this week?",
+    "pray": "Lord, I choose life. Help me to love you, obey your voice and hold fast to you.",
+    "do": "Read your questions once more before class.",
+    "go": [
+     "sponsor",
+     "verse"
+    ]
+   }
+  ],
+  "sym2-07": [
+   {
+    "kind": "remember",
+    "title": "Charity is patient",
+    "ref": "1 Corinthians 13:1-7",
+    "think": "Real love is not mainly a feeling. Paul describes it with verbs: patient, kind, not envious, not proud, bearing all things. Love is willing the good of the other, and it comes from God who is love.",
+    "journal": "Put your own name in place of \"charity\" in these verses. Which line is hardest to read?",
+    "pray": "Lord, you are love. Make my love patient and kind, not proud or self-seeking.",
+    "do": "Practise one line of 1 Corinthians 13 today with someone difficult.",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "The greatest of these",
+    "ref": "1 Corinthians 13:8-13",
+    "think": "\"Charity never falleth away.\" Knowledge, prophecy and tongues will pass. Faith and hope will one day be fulfilled. Only love lasts into eternity, because God is love.",
+    "journal": "What would you do differently if you believed only love lasts?",
+    "pray": "Lord, let my life be built of the one thing that lasts: love.",
+    "do": "Do this week's Bible study on 1 Corinthians 13.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "1822-1829"
+   },
+   {
+    "kind": "watch",
+    "title": "Love is an ability",
+    "ref": "1 John 3:16-18",
+    "media": {
+     "kind": "video",
+     "by": "Fr. Mike Schmitz, Ascension Presents",
+     "title": "Love is an Ability",
+     "url": "https://www.youtube.com/watch?v=TeW3VQ1Uf5Q",
+     "mins": 6,
+     "about": "Fr. Mike explains that love is not just something that happens to us, like falling in love. It is an ability we can grow, like a muscle: the ability to choose another person's good, even when it costs us.",
+     "listen": "how to \"train\" love in small daily choices."
+    },
+    "think": "\"Let us not love in word, nor in tongue, but in deed, and in truth.\" Love is proved by what we do.",
+    "journal": "Whom could you love \"in deed\" today, in one concrete way?",
+    "pray": "Jesus, you laid down your life for us. Teach me to love in deed and in truth.",
+    "do": "Do one concrete act of love today that costs you something: time, comfort or money."
+   },
+   {
+    "kind": "reason",
+    "title": "Is love just a feeling?",
+    "ref": "John 13:31-35",
+    "reasonId": "why-rules",
+    "reason": {
+     "q": "If love is a feeling, why does the Church make rules about it?",
+     "steps": [
+      "Feelings are real and good, but they come and go. If love were only a feeling, no promise of love could ever be kept.",
+      "Love in the full sense is a decision to seek another's good. Jesus commands it (\"love one another\"), and you can only command what can be chosen.",
+      "Using someone for my pleasure or benefit, however good it feels, is the opposite of love. The Church's teaching protects people from being used.",
+      "The measure is Jesus: \"as I have loved you.\" His love was faithful, generous, and gave everything."
+     ]
+    },
+    "think": "\"By this shall all men know that you are my disciples, if you have love one for another.\" Love is the Church's identity card.",
+    "journal": "When have you seen love as a choice rather than a feeling?",
+    "pray": "Lord, when I do not feel like loving, give me the grace to choose love anyway.",
+    "do": "Choose to be kind to someone today when you don't feel like it.",
+    "ccc": "1766"
+   },
+   {
+    "kind": "story",
+    "title": "A mother's choice",
+    "ref": "John 15:12-13",
+    "story": {
+     "name": "St. Gianna Beretta Molla",
+     "saint": "gianna",
+     "text": "Gianna was a doctor in Italy, a paediatrician who loved skiing, mountaineering, music and fashion. She married Pietro Molla in 1955 and they had three children. Her letters to him are full of tenderness.\n\nIn 1961, pregnant with their fourth child, she was found to have a tumour in her uterus. The doctors offered treatments that would save her but end the baby's life. She chose the surgery that protected her child, telling the doctors, \"If you must choose between me and the child, do not hesitate: choose the child.\" Her daughter Gianna Emanuela was born healthy; Gianna died a week later. Her daughter became a doctor too."
+    },
+    "think": "Gianna loved life, her husband and her children, and that is exactly why she gave herself. Real love is not the absence of other loves but the gift of self.",
+    "journal": "Who has given themselves for you? Write a line of thanks.",
+    "pray": "St. Gianna, pray for mothers, for doctors, and for all families expecting a child.",
+    "do": "Thank your mother, or someone who was like a mother to you, today."
+   },
+   {
+    "kind": "live",
+    "title": "Love your neighbour as yourself",
+    "ref": "Luke 10:25-37",
+    "think": "The lawyer asks, \"who is my neighbour?\" Jesus tells a story and turns the question around: be a neighbour to whoever needs you.",
+    "journal": "Who is the \"wounded traveller\" in your life right now?",
+    "pray": "Lord, open my eyes to see the people I usually pass by, and give me a heart that stops.",
+    "do": "Stop for someone today you would normally pass by: a neighbour, a co-worker, a person asking for help."
+   },
+   {
+    "kind": "class",
+    "title": "Questions about love",
+    "ref": "Song of Songs 8:6-7",
+    "dr": "Canticle of Canticles 8:6-7",
+    "class": "What do you want to ask about love, friendship, dating, marriage, or loving difficult people? Write it down.",
+    "think": "\"Love is strong as death... Many waters cannot quench charity.\" The Bible even contains a book of love poetry, because human love is a sign of God's.",
+    "journal": "What did you learn about love this week?",
+    "pray": "Set me as a seal upon your heart, Lord. Let nothing quench your love in me.",
+    "do": "Read your questions once more before class.",
+    "go": [
+     "sponsor",
+     "verse"
+    ]
+   }
+  ],
+  "sym2-08": [
+   {
+    "kind": "remember",
+    "title": "Your body is a temple",
+    "ref": "1 Corinthians 6:19-20",
+    "think": "\"Your members are the temple of the Holy Ghost... For you are bought with a great price. Glorify and bear God in your body.\" The body is not a machine we own; it is a gift and part of who we are.",
+    "journal": "What did you hear in class about the body and sexuality that was new to you?",
+    "pray": "Holy Spirit, you live in me. Help me to honour my body and the bodies of others.",
+    "do": "Take care of your body today as a gift from God: rest, eat well, take a walk.",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "Bone of my bones",
+    "ref": "Genesis 2:18-25",
+    "think": "\"It is not good for man to be alone.\" God makes a partner equal to him, and the man sings for joy. \"They shall be two in one flesh.\" Sexuality is part of the goodness of creation, made for love and life.",
+    "journal": "What does it mean that we are made for communion, not for being alone?",
+    "pray": "Creator, thank you for making us male and female, for love and for life. Heal what is wounded in me.",
+    "do": "Do this week's Bible study on Genesis 2:18-25.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "369-373"
+   },
+   {
+    "kind": "watch",
+    "title": "The Theology of the Body",
+    "ref": "Ephesians 5:31-32",
+    "media": {
+     "kind": "search",
+     "by": "Fr. Mike Schmitz, Ascension Presents",
+     "title": "Fr. Mike on the Theology of the Body",
+     "url": "https://www.youtube.com/c/AscensionPresents/search?query=theology+of+the+body",
+     "mins": 10,
+     "about": "St. John Paul II taught that the body \"speaks a language\": it is made to say \"I give myself to you, freely, totally, faithfully and fruitfully.\" Fr. Mike explains this in simple terms, with honesty about how hard it is in today's culture.",
+     "listen": "the four words: free, total, faithful, fruitful."
+    },
+    "think": "Paul calls marriage \"a great sacrament\" because it points to Christ and the Church. Married love is meant to be an image of God's own love.",
+    "journal": "Which of the four words (free, total, faithful, fruitful) speaks to you most?",
+    "pray": "St. John Paul II, pray for us, that we may see our bodies and our love the way God does.",
+    "do": "Be careful today with what you watch and scroll. Choose what honours people."
+   },
+   {
+    "kind": "reason",
+    "title": "Why does the Church care what I do in private?",
+    "ref": "1 Thessalonians 4:1-8",
+    "reasonId": "why-rules",
+    "reason": {
+     "q": "Isn't sex a private matter between consenting adults?",
+     "steps": [
+      "Sex is never only private: it involves another person, often creates a new person, and shapes families and societies.",
+      "Consent is necessary but not enough. Two people can freely agree to something that still hurts them. Love asks not only \"Do you agree?\" but \"Is this truly good for you?\"",
+      "The Church teaches that the body's language says \"I give myself to you completely.\" Only a lifelong, faithful marriage open to life tells that truth with the body.",
+      "This teaching is demanding, and many struggle. The Church offers mercy, Confession and patience, never contempt."
+     ]
+    },
+    "think": "\"For God hath not called us unto uncleanness, but unto sanctification.\" Holiness reaches every part of us, including the body.",
+    "journal": "If you have questions or struggles here, write them honestly. They stay on your phone.",
+    "pray": "Lord, purify my heart, my eyes and my desires. Where I have fallen, lift me up.",
+    "do": "If something here weighs on you, plan to bring it to Confession or to a priest you trust.",
+    "ccc": "2337-2347"
+   },
+   {
+    "kind": "story",
+    "title": "A pope who loved human love",
+    "ref": "Psalm 139:13-16",
+    "dr": "Psalms 138:13-16",
+    "story": {
+     "name": "St. John Paul II",
+     "saint": "john-paul-ii",
+     "text": "Karol Wojtyła grew up in Poland. By 21 he had lost his mother, brother and father. He worked in a quarry under Nazi occupation and studied in secret to become a priest. As a young priest he went kayaking and hiking with groups of young couples and listened to their joys and struggles in love.\n\nFrom those friendships came his writing on love, and later, as Pope, 129 talks known as the Theology of the Body. He taught that the human person \"cannot fully find himself except through a sincere gift of himself.\" He visited Canada three times, including World Youth Day in Toronto in 2002."
+    },
+    "think": "\"I will praise thee, for thou art fearfully magnified: wonderful are thy works.\" You were knit together by God. Your body is part of that wonder.",
+    "journal": "What does \"a sincere gift of self\" look like in your life right now?",
+    "pray": "Do not be afraid. Open wide the doors to Christ. (St. John Paul II) Lord, I open my doors to you.",
+    "do": "Spend time with a friend today without your phone, giving them your full attention."
+   },
+   {
+    "kind": "live",
+    "title": "Blessed are the clean of heart",
+    "ref": "Matthew 5:27-28",
+    "think": "Jesus looks at the heart, not only at actions. Chastity is not repression; it is the freedom to love without using, to see people as persons, not objects.",
+    "journal": "Where do you need God's help to see others with a clean heart?",
+    "pray": "Lord, give me a clean heart, that I may see you, and see every person as you see them.",
+    "do": "When a thought or image tempts you to use someone today, pray a Hail Mary for that person instead.",
+    "prayer": "hail-mary"
+   },
+   {
+    "kind": "class",
+    "title": "Questions about love and sexuality",
+    "ref": "Romans 12:1-2",
+    "class": "This topic raises many questions: contraception, cohabitation, same-sex attraction, past relationships, your own situation. Write down what you want to ask, publicly or privately.",
+    "think": "\"Present your bodies a living sacrifice, holy, pleasing unto God... be reformed in the newness of your mind.\" God wants all of us: body, mind and heart.",
+    "journal": "What did you learn this week that you want to remember?",
+    "pray": "Lord, I offer you my body, my mind and my heart. Renew me.",
+    "do": "If a question is private, ask to speak with your priest or catechist alone after class.",
+    "go": [
+     "sponsor",
+     "confession"
+    ]
+   }
+  ],
+  "sym2-09": [
+   {
+    "kind": "remember",
+    "title": "You did it to me",
+    "ref": "Matthew 25:31-40",
+    "think": "At the judgment Jesus says, \"as long as you did it to one of these my least brethren, you did it to me.\" Catholic social teaching starts here: Christ is hidden in the poor.",
+    "journal": "Where have you met Christ in someone poor or in need?",
+    "pray": "Lord Jesus, open my eyes to see you in the hungry, the stranger, the sick and the prisoner.",
+    "do": "Learn the seven works of mercy for the body: feed the hungry, give drink to the thirsty, clothe the naked, shelter the homeless, visit the sick, visit prisoners, bury the dead.",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "Learn to do good",
+    "ref": "Isaiah 58:6-11",
+    "think": "God tells his people that the fast he wants is to \"deal thy bread to the hungry, and bring the needy and the harbourless into thy house.\" Prayer without justice is incomplete.",
+    "journal": "Who in your neighbourhood or city is most forgotten?",
+    "pray": "Lord, let my light break forth like the dawn, by caring for those in need.",
+    "do": "Do this week's Bible study on Matthew 25:31-46.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "2443-2449"
+   },
+   {
+    "kind": "watch",
+    "title": "A civilization of love",
+    "ref": "Acts 4:32-35",
+    "media": {
+     "kind": "search",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "Bishop Barron on Catholic social teaching",
+     "url": "https://www.youtube.com/@BishopBarron/search?query=Catholic+social+teaching",
+     "mins": 10,
+     "about": "Bishop Barron explains the main principles of Catholic social teaching: the dignity of every person, the common good, solidarity, care for the poor, and subsidiarity (solving problems at the most local level possible). It is neither left nor right; it is the Gospel applied to society.",
+     "listen": "why both the state and the family have their own roles."
+    },
+    "think": "The first Christians \"had all things common... neither was there any one needy among them.\" Love became visible in how they shared.",
+    "journal": "What do you have that you could share more freely?",
+    "pray": "Lord, make me generous with what I have, because all of it comes from you.",
+    "do": "Find out what your parish or the local Society of St. Vincent de Paul does for the poor.",
+    "word": "Parish"
+   },
+   {
+    "kind": "reason",
+    "title": "Why does God allow poverty?",
+    "ref": "1 John 3:17-18",
+    "reasonId": "problem-of-evil",
+    "reason": {
+     "q": "If God is good, why doesn't he end poverty?",
+     "steps": [
+      "The world produces enough food for everyone. Most hunger comes from war, greed, corruption and indifference: from human choices.",
+      "God's answer to poverty is not a miracle that removes our responsibility. It is a people: the Church, sent to feed, heal and share.",
+      "History shows it: Christians founded many of the first hospitals, orphanages, schools and food banks, including in Canada, where nuns founded the first hospitals in Quebec and Montreal.",
+      "So the question turns back to us, as John says: if we see a brother in need and close our heart, \"how doth the charity of God abide in him?\""
+     ]
+    },
+    "think": "God has chosen to need us. Our hands are how he feeds his children today.",
+    "journal": "What is one thing you could do this month about poverty near you?",
+    "pray": "Lord, I cannot fix the world, but I can love one person. Show me who.",
+    "do": "Put aside a little money or food this week for a food bank or someone in need.",
+    "ccc": "2447"
+   },
+   {
+    "kind": "story",
+    "title": "Mother of the poor in Montreal",
+    "ref": "Proverbs 31:25-31",
+    "story": {
+     "name": "St. Marguerite d'Youville",
+     "saint": "marguerite-youville",
+     "text": "Marguerite was born in Quebec in 1701. Her husband was a fur trader who sold alcohol illegally to Indigenous people and left her deep in debt; he died after eight years of marriage, and four of their six children died young.\n\nInstead of becoming bitter, she opened her home to the poor. People mocked her and called her group \"les soeurs grises\" (a pun meaning both \"grey nuns\" and \"tipsy nuns\", because of her husband). She kept the name. She took over Montreal's failing general hospital and cared for the sick, the old, abandoned babies and soldiers from both sides of the war. She was the first saint born in Canada."
+    },
+    "think": "Marguerite turned her own suffering into compassion. The insult became the name of a great work of love.",
+    "journal": "How could a hurt in your life become a source of compassion for others?",
+    "pray": "St. Marguerite d'Youville, pray for the poor of Canada, and for all who care for them.",
+    "do": "Look up the Grey Nuns or a local shelter, and pray for the people they serve."
+   },
+   {
+    "kind": "live",
+    "title": "Care for our common home",
+    "ref": "Genesis 2:15",
+    "think": "God put the man in the garden \"to dress it, and to keep it.\" Caring for creation is part of loving God and our neighbour, especially the poor, who suffer most when the earth is harmed.",
+    "journal": "What in creation makes you most grateful to God?",
+    "pray": "Praised be you, my Lord, for Brother Sun and Sister Moon, for Sister Water and Mother Earth. (St. Francis)",
+    "do": "Do one thing today to waste less: food, water, plastic or electricity.",
+    "saint": "francis"
+   },
+   {
+    "kind": "class",
+    "title": "Questions about justice",
+    "ref": "Amos 5:21-24",
+    "class": "What do you want to ask about Catholic social teaching, politics, money, work, immigration or the environment? Write it down.",
+    "think": "\"Let judgment run down as water, and justice as a mighty torrent.\" Amos says God is not impressed by worship that ignores the poor.",
+    "journal": "How can your faith change the way you work, shop or vote?",
+    "pray": "Lord, let justice roll down like waters, beginning in my own life.",
+    "do": "Read your questions once more before class.",
+    "go": [
+     "sponsor",
+     "verse"
+    ]
+   }
+  ],
+  "sym2-10": [
+   {
+    "kind": "remember",
+    "title": "In the image of God",
+    "ref": "Genesis 1:26-28",
+    "think": "\"God created man to his own image.\" Every human being, before birth or near death, rich or poor, healthy or disabled, citizen or refugee, carries that image. That is where dignity comes from.",
+    "journal": "Whose dignity is easiest for you to forget?",
+    "pray": "Lord, you made every person in your image. Help me to honour each one I meet today.",
+    "do": "Greet everyone you meet today, including those people usually ignore.",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "Before I formed thee",
+    "ref": "Jeremiah 1:4-8",
+    "think": "\"Before I formed thee in the bowels of thy mother, I knew thee.\" God knows and loves each person before birth. That is why the Church defends life from conception to natural death.",
+    "journal": "What does it mean to you that God knew you before you were born?",
+    "pray": "Lord, you knew me before I was born. Thank you for the gift of my life.",
+    "do": "Do this week's Bible study on Genesis 1:26-31.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "2258-2262"
+   },
+   {
+    "kind": "watch",
+    "title": "Every life is sacred",
+    "ref": "Psalm 8",
+    "dr": "Psalms 8",
+    "media": {
+     "kind": "search",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "Bishop Barron on human dignity",
+     "url": "https://www.youtube.com/@BishopBarron/search?query=human+dignity",
+     "mins": 10,
+     "about": "Bishop Barron shows that the idea that every human being has equal dignity came into the world through the Bible. Ancient cultures did not believe it; it rests on the conviction that each person is made in God's image and loved by him.",
+     "listen": "where our modern idea of human rights really comes from."
+    },
+    "think": "\"What is man that thou art mindful of him?... Thou hast made him a little less than the angels.\" Small in the universe, yet crowned with glory.",
+    "journal": "When have you felt small, and how does this psalm answer that?",
+    "pray": "O Lord our Lord, how admirable is thy name in the whole earth!",
+    "do": "Look at the night sky tonight, and then at a face you love. Both are God's work."
+   },
+   {
+    "kind": "reason",
+    "title": "Where do human rights come from?",
+    "ref": "Galatians 3:26-28",
+    "reasonId": "moral-argument",
+    "reason": {
+     "q": "Why should every person have equal dignity?",
+     "steps": [
+      "People are not equal in strength, intelligence, health or usefulness. If dignity depended on those, some people would be worth more than others.",
+      "If human beings are only the product of chance, it is hard to explain why a weak or unwanted person should have rights.",
+      "The Bible gives a reason: every person is made in God's image and loved by him. Our worth is given, not earned, so it cannot be taken away.",
+      "That is why the Church defends the unborn, the disabled, the dying, the migrant and the prisoner with the same voice. It is one principle, applied consistently."
+     ]
+    },
+    "think": "\"There is neither Jew nor Greek... bond nor free... male nor female. For you are all one in Christ Jesus.\" In Christ, no one is worth less.",
+    "journal": "Have you ever been treated as less than others? How does this teaching speak to you?",
+    "pray": "Lord, you see no one as worthless. Give me your eyes.",
+    "do": "Stand up, gently, for someone who is mocked or left out this week.",
+    "ccc": "1929-1938"
+   },
+   {
+    "kind": "story",
+    "title": "Something beautiful for God",
+    "ref": "Matthew 25:34-40",
+    "story": {
+     "name": "St. Teresa of Calcutta",
+     "saint": "teresa-calcutta",
+     "text": "Agnes Bojaxhiu was born in 1910 in Skopje, of Albanian parents. She became a Loreto sister and taught girls in Calcutta for almost twenty years. On a train in 1946 she heard Jesus' call to serve \"the poorest of the poor.\"\n\nShe left the convent with five rupees, wearing a simple white sari with blue stripes. She picked up the dying from the streets so they could die with dignity, loved. \"Each one of them is Jesus in disguise,\" she said. Her Missionaries of Charity now serve on every continent, including in Canada. She also lived for decades in spiritual darkness, feeling nothing in prayer, and kept serving."
+    },
+    "think": "Mother Teresa did not wait to feel God before loving. She served Jesus in the poor even when prayer felt empty. Love was her prayer.",
+    "journal": "Who is \"Jesus in disguise\" in your life this week?",
+    "pray": "St. Teresa of Calcutta, pray for me, that I may do small things with great love.",
+    "do": "Do one small thing today with great love, as Mother Teresa taught."
+   },
+   {
+    "kind": "live",
+    "title": "Welcome the stranger",
+    "ref": "Leviticus 19:33-34",
+    "think": "\"If a stranger dwell in your land... let him be among you as one of the same country: and you shall love him as yourselves: for you were strangers in the land of Egypt.\" Many of us, too, were newcomers once.",
+    "journal": "When were you a stranger, and who welcomed you?",
+    "pray": "Lord, you were a refugee in Egypt as a child. Bless every newcomer to Canada, and make me welcoming.",
+    "do": "Reach out to a newcomer in your parish, neighbourhood or work this week."
+   },
+   {
+    "kind": "class",
+    "title": "Questions about life and dignity",
+    "ref": "Deuteronomy 30:19-20",
+    "class": "What do you want to ask about abortion, euthanasia (MAID in Canada), the death penalty, war, racism or disability? Write it down. These are hard and important questions.",
+    "think": "\"Choose therefore life, that both thou and thy seed may live.\" Defending life is a choice we make again and again.",
+    "journal": "What did you learn about human dignity this week?",
+    "pray": "Lord of life, protect the weakest among us, and give me courage to speak for them.",
+    "do": "Read your questions once more. This ends the second part of Symbolon, and Lent is coming.",
+    "go": [
+     "sponsor",
+     "rites"
+    ]
+   }
+  ],
+  "s26": [
+   {
+    "kind": "remember",
+    "title": "Return to me with all your heart",
+    "ref": "Joel 2:12-13",
+    "think": "\"Be converted to me with all your heart, in fasting, and in weeping... rend your hearts, and not your garments.\" Lent is forty days of coming home. For you, it is the last retreat before the sacraments.",
+    "journal": "What do you want God to change in you during this Lent?",
+    "pray": "Lord, I return to you with all my heart. You are gracious and merciful, slow to anger and rich in kindness.",
+    "do": "Choose your three Lenten practices: one for prayer, one for fasting, one for giving. Write them down.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Lent"
+   },
+   {
+    "kind": "scripture",
+    "title": "In secret",
+    "ref": "Matthew 6:1-6",
+    "think": "Jesus names three practices: almsgiving, prayer and fasting, and says to do each one \"in secret,\" for the Father who sees. Lent is not a show; it is a private conversation of love.",
+    "journal": "Which of the three is hardest for you, and why?",
+    "pray": "Father, you see in secret. Let my Lent be for you alone.",
+    "do": "Do this week's Bible study on Matthew 6:1-18.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "1434-1439"
+   },
+   {
+    "kind": "watch",
+    "title": "Why fast?",
+    "ref": "Matthew 4:1-11",
+    "media": {
+     "kind": "search",
+     "by": "Fr. Mike Schmitz, Ascension Presents",
+     "title": "Fr. Mike on Lent and fasting",
+     "url": "https://www.youtube.com/c/AscensionPresents/search?query=Lent+fasting",
+     "mins": 10,
+     "about": "Fr. Mike explains why Catholics fast in Lent: not to earn God's love, but to make room for it. Saying no to small good things trains us to say no to bad ones, and hunger reminds us that we need God more than bread.",
+     "listen": "how fasting and prayer work together."
+    },
+    "think": "Jesus fasts forty days and is tempted. He answers each temptation with Scripture: \"Not in bread alone doth man live, but in every word that proceedeth from the mouth of God.\"",
+    "journal": "What is your strongest temptation, and which word of God could answer it?",
+    "pray": "Lord Jesus, you were tempted as I am. Give me your strength when I am weak.",
+    "do": "In Canada, Ash Wednesday and Good Friday are days of fasting and abstinence, and Fridays of Lent are days of abstinence from meat. Plan yours."
+   },
+   {
+    "kind": "reason",
+    "title": "Does God care what I eat?",
+    "ref": "Isaiah 58:3-9",
+    "reasonId": "why-rules",
+    "reason": {
+     "q": "If God looks at the heart, why do outward practices like fasting matter?",
+     "steps": [
+      "We are body and soul, and they affect each other. What we do with the body shapes the heart, just as kneeling helps us pray.",
+      "Fasting is found in nearly every religion and was practised by Moses, Elijah and Jesus himself. It is a human way of saying \"God comes first.\"",
+      "Isaiah warns that fasting without justice is empty. The Church joins the two: what we save by fasting is given to the poor.",
+      "The Church's rules are small and gentle (two fast days a year, meatless Fridays in Lent) so that everyone can join, and the sick, the young and the elderly are excused."
+     ]
+    },
+    "think": "\"Is not this rather the fast that I have chosen? loose the bands of wickedness... Deal thy bread to the hungry.\" The best fast changes how we treat others.",
+    "journal": "What could you give up this Lent that would help you love God and others more?",
+    "pray": "Lord, let my fasting free me, and let what I save feed someone hungry.",
+    "do": "Give up one thing today (a snack, a show, social media) and give the time or money to God or the poor.",
+    "ccc": "1438"
+   },
+   {
+    "kind": "story",
+    "title": "He kissed the leper",
+    "ref": "Mark 1:40-42",
+    "story": {
+     "name": "St. Francis of Assisi",
+     "saint": "francis",
+     "text": "Francis was the son of a rich cloth merchant in Assisi, Italy, a party-loving young man who dreamed of becoming a knight. He was horrified by lepers and would hold his nose and ride past them.\n\nOne day, riding near Assisi, he met a leper on the road. Something moved in him: he got off his horse, gave the man money and kissed his hand. \"What had seemed bitter to me was changed into sweetness of soul and body,\" he wrote. He gave up his wealth, lived in poverty, cared for lepers, and founded the Franciscans. He loved Lent so much that he kept several \"Lents\" each year."
+    },
+    "think": "Jesus \"having compassion on him, stretched forth his hand; and touching him\" healed the leper. Lent asks us to touch what we avoid.",
+    "journal": "Who or what do you avoid, that God might be asking you to approach?",
+    "pray": "Lord, make me an instrument of your peace. Where there is hatred, let me sow love.",
+    "do": "Do one thing today you have been avoiding out of discomfort: a visit, a call, a kind word."
+   },
+   {
+    "kind": "live",
+    "title": "Prayer, fasting, almsgiving",
+    "ref": "Tobit 12:8-9",
+    "think": "\"Prayer is good with fasting and alms, more than to lay up treasures of gold.\" The three Lenten practices belong together, like three legs of a stool.",
+    "journal": "How are your Lenten practices going so far? Be honest and gentle with yourself.",
+    "pray": "Lord, I am weak. Thank you for your mercy when I fail, and give me a fresh start.",
+    "do": "Pray the Stations of the Cross this Friday, at church or in the app.",
+    "go": [
+     "stations",
+     "habits"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "Questions about Lent",
+    "ref": "2 Corinthians 5:20-6:2",
+    "class": "What do you want to ask about Lent, fasting rules in Canada, the Rite of Election, or the coming weeks? Write it down.",
+    "think": "\"Behold, now is the acceptable time; behold, now is the day of salvation.\" Not someday. Now.",
+    "journal": "What is God saying to you \"now,\" in this Lent?",
+    "pray": "Lord, now is the day of salvation. I do not want to wait any longer to give you my heart.",
+    "do": "Look at the rites ahead: how many days to the Easter Vigil?",
+    "go": [
+     "rites",
+     "sponsor"
+    ],
+    "word": "Elect"
+   }
+  ],
+  "s27": [
+   {
+    "kind": "remember",
+    "title": "Heal what is weak",
+    "ref": "John 4:5-15",
+    "think": "On the third, fourth and fifth Sundays of Lent, the parish prays over the elect in the scrutinies, using three Gospels: the woman at the well, the man born blind and Lazarus. Each one is about Jesus healing and freeing.",
+    "journal": "What part of the scrutinies do you look forward to, or feel nervous about?",
+    "pray": "Jesus, you give living water. I am thirsty. Give me this water, that I may not thirst again.",
+    "do": "Drink a glass of water slowly today, and thank Jesus for the living water of Baptism.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Scrutinies"
+   },
+   {
+    "kind": "scripture",
+    "title": "I was blind, now I see",
+    "ref": "John 9:1-12",
+    "think": "Jesus makes clay, anoints the blind man's eyes and sends him to wash. He comes back seeing. In the early Church, Baptism was called \"enlightenment.\" This is what is about to happen to you.",
+    "journal": "What do you see now that you could not see a year ago?",
+    "pray": "Lord, open the eyes of my heart. One thing I know: that whereas I was blind, now I see.",
+    "do": "Do this week's Bible study on John 9.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "1216"
+   },
+   {
+    "kind": "watch",
+    "title": "The man born blind",
+    "ref": "John 9:24-38",
+    "media": {
+     "kind": "search",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "Bishop Barron on the man born blind",
+     "url": "https://www.youtube.com/@BishopBarron/search?query=man+born+blind",
+     "mins": 12,
+     "about": "Bishop Barron's Lenten sermons on John 9 show how the healed man grows step by step, from \"the man called Jesus\" to \"a prophet\" to \"Lord, I believe,\" while the religious experts, who think they see, become more and more blind.",
+     "listen": "the three steps of the man's faith."
+    },
+    "think": "The man is thrown out for telling the truth, and Jesus goes looking for him: \"Dost thou believe in the Son of God?\" \"Lord, I believe.\"",
+    "journal": "Have you lost anything or anyone because of your faith journey?",
+    "pray": "Lord, I believe. Find me when others push me away.",
+    "do": "Write down your own three steps: who Jesus was to you at first, then, and now."
+   },
+   {
+    "kind": "reason",
+    "title": "Can people really change?",
+    "ref": "2 Corinthians 5:17-21",
+    "reasonId": "doubts",
+    "reason": {
+     "q": "Isn't it naive to think a sacrament can change who I am?",
+     "steps": [
+      "We know from experience that people change, through love, suffering, friendship and choices. Change is part of being human.",
+      "Christianity adds that God himself acts in us. Baptism does not change our personality; it gives us a new relationship with God and a new power to grow.",
+      "Change is usually gradual, like the blind man's faith. The scrutinies pray against what holds us back and for what is good in us.",
+      "The lives of the saints, and of many ordinary converts, show real and lasting change. You can ask your sponsor about theirs."
+     ]
+    },
+    "think": "\"If then any be in Christ a new creature, the old things are passed away, behold all things are made new.\"",
+    "journal": "What is one thing you hope will be made new in you?",
+    "pray": "Lord, make me a new creation. I give you the old things; make all things new.",
+    "do": "Ask your sponsor this week how faith has changed their life.",
+    "go": [
+     "sponsor"
+    ]
+   },
+   {
+    "kind": "story",
+    "title": "Seven devils, then the first witness",
+    "ref": "John 20:11-18",
+    "story": {
+     "name": "St. Mary Magdalene",
+     "saint": "mary-magdalene",
+     "text": "Luke tells us Jesus had freed Mary of Magdala from \"seven devils.\" We do not know exactly what she suffered, only that Jesus healed her completely, and that from then on she followed him and supported his work.\n\nShe stayed at the cross when most of the men ran away. On Easter morning she went to the tomb in the dark and wept when she found it empty. A man she thought was the gardener said one word, \"Mary,\" and she knew him. Jesus sent her to tell the apostles. The Church calls her \"the apostle to the apostles.\""
+    },
+    "think": "Jesus called her by name, and she recognized him. The scrutinies are like that: God naming what binds us, and calling us by name into freedom.",
+    "journal": "What \"devils\" (fears, habits, wounds) do you want Jesus to drive out?",
+    "pray": "St. Mary Magdalene, pray for me, that I may hear Jesus call my name.",
+    "do": "Pray the prayer of deliverance before sleep: \"Jesus, I give you what binds me. Set me free.\"",
+    "prayer": "st-michael"
+   },
+   {
+    "kind": "live",
+    "title": "Lazarus, come out",
+    "ref": "John 11:38-44",
+    "think": "Jesus says three things at Lazarus' tomb: \"Take away the stone,\" \"Lazarus, come forth,\" and \"Loose him, and let him go.\" Others help remove the stone and the bandages. Community matters in conversion.",
+    "journal": "Who is helping to \"unbind\" you on this journey?",
+    "pray": "Lord, call me out of every tomb. Bless the people who help unbind me.",
+    "do": "Thank one person today who has helped you on your way to faith.",
+    "go": [
+     "confession"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "Questions about the scrutinies",
+    "ref": "Ephesians 5:8-14",
+    "class": "What do you want to know about the scrutinies, the exorcism prayers, what to wear or do, or what your sponsor does? Write it down.",
+    "think": "\"You were heretofore darkness, but now light in the Lord. Walk then as children of the light.\" An ancient baptism hymn: \"Rise thou that sleepest, and Christ shall enlighten thee.\"",
+    "journal": "How have you changed since you started RCIA?",
+    "pray": "Christ, light of the world, shine on me. Wake me, raise me, and let me walk in your light.",
+    "do": "Read your questions once more.",
+    "go": [
+     "rites",
+     "sponsor"
+    ],
+    "word": "Elect"
+   }
+  ],
+  "s28": [
+   {
+    "kind": "remember",
+    "title": "Believe in your heart, say it with your lips",
+    "ref": "Romans 10:8-10",
+    "think": "Paul says faith lives in two places: in the heart that believes and on the lips that confess. The Creed joins them. When you say \"I believe,\" you are not reciting a list; you are giving yourself to the God it describes.",
+    "journal": "Which line of the Creed did you hear differently in class this week?",
+    "pray": "Lord, I believe. Let what I say with my lips live in my heart.",
+    "do": "Pray the Apostles' Creed slowly, stopping for a breath after each line.",
+    "prayer": "apostles-creed",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "What I received, I handed on",
+    "ref": "1 Corinthians 15:1-8",
+    "think": "Here Paul writes down a short creed he had received himself, only a few years after Jesus died: Christ died for our sins, was buried, rose on the third day and appeared to many. The Creed you are learning grows from this same root.",
+    "journal": "Who handed the faith on to you? Write their names and thank God for them.",
+    "pray": "Thank you, Lord, for the long chain of believers who carried the faith all the way to me.",
+    "do": "Do this week's Bible study.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "185-197",
+    "word": "Creed"
+   },
+   {
+    "kind": "watch",
+    "title": "What the Creed really says",
+    "ref": "Deuteronomy 6:4-7",
+    "media": {
+     "kind": "search",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "Bishop Barron on the Creed",
+     "url": "https://www.youtube.com/@BishopBarron/search?query=creed",
+     "mins": 10,
+     "about": "Bishop Barron walks through the Creed line by line. He shows that \"I believe in one God\" is a bold claim: it means nothing else, not money, not power, not pleasure, not success, gets to be God in my life. Each article is a door into the life of the Trinity.",
+     "listen": "what the word \"one\" rules out in your life."
+    },
+    "think": "Israel's oldest creed is \"Hear, O Israel: the Lord our God is one Lord.\" It was meant to be spoken at home, on the road, lying down and rising up. A creed is for everyday life, not only for church.",
+    "journal": "What competes with God for first place in your life?",
+    "pray": "You alone are God. I give you first place in my day.",
+    "do": "Start memorizing the Nicene Creed, the one we say at Sunday Mass. Learn the first part today.",
+    "prayer": "nicene-creed"
+   },
+   {
+    "kind": "reason",
+    "title": "Aren't all religions the same?",
+    "ref": "John 14:6",
+    "reasonId": "other-religions",
+    "reason": {
+     "q": "If every religion leads to God, why does it matter which Creed I say?",
+     "steps": [
+      "Religions really do share a lot: prayer, a moral law, a longing for God. The Church respects whatever is true and holy in them (Vatican II).",
+      "But they also say different things, and the differences are not small. Was Jesus God or only a prophet? Did he die on the cross or not? Did he rise? These cannot all be true at once.",
+      "Saying \"they are all the same\" can sound respectful, but it ignores what each one actually believes. Taking a religion seriously means asking: is it true?",
+      "Christianity rests on a claim you can test: a man in history said \"I am the way, the truth and the life\" and then rose from the dead. If that happened, he is not one path among many; he is the one who makes every true path lead home."
+     ]
+    },
+    "think": "The Church teaches that people who do not know Christ through no fault of their own, but seek God sincerely, can be saved by his grace. Yet the fullness of truth is a gift too good to keep to ourselves.",
+    "journal": "What faith did you or your family grow up with? What good did you receive there?",
+    "pray": "Jesus, you are the way, the truth and the life. Lead all who seek God, my family too, to you.",
+    "do": "Pray today for someone you love who follows another religion or none.",
+    "ccc": "843-848"
+   },
+   {
+    "kind": "story",
+    "title": "The brilliant mind who called his work straw",
+    "ref": "Wisdom 7:7-10",
+    "story": {
+     "name": "St. Thomas Aquinas",
+     "saint": "aquinas",
+     "text": "Thomas was born in Italy around 1225 to a noble family who wanted him to become a powerful abbot. When he chose instead to join the Dominicans, a new order of poor preaching friars, his brothers kidnapped him and locked him in the family castle for more than a year. He spent the time praying and studying, and in the end they let him go.\n\nHe was big and quiet, and his classmates nicknamed him \"the dumb ox.\" His teacher answered that this ox would one day bellow so loudly the whole world would hear. Thomas became one of the greatest thinkers in history, showing that faith and reason are friends. In Lent of 1273 he preached a series of sermons on the Apostles' Creed to ordinary people in Naples. A few months later, after an experience of God during Mass, he stopped writing. \"Everything I have written seems like straw compared to what I have seen,\" he said. He died the next spring."
+    },
+    "think": "The man who wrote thousands of pages about God ended in silent wonder. Studying the faith is good; meeting the God it speaks of is the goal.",
+    "journal": "Is your faith more in your head, or more in your heart, right now? What would help bring the two together?",
+    "pray": "Grant me, O Lord my God, a mind to know you, a heart to seek you, wisdom to find you. (from a prayer of St. Thomas Aquinas)",
+    "do": "Learn the next part of the Nicene Creed.",
+    "ccc": "36-38"
+   },
+   {
+    "kind": "live",
+    "title": "A faith that walks",
+    "ref": "James 2:14-18",
+    "think": "James asks what good it is to say \"I have faith\" while a hungry neighbour is sent away. The Creed is not finished when we stop speaking; it continues in what we do.",
+    "journal": "Pick one line of the Creed. How could you live it today?",
+    "pray": "Lord, let my life say the Creed even when my lips are silent.",
+    "do": "Do one hidden act of kindness today as your \"I believe.\""
+   },
+   {
+    "kind": "class",
+    "title": "Ready to give the Creed back",
+    "ref": "2 Timothy 1:13-14",
+    "class": "Which words of the Creed are still unclear to you? \"Consubstantial,\" \"descended into hell,\" \"the communion of saints\"? Write down the ones you want explained.",
+    "think": "Paul tells Timothy to guard the good thing entrusted to him, with the help of the Holy Spirit. The Creed is now being entrusted to you.",
+    "journal": "Write the Creed in your own words, as if explaining it to a friend.",
+    "pray": "Holy Spirit, help me to guard the faith and to hand it on.",
+    "do": "Try saying the whole Nicene Creed from memory.",
+    "go": [
+     "rites",
+     "sponsor"
+    ],
+    "word": "Elect"
+   }
+  ],
+  "s29": [
+   {
+    "kind": "remember",
+    "title": "When you pray, say Father",
+    "ref": "Matthew 6:9-13",
+    "think": "The first word is the most daring: Father. Jesus lets us call God by the name he himself uses. The whole prayer is the Gospel in a few lines: God's name, his kingdom, his will, our bread, our forgiveness, our protection.",
+    "journal": "Which line of the Our Father touches you most this week? Why?",
+    "pray": "Pray the Our Father very slowly, one phrase at a time.",
+    "do": "Pray the Our Father three times today: morning, noon and night.",
+    "prayer": "our-father",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "Lord, teach us to pray",
+    "ref": "Luke 11:1-13",
+    "think": "The disciples watched Jesus pray and wanted what he had. He gave them words, then a story about a friend who keeps knocking at midnight. God is not reluctant; he wants us to ask, seek and knock.",
+    "journal": "What do you want to ask God for, honestly, today?",
+    "pray": "Lord, teach me to pray. I knock, and I trust you will open.",
+    "do": "Do this week's Bible study.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "2759-2766",
+    "word": "Amen"
+   },
+   {
+    "kind": "watch",
+    "title": "Our Father, line by line",
+    "ref": "Romans 8:14-17",
+    "media": {
+     "kind": "search",
+     "by": "Fr. Mike Schmitz, Ascension Presents",
+     "title": "Fr. Mike on the Our Father",
+     "url": "https://www.youtube.com/c/AscensionPresents/search?query=our+father",
+     "mins": 10,
+     "about": "Fr. Mike looks at why Jesus says \"our\" and not \"my\": we never pray alone. He explains \"hallowed be thy name\" (may your name be treated as holy), \"thy kingdom come\" (may your reign start in me), and why we ask for bread only for today.",
+     "listen": "why it is \"our\" Father and \"daily\" bread."
+    },
+    "think": "Paul says the Spirit makes us cry out \"Abba, Father.\" Abba is the word a child uses at home. At Baptism you become a child of God, not in a poetic way, but truly.",
+    "journal": "What was your experience of a father? How does it help or hurt the way you see God?",
+    "pray": "Abba, Father, I am your child. Heal whatever makes it hard for me to trust you.",
+    "do": "Learn the Our Father by heart in the words used at Mass in Canada, if you have not yet.",
+    "prayer": "our-father"
+   },
+   {
+    "kind": "reason",
+    "title": "Why does God seem silent?",
+    "ref": "Psalm 13",
+    "dr": "Psalms 12",
+    "reasonId": "hiddenness",
+    "reason": {
+     "q": "I pray and feel nothing. Is anyone listening?",
+     "steps": [
+      "Feelings are real, but they are not a measure of God's presence. You do not feel the earth spinning, yet it carries you every moment.",
+      "The Bible is honest about this. Psalm 13 begins \"How long, O Lord, wilt thou forget me?\" Jesus himself prayed \"My God, why hast thou forsaken me?\" Feeling abandoned is part of the prayer of God's own people.",
+      "Many saints went through long dry times: Mother Teresa for about fifty years, Thérèse of Lisieux at the end of her life. They kept praying, and their love grew stronger, not weaker.",
+      "Prayer is not mainly about what we feel but about whom we turn to. Showing up when it is dry is a real act of love, like staying with a friend in a long silence."
+     ]
+    },
+    "think": "The psalm that starts with \"How long?\" ends with \"I will sing to the Lord.\" Honest complaint and trust can live in the same prayer.",
+    "journal": "Write a short \"How long, Lord?\" prayer of your own. Then add one line of trust.",
+    "pray": "Lord, even when I feel nothing, I choose to stay with you.",
+    "do": "Pray for five minutes today, even if it feels empty. Just stay.",
+    "ccc": "2725-2731"
+   },
+   {
+    "kind": "story",
+    "title": "A little way to God",
+    "ref": "Matthew 18:1-4",
+    "story": {
+     "name": "St. Thérèse of Lisieux",
+     "saint": "therese",
+     "text": "Thérèse Martin was born in France in 1873. Her mother died when she was four, and she grew up sensitive and easily in tears. At fifteen she wanted to enter a Carmelite convent so badly that she asked Pope Leo XIII in person for permission. She entered, and died there of tuberculosis at twenty-four.\n\nShe never did anything famous. She called her path \"the little way\": doing small things with great love, trusting God like a child trusts a parent. When she was too tired or dry to pray, she wrote, she would say an Our Father very slowly, and that was enough. In her last eighteen months she lived through deep darkness against faith, and kept making acts of trust. Her short autobiography, The Story of a Soul, has been read by millions. She is now a Doctor of the Church."
+    },
+    "think": "Jesus says unless we become like little children we will not enter the kingdom. Thérèse shows what that means: not childish, but trusting, small and full of love.",
+    "journal": "What small thing could you do today with great love?",
+    "pray": "For me, prayer is a surge of the heart, a simple look turned toward heaven. (St. Thérèse) Lord, I look to you.",
+    "do": "Do one small, unseen task today, just for God."
+   },
+   {
+    "kind": "live",
+    "title": "As we forgive",
+    "ref": "Matthew 18:21-22",
+    "think": "The Our Father has one line with a condition: forgive us as we forgive. Peter asks if seven times is enough. Jesus says seventy times seven: forgiveness without counting.",
+    "journal": "Is there someone you find hard to forgive? You can write their initial only.",
+    "pray": "Lord, I am not ready to feel forgiveness, but I choose it. Help my heart to follow.",
+    "do": "Pray an Our Father for the person you find hardest to forgive.",
+    "ccc": "2838-2845",
+    "prayer": "our-father"
+   },
+   {
+    "kind": "class",
+    "title": "Good gifts from the Father",
+    "ref": "Matthew 7:7-11",
+    "class": "What do you want to ask about prayer? How to pray when distracted, what to say, how long, whether memorized prayers count? Write it down.",
+    "think": "If we know how to give good gifts to our children, how much more will the Father give good things to those who ask him.",
+    "journal": "How has your prayer changed since you started RCIA?",
+    "pray": "Father, I trust you to give me what is truly good.",
+    "do": "Read your questions once more before class.",
+    "go": [
+     "rites",
+     "intentions"
+    ]
+   }
+  ],
+  "s30": [
+   {
+    "kind": "remember",
+    "title": "Hosanna to the Son of David",
+    "ref": "Matthew 21:1-11",
+    "think": "Jesus enters Jerusalem on a donkey, not a war horse. The crowd shouts Hosanna; in a few days a crowd will shout \"Crucify him.\" Holy Week asks which voice is mine.",
+    "journal": "What did you learn in class about the days ahead? What are you looking forward to, and what makes you nervous?",
+    "pray": "Hosanna, Lord Jesus. Come into my city, my home and my heart.",
+    "do": "Find out the times of the Holy Week services at your parish and put them in your calendar.",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Triduum"
+   },
+   {
+    "kind": "scripture",
+    "title": "He loved them to the end",
+    "ref": "John 13:1-15",
+    "think": "On Holy Thursday Jesus kneels and washes his disciples' feet, the job of a servant. Then he gives them the Eucharist. Both say the same thing: I give myself to you completely.",
+    "journal": "Where is Jesus asking you to serve in a humble way?",
+    "pray": "Lord, wash me, and teach me to wash the feet of others.",
+    "do": "Do this week's Bible study.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "1337-1340"
+   },
+   {
+    "kind": "watch",
+    "title": "Walk the Way of the Cross",
+    "ref": "Isaiah 53:3-7",
+    "media": {
+     "kind": "video",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "The Stations of the Cross with Bishop Barron",
+     "url": "https://www.youtube.com/watch?v=pJNjtA-Awb4",
+     "mins": 30,
+     "about": "A guided prayer through the fourteen Stations of the Cross, from Jesus condemned to death to his burial in the tomb. At each station Bishop Barron offers a short reflection and a prayer. You can watch it in pieces, a few stations at a time.",
+     "listen": "one station that stays with you. Come back to it on Good Friday."
+    },
+    "think": "Seven centuries before Jesus, Isaiah describes a servant \"wounded for our iniquities\" who goes silent like a lamb to the slaughter. The early Christians read this and saw Jesus.",
+    "journal": "Which station of the cross speaks to your own life right now?",
+    "pray": "We adore you, O Christ, and we bless you, because by your holy cross you have redeemed the world.",
+    "do": "Pray the Stations of the Cross, in the app or at your church.",
+    "go": [
+     "stations"
+    ],
+    "prayer": "christ-crucified"
+   },
+   {
+    "kind": "reason",
+    "title": "Why did Jesus have to die?",
+    "ref": "Romans 5:6-8",
+    "reasonId": "why-cross",
+    "reason": {
+     "q": "If God can do anything, why not just forgive us without the cross?",
+     "steps": [
+      "Sin is not only breaking a rule; it is breaking a relationship and damaging the world. Real forgiveness does not pretend the damage is not there.",
+      "On the cross we see what sin does: the best person who ever lived is betrayed, mocked and killed. The cross shows us the truth about ourselves.",
+      "It also shows the truth about God. Jesus does not answer violence with violence; he answers it with \"Father, forgive them.\" God takes the worst we can do and turns it into the place of mercy.",
+      "Paul's point is simple: someone might die for a good person, but Christ died for us \"while we were yet sinners.\" Love that goes this far cannot be earned, only received."
+     ]
+    },
+    "think": "The cross is not God punishing an innocent man to calm his anger. It is the Son freely giving himself, out of love for the Father and for us.",
+    "journal": "How does it feel to be loved \"while you were yet a sinner\"?",
+    "pray": "Soul of Christ, sanctify me. Blood of Christ, inebriate me. Within your wounds, hide me.",
+    "do": "Look at a crucifix for two minutes in silence today.",
+    "ccc": "599-618",
+    "prayer": "anima-christi"
+   },
+   {
+    "kind": "story",
+    "title": "The thief who stole heaven",
+    "ref": "Luke 23:39-43",
+    "story": {
+     "name": "The good thief",
+     "text": "Two criminals were crucified with Jesus. Luke tells us one mocked him: \"If thou be Christ, save thyself and us.\" The other told him to stop. \"We receive the due reward of our deeds; but this man hath done no evil.\" Then he turned his head and said, \"Lord, remember me when thou shalt come into thy kingdom.\"\n\nHe had no time to be baptized, to go to Mass, or to fix his past. He simply admitted the truth about himself, recognized who Jesus was, and asked. Jesus answered, \"This day thou shalt be with me in paradise.\" Christian tradition later gave him a name, Dismas, and people say he was the first to enter heaven with Christ."
+    },
+    "think": "It is never too late. The good thief shows that what God asks first is honesty and trust, not a perfect record.",
+    "journal": "Write your own \"Jesus, remember me\" in a few honest words.",
+    "pray": "Jesus, remember me when you come into your kingdom.",
+    "do": "If you will receive Baptism at the Vigil, rest in the fact that all your past will be washed away. If you are already baptized, prepare for Confession before Easter.",
+    "go": [
+     "confession"
+    ]
+   },
+   {
+    "kind": "live",
+    "title": "Behold your mother",
+    "ref": "John 19:25-27",
+    "think": "From the cross Jesus gives his mother to the beloved disciple, and the disciple to her. The Church has always seen every disciple in that moment, including you.",
+    "journal": "How will you keep the Triduum (Holy Thursday, Good Friday, the Easter Vigil) holy this year?",
+    "pray": "Mary, you stood by the cross. Stand by me in these holy days.",
+    "do": "Plan your Good Friday: it is a day of fasting and abstinence. Keep it quiet; turn off music and screens where you can.",
+    "ccc": "964"
+   },
+   {
+    "kind": "class",
+    "title": "Buried and raised with him",
+    "ref": "Romans 6:3-5",
+    "class": "What do you still want to know about the Easter Vigil? Where to sit, what to wear, what to say, when to come? Write down every practical question too.",
+    "think": "Baptism is a burial and a rising: you go down into Christ's death and come up into his new life. That is why the Church baptizes at night, in the Easter Vigil, the holiest night of the year.",
+    "journal": "Write a letter to God for the night of your sacraments.",
+    "pray": "Risen Lord, I am ready to die to the old and rise with you.",
+    "do": "Read your questions once more and talk with your sponsor about the Vigil.",
+    "go": [
+     "rites",
+     "sponsor"
+    ],
+    "word": "Vigil"
+   }
+  ],
+  "s31": [
+   {
+    "kind": "remember",
+    "title": "They kept going",
+    "ref": "Acts 2:42-47",
+    "think": "After their Baptism the first Christians \"were persevering\" in four things: the apostles' teaching, community, the breaking of bread and the prayers. The sacraments were a beginning, not a finish line.",
+    "journal": "What happened in you at Easter? Write down what you remember before it fades.",
+    "pray": "Queen of heaven, rejoice, alleluia. Pray for me, that I may keep the joy of Easter.",
+    "do": "Choose one of the four (teaching, community, Eucharist, prayer) to grow in this month.",
+    "prayer": "regina-caeli",
+    "go": [
+     "lesson",
+     "verse"
+    ],
+    "word": "Mystagogy"
+   },
+   {
+    "kind": "scripture",
+    "title": "Our hearts were burning",
+    "ref": "Luke 24:13-35",
+    "think": "This is the road this whole app is named after. Two sad disciples walk away from Jerusalem. A stranger walks with them, explains the Scriptures, and they recognize him in the breaking of the bread. Word and Eucharist: the same pattern as every Mass.",
+    "journal": "Looking back over your journey, when was Jesus walking beside you before you recognized him?",
+    "pray": "Stay with us, Lord, for it is evening. Stay with me on every road.",
+    "do": "Do this week's Bible study.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "1346-1347"
+   },
+   {
+    "kind": "watch",
+    "title": "Peace be with you",
+    "ref": "John 20:19-23",
+    "media": {
+     "kind": "search",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "Bishop Barron's Easter sermons",
+     "url": "https://www.youtube.com/@BishopBarron/search?query=Easter+resurrection",
+     "mins": 15,
+     "about": "In his Sunday sermons for the Easter season, Bishop Barron explains why the resurrection changes everything: if Jesus rose, then death is not the last word, his claims are true, and our lives must be reordered around him. Pick one sermon from the Sundays after Easter.",
+     "listen": "what changes in your life if Jesus really rose."
+    },
+    "think": "The risen Jesus comes through locked doors to frightened friends and says \"Peace be to you.\" He breathes the Spirit on them. The same Spirit you received now lives in you.",
+    "journal": "What doors in your life are still locked out of fear?",
+    "pray": "Risen Jesus, come through my locked doors and give me your peace.",
+    "do": "Go to Mass this Sunday early and spend five minutes in thanksgiving afterwards.",
+    "word": "Alleluia"
+   },
+   {
+    "kind": "reason",
+    "title": "What about the scandals?",
+    "ref": "Matthew 13:24-30",
+    "reasonId": "scandals",
+    "reason": {
+     "q": "How can I belong to a Church whose members, even leaders, have done terrible things?",
+     "steps": [
+      "First, the anger is right. Abuse and cover-ups are grave evils, and the victims come first. In Canada this includes the harm done in residential schools; Pope Francis came in 2022 to apologize in person.",
+      "Jesus never promised a Church without sinners. In this parable the weeds grow with the wheat until the harvest. One of the twelve apostles betrayed him, and Peter denied him.",
+      "The truth of the faith does not depend on the holiness of its ministers. A sick doctor does not make medicine false. The sacraments act through Christ, not through the priest's goodness.",
+      "The answer to bad Catholics is not fewer Catholics but holier ones. The saints were often the Church's strongest reformers, from inside."
+     ]
+    },
+    "think": "Peter, who denied Jesus three times, was asked three times \"Do you love me?\" and made shepherd. The Church is a hospital for sinners, and we are all patients.",
+    "journal": "What disappoints you about the Church, honestly? What keeps you here?",
+    "pray": "Lord, heal those who were hurt by your Church, and make me part of its healing.",
+    "do": "Pray for survivors of abuse and for the healing of Indigenous peoples in Canada.",
+    "ccc": "827"
+   },
+   {
+    "kind": "story",
+    "title": "At last, God is mine",
+    "ref": "John 6:35",
+    "story": {
+     "name": "St. Elizabeth Ann Seton",
+     "saint": "elizabeth-seton",
+     "text": "Elizabeth was born in New York in 1774 and raised in the Episcopal Church. She married a businessman and had five children. Then his business failed and he fell ill. They sailed to Italy hoping the climate would heal him, but he died there, leaving her a widow at twenty-nine.\n\nIn Italy a Catholic family cared for her, and she watched them pray before the Blessed Sacrament. She longed to believe that Jesus was truly there. Back home, against the wishes of family and friends, many of whom turned away from her, she became Catholic in 1805. After her first Communion she wrote: \"At last, God is mine and I am his.\" She went on to found a religious order and Catholic schools, and became the first saint born in the United States."
+    },
+    "think": "Elizabeth paid a price for becoming Catholic, and found it worth it. The Eucharist was the treasure that drew her, and it is now yours too.",
+    "journal": "What did you feel at your first Communion (or what do you hope to feel)? Write it down.",
+    "pray": "Jesus, bread of life, at last you are mine and I am yours.",
+    "do": "Visit a church this week and pray before the tabernacle for a few minutes.",
+    "prayer": "o-sacrament"
+   },
+   {
+    "kind": "live",
+    "title": "Doers of the word",
+    "ref": "James 1:22-25",
+    "think": "James says hearing without doing is like looking in a mirror and forgetting your own face. Mystagogy is learning to live as who you now are: a son or daughter of God.",
+    "journal": "What daily or weekly habits will keep your faith alive after RCIA ends?",
+    "pray": "Lord, let me not only hear your word but live it.",
+    "do": "Set two or three simple weekly habits in the app: Sunday Mass, daily prayer, one act of service.",
+    "go": [
+     "habits"
+    ]
+   },
+   {
+    "kind": "class",
+    "title": "A people set apart",
+    "ref": "1 Peter 2:9-10",
+    "class": "What do you want to ask now that you have received the sacraments? What surprised you? What is still unclear?",
+    "think": "Peter writes to new Christians: \"you are a chosen generation, a kingly priesthood, a holy nation.\" Once you were not a people; now you are God's people.",
+    "journal": "How do you feel about being called a neophyte, a \"new plant\" in the Church?",
+    "pray": "Thank you, Lord, for calling me out of darkness into your wonderful light.",
+    "do": "Read your questions once more before class.",
+    "go": [
+     "sponsor",
+     "mass"
+    ],
+    "word": "Neophyte"
+   }
+  ],
+  "s32": [
+   {
+    "kind": "remember",
+    "title": "Tongues of fire",
+    "ref": "Acts 2:1-11",
+    "think": "At Pentecost the Spirit comes like wind and fire, and frightened disciples go out into the street. People from many nations, including Parthians, Medes and Elamites from the lands of Iran, hear the Gospel in their own languages.",
+    "journal": "What did you hear in class about being sent? Who comes to mind?",
+    "pray": "Come, Holy Spirit, fill my heart and set it on fire with your love.",
+    "do": "Pray the Morning Offering when you wake up, giving your whole day to God.",
+    "prayer": "morning-offering",
+    "go": [
+     "lesson",
+     "verse"
+    ]
+   },
+   {
+    "kind": "scripture",
+    "title": "Go and make disciples",
+    "ref": "Matthew 28:16-20",
+    "think": "The last words of Matthew's Gospel are a mission and a promise: go to all nations, baptize, teach, and \"behold I am with you all days.\" Some still doubted, and Jesus sent them anyway.",
+    "journal": "You do not need to have every answer to share your faith. What part of your story could you share?",
+    "pray": "Jesus, you are with me all days. Send me where you want me.",
+    "do": "Do this week's Bible study.",
+    "go": [
+     "bible"
+    ],
+    "ccc": "849-856"
+   },
+   {
+    "kind": "watch",
+    "title": "Every Catholic is a missionary",
+    "ref": "Romans 10:13-15",
+    "media": {
+     "kind": "search",
+     "by": "Bishop Robert Barron, Word on Fire",
+     "title": "Bishop Barron on evangelization",
+     "url": "https://www.youtube.com/@BishopBarron/search?query=evangelization",
+     "mins": 10,
+     "about": "Bishop Barron explains that evangelizing is not pushing people; it is sharing something beautiful and true that you have found. He often says to begin with beauty, then goodness, and then truth: let people see a life changed by Christ, and the questions will come.",
+     "listen": "why beauty is often the first door to faith."
+    },
+    "think": "\"How shall they hear without a preacher?\" Paul asks. Every one of us came to faith because someone told us. Now it is our turn.",
+    "journal": "Who first spoke to you about Jesus? What did they do that helped?",
+    "pray": "Lord, make my life something beautiful that points to you.",
+    "do": "Thank the person who first spoke to you about Jesus, with a message or a prayer."
+   },
+   {
+    "kind": "reason",
+    "title": "How do I talk to my family?",
+    "ref": "1 Peter 3:15-16",
+    "reasonId": "family",
+    "reason": {
+     "q": "My family does not share my faith, or even opposes it. What should I say?",
+     "steps": [
+      "Peter says to be ready to give a reason for your hope, but \"with modesty and fear\": gently and with respect. Winning an argument is not the goal; love is.",
+      "Honour your parents and family, even when you disagree. The fourth commandment does not end at Baptism. Often a kinder, more patient you is the strongest argument.",
+      "Share your story, not a lecture: what you were looking for, what you found, what changed. People can argue with ideas, but it is hard to argue with your experience.",
+      "If speaking openly could put you in danger, your safety comes first. God sees your heart. Pray for your family every day, and talk with your priest about your situation."
+     ]
+    },
+    "think": "St. Monica prayed for her son Augustine for seventeen years. Your prayers for your family are never wasted.",
+    "journal": "Write three sentences that tell the story of your faith, as you might tell a family member.",
+    "pray": "Lord, bless my family. Let them see your love in me.",
+    "do": "Do something kind for a family member today, without saying why.",
+    "saint": "monica",
+    "go": [
+     "intentions"
+    ]
+   },
+   {
+    "kind": "story",
+    "title": "The teacher of Ville-Marie",
+    "ref": "Luke 1:39-45",
+    "story": {
+     "name": "St. Marguerite Bourgeoys",
+     "saint": "marguerite-bourgeoys",
+     "text": "Marguerite was born in Troyes, France, in 1620. At twenty, walking in a procession, she looked at a statue of Mary and felt her heart turned toward God for good. In 1653 she sailed to Ville-Marie, the tiny, struggling settlement that would become Montreal.\n\nIn 1658 she opened the first school there, in an old stone stable. She welcomed French and Indigenous children, and later the young women sent from France to settle and marry, teaching them to read, to run a home and to pray. In a time when religious sisters lived behind walls, she founded a community of women who went out among the people, like Mary hurrying to visit Elizabeth. She built the chapel of Notre-Dame-de-Bon-Secours, which still stands in Old Montreal. She was the first woman saint of Canada."
+    },
+    "think": "Mary, carrying Jesus within her, hurried to serve her cousin, and Elizabeth's child leapt for joy. When we carry Christ, we bring joy to others without needing many words.",
+    "journal": "Who could you visit or help this week, as Mary visited Elizabeth?",
+    "pray": "St. Marguerite Bourgeoys, pray for Canada and for all who teach the faith.",
+    "do": "Find one ministry at your parish where you could help: welcoming, music, youth, the poor, or the next RCIA group."
+   },
+   {
+    "kind": "live",
+    "title": "Salt and light",
+    "ref": "Matthew 5:13-16",
+    "think": "Jesus does not say \"try to be\" salt and light. He says \"You are.\" Your faith is not meant to be hidden under a bushel; it is meant to give flavour and light to the place you live and work.",
+    "journal": "Where in your daily life could you be a little more salt and light?",
+    "pray": "Lord, let my light shine so that others may glorify you, not me.",
+    "do": "Do your work today with honesty and care, as an offering to God.",
+    "ccc": "897-913",
+    "prayer": "act-of-charity"
+   },
+   {
+    "kind": "class",
+    "title": "Follow me",
+    "ref": "John 21:15-19",
+    "class": "This is the last class. What do you still want to ask? About next steps, a parish group, a Bible study, being a sponsor one day? Write it down, and write a thank you for your catechists.",
+    "think": "By the lake, the risen Jesus asks Peter three times, \"Do you love me?\" and three times gives him a mission: feed my sheep. Then the same words he said at the very beginning: \"Follow me.\" The journey does not end here. It starts again, every day.",
+    "journal": "Look back at your first journal entry in this app. How has God led you since then?",
+    "pray": "Lord, you know all things. You know that I love you. I will follow you.",
+    "do": "Choose your next step: read the whole Bible in a year, join a parish group, or keep your weekly habits.",
+    "go": [
+     "bible-year",
+     "habits",
+     "sponsor"
+    ]
+   }
+  ]
+ }
+}

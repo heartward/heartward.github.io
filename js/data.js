@@ -1,13 +1,13 @@
 import { state } from './store.js';
 // Loads bundled content. Content files live in content/<lang>/; English is the base and other languages overlay it.
 export const data = {};
-const FILES = ['sessions', 'prayers', 'faq', 'guides', 'glossary', 'saints', 'calendar', 'paths', 'study', 'extras', 'feasts', 'more', 'bible', 'scripture', 'year', 'books'];
+const FILES = ['sessions', 'prayers', 'faq', 'guides', 'glossary', 'saints', 'calendar', 'paths', 'study', 'extras', 'feasts', 'more', 'bible', 'scripture', 'year', 'books', 'daily'];
 const get = p => fetch(p).then(r => { if (!r.ok) throw new Error(p); return r.json(); });
 
 // Translations (content/fa/<file>.json) map each English text to its translation. Any text without one
 // (for example something added to the English files later) simply shows in English.
 // Fields that hold ids, links or codes are never translated.
-const KEEP = new Set(['id', 'url', 'stage', 'status', 'prayers', 'color', 'date', 'feast', 'byWeekday', 'posture', 'tags', 'program', 'answer', 'figure']);
+const KEEP = new Set(['id', 'url', 'stage', 'status', 'prayers', 'color', 'date', 'feast', 'byWeekday', 'posture', 'tags', 'program', 'answer', 'figure', 'word', 'saint', 'go', 'kind', 'prayer', 'dr', 'reasonId']);
 function overlay(x, map, key) {
   if (typeof x === 'string') return KEEP.has(key) ? x : (map[x] || x);
   if (Array.isArray(x)) return x.map(v => overlay(v, map, key));
@@ -31,6 +31,7 @@ export async function loadData() {
     Promise.all(tr),
     lang === 'fa' ? get('content/fa/passages.json').catch(() => null) : null
   ]);
+  data.glossaryEn = base[FILES.indexOf('glossary')];
   data.prayersEn = Object.fromEntries(base[FILES.indexOf('prayers')].map(p => [p.id, p]));
   FILES.forEach((f, i) => { data[f] = maps[i] ? overlay(base[i], maps[i], null) : base[i]; });
   data.stages = data.sessions.stages;

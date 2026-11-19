@@ -12,6 +12,7 @@ Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 - **Learn**: Mass guide (when to sit, stand or kneel), first-week basics, questions, glossary, a saint finder and the Church calendar.
 - **Me**: journal, weekly habits, sacrament dates and anniversaries, friends on the journey, getting involved, parish info, settings (text size, dark mode), backup and a QR code to share the app.
 - **This week** (`#/week`): for the current class, a memory verse (Douay-Rheims, public domain) with flashcards and audio, a Bible study with questions and notes, a review quiz, discussion questions to send to a sponsor, this Sunday's Gospel with a Lectio Divina guide, a saint of the week with a small action, and a weekly challenge. Plus a first Confession preparation page.
+- **Between classes** (`#/daily-week/<session>` and `#/daily/<session>/<day>`): seven short days for every session, shown on Today as "Today's step". Day 1 is the day after class and Day 7 is class day. Each day has a reading, something to think about with a journal line, a prayer and a small thing to do, and one of seven kinds: look back, Scripture, watch or listen (a video or podcast from a trusted Catholic teacher, with a summary for offline days), think it through (faith and reason, linked to the questions section), a story of a saint or convert, live it, and get ready for class (questions to bring). Set your class day in the week plan.
 - **Listen**: read-aloud for prayers, lessons and the Rosary using the phone's own voice, with a "say it after me" mode for memorizing.
 - **Share with your class**: a welcome page (`#/welcome`) with a QR code and link for sponsors and classmates.
 - **Search** across everything, offline.
@@ -35,6 +36,7 @@ Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 | `js/i18n-es.js` | Spanish menu text (switched off for now: set `SPANISH = true` in `js/store.js` to bring it back) |
 | `content/en/sessions.json` | Stages, rites and sessions. `status` is `draft` (written) or `outline` |
 | `content/en/study.json` | Per-session memory verse, Bible study, quiz and discussion; weekly challenges, saint actions, Lectio Divina and first Confession guides |
+| `content/en/daily.json`, `content/fa/daily.json` | The seven-day plans for every session (`js/views/daily.js`). Written in `kind` order: remember, scripture, watch, reason, story, live, class. `ref` is the modern verse reference used for Persian and the NRSV link; `dr` is the Douay-Rheims reference when its numbering differs (Psalms, a few others) |
 | `content/en/prayers.json` | Prayers with category, text, meaning and sources |
 | `content/en/guides.json` | Mass, basics, confession and Rosary guides |
 | `content/en/faq.json`, `glossary.json`, `saints.json`, `calendar.json`, `paths.json` | Questions, words, saints, feasts, and the first-year, welcome-back and get-involved paths |

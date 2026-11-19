@@ -447,3 +447,28 @@ export function read(id, cStr) {
     }
   };
 }
+
+// ---------- One short passage, for the daily plan ----------
+// "John 3:16-17", "Luke 9:51-10:12", "Mark 4" (whole chapter). Verse numbers are the Douay-Rheims ones;
+// for a psalm, pass its Douay-Rheims number as dr ("Psalms 22" for Psalm 23).
+export function parseRef(s) {
+  const m = /^(.+?)\s+(\d+)(?::(\d+))?(?:-(\d+)(?::(\d+))?)?$/.exec(String(s || '').trim());
+  if (!m) return null;
+  const name = m[1] === 'Psalm' ? 'Psalms' : m[1], bi = Y().books.findIndex(b => b.name === name || b.dr === name);
+  if (bi < 0) return null;
+  const b = Y().books[bi], pos = (c, v) => v - ((b.s || {})[c] || 1) + 1, c1 = +m[2];
+  if (!m[3]) { const c2 = m[4] ? +m[4] : c1; return [bi, c1, 1, c2, b.v[c2 - 1]]; }
+  const v1 = +m[3], c2 = m[5] ? +m[4] : c1, v2 = m[5] ? +m[5] : m[4] ? +m[4] : v1;
+  return [bi, c1, pos(c1, v1), c2, pos(c2, v2)];
+}
+export function passage(ref, dr) {
+  const r = parseRef(dr || ref);
+  if (!r) return Promise.reject(new Error(ref));
+  const b = Y().books[r[0]], many = r[1] !== r[3];
+  return Promise.all([loadBook(b.id), hasFa(b) ? loadBookFa(b.id) : null]).then(([bk, fb]) => {
+    // The Persian text uses modern numbering, so outside the Psalms it follows the modern reference.
+    if (fb) { const rf = dr && b.name !== 'Psalms' ? (parseRef(ref) || r) : r, us = unitsOf(rf, fb, bk); return { html: unitsHtml(us, many), said: us.flatMap(u => sentences(u.v)), fa: true, n: us.length }; }
+    const vs = versesOf(r, bk);
+    return { html: scriptureHtml(vs, many), said: vs.flatMap(v => sentences(v[2])), fa: false, n: vs.length };
+  });
+}

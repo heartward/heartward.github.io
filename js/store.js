@@ -27,10 +27,11 @@ const defaults = () => ({
   lectio: {},        // Sunday 'YYYY-MM-DD' -> [notes for each step]
   sponsor: { asks: '', notes: '' }, // questions and notes for talks with the sponsor
   rites: {},
+  daily: {},         // sessionId -> { 1..7: { done: 'YYYY-MM-DD', note, prompt } } for the days between classes
   intentions: [],    // { text, added, answered?, note? }
   keepsake: { name: '', verse: '' },         // acceptance -> 'YYYY-MM-DD' (set by the parish)
   introDone: false,  // the first-visit welcome on Today has been dismissed
-  settings: { theme: 'system', size: 'normal', lang: 'en', reminder: '08:00', rate: 'normal' },
+  settings: { theme: 'system', size: 'normal', lang: 'en', reminder: '08:00', rate: 'normal', classDay: '' },
   updated: null
 });
 

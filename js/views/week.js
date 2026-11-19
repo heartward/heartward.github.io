@@ -6,6 +6,7 @@ import { icon } from '../icons.js';
 import { esc, t, toast, back, head, fmtDate, safeUrl } from '../ui.js';
 import { nextSession, sessionNo } from './journey.js';
 import { practiceHtml } from './pray.js';
+import { daysOf } from './daily.js';
 import { canSpeak, listenButton, bindListen, sentences } from '../speech.js';
 
 const rerender = () => document.dispatchEvent(new Event('heartward:render'));
@@ -29,6 +30,8 @@ export function week(id) {
   const best = state.quiz[s.id];
   let html = back(id ? '#/session/' + s.id : '#/', id ? t('Session') : t('Today')) +
     head(t('This week') + ' · ' + t('Session') + ' ' + sessionNo(s), s.title, t('Everything to live this week\'s class: a verse to learn, a passage to study, questions to talk about, and small ways to practice.'));
+
+  if (daysOf(s.id)) html += '<a class="card row" href="#/daily-week/' + s.id + '"><span class="lead">' + icon('calendar') + '</span><span class="grow"><span class="title">' + esc(t('Between classes')) + '</span><span class="sub">' + esc(t('Seven short days to live this session: read, think, pray and do')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>';
 
   if (st.verse) html += '<section class="card verse-card"><div class="eyebrow">' + esc(t('Memory verse')) + '</div>' +
     '<blockquote class="verse">' + esc(st.verse.text) + '<cite>' + esc(st.verse.ref) + ' (' + esc(t('Douay-Rheims')) + ')</cite></blockquote>' +
