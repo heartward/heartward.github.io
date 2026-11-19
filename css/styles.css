@@ -637,3 +637,7 @@ ol.outline .oc { flex: 0 0 4.2em; color: var(--muted); font-variant-numeric: tab
 [dir="rtl"] .week-card .chev svg { transform: scaleX(-1); }
 /* Charts keep their drawn layout; only the words inside are Persian. */
 [dir="rtl"] .diagram svg { direction: ltr; }
+
+/* Catechism references open the official text on the Vatican website. */
+a.ccc-link { color: var(--accent-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a.ccc-link:hover { text-decoration-thickness: 2px; }
