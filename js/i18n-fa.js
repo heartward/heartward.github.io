@@ -853,5 +853,7 @@ export const FA = {
   "A new version is downloading. Heartward will restart in a moment.": "نسخهٔ تازه در حال دریافت است. Heartward تا چند لحظهٔ دیگر دوباره باز می‌شود.",
   "You have the latest version.": "تازه‌ترین نسخه را دارید.",
   "Could not check. Are you online?": "بررسی ممکن نشد. به اینترنت وصل هستید؟",
-  "Updates are automatic in this browser.": "در این مرورگر به‌روزرسانی خودکار است."
+  "Updates are automatic in this browser.": "در این مرورگر به‌روزرسانی خودکار است.",
+  "Read in the Catechism (Vatican website)": "خواندن در کاتکیسم (وبگاه واتیکان، به انگلیسی)",
+  "The Catechism opens when you are back online": "کاتکیسم وقتی دوباره به اینترنت وصل شوید باز می‌شود"
 };

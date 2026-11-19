@@ -648,3 +648,6 @@ ol.outline .oc { flex: 0 0 4.2em; color: var(--muted); font-variant-numeric: tab
 .novena-days li { margin: 0 0 8px; }
 .novena-days li:last-child { margin-bottom: 0; }
 .lib-group[hidden], .lib-group li[hidden] { display: none; }
+/* Catechism references open the official text on the Vatican website. */
+a.ccc-link { color: var(--accent-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a.ccc-link:hover { text-decoration-thickness: 2px; }
