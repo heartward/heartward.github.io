@@ -27,6 +27,7 @@ const defaults = () => ({
   lectio: {},        // Sunday 'YYYY-MM-DD' -> [notes for each step]
   sponsor: { asks: '', notes: '' }, // questions and notes for talks with the sponsor
   rites: {},
+  reason: {},        // Faith and reason topic id -> { done: 'YYYY-MM-DD', note }
   intentions: [],    // { text, added, answered?, note? }
   keepsake: { name: '', verse: '' },         // acceptance -> 'YYYY-MM-DD' (set by the parish)
   introDone: false,  // the first-visit welcome on Today has been dismissed

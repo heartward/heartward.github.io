@@ -14,6 +14,7 @@ import * as week from './views/week.js';
 import * as extras from './views/extras.js';
 import * as more from './views/more.js';
 import * as bible from './views/bible.js';
+import * as reason from './views/reason.js';
 
 const routes = {
   '': [today.view, 'today'],
@@ -29,6 +30,7 @@ const routes = {
   intentions: [more.intentions, 'pray'], readings: [more.readings, 'today'], examen: [more.examen, 'pray'], stations: [more.stations, 'pray'], keepsake: [more.keepsake, 'me'],
   bible: [id => id ? bible.study(id) : bible.hub(), 'learn'], 'bible-guide': [bible.guide, 'learn'], 'bible-plan': [bible.plan, 'learn'], 'bible-notes': [bible.notes, 'learn'],
   'bible-year': [bible.year, 'learn'], 'bible-day': [bible.day, 'learn'], 'bible-books': [bible.books, 'learn'], 'bible-read': [bible.read, 'learn'], 'bible-all': [bible.library, 'learn'],
+  reason: [id => id ? reason.topic(id) : reason.hub(), 'learn'],
   search: [search.view, 'search']
 };
 

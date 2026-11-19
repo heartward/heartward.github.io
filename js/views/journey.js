@@ -6,6 +6,7 @@ import { lessonHtml } from '../figures.js';
 import { listenButton, bindListen, sentences } from '../speech.js';
 import { daysToVigil } from './extras.js';
 import { sessionStudies, studyRow } from './bible.js';
+import { sessionBlock } from './reason.js';
 
 export const sessionNo = s => data.sessionList.indexOf(s) + 1;
 export const nextSession = () => data.sessionList.find(s => !state.done[s.id]) || null;
@@ -64,6 +65,7 @@ export function session(id) {
   const studies = sessionStudies(s.id);
   if (studies.length) html += '<div class="section-title"><h2>' + esc(t('Bible study for this session')) + '</h2><a class="linkish" href="#/bible-all">' + esc(t('All studies')) + '</a></div><ul class="list card tight">' +
     studies.map((x, k) => studyRow(x, k === 0 ? x.intro : x.ref + ' · ' + data.bible.plans[x.plan].title)).join('') + '</ul>';
+  html += sessionBlock(s.id);
   if (s.reflection) html += '<div class="reflection"><div class="eyebrow">' + esc(t('Reflect')) + '</div><p>' + esc(s.reflection) + '</p></div>';
   if (s.prayers && s.prayers.length) {
     html += '<div class="section-title"><h2>' + esc(t('Prayers for this week')) + '</h2></div><div class="chips">' + s.prayers.map(pid => {

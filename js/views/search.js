@@ -18,6 +18,7 @@ function index() {
     const es = SPANISH ? (data.prayersEs || {})[p.id] : (state.settings.lang === 'fa' ? (data.prayersEn || {})[p.id] : null);
     add('Prayers', 'candle', '#/prayer/' + p.id, p.title, p.when, p.text + (es ? ' ' + es.title + ' ' + es.text : ''));
   });
+  data.reason.topics.forEach(x => add('Faith and reason', 'question', '#/reason/' + x.id, x.q, x.short, [...x.steps, ...x.objections.flatMap(o => [o.o, o.r]), x.think].join(' ')));
   data.faq.forEach(f => add('Questions', 'question', '#/questions', f.q, f.a, ''));
   data.glossary.forEach(g => add('Words', 'list', '#/glossary', g.term, g.def, ''));
   data.saints.saints.forEach(s => add('Saints', 'star', '#/saint/' + s.id, s.name, t('Patron of') + ' ' + s.patron, s.story + ' ' + s.tags.join(' ')));
@@ -36,7 +37,7 @@ function index() {
   return items;
 }
 
-const GROUPS = ['Sessions', 'Bible study', 'Prayers', 'Questions', 'Words', 'Saints', 'Guides'];
+const GROUPS = ['Sessions', 'Faith and reason', 'Bible study', 'Prayers', 'Questions', 'Words', 'Saints', 'Guides'];
 let cache = null;
 
 function results(q) {
