@@ -7,7 +7,7 @@ const get = p => fetch(p).then(r => { if (!r.ok) throw new Error(p); return r.js
 // Translations (content/fa/<file>.json) map each English text to its translation. Any text without one
 // (for example something added to the English files later) simply shows in English.
 // Fields that hold ids, links or codes are never translated.
-const KEEP = new Set(['id', 'url', 'stage', 'status', 'prayers', 'color', 'date', 'feast', 'byWeekday', 'posture', 'tags', 'program', 'answer', 'figure']);
+const KEEP = new Set(['id', 'url', 'stage', 'status', 'prayers', 'color', 'date', 'feast', 'byWeekday', 'posture', 'tags', 'program', 'answer', 'figure', 'kind', 'related']);
 function overlay(x, map, key) {
   if (typeof x === 'string') return KEEP.has(key) ? x : (map[x] || x);
   if (Array.isArray(x)) return x.map(v => overlay(v, map, key));
@@ -37,6 +37,7 @@ export async function loadData() {
   data.sessionList = applyParishOrder(data.sessions.sessions, parish);
   data.prayersEs = Object.fromEntries(es.map(p => [p.id, p]));
   data.parish = parish || {};
+  data.bibleEn = base[FILES.indexOf('bible')]; // English study titles stay searchable in Persian
   data.passagesFa = passagesFa; // study passages from the Old Persian Version
   return data;
 }

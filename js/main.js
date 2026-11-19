@@ -3,6 +3,7 @@ import { state } from './store.js';
 import { icon } from './icons.js';
 import { t, isRTL, localizeDigits } from './ui.js';
 import { stop as stopSpeech } from './speech.js';
+import { linkCatechism } from './refs.js';
 import * as today from './views/today.js';
 import * as journey from './views/journey.js';
 import * as pray from './views/pray.js';
@@ -28,7 +29,7 @@ const routes = {
   rites: [extras.rites, 'journey'], sponsor: [extras.sponsor, 'me'], 'saint-quiz': [extras.saintQuiz, 'learn'],
   intentions: [more.intentions, 'pray'], readings: [more.readings, 'today'], examen: [more.examen, 'pray'], stations: [more.stations, 'pray'], keepsake: [more.keepsake, 'me'],
   bible: [id => id ? bible.study(id) : bible.hub(), 'learn'], 'bible-guide': [bible.guide, 'learn'], 'bible-plan': [bible.plan, 'learn'], 'bible-notes': [bible.notes, 'learn'],
-  'bible-year': [bible.year, 'learn'], 'bible-day': [bible.day, 'learn'], 'bible-books': [bible.books, 'learn'], 'bible-read': [bible.read, 'learn'],
+  'bible-year': [bible.year, 'learn'], 'bible-day': [bible.day, 'learn'], 'bible-books': [bible.books, 'learn'], 'bible-read': [bible.read, 'learn'], 'bible-all': [bible.library, 'learn'],
   reason: [id => id ? reason.topic(id) : reason.hub(), 'learn'],
   search: [search.view, 'search']
 };
@@ -70,13 +71,14 @@ export function render() {
   }
   document.querySelectorAll('#tabbar a').forEach(a => a.dataset.tab === tab ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
   if (out.bind) out.bind(view);
+  linkCatechism(view);
   localizeDigits(view);
 }
 
-// Pages also change after they are drawn (quiz answers, Rosary steps, search results), so keep digits Persian.
-if (isRTL() && window.MutationObserver) {
+// Pages also change after they are drawn (quiz answers, Rosary steps, search results), so keep Catechism links and Persian digits.
+if (window.MutationObserver) {
   let queued = false;
-  new MutationObserver(() => { if (queued) return; queued = true; requestAnimationFrame(() => { queued = false; localizeDigits(document.getElementById('view')); }); })
+  new MutationObserver(() => { if (queued) return; queued = true; requestAnimationFrame(() => { queued = false; const v = document.getElementById('view'); linkCatechism(v); localizeDigits(v); }); })
     .observe(document.getElementById('view'), { childList: true, subtree: true, characterData: true });
 }
 

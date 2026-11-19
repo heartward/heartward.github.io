@@ -432,10 +432,10 @@ ol.steps li { margin: 4px 0; }
 .hero.intro p { margin: 0; opacity: .88; font-size: 1rem; line-height: 1.5; }
 .hero .road { display: block; width: 100%; height: auto; margin: 16px 0 2px; overflow: visible; }
 .hero .road .trail { stroke: rgba(255, 255, 255, .22); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 2 9; }
-.hero .road .lit-trail { stroke: var(--glow); filter: drop-shadow(0 0 4px var(--glow)); }
+.hero .road .lit-trail { filter: drop-shadow(0 0 4px var(--glow)); }
+.hero .road .lit-trail .trail { stroke: var(--glow); }
 .hero .road .lit { fill: var(--glow); filter: drop-shadow(0 0 5px var(--glow)); }
 .hero .road .dim { fill: rgba(255, 255, 255, .28); }
-.hero .road .here { fill: var(--glow); stroke: #fff; stroke-width: 2.5; filter: drop-shadow(0 0 8px var(--glow)); }
 .hero-progress + .road { margin-top: 10px; }
 /* The road runs from the reading start, so it is mirrored in Persian to match the labels. */
 [dir="rtl"] .hero .road { transform: scaleX(-1); }
@@ -638,6 +638,19 @@ ol.outline .oc { flex: 0 0 4.2em; color: var(--muted); font-variant-numeric: tab
 /* Charts keep their drawn layout; only the words inside are Persian. */
 [dir="rtl"] .diagram svg { direction: ltr; }
 
+/* Bible study library */
+.search-link { display: flex; align-items: center; min-height: 48px; padding-inline-start: 44px; padding-inline-end: 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--faint); text-decoration: none; }
+.study-filter { margin-top: 2px; }
+.study-filter .chip { font-family: inherit; }
+.study-prayer { margin: 0 0 12px; background: var(--accent-soft); border-color: transparent; }
+.study-prayer .eyebrow { display: block; }
+.novena-days { list-style: none; }
+.novena-days li { margin: 0 0 8px; }
+.novena-days li:last-child { margin-bottom: 0; }
+.lib-group[hidden], .lib-group li[hidden] { display: none; }
+/* Catechism references open the official text on the Vatican website. */
+a.ccc-link { color: var(--accent-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a.ccc-link:hover { text-decoration-thickness: 2px; }
 /* Faith and reason */
 .argument { counter-reset: arg; list-style: none; margin: 0; padding: 14px 16px; }
 .argument li { counter-increment: arg; position: relative; padding-inline-start: 38px; margin: 0 0 12px; line-height: 1.6; }

@@ -918,6 +918,18 @@
         "What gifts could you share with your parish?",
         "Who is someone you could invite to Mass or RCIA next year?"
       ]
+    },
+    "s02": {
+      "bible": {
+        "ref": "1 John 4:7-16",
+        "url": "https://www.biblegateway.com/passage/?search=1+John+4%3A7-16&version=NRSVCE",
+        "intro": "John says it in three words: God is love. We know it because he sent his Son.",
+        "questions": [
+          "What picture of God did you grow up with? How does \"God is love\" compare?",
+          "John says love comes from God first: \"not that we loved God, but that he loved us.\" How does that change prayer?",
+          "Who is God asking you to love this week?"
+        ]
+      }
     }
   },
   "challenges": [

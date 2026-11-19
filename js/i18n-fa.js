@@ -1,6 +1,26 @@
 // Persian (Farsi) strings for the app's menus, labels and charts. Keys are the English text passed to t().
 // Content (lessons, prayers, guides) is translated in content/fa/. A '|' in a chart label starts a new line.
 export const FA = {
+  "Find a study by title": "جست‌وجوی مطالعه با عنوان",
+  "All Bible studies": "همهٔ مطالعه‌های کتاب مقدس",
+  "studies, with a filter for RCIA": "مطالعه، با صافی برای RCIA",
+  "Studies by topic": "مطالعه بر اساس موضوع",
+  "See all": "دیدن همه",
+  "Study": "مطالعه",
+  "Pray with": "با این دعا نیایش کنید",
+  "More studies for this session": "مطالعه‌های بیشتر برای این جلسه",
+  "Every study in Heartward. Search by title or passage, or show only one series, such as the RCIA studies.": "همهٔ مطالعه‌های Heartward. با عنوان یا متن کتاب مقدس جست‌وجو کنید، یا فقط یک مجموعه، مانند مطالعه‌های RCIA، را نشان دهید.",
+  "Search by title or passage": "جست‌وجو با عنوان یا متن",
+  "Search studies": "جست‌وجوی مطالعه‌ها",
+  "Show": "نمایش",
+  "All": "همه",
+  "Open plan": "باز کردن برنامه",
+  "No studies match. Try another word.": "هیچ مطالعه‌ای پیدا نشد. واژهٔ دیگری را امتحان کنید.",
+  "study": "مطالعه",
+  "studies": "مطالعه",
+  "Bible study for this session": "مطالعهٔ کتاب مقدس برای این جلسه",
+  "All studies": "همهٔ مطالعه‌ها",
+  "The nine days": "نُه روز",
   "\"Say it after me\" reads one line, then pauses so you can repeat it out loud.": "«با من تکرار کن» هر سطر را می‌خواند و بعد مکث می‌کند تا آن را با صدای بلند تکرار کنید.",
   "\"Were not our hearts burning within us while he spoke to us on the way?\"": "«آیا دل ما در درونمان نمی‌سوخت، وقتی در راه با ما سخن می‌گفت؟»",
   "A companion for the journey into the Catholic faith": "همراهی برای مسیر ورود به ایمان کاتولیک",
@@ -851,5 +871,7 @@ export const FA = {
   "Thought through": "با فکر از سر گذراندم",
   "I have thought this through": "به این فکر کرده‌ام",
   "Still unsure? That is all right. Write the question in your journal and bring it to your catechist or sponsor. Keep praying, even simply: \"God, if you are there, show me.\"": "هنوز مطمئن نیستید؟ اشکالی ندارد. پرسش را در دفترچه‌تان بنویسید و نزد معلم تعلیمات دینی یا حامی‌تان ببرید. به دعا ادامه دهید، حتی ساده: «خدایا، اگر هستی، به من نشان بده.»",
-  "Questions people ask": "پرسش‌هایی که مردم می‌پرسند"
+  "Questions people ask": "پرسش‌هایی که مردم می‌پرسند",
+  "Read in the Catechism (Vatican website)": "خواندن در کاتکیسم (وبگاه واتیکان، به انگلیسی)",
+  "The Catechism opens when you are back online": "کاتکیسم وقتی دوباره به اینترنت وصل شوید باز می‌شود"
 };

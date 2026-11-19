@@ -34,6 +34,7 @@ Live at **https://heartward.github.io** (GitHub Pages, deployed from `main`).
 | `js/liturgy.js` | Easter date, moveable feasts and seasons, computed on the device |
 | `js/i18n-es.js` | Spanish menu text (switched off for now: set `SPANISH = true` in `js/store.js` to bring it back) |
 | `content/en/sessions.json` | Stages, rites and sessions. `status` is `draft` (written) or `outline` |
+| `content/en/bible.json` | Bible study: guide, method, reading plans (My RCIA road, Mark, The big story) and the topic series (`kind: "topic"`: freedom, prayer, Mary, sacraments, virtue, parables, healing). Each study names a `prayer` (an id in prayers.json); `related` lists the library studies shown with each RCIA session. All studies are in one library at `#/bible-all`, with a filter per series and a search by title or passage. When you add a study, add its passage to `content/en/scripture.json` and `content/fa/passages.json` |
 | `content/en/study.json` | Per-session memory verse, Bible study, quiz and discussion; weekly challenges, saint actions, Lectio Divina and first Confession guides |
 | `content/en/prayers.json` | Prayers with category, text, meaning and sources |
 | `content/en/guides.json` | Mass, basics, confession and Rosary guides |
