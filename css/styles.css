@@ -637,3 +637,14 @@ ol.outline .oc { flex: 0 0 4.2em; color: var(--muted); font-variant-numeric: tab
 [dir="rtl"] .week-card .chev svg { transform: scaleX(-1); }
 /* Charts keep their drawn layout; only the words inside are Persian. */
 [dir="rtl"] .diagram svg { direction: ltr; }
+
+/* Bible study library */
+.search-link { display: flex; align-items: center; min-height: 48px; padding-inline-start: 44px; padding-inline-end: 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--faint); text-decoration: none; }
+.study-filter { margin-top: 2px; }
+.study-filter .chip { font-family: inherit; }
+.study-prayer { margin: 0 0 12px; background: var(--accent-soft); border-color: transparent; }
+.study-prayer .eyebrow { display: block; }
+.novena-days { list-style: none; }
+.novena-days li { margin: 0 0 8px; }
+.novena-days li:last-child { margin-bottom: 0; }
+.lib-group[hidden], .lib-group li[hidden] { display: none; }
