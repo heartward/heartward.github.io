@@ -14,13 +14,15 @@ const rerender = () => document.dispatchEvent(new Event('heartward:render'));
 const B = () => data.bible;
 const ext = (href, label, cls = 'soft sm') => '<a class="btn ' + cls + '" href="' + esc(safeUrl(href)) + '" target="_blank" rel="noopener">' + esc(label) + icon('external') + '</a>';
 export const nrsvUrl = ref => 'https://www.biblegateway.com/passage/?search=' + encodeURIComponent(ref) + '&version=NRSVCE';
-export const PLAN_IDS = ['rcia', 'mark', 'story'];
+// Plans in order: My RCIA road, Mark, The big story, then the topic series (kind: 'topic').
+export const planIds = () => Object.keys(B().plans);
+const topicIds = () => planIds().filter(id => B().plans[id].kind === 'topic');
 
 // Every study as one shape: { id, plan, ref, title, intro, understand, ccc, questions, live, session? }.
 function rciaStudies() {
   return data.sessionList.filter(s => (data.study.sessions[s.id] || {}).bible).map(s => {
     const b = data.study.sessions[s.id].bible, x = B().studies[s.id] || {};
-    return { id: s.id, plan: 'rcia', session: s, ref: b.ref, refEn: b.refEn || b.ref, title: s.title, intro: b.intro, questions: b.questions, understand: x.understand, ccc: x.ccc, live: x.live };
+    return { id: s.id, plan: 'rcia', session: s, ref: b.ref, refEn: b.refEn || b.ref, title: s.title, intro: b.intro, questions: b.questions, understand: x.understand, ccc: x.ccc, live: x.live, prayer: x.prayer };
   });
 }
 export function planStudies(planId) {
@@ -28,12 +30,20 @@ export function planStudies(planId) {
   const p = B().plans[planId];
   return p ? p.days.map(d => ({ ...d, plan: planId })) : [];
 }
-export const allStudies = () => PLAN_IDS.flatMap(planStudies);
+export const allStudies = () => planIds().flatMap(planStudies);
 const findStudy = id => allStudies().find(s => s.id === id) || null;
+// The studies for one RCIA session: its own passage first, then the related studies from the library.
+export function sessionStudies(sid) {
+  const own = rciaStudies().find(s => s.id === sid);
+  return [own, ...((B().related || {})[sid] || []).map(findStudy)].filter(Boolean);
+}
 const doneCount = list => list.filter(s => state.bible[s.id]).length;
 const nextIn = list => list.find(s => !state.bible[s.id]) || null;
 const notesOf = id => (state.study[id] || {}).notes || '';
-const label = s => s.plan === 'rcia' ? t('Session') + ' ' + sessionNo(s.session) : t('Day') + ' ' + (planStudies(s.plan).indexOf(s) + 1);
+const label = s => s.plan === 'rcia' ? t('Session') + ' ' + sessionNo(s.session) : t(B().plans[s.plan].kind === 'topic' ? 'Study' : 'Day') + ' ' + (planStudies(s.plan).findIndex(x => x.id === s.id) + 1);
+// One row for a study in a list.
+export const studyRow = (s, sub) => '<li><a class="row" href="#/bible/' + s.id + '"><span class="lead">' + icon(state.bible[s.id] ? 'check' : 'book') + '</span><span class="grow"><span class="title">' + esc(s.plan === 'rcia' ? s.ref : s.title) + '</span>' +
+  '<span class="sub">' + esc(sub != null ? sub : (s.plan === 'rcia' ? s.title : s.ref) + ' · ' + B().plans[s.plan].title) + '</span></span><span class="chev">' + icon('chevron') + '</span></a></li>';
 const planCard = (id, extra) => {
   const p = B().plans[id], list = planStudies(id), n = doneCount(list), pct = list.length ? Math.round(n / list.length * 100) : 0;
   return '<a class="card plan-card" href="#/bible-plan/' + id + '"><span class="eyebrow">' + esc(p.sub) + '</span><h3>' + esc(p.title) + '</h3>' +
@@ -53,6 +63,10 @@ export function hub() {
     '<span class="wk-verse">' + esc(forWeek.ref) + '</span><span class="muted small">' + esc(forWeek.intro) + '</span>' +
     (state.bible[forWeek.id] ? ' <span class="tag gold">' + esc(t('done')) + '</span>' : '') + '<span class="chev">' + icon('chevron') + '</span></a>';
 
+  html += '<a class="search-wrap search-link" href="#/bible-all/find">' + icon('search') + '<span>' + esc(t('Find a study by title')) + '</span></a>' +
+    '<ul class="list card tight"><li><a class="row" href="#/bible-all"><span class="lead">' + icon('list') + '</span><span class="grow"><span class="title">' + esc(t('All Bible studies')) + '</span><span class="sub">' +
+    allStudies().length + ' ' + esc(t('studies, with a filter for RCIA')) + '</span></span><span class="chev">' + icon('chevron') + '</span></a></li></ul>';
+
   html += '<div class="tiles">' +
     '<a class="tile wide" href="#/bible-guide"><span class="ti">' + icon('sparkle') + '</span><span><span class="tt">' + esc(t('Start here')) + '</span><br><span class="ts">' + esc(t('How the Bible works and how Catholics read it. Five minutes.')) + '</span></span></a></div>';
 
@@ -61,6 +75,9 @@ export function hub() {
 
   html += '<div class="section-title"><h2>' + esc(t('Reading plans')) + '</h2></div>' +
     yearCard() + planCard('rcia', t('Session') + ' ' + sessionNo(cur) + ': ' + cur.title) + planCard('mark') + planCard('story');
+
+  html += '<div class="section-title"><h2>' + esc(t('Studies by topic')) + '</h2><a class="linkish" href="#/bible-all">' + esc(t('See all')) + '</a></div>' +
+    topicIds().map(id => planCard(id)).join('');
 
   html += '<div class="section-title"><h2>' + esc(t('Get ready for Sunday')) + '</h2></div><ul class="list card tight">' +
     '<li><a class="row" href="#/lectio"><span class="lead">' + icon('book') + '</span><span class="grow"><span class="title">' + esc(t('Sunday Gospel with Lectio Divina')) + '</span><span class="sub">' + esc(fmtDate(nextSunday())) + '</span></span><span class="chev">' + icon('chevron') + '</span></a></li>' +
@@ -95,7 +112,7 @@ export function plan(id) {
   list.forEach(s => {
     const lit = !!state.bible[s.id], n = s.plan === 'rcia' ? sessionNo(s.session) : list.indexOf(s) + 1;
     html += '<li class="' + (lit ? 'lit' : '') + (next === s ? ' next' : '') + '"><a class="stop" href="#/bible/' + s.id + '"><span class="node">' + (lit ? icon('check') : n) + '</span>' +
-      '<span class="info"><span class="title">' + esc(s.ref) + '</span><span class="sub">' + esc(s.title) + (notesOf(s.id).trim() ? ' <span class="tag gold">' + esc(t('notes')) + '</span>' : '') + '</span></span></a></li>';
+      '<span class="info"><span class="title">' + esc(p.kind === 'topic' ? s.title : s.ref) + '</span><span class="sub">' + esc(p.kind === 'topic' ? s.ref : s.title) + (notesOf(s.id).trim() ? ' <span class="tag gold">' + esc(t('notes')) + '</span>' : '') + '</span></span></a></li>';
   });
   html += '</ol>';
   return { html, title: p.title };
@@ -105,15 +122,15 @@ export function plan(id) {
 export function study(id) {
   const s = findStudy(id);
   if (!s) return { html: back('#/bible', t('Bible study')) + '<p class="empty">' + esc(t('Not found')) + '</p>' };
-  const P = B().plans[s.plan], list = planStudies(s.plan), i = list.indexOf(s), prev = list[i - 1], nxt = list[i + 1];
+  const P = B().plans[s.plan], list = planStudies(s.plan), i = list.findIndex(x => x.id === s.id), prev = list[i - 1], nxt = list[i + 1];
   const faV = faText() && data.passagesFa ? (data.passagesFa.passages || {})[s.refEn || s.ref] : null;
   const verses = faV || (data.scripture.passages || {})[s.refEn || s.ref] || [], done = !!state.bible[s.id];
   const m = Object.fromEntries(B().method.map(x => [x.id, x]));
   const step = (n, key, body) => '<section class="card study-step"><div class="step-head"><span class="n">' + n + '</span><h2>' + esc(m[key].name) + '</h2></div>' + body + '</section>';
 
   let html = back('#/bible-plan/' + s.plan, P.title) +
-    head(label(s) + ' · ' + P.title, s.ref, s.intro) +
-    (s.plan === 'rcia' ? '<p class="small muted" style="margin:-8px 2px 12px">' + esc(s.title) + ' · <a href="#/session/' + s.id + '">' + esc(t('Open the lesson')) + '</a></p>' : '<p class="small muted" style="margin:-8px 2px 12px">' + esc(s.title) + '</p>') +
+    (P.kind === 'topic' ? head(label(s) + ' · ' + P.title, s.title, s.intro) + '<p class="small muted" style="margin:-8px 2px 12px">' + esc(s.ref) + '</p>' : head(label(s) + ' · ' + P.title, s.ref, s.intro)) +
+    (P.kind === 'topic' ? '' : s.plan === 'rcia' ? '<p class="small muted" style="margin:-8px 2px 12px">' + esc(s.title) + ' · <a href="#/session/' + s.id + '">' + esc(t('Open the lesson')) + '</a></p>' : '<p class="small muted" style="margin:-8px 2px 12px">' + esc(s.title) + '</p>') +
     '<p class="small muted prayer-line">' + icon('candle') + ' ' + esc(B().prayer) + '</p>';
 
   html += step(1, 'read', '<p class="small muted" style="margin:0 0 8px">' + esc(m.read.about) + '</p>' +
@@ -124,15 +141,18 @@ export function study(id) {
   if (s.understand) html += step(2, 'understand', '<p style="margin:0">' + esc(s.understand) + '</p>' +
     (s.ccc ? '<p class="small muted" style="margin:10px 0 0">' + esc(t('To go deeper: Catechism of the Catholic Church')) + ' ' + esc(s.ccc) + '</p>' : ''));
 
-  html += step(s.understand ? 3 : 2, 'pray', '<ol class="qs">' + (s.questions || []).map(q => '<li>' + esc(q) + '</li>').join('') + '</ol>' +
+  const pr = s.prayer && data.prayers.find(p => p.id === s.prayer);
+  html += step(s.understand ? 3 : 2, 'pray', (pr ? '<a class="card row study-prayer" href="#/prayer/' + pr.id + '"><span class="lead">' + icon('candle') + '</span><span class="grow"><span class="eyebrow">' + esc(t('Pray with')) + '</span><span class="title">' + esc(pr.title) + '</span>' +
+      '<span class="sub">' + esc(pr.when) + '</span></span><span class="chev">' + icon('chevron') + '</span></a>' : '') + '<ol class="qs">' + (s.questions || []).map(q => '<li>' + esc(q) + '</li>').join('') + '</ol>' +
     '<label class="field" style="margin:0"><span>' + esc(t('My notes')) + ' <span class="saved-hint" id="bsaved"></span></span><textarea id="bnotes" placeholder="' + esc(t('What is God saying to you in this passage?')) + '">' + esc(notesOf(s.id)) + '</textarea></label>' +
     '<div class="btn-row" style="margin:10px 0 0"><button class="btn ghost sm" id="bshare">' + esc(t('Send the questions to my sponsor or group')) + '</button></div>');
 
   if (s.live) html += step(s.understand ? 4 : 3, 'live', '<p style="margin:0">' + esc(s.live) + '</p>');
 
   html += '<div class="btn-row" style="justify-content:center;margin-top:16px"><button class="btn ' + (done ? 'ok' : '') + '" id="bdone" aria-pressed="' + done + '">' + (done ? icon('check') + esc(t('Studied')) + ' · ' + esc(fmtDate(new Date(state.bible[s.id] + 'T12:00:00'), { month: 'short', day: 'numeric' })) : esc(t('Mark as studied'))) + '</button></div>' +
-    '<div class="study-nav">' + (prev ? '<a class="btn ghost sm" href="#/bible/' + prev.id + '">' + icon('back') + esc(prev.ref) + '</a>' : '<span></span>') +
-    (nxt ? '<a class="btn ghost sm" href="#/bible/' + nxt.id + '">' + esc(nxt.ref) + icon('chevron') + '</a>' : '') + '</div>';
+    (s.plan === 'rcia' && sessionStudies(s.id).length > 1 ? '<div class="section-title"><h2>' + esc(t('More studies for this session')) + '</h2></div><ul class="list card tight">' + sessionStudies(s.id).slice(1).map(x => studyRow(x)).join('') + '</ul>' : '') +
+    '<div class="study-nav">' + (prev ? '<a class="btn ghost sm" href="#/bible/' + prev.id + '">' + icon('back') + esc(P.kind === 'topic' ? prev.title : prev.ref) + '</a>' : '<span></span>') +
+    (nxt ? '<a class="btn ghost sm" href="#/bible/' + nxt.id + '">' + esc(P.kind === 'topic' ? nxt.title : nxt.ref) + icon('chevron') + '</a>' : '') + '</div>';
 
   return {
     html, title: s.ref,
@@ -155,6 +175,57 @@ export function study(id) {
   };
 }
 
+// ---------- All studies: one library, a filter and a search by title ----------
+// Lower case, and for Persian: one form of ye and kaf, no short vowels or half-spaces, Persian digits as ASCII.
+const norm = s => String(s).toLowerCase().replace(/[يى]/g, 'ی').replace(/ك/g, 'ک').replace(/[ة]/g, 'ه').replace(/[ً-ٰٟ‌‏‎]/g, '').replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
+export function library(filter = 'all', q = '') {
+  const ids = planIds(), find = filter === 'find';
+  if (filter !== 'all' && !ids.includes(filter)) filter = 'all';
+  // In Persian the English title is searchable too, so a title heard in class can be found either way.
+  const en = state.settings.lang === 'fa' ? data.bibleEn : null;
+  const enTitle = s => { if (!en) return ''; const p = en.plans[s.plan]; const d = p && p.days ? p.days.find(x => x.id === s.id) : null; return d ? d.title + ' ' + d.ref + ' ' + d.intro : ''; };
+  let html = back('#/bible', t('Bible study')) + head(t('Bible study'), t('All Bible studies'), t('Every study in Heartward. Search by title or passage, or show only one series, such as the RCIA studies.')) +
+    '<div class="search-wrap">' + icon('search') + '<input type="search" id="bq" enterkeyhint="search" autocomplete="off" value="' + esc(q) + '" placeholder="' + esc(t('Search by title or passage')) + '" aria-label="' + esc(t('Search studies')) + '"></div>' +
+    '<div class="chips study-filter" role="group" aria-label="' + esc(t('Show')) + '">' +
+    [['all', t('All')]].concat(ids.map(id => [id, B().plans[id].short || B().plans[id].title])).map(([id, name]) =>
+      '<button class="chip' + (id === filter ? ' on' : '') + '" data-f="' + id + '" aria-pressed="' + (id === filter) + '">' + esc(name) + '</button>').join('') + '</div>' +
+    '<p class="small muted" id="bcount" style="margin:10px 2px 0" aria-live="polite"></p>';
+  ids.forEach(id => {
+    const P = B().plans[id], list = planStudies(id);
+    html += '<section class="lib-group" data-plan="' + id + '"><div class="section-title"><h2>' + esc(P.title) + '</h2><a class="linkish" href="#/bible-plan/' + id + '">' + esc(t('Open plan')) + '</a></div><ul class="list card tight">' +
+      list.map(s => studyRow(s, (s.plan === 'rcia' ? label(s) + ' · ' + s.title : s.ref)).replace('<li>', '<li data-hay="' + esc(norm([s.title, s.ref, s.refEn, s.intro, enTitle(s)].join(' '))) + '">')).join('') + '</ul></section>';
+  });
+  html += '<p class="empty" id="bempty" hidden>' + esc(t('No studies match. Try another word.')) + '</p>';
+  return {
+    html, title: t('All Bible studies'),
+    bind(root) {
+      const inp = root.querySelector('#bq');
+      const apply = () => {
+        const words = norm(inp.value).split(/\s+/).filter(Boolean);
+        let n = 0;
+        root.querySelectorAll('.lib-group').forEach(g => {
+          const on = filter === 'all' || g.dataset.plan === filter;
+          let k = 0;
+          g.querySelectorAll('li').forEach(li => { const m = on && words.every(w => li.dataset.hay.includes(w)); li.hidden = !m; if (m) k++; });
+          g.hidden = !k; n += k;
+        });
+        root.querySelector('#bcount').textContent = n + ' ' + t(n === 1 ? 'study' : 'studies');
+        root.querySelector('#bempty').hidden = n > 0;
+        history.replaceState(null, '', '#/bible-all/' + filter + (inp.value ? '/' + encodeURIComponent(inp.value) : ''));
+      };
+      root.querySelectorAll('[data-f]').forEach(b => b.onclick = () => {
+        filter = b.dataset.f;
+        root.querySelectorAll('[data-f]').forEach(x => { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b); });
+        apply();
+      });
+      let timer;
+      inp.oninput = () => { clearTimeout(timer); timer = setTimeout(apply, 100); };
+      apply();
+      if (find) inp.focus();
+    }
+  };
+}
+
 // ---------- My Bible notes ----------
 export function notes() {
   const withNotes = allStudies().filter(s => notesOf(s.id).trim());
@@ -162,7 +233,7 @@ export function notes() {
     .sort((a, b) => parseInt(a.slice(5), 10) - parseInt(b.slice(5), 10) || a.localeCompare(b));
   let html = back('#/bible', t('Bible study')) + head(t('Bible study'), t('My Bible notes'), t('Everything you wrote in your Bible studies. It stays only on this device; Backup in Settings saves it too.'));
   if (!withNotes.length && !yearNotes.length) html += '<p class="empty">' + esc(t('No notes yet. Open a study and write a line or two in step 3.')) + '</p><div class="btn-row" style="justify-content:center"><a class="btn" href="#/bible-plan/rcia">' + esc(t('Open My RCIA road')) + '</a></div>';
-  PLAN_IDS.forEach(pid => {
+  planIds().forEach(pid => {
     const list = withNotes.filter(s => s.plan === pid);
     if (!list.length) return;
     html += '<div class="section-title"><h2>' + esc(B().plans[pid].title) + '</h2></div>' + list.map(s =>

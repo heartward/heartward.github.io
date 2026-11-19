@@ -28,6 +28,7 @@ const defaults = () => ({
   sponsor: { asks: '', notes: '' }, // questions and notes for talks with the sponsor
   rites: {},
   daily: {},         // sessionId -> { 1..7: { done: 'YYYY-MM-DD', note, prompt } } for the days between classes
+  reason: {},        // Faith and reason topic id -> { done: 'YYYY-MM-DD', note }
   intentions: [],    // { text, added, answered?, note? }
   keepsake: { name: '', verse: '' },         // acceptance -> 'YYYY-MM-DD' (set by the parish)
   introDone: false,  // the first-visit welcome on Today has been dismissed

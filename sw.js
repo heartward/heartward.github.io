@@ -1,6 +1,6 @@
 /* Offline support: serve from cache, refresh in the background so content updates arrive on the next visit.
    Every download skips the browser's own HTTP cache, so a new version never mixes in files from an older one. */
-var CACHE = 'heartward-v33';
+var CACHE = 'heartward-v36';
 var BIBLE = 'heartward-bible'; // the 73 book texts, loaded one at a time and kept across app updates
 var ART = 'heartward-art'; // paintings from Wikimedia Commons, kept across app updates
 var SHELL = [
@@ -24,6 +24,7 @@ var SHELL = [
   'js/main.js',
   'js/store.js',
   'js/ui.js',
+  'js/refs.js',
   'js/views/journey.js',
   'js/views/learn.js',
   'js/views/me.js',
@@ -35,6 +36,7 @@ var SHELL = [
   'js/views/more.js',
   'js/views/bible.js',
   'js/views/daily.js',
+  'js/views/reason.js',
   'js/speech.js',
   'content/en/calendar.json',
   'content/en/faq.json',
@@ -53,6 +55,7 @@ var SHELL = [
   'content/en/year.json',
   'content/en/books.json',
   'content/en/daily.json',
+  'content/en/reason.json',
   'content/es/prayers.json',
   'content/fa/sessions.json',
   'content/fa/prayers.json',
@@ -70,6 +73,7 @@ var SHELL = [
   'content/fa/scripture.json',
   'content/fa/year.json',
   'content/fa/books.json',
+  'content/fa/reason.json',
   'content/fa/passages.json',
   'content/fa/daily.json',
   'content/parish.json'

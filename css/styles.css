@@ -432,10 +432,10 @@ ol.steps li { margin: 4px 0; }
 .hero.intro p { margin: 0; opacity: .88; font-size: 1rem; line-height: 1.5; }
 .hero .road { display: block; width: 100%; height: auto; margin: 16px 0 2px; overflow: visible; }
 .hero .road .trail { stroke: rgba(255, 255, 255, .22); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 2 9; }
-.hero .road .lit-trail { stroke: var(--glow); filter: drop-shadow(0 0 4px var(--glow)); }
+.hero .road .lit-trail { filter: drop-shadow(0 0 4px var(--glow)); }
+.hero .road .lit-trail .trail { stroke: var(--glow); }
 .hero .road .lit { fill: var(--glow); filter: drop-shadow(0 0 5px var(--glow)); }
 .hero .road .dim { fill: rgba(255, 255, 255, .28); }
-.hero .road .here { fill: var(--glow); stroke: #fff; stroke-width: 2.5; filter: drop-shadow(0 0 8px var(--glow)); }
 .hero-progress + .road { margin-top: 10px; }
 /* The road runs from the reading start, so it is mirrored in Persian to match the labels. */
 [dir="rtl"] .hero .road { transform: scaleX(-1); }
@@ -637,6 +637,39 @@ ol.outline .oc { flex: 0 0 4.2em; color: var(--muted); font-variant-numeric: tab
 [dir="rtl"] .week-card .chev svg { transform: scaleX(-1); }
 /* Charts keep their drawn layout; only the words inside are Persian. */
 [dir="rtl"] .diagram svg { direction: ltr; }
+
+/* Bible study library */
+.search-link { display: flex; align-items: center; min-height: 48px; padding-inline-start: 44px; padding-inline-end: 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--faint); text-decoration: none; }
+.study-filter { margin-top: 2px; }
+.study-filter .chip { font-family: inherit; }
+.study-prayer { margin: 0 0 12px; background: var(--accent-soft); border-color: transparent; }
+.study-prayer .eyebrow { display: block; }
+.novena-days { list-style: none; }
+.novena-days li { margin: 0 0 8px; }
+.novena-days li:last-child { margin-bottom: 0; }
+.lib-group[hidden], .lib-group li[hidden] { display: none; }
+/* Catechism references open the official text on the Vatican website. */
+a.ccc-link { color: var(--accent-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a.ccc-link:hover { text-decoration-thickness: 2px; }
+/* Faith and reason */
+.argument { counter-reset: arg; list-style: none; margin: 0; padding: 14px 16px; }
+.argument li { counter-increment: arg; position: relative; padding-inline-start: 38px; margin: 0 0 12px; line-height: 1.6; }
+.argument li:last-child { margin-bottom: 0; }
+.argument li::before { content: counter(arg); position: absolute; inset-inline-start: 0; top: 1px; width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; font-size: .85rem; display: grid; place-items: center; }
+:root[dir="rtl"] .argument li::before { content: counter(arg, persian); }
+.r-short { border-inline-start: 5px solid var(--accent); }
+.r-short p { margin: 4px 0 0; font-family: var(--serif); font-size: 1.1rem; line-height: 1.65; }
+details.method { margin-top: 16px; }
+details.method summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; align-items: center; }
+details.method summary::-webkit-details-marker { display: none; }
+details.method summary .eyebrow { grid-column: 1; }
+details.method summary strong { grid-column: 1; }
+details.method summary .plus { grid-column: 2; grid-row: 1 / span 2; }
+details.method[open] summary .plus { transform: rotate(45deg); }
+details.method .argument { padding: 14px 0 4px; }
+.r-quote { margin: 12px 0 0; padding-inline-start: 14px; border-inline-start: 3px solid var(--accent); font-family: var(--serif); font-style: italic; }
+.r-quote cite { display: block; font-style: normal; font-size: .85rem; color: var(--muted); margin-top: 4px; }
+.reason-road { margin-bottom: 0; }
 
 /* ---------- Between classes: the daily plan ---------- */
 .day-card { position: relative; display: block; text-decoration: none; color: var(--text); padding-inline-end: 40px; background: linear-gradient(160deg, var(--surface), var(--accent-soft)); border: 1px solid var(--accent-soft); }

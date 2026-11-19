@@ -367,5 +367,116 @@
         "url": "https://www.biblegateway.com/passage/?search=Revelation+12&version=NRSVCE"
       }
     ]
+  },
+  {
+    "id": "come-holy-spirit",
+    "title": "Come, Holy Spirit",
+    "category": "Everyday",
+    "when": "Before reading the Bible, before class, and before any decision.",
+    "text": "Come, Holy Spirit, fill the hearts of your faithful\nand kindle in them the fire of your love.\nSend forth your Spirit and they shall be created,\nand you shall renew the face of the earth.\n\nLet us pray.\nO God, who by the light of the Holy Spirit\ninstructed the hearts of the faithful,\ngrant that by the same Holy Spirit\nwe may be truly wise\nand ever rejoice in his consolation.\nThrough Christ our Lord.\nAmen.",
+    "meaning": "An old prayer of the Church to the Holy Spirit, the Helper Jesus promised. The verse \"Send forth your Spirit\" comes from Psalm 104. We ask for light to understand God's word and the strength to live it.",
+    "sources": [
+      {
+        "title": "Acts 2:1-4",
+        "url": "https://www.biblegateway.com/passage/?search=Acts+2%3A1-4&version=NRSVCE"
+      },
+      {
+        "title": "Psalm 104:30",
+        "url": "https://www.biblegateway.com/passage/?search=Psalm+104%3A30&version=NRSVCE"
+      }
+    ]
+  },
+  {
+    "id": "magnificat",
+    "title": "The Magnificat (Mary's song)",
+    "category": "Mary",
+    "when": "In the evening. The Church sings it every day at Evening Prayer.",
+    "text": "My soul doth magnify the Lord.\nAnd my spirit hath rejoiced in God my Saviour.\nBecause he hath regarded the humility of his handmaid:\nfor behold from henceforth all generations shall call me blessed.\nBecause he that is mighty hath done great things to me:\nand holy is his name.\nAnd his mercy is from generation unto generations,\nto them that fear him.\nHe hath shewed might in his arm:\nhe hath scattered the proud in the conceit of their heart.\nHe hath put down the mighty from their seat\nand hath exalted the humble.\nHe hath filled the hungry with good things:\nand the rich he hath sent empty away.\nHe hath received Israel his servant,\nbeing mindful of his mercy.\nAs he spoke to our fathers:\nto Abraham and to his seed for ever.\n\nGlory be to the Father, and to the Son, and to the Holy Spirit,\nas it was in the beginning, is now, and ever shall be,\nworld without end. Amen.",
+    "meaning": "Mary's song of praise when she visits Elizabeth (Luke 1:46-55), here in the Douay-Rheims Bible. Mary praises a God who keeps his promises and lifts up the lowly. When we pray it, we join her joy and her trust.",
+    "sources": [
+      {
+        "title": "Luke 1:39-56",
+        "url": "https://www.biblegateway.com/passage/?search=Luke+1%3A39-56&version=NRSVCE"
+      }
+    ]
+  },
+  {
+    "id": "jesus-prayer",
+    "title": "The Jesus Prayer",
+    "category": "Short prayers",
+    "when": "Any time, slowly, many times over; with your breathing if it helps.",
+    "text": "Lord Jesus Christ, Son of God,\nhave mercy on me, a sinner.",
+    "meaning": "This prayer joins the cry of blind Bartimaeus (\"Jesus, Son of David, have mercy on me\") and the tax collector in the Temple (\"God, be merciful to me, a sinner\"). Christians of the East and West have prayed it for centuries. The Catechism calls the name of Jesus the heart of Christian prayer.",
+    "sources": [
+      {
+        "title": "Luke 18:9-14",
+        "url": "https://www.biblegateway.com/passage/?search=Luke+18%3A9-14&version=NRSVCE"
+      },
+      {
+        "title": "Mark 10:46-52",
+        "url": "https://www.biblegateway.com/passage/?search=Mark+10%3A46-52&version=NRSVCE"
+      }
+    ]
+  },
+  {
+    "id": "peace-prayer",
+    "title": "Prayer for Peace (Make me an instrument)",
+    "category": "Faith, hope and love",
+    "when": "In the morning, or when there is conflict around you.",
+    "text": "Lord, make me an instrument of your peace.\nWhere there is hatred, let me sow love;\nwhere there is injury, pardon;\nwhere there is doubt, faith;\nwhere there is despair, hope;\nwhere there is darkness, light;\nwhere there is sadness, joy.\n\nO divine Master, grant that I may not so much seek\nto be consoled as to console,\nto be understood as to understand,\nto be loved as to love.\nFor it is in giving that we receive,\nit is in pardoning that we are pardoned,\nand it is in dying that we are born to eternal life.\nAmen.",
+    "meaning": "Often called the Prayer of St. Francis, because it breathes his spirit, though it was first printed in France in 1912. It turns the Beatitudes into a plan for the day: wherever something is broken, we ask to bring its opposite.",
+    "sources": [
+      {
+        "title": "Matthew 5:1-12",
+        "url": "https://www.biblegateway.com/passage/?search=Matthew+5%3A1-12&version=NRSVCE"
+      }
+    ]
+  },
+  {
+    "id": "suscipe",
+    "title": "Take, Lord, and receive (Suscipe)",
+    "category": "Trust and surrender",
+    "when": "When you want to give your whole self to God, or before a big decision.",
+    "text": "Take, Lord, and receive all my liberty,\nmy memory, my understanding,\nand my entire will,\nall that I have and possess.\nYou have given all to me;\nto you, Lord, I return it.\nAll is yours; dispose of it wholly according to your will.\nGive me only your love and your grace,\nfor this is enough for me.\nAmen.",
+    "meaning": "St. Ignatius of Loyola (1491-1556) placed this prayer at the end of his Spiritual Exercises. Suscipe is Latin for \"receive.\" We give back to God the gifts he gave us, starting with our freedom, and ask only for his love. It is the prayer of total surrender.",
+    "sources": [
+      {
+        "title": "Luke 1:38",
+        "url": "https://www.biblegateway.com/passage/?search=Luke+1%3A38&version=NRSVCE"
+      }
+    ]
+  },
+  {
+    "id": "surrender-novena",
+    "title": "The Surrender Novena",
+    "category": "Trust and surrender",
+    "when": "For nine days in a row, when you are worried or facing something you cannot fix.",
+    "text": "O Jesus, I surrender myself to you,\ntake care of everything!\n\n(Pray these words ten times each day, after reading that day's words of Jesus.)",
+    "meaning": "A novena is a prayer said for nine days in a row, like the apostles and Mary praying for nine days between the Ascension and Pentecost. The Surrender Novena comes from Fr. Dolindo Ruotolo (1882-1970), a priest of Naples whom St. Padre Pio admired. Each day begins with a short meditation, written as Jesus speaking to the soul, and ends with the line \"O Jesus, I surrender myself to you, take care of everything!\" said ten times. It is not a magic formula: it is a way of practising trust, letting go of worry and of our own plans so God can act.",
+    "days": [
+      "Hand your problems to me and you will find peace: let me take care of them.",
+      "Surrender is not worrying and then praying. Stop being anxious and let go.",
+      "\"Your will be done\" means letting me act, not telling me how to fix things.",
+      "When things get worse, do not panic. Close your eyes and trust me.",
+      "I may lead you by a path you did not choose. Let me carry you.",
+      "Do not rely only on your own strength or on other people. Rely on me.",
+      "Stop thinking it over and over. Miracles come when you forget yourself and trust.",
+      "Let my grace carry you like a current, without worrying about now or later.",
+      "One act of surrender is worth more than many anxious prayers. Offer your sufferings with humility."
+    ],
+    "sources": [
+      {
+        "title": "Read the full novena, all nine days",
+        "url": "https://cccath.ca/files/other/surrender_novena_ruotolo.pdf"
+      },
+      {
+        "title": "James 4:7-10",
+        "url": "https://www.biblegateway.com/passage/?search=James+4%3A7-10&version=NRSVCE"
+      },
+      {
+        "title": "Matthew 6:25-34",
+        "url": "https://www.biblegateway.com/passage/?search=Matthew+6%3A25-34&version=NRSVCE"
+      }
+    ]
   }
 ]
