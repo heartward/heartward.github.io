@@ -79,6 +79,7 @@ export function prayer(id) {
     '<input type="range" id="lvl" min="0" max="4" step="1" value="0" style="width:100%;accent-color:var(--accent)"></label>' +
     '<p class="small muted" style="margin:6px 0 0">' + esc(t('Say the prayer from memory. Tap a blank to peek.')) + '</p></div>' +
     '<div class="section-title"><h2>' + esc(t('What it means')) + '</h2></div><p>' + esc(p.meaning) + '</p>' +
+    (p.days ? '<div class="section-title"><h2>' + esc(t('The nine days')) + '</h2></div><ul class="card novena-days">' + p.days.map((d, i) => '<li><strong>' + esc(t('Day')) + ' ' + (i + 1) + '.</strong> ' + esc(d) + '</li>').join('') + '</ul>' : '') +
     sources(p.sources) +
     '<div class="btn-row" style="margin-top:22px"><button class="btn block ' + (l ? 'ok' : '') + '" id="learned">' + (l ? icon('check') + esc(t('I know this by heart')) : esc(t('Mark as learned'))) + '</button></div>';
   return {

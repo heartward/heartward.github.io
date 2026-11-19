@@ -638,6 +638,16 @@ ol.outline .oc { flex: 0 0 4.2em; color: var(--muted); font-variant-numeric: tab
 /* Charts keep their drawn layout; only the words inside are Persian. */
 [dir="rtl"] .diagram svg { direction: ltr; }
 
+/* Bible study library */
+.search-link { display: flex; align-items: center; min-height: 48px; padding-inline-start: 44px; padding-inline-end: 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--faint); text-decoration: none; }
+.study-filter { margin-top: 2px; }
+.study-filter .chip { font-family: inherit; }
+.study-prayer { margin: 0 0 12px; background: var(--accent-soft); border-color: transparent; }
+.study-prayer .eyebrow { display: block; }
+.novena-days { list-style: none; }
+.novena-days li { margin: 0 0 8px; }
+.novena-days li:last-child { margin-bottom: 0; }
+.lib-group[hidden], .lib-group li[hidden] { display: none; }
 /* Catechism references open the official text on the Vatican website. */
 a.ccc-link { color: var(--accent-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
 a.ccc-link:hover { text-decoration-thickness: 2px; }
