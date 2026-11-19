@@ -27,7 +27,7 @@ export function view() {
     '<span class="flame" style="color:var(--glow)">' + icon('flame') + '</span></div>' +
     '<div><div class="big">' + p.done + ' ' + esc(t('of')) + ' ' + p.total + '</div><div class="sub">' + esc(t('RCIA classes done')) + '</div>' +
     '<div class="sub">' + Object.keys(state.learned).length + ' ' + esc(t('prayers learned by heart')) + '</div></div></div>' +
-    '<div class="stagebar">' + p.stages.map(st => '<div class="seg"><div class="bar"><div class="fill" style="width:' + Math.round(st.pct * 100) + '%"></div></div><div class="lbl">' + esc(t(st.title)) + '</div></div>').join('') + '</div>' +
+    road(p) +
     '</section>';
 
   const nv = daysToVigil();
@@ -78,19 +78,17 @@ export function view() {
     tile('#/questions', 'question', t('Questions'), t('Common newcomer questions')) +
     (state.saint ? '' : tile('#/saint-quiz', 'star', t('Find my saint'), t('A short quiz'), 'wide')) +
     '</div>';
-  return { html, title: t('Today') };
+  return { html, title: t('Today'), bind: placeRoadDots };
 }
 
 function intro(first) {
   const feat = (href, ic, title, sub) => '<a class="intro-feat" href="' + href + '"><span class="ic">' + icon(ic) + '</span><span><strong>' + esc(title) + '</strong><span>' + esc(sub) + '</span></span></a>';
-  const stops = data.stages.map(s => t(s.title));
   const html =
     '<section class="hero intro" aria-labelledby="intro-h">' +
     '<div class="kicker">' + esc(t('Welcome to Heartward')) + '</div>' +
     '<h1 id="intro-h">' + esc(t('Your companion on the road to the Catholic faith')) + '</h1>' +
     '<p>' + esc(t('Made for RCIA. Follow each class, learn the prayers by heart, and watch your path light up on the way to Easter.')) + '</p>' +
-    '<svg class="road" viewBox="0 0 320 96" aria-hidden="true"><path id="road" d="M8 82 C 70 86, 70 34, 130 40 S 210 86, 250 58 S 290 14, 312 12" fill="none"/></svg>' +
-    '<ol class="road-stops" aria-label="' + esc(t('The four stages')) + '">' + stops.map((s, i) => '<li' + (i === 0 ? ' class="here"' : '') + '>' + esc(s) + '</li>').join('') + '</ol>' +
+    road(progress()) +
     '<div class="btn-row" style="margin:18px 0 0">' +
     (first ? '<a class="btn block glow" href="#/session/' + first.id + '">' + icon('road') + esc(t('Start with Session 1')) + '</a>' : '') +
     '<button class="btn block ghost-light" id="skip-intro">' + esc(t('I have already started')) + '</button></div>' +
@@ -107,16 +105,7 @@ function intro(first) {
   return {
     html, title: t('Welcome'),
     bind(root) {
-      // Place the four stage dots along the road.
-      const road = root.querySelector('#road');
-      if (road && road.getTotalLength) {
-        const L = road.getTotalLength(), svg = road.ownerSVGElement;
-        [0.02, 0.36, 0.68, 0.98].forEach((k, i) => {
-          const pt = road.getPointAtLength(L * k), c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-          c.setAttribute('cx', pt.x); c.setAttribute('cy', pt.y); c.setAttribute('r', i === 0 ? 8 : 6); c.setAttribute('class', i === 0 ? 'lit' : 'dim');
-          svg.appendChild(c);
-        });
-      }
+      placeRoadDots(root);
       root.querySelector('#skip-intro').onclick = () => { state.introDone = true; save(); document.dispatchEvent(new Event('heartward:render')); };
     }
   };
@@ -137,4 +126,42 @@ function hourPrayer(now) {
     return tile('#/prayer/' + (easter ? 'regina-caeli' : 'angelus'), 'bell', t(easter ? 'The Regina Caeli' : 'The Angelus'), t('Prayed at 6 am, noon and 6 pm'));
   }
   return tile('#/prayer/guardian-angel', 'moon', t('Prayer to your Guardian Angel'), t('Before you sleep'));
+}
+
+// The Emmaus road: a winding dotted path with a stop for each of the four stages.
+// Each stage has its own stretch of road, so reaching a new stage lights its stop,
+// and the glow creeps forward one session at a time inside the stage.
+const STOPS = [0.02, 0.34, 0.66, 0.9];
+const ROAD_D = 'M8 82 C 70 86, 70 34, 130 40 S 210 86, 250 58 S 290 14, 312 12';
+function roadPos(p) {
+  if (p.total && p.done >= p.total) return { at: 1, stage: p.stages.length - 1 };
+  // The stage you are in is the first one not yet finished.
+  let i = p.stages.findIndex(st => st.pct < 1);
+  if (i < 0) i = p.stages.length - 1;
+  const from = STOPS[i], to = i + 1 < STOPS.length ? STOPS[i + 1] : 1;
+  return { at: from + (to - from) * p.stages[i].pct, stage: i };
+}
+function road(p) {
+  const pos = roadPos(p), lit = Math.min(100, pos.at * 100).toFixed(2);
+  return '<svg class="road" viewBox="0 0 320 96" aria-hidden="true" data-at="' + pos.at.toFixed(4) + '" data-stage="' + pos.stage + '">' +
+    '<defs><mask id="road-lit" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="96">' +
+    '<path d="' + ROAD_D + '" pathLength="100" fill="none" stroke="#fff" stroke-width="14" stroke-dasharray="' + lit + ' 101"/></mask></defs>' +
+    '<path class="trail" d="' + ROAD_D + '" fill="none"/>' +
+    '<path class="trail lit-trail" d="' + ROAD_D + '" fill="none" mask="url(#road-lit)"/>' +
+    '<path class="road-line" d="' + ROAD_D + '" fill="none" stroke="none"/></svg>' +
+    '<ol class="road-stops" aria-label="' + esc(t('The four stages')) + '">' +
+    p.stages.map((st, i) => '<li class="' + (i === pos.stage ? 'here' : i < pos.stage ? 'reached' : '') + '"' + (i === pos.stage ? ' aria-current="step"' : '') + '>' + esc(t(st.title)) + '</li>').join('') + '</ol>';
+}
+// Dots need the real path geometry, so they are placed once the page is on screen.
+function placeRoadDots(root) {
+  const svg = root.querySelector('svg.road'), line = svg && svg.querySelector('.road-line');
+  if (!line || !line.getTotalLength) return;
+  const L = line.getTotalLength(), at = +svg.dataset.at, stage = +svg.dataset.stage;
+  const dot = (k, r, cls) => {
+    const pt = line.getPointAtLength(L * k), c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c.setAttribute('cx', pt.x.toFixed(1)); c.setAttribute('cy', pt.y.toFixed(1)); c.setAttribute('r', r); c.setAttribute('class', cls);
+    svg.appendChild(c);
+  };
+  STOPS.forEach((k, i) => dot(k, 6, i <= stage ? 'lit' : 'dim'));
+  dot(Math.max(at, STOPS[0]), 8, 'here');
 }

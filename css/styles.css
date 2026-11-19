@@ -182,11 +182,6 @@ main { max-width: 720px; margin: 0 auto; padding: 8px 16px 32px; outline: none; 
 .ring .flame svg { width: 30px; height: 30px; transform: none; }
 .hero-progress .big { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; color: #fff; }
 .hero-progress .sub { font-size: .88rem; opacity: .8; }
-.stagebar { display: flex; gap: 4px; margin-top: 16px; }
-.stagebar .seg { flex: 1; min-width: 0; }
-.stagebar .bar { height: 6px; border-radius: 6px; background: rgba(255, 255, 255, .14); overflow: hidden; }
-.stagebar .fill { height: 100%; background: var(--glow); box-shadow: 0 0 8px var(--glow); border-radius: 6px; }
-.stagebar .lbl { font-size: .68rem; opacity: .75; margin-top: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* Next-up card */
 .next-card { display: flex; gap: 14px; align-items: flex-start; }
@@ -435,14 +430,20 @@ ol.steps li { margin: 4px 0; }
 .hero.intro .kicker { font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--glow); }
 .hero.intro h1 { font-size: 1.75rem; line-height: 1.15; margin: 8px 0 10px; }
 .hero.intro p { margin: 0; opacity: .88; font-size: 1rem; line-height: 1.5; }
-.hero .road { display: block; width: 100%; height: auto; margin: 16px 0 2px; }
-.hero .road path { stroke: rgba(255, 255, 255, .22); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 2 9; }
-.hero .road .lit { fill: var(--glow); filter: drop-shadow(0 0 7px var(--glow)); }
+.hero .road { display: block; width: 100%; height: auto; margin: 16px 0 2px; overflow: visible; }
+.hero .road .trail { stroke: rgba(255, 255, 255, .22); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 2 9; }
+.hero .road .lit-trail { stroke: var(--glow); filter: drop-shadow(0 0 4px var(--glow)); }
+.hero .road .lit { fill: var(--glow); filter: drop-shadow(0 0 5px var(--glow)); }
 .hero .road .dim { fill: rgba(255, 255, 255, .28); }
-.road-stops { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 0; margin: 0; font-size: .7rem; opacity: .8; }
-.road-stops li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hero .road .here { fill: var(--glow); stroke: #fff; stroke-width: 2.5; filter: drop-shadow(0 0 8px var(--glow)); }
+.hero-progress + .road { margin-top: 10px; }
+/* The road runs from the reading start, so it is mirrored in Persian to match the labels. */
+[dir="rtl"] .hero .road { transform: scaleX(-1); }
+.road-stops { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 0; margin: 0; font-size: .7rem; line-height: 1.25; opacity: .8; }
+.road-stops li { overflow-wrap: break-word; text-wrap: balance; }
 .road-stops li:nth-child(2), .road-stops li:nth-child(3) { text-align: center; }
 .road-stops li:last-child { text-align: end; }
+.road-stops .reached { opacity: 1; color: #fff; }
 .road-stops .here { color: var(--glow); font-weight: 700; opacity: 1; }
 .btn.glow { background: var(--glow); color: #1d1606; }
 .btn.ghost-light { background: transparent; color: #f6efe2; border: 1px solid rgba(255, 255, 255, .28); }
